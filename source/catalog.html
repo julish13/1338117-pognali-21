@@ -1,16 +1,558 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Погнали</title>
-  </head>
-  <body class="page__body">
 
-    <main>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Погнали</title>
+</head>
 
-    </main>
-    <footer>
+<body class="page__body">
+  <header class="page-header">
+    <a class="page-header__logo logo">
+      <img src="https://via.placeholder.com/150x150" alt="Логотип Погнали">
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <ul class="site-nav">
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="#">О сервисе</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="form.html">Направления</a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="catalog.html">Попутчики</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="page-header__login" href="#"></a>
+    <div class="page-header__contacts">
+      <a class="page-header__phone" href="tel:88005558628">8 800 555-86-28</a>
+      <a class="page-header__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+    </div>
+    <div class="social social--header">
+      <a class="social__icon social__icon--facebook social__icon--header" href="#"
+        aria-label="Наша страница в  Facebook"></a>
+      <a class="social__icon social__icon--vkontakte social__icon--header" href="#"
+        aria-label="Наша страница Вконтакте"></a>
+      <a class="social__icon social__icon--instagram social__icon--header" href="#"
+        aria-label="Наша страница в Instagram"></a>
+    </div>
+  </header>
+  <main class="main-catalog">
+    <h1 class="main-heading main-catalog__heading">Попутчики</h1>
+    <section class="filter">
+      <h2 class="visually-hidden">Фильтрация попутчиков</h2>
+      <form class="filter__form">
+        <fieldset class="filter__countries filter-countries">
+          <div class="filter-countries__header">
+            <p class="filter-countries__heading">Фильтрация по странам:</p>
+            <button class="filter-countries__toggle" type="button" aria-label="Открыть меню"></button>
+          </div>
+          <div class="filter-countries__dropdown filter-countries-dropdown">
+            <div class="filter-countries-dropdown__lands-list">
+              <input class="visually-hidden" type="checkbox" name="europe" id="europe" checked>
+              <label class="filter-countries__land-checkbox" for="europe">Европа</label>
+              <input class="visually-hidden" type="checkbox" name="asia" id="asia" checked>
+              <label class="filter-countries__land-checkbox" for="asia">Азия</label>
+              <input class="visually-hidden" type="checkbox" name="america" id="america" checked>
+              <label class="filter-countries__land-checkbox" for="america">Америка</label>
+              <input class="visually-hidden" type="checkbox" name="islands" id="islands" checked>
+              <label class="filter-countries__land-checkbox" for="islands">Острова</label>
+            </div>
+            <table class="filter-countries-dropdown__alphabet alphabet" aria-label="алфавит">
+              <tr class="alphabet__row">
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="a">
+                  <label class="alphabet__label" for="a">А</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="b">
+                  <label class="alphabet__label" for="b">Б</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="v">
+                  <label class="alphabet__label" for="v">В</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="g">
+                  <label class="alphabet__label" for="g">Г</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="d">
+                  <label class="alphabet__label" for="d">Д</label>
+                </td>
+              </tr>
+              <tr class="alphabet__row">
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="e">
+                  <label class="alphabet__label" for="e">Е</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="z">
+                  <label class="alphabet__label" for="z">З</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="i">
+                  <label class="alphabet__label" for="i">И</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="k">
+                  <label class="alphabet__label" for="k">К</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="l">
+                  <label class="alphabet__label" for="l">Л</label>
+                </td>
+              </tr>
+              <tr class="alphabet__row">
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="m">
+                  <label class="alphabet__label" for="m">М</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="n">
+                  <label class="alphabet__label" for="n">Н</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="o">
+                  <label class="alphabet__label" for="o">О</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="p">
+                  <label class="alphabet__label" for="p">П</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="r">
+                  <label class="alphabet__label" for="r">Р</label>
+                </td>
+              </tr>
+              <tr class="alphabet__row">
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="s">
+                  <label class="alphabet__label" for="s">С</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="t">
+                  <label class="alphabet__label" for="t">Т</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="u">
+                  <label class="alphabet__label" for="u">У</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="f">
+                  <label class="alphabet__label" for="f">Ф</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="h">
+                  <label class="alphabet__label" for="h">Х</label>
+                </td>
+              </tr>
+              <tr class="alphabet__row">
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="ch">
+                  <label class="alphabet__label" for="ch">Ч</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="sh">
+                  <label class="alphabet__label" for="sh">Ш</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="shch">
+                  <label class="alphabet__label" for="shch">Щ</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="eh">
+                  <label class="alphabet__label" for="eh">Э</label>
+                </td>
+                <td class="alphabet__letter">
+                  <input class="alphabet__checkbox visually-hidden" type="radio" name="letter" id="yu">
+                  <label class="alphabet__label" for="yu">Ю</label>
+                </td>
+              </tr>
+            </table>
+            <ul class="filter-countries-dropdown__countries-list dropdown-countries-list">
+              <li class="dropdown-countries-list__country">Австралия</li>
+              <li class="dropdown-countries-list__country">Австрия</li>
+              <li class="dropdown-countries-list__country">Азербайджан</li>
+              <li class="dropdown-countries-list__country">Албания</li>
+              <li class="dropdown-countries-list__country">Алжир</li>
+              <li class="dropdown-countries-list__country">Ангола</li>
+              <li class="dropdown-countries-list__country">Андорра</li>
+              <li class="dropdown-countries-list__country">Антигуа и Барбуда</li>
+              <li class="dropdown-countries-list__country">Аргентина</li>
+              <li class="dropdown-countries-list__country">Армения</li>
+              <li class="dropdown-countries-list__country">Афганистан</li>
+            </ul>
+            <button class="filter-countries-dropdown__button button-round" type="button">Свернуть</button>
+          </div>
+        </fieldset>
+        <fieldset class="filter__personality filter-personality">
+          <legend class="filter-personality__heading">Подберите идеального попутчика</legend>
+          <div class="filter-personality__field filter-personality-field">
+            <div class="filter-personality-field__header">
+              <p class="filter-personality-field__title">Хобби</p>
+              <button class="filter-personality-field__toggle" type="button" aria-label="Открыть меню"></button>
+            </div>
+            <div class="filter-personality-field__list">
+              <input class="visually-hidden" type="checkbox" name="gym" id="gym" checked>
+              <label class="filter-personality-field__checkbox" for="gym">Спортзал</label>
+              <input class="visually-hidden" type="checkbox" name="hookah" id="hookah">
+              <label class="filter-personality-field__checkbox" for="hookah">Кальян</label>
+              <input class="visually-hidden" type="checkbox" name="sofa" id="sofa">
+              <label class="filter-personality-field__checkbox" for="sofa">Диван</label>
+            </div>
+          </div>
+          <div class="filter-personality__field filter-personality-field">
+            <div class="filter-personality-field__header">
+              <p class="filter-personality-field__title">Музыка</p>
+              <button class="filter-personality-field__toggle" type="button" aria-label="Открыть меню"></button>
+            </div>
+            <div class="filter-personality-field__list">
+              <input class="visually-hidden" type="checkbox" name="hardrock" id="hardrock" checked>
+              <label class="filter-personality-field__checkbox" for="hardrock">Тяжелый рок</label>
+              <input class="visually-hidden" type="checkbox" name="russian_rap" id="russian_rap">
+              <label class="filter-personality-field__checkbox" for="russian_rap">Русский рэп</label>
+              <input class="visually-hidden" type="checkbox" name="eurodance" id="eurodance">
+              <label class="filter-personality-field__checkbox" for="eurodance">Евроденс</label>
+            </div>
+          </div>
+          <div class="filter-personality__field filter-personality-field">
+            <div class="filter-personality-field__header">
+              <p class="filter-personality-field__title">Еда</p>
+              <button class="filter-personality-field__toggle" type="button" aria-label="Открыть меню"></button>
+            </div>
+            <div class="filter-personality-field__list">
+              <input class="visually-hidden" type="checkbox" name="meat" id="meat" checked>
+              <label class="filter-personality-field__checkbox" for="meat">Мясоед</label>
+              <input class="visually-hidden" type="checkbox" name="healthy_food" id="healthy_food">
+              <label class="filter-personality-field__checkbox" for="healthy_food">Сидит на ПП</label>
+              <input class="visually-hidden" type="checkbox" name="raw_vegan" id="raw_vegan">
+              <label class="filter-personality-field__checkbox" for="raw_vegan">Веган-сыроед</label>
+            </div>
+          </div>
+          <div class="filter-personality__field filter-personality-field">
+            <div class="filter-personality-field__header">
+              <p class="filter-personality-field__title">Еда</p>
+              <button class="filter-personality-field__toggle" type="button" aria-label="Открыть меню"></button>
+            </div>
+            <div class="filter-personality-field__list transport">
+              <input class="visually-hidden transport__input" type=checkbox name="plane" id="plane" checked
+                aria-label="На самолете">
+              <label class="filter-personality-field__checkbox transport__button transport__button--plane"
+                for="plane"></label>
+              <input class="visually-hidden transport__input" type=checkbox name="bus" id="bus" checked
+                aria-label="На автобусе">
+              <label class="filter-personality-field__checkbox transport__button transport__button--bus"
+                for="bus"></label>
+              <input class="visually-hidden transport__input" type=checkbox name="bike" id="bike" checked
+                aria-label="На велосипеде">
+              <label class="filter-personality-field__checkbox transport__button transport__button--bike"
+                for="bike"></label>
+              <input class="visually-hidden transport__input" type=checkbox name="walk" id="walk" checked
+                aria-label="Пешком">
+              <label class="filter-personality-field__checkbox transport__button transport__button--walk"
+                for="walk"></label>
+            </div>
+          </div>
+          <div class="filter-personality__field filter-personality-field">
+            <div class="filter-personality-field__header">
+              <p class="filter-personality-field__title">Левел</p>
+              <button class="filter-personality-field__toggle" type="button" aria-label="Открыть меню"></button>
+            </div>
+            <div class="filter-personality-field__level-filter level-filter">
+              <div class="level-filter__range-controls">
+                <div class="level-filter__scale">
+                  <div class="level-filter__bar"></div>
+                </div>
+                <div class="level-filter__toggle level-filter__toggle--min" tabindex="0"></div>
+                <div class="level-filter__toggle level-filter__toggle--max" tabindex="0"></div>
+              </div>
+              <div class="level-filter__values">
+                <input class="level-filter__value" type="number" aria-label="Минимальный уровень" name="min-level"
+                  value="30">
+                <label>—</label>
+                <input class="level-filter__value" type="number" aria-label="Максимальный уровень" name="max-level"
+                  value="100">
+              </div>
+            </div>
+          </div>
+          <button class="filter-personality__button button-round" type="submit">Показать</button>
+        </fieldset>
+      </form>
+    </section>
+    <section class="user-catalog">
+      <h2 class="visually-hidden">Список пользователей</h2>
+      <ul class="user-catalog__list">
+        <li class="user-catalog__item user-catalog-item">
+          <div class="user-catalog-item__header">
+            <a class="user-catalog-item__photo" href="#">
+              <img src="https://via.placeholder.com/150x150" alt="Фото пользователя">
+            </a>
+            <a class="user-catalog-item__name" href="#">Таня Фирсова</a>
+            <div class="user-catalog-item__likes likes">
+              <label class="likes__amount">
+                <input class="likes__button" type="checkbox" aria-label="лайк">1,5 М
+              </label>
+            </div>
 
-    </footer>
-  </body>
+            <span class="user-catalog-item__status status status--offline visually-hidden">офлайн</span>
+          </div>
+          <ul class="user-catalog-item__tag-list tag-list">
+            <li class="tag-list__tag">
+              <a href="#">#ЗОЖ</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#ПП</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#Фитнес</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#пляж</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#авокадо</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#смузи</a>
+            </li>
+          </ul>
+          <div class="user-catalog-item__country">
+            <p class="user-catalog-item__subheading">хочет посетить:</p>
+            <ul class="user-catalog-item__countries-list users-contries-list">
+              <li class="users-contries-list__country users-contries-list__country--sri-lanka">Шри Ланка</li>
+              <li class="users-contries-list__country users-contries-list__country--thailand">Тайланд</li>
+              <li class="users-contries-list__country users-contries-list__country--seychelles">Сейшелы</li>
+            </ul>
+          </div>
+          <div class="user-catalog-item__transport">
+            <p class="user-catalog-item__subheading">транспорт:</p>
+            <ul class="user-catalog-item__transport-list transport">
+              <li class="transport__button transport__button--plane transport__button--checked">
+                <span class="visually-hidden">На самолете, активно</span>
+              </li>
+              <li class="transport__button transport__button--bus">
+                <span class="visually-hidden">На автобусе, неактивно</span>
+              </li>
+              <li class="transport__button transport__button--bike">
+                <span class="visually-hidden">На велосипеде, неактивно</span>
+              </li>
+              <li class="transport__button transport__button--walk">
+                <span class="visually-hidden">Пешком, неактивно</span>
+              </li>
+            </ul>
+          </div>
+          <div class="user-catalog-item__level level">
+            <p class="level__text">левел:</p>
+            <p class="level__value">99</p>
+          </div>
+          <a class="user-catalog-item__button button-round" href="#">Позвать</a>
+        </li>
+        <li class="user-catalog__item user-catalog-item">
+          <div class="user-catalog-item__header">
+            <a class="user-catalog-item__photo" href="#">
+              <img src="https://via.placeholder.com/150x150" alt="Фото пользователя">
+            </a>
+            <a class="user-catalog-item__name" href="#">Петя Демин</a>
+            <div class="user-catalog-item__likes likes">
+              <label class="likes__amount">
+                <input class="likes__button" type="checkbox" aria-label="лайк">1500
+              </label>
+            </div>
+            <span class="user-catalog-item__status status status--offline visually-hidden">офлайн</span>
+          </div>
+          <ul class="user-catalog-item__tag-list tag-list">
+            <li class="tag-list__tag">
+              <a href="#">#бургер</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#бар</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#футбол</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#концерт</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#крафт</a>
+            </li>
+          </ul>
+          <div class="user-catalog-item__country">
+            <p class="user-catalog-item__subheading">хочет посетить:</p>
+            <ul class="user-catalog-item__countries-list users-contries-list">
+              <li class="users-contries-list__country users-contries-list__country--belgium">Бельгия</li>
+              <li class="users-contries-list__country users-contries-list__country--czech">Чехия</li>
+            </ul>
+          </div>
+          <div class="user-catalog-item__transport">
+            <p class="user-catalog-item__subheading">транспорт:</p>
+            <ul class="user-catalog-item__transport-list transport">
+              <li class="transport__button transport__button--plane transport__button--checked">
+                <span class="visually-hidden">На самолете, активно</span>
+              </li>
+              <li class="transport__button transport__button--bus transport__button--checked">
+                <span class="visually-hidden">На автобусе, активно</span>
+              </li>
+              <li class="transport__button transport__button--bike">
+                <span class="visually-hidden">На велосипеде, неактивно</span>
+              </li>
+              <li class="transport__button transport__button--walk transport__button--checked">
+                <span class="visually-hidden">Пешком, активно</span>
+              </li>
+            </ul>
+          </div>
+          <div class="user-catalog-item__level level">
+            <p class="level__text">левел:</p>
+            <p class="level__value">80</p>
+          </div>
+          <a class="user-catalog-item__button button-round" href="#">Позвать</a>
+        </li>
+        <li class="user-catalog__item user-catalog-item">
+          <div class="user-catalog-item__header">
+            <a class="user-catalog-item__photo" href="#">
+              <img src="https://via.placeholder.com/150x150" alt="Фото пользователя">
+            </a>
+            <a class="user-catalog-item__name" href="#">Марк Смолов</a>
+            <div class="user-catalog-item__likes likes">
+              <label class="likes__amount">
+                <input class="likes__button" type="checkbox" aria-label="лайк">170
+              </label>
+            </div>
+            <span class="user-catalog-item__status status status--offline visually-hidden">офлайн</span>
+          </div>
+          <ul class="user-catalog-item__tag-list tag-list">
+            <li class="tag-list__tag">
+              <a href="#">#рэп</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#тату</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#хайпбист</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#кроссовки</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#суприм</a>
+            </li>
+          </ul>
+          <div class="user-catalog-item__country">
+            <p class="user-catalog-item__subheading">хочет посетить:</p>
+            <ul class="user-catalog-item__countries-list users-contries-list">
+              <li class="users-contries-list__country users-contries-list__country--usa">США</li>
+              <li class="users-contries-list__country users-contries-list__country--australia">Австралия</li>
+              <li class="users-contries-list__country users-contries-list__country--dominica">Доминика</li>
+            </ul>
+          </div>
+          <div class="user-catalog-item__transport">
+            <p class="user-catalog-item__subheading">транспорт:</p>
+            <ul class="user-catalog-item__transport-list transport">
+              <li class="transport__button transport__button--plane transport__button--checked">
+                <span class="visually-hidden">На самолете, активно</span>
+              </li>
+              <li class="transport__button transport__button--bus">
+                <span class="visually-hidden">На автобусе, неактивно</span>
+              </li>
+              <li class="transport__button transport__button--bike transport__button--checked">
+                <span class="visually-hidden">На велосипеде, активно</span>
+              </li>
+              <li class="transport__button transport__button--walk">
+                <span class="visually-hidden">Пешком, неактивно</span>
+              </li>
+            </ul>
+          </div>
+          <div class="user-catalog-item__level level">
+            <p class="level__text">левел:</p>
+            <p class="level__value">25</p>
+          </div>
+          <a class="user-catalog-item__button button-round" href="#">Позвать</a>
+        </li>
+        <li class="user-catalog__item user-catalog-item">
+          <div class="user-catalog-item__header">
+            <a class="user-catalog-item__photo" href="#">
+              <img src="https://via.placeholder.com/150x150" alt="Фото пользователя">
+            </a>
+            <a class="user-catalog-item__name" href="#">Лариса Роговая</a>
+            <div class="user-catalog-item__likes likes">
+              <label class="likes__amount">
+                <input class="likes__button" type="checkbox" aria-label="лайк">23
+              </label>
+            </div>
+            <span class="user-catalog-item__status status status--offline visually-hidden">офлайн</span>
+          </div>
+          <ul class="user-catalog-item__tag-list tag-list">
+            <li class="tag-list__tag">
+              <a href="#">#образование</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#карьера</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#учеба</a>
+            </li>
+            <li class="tag-list__tag">
+              <a href="#">#линкедин</a>
+            </li>
+          </ul>
+          <div class="user-catalog-item__country">
+            <p class="user-catalog-item__subheading">хочет посетить:</p>
+            <ul class="user-catalog-item__countries-list users-contries-list">
+              <li class="users-contries-list__country users-contries-list__country--great-britain">Великобритания</li>
+              <li class="users-contries-list__country users-contries-list__country--germany">Германия</li>
+            </ul>
+          </div>
+          <div class="user-catalog-item__transport">
+            <p class="user-catalog-item__subheading">транспорт:</p>
+            <ul class="user-catalog-item__transport-list transport">
+              <li class="transport__button transport__button--plane transport__button--checked">
+                <span class="visually-hidden">На самолете, активно</span>
+              </li>
+              <li class="transport__button transport__button--bus transport__button--checked">
+                <span class="visually-hidden">На автобусе, активно</span>
+              </li>
+              <li class="transport__button transport__button--bike">
+                <span class="visually-hidden">На велосипеде, неактивно</span>
+              </li>
+              <li class="transport__button transport__button--walk">
+                <span class="visually-hidden">Пешком, неактивно</span>
+              </li>
+            </ul>
+          </div>
+          <div class="user-catalog-item__level level">
+            <p class="level__text">левел:</p>
+            <p class="level__value">50</p>
+          </div>
+          <a class="user-catalog-item__button button-round" href="#">Позвать</a>
+        </li>
+      </ul>
+      <a class="user-catalog__expand" href="#">Показать еще</a>
+      <div class="user-catalog__swipe">
+        <a class="user-catalog__arrow user-catalog__arrow--previous" aria-label="Предыдущая страница"></a>
+        <a class="user-catalog__arrow user-catalog__arrow--next" aria-label="Следующая страница"></a>
+      </div>
+    </section>
+  </main>
+  <footer class="page-footer">
+    <a class="page-footer__logo logo">
+      <img src="https://via.placeholder.com/150x150" alt="Логотип Погнали">
+    </a>
+    <div class="page-footer__social social social--footer">
+      <a class="social__icon social__icon--facebook social__icon--footer" href="#"
+        aria-label="Наша страница в  Facebook"></a>
+      <a class="social__icon social__icon--vkontakte social__icon--footer" href="#"
+        aria-label="Наша страница Вконтакте"></a>
+      <a class="social__icon social__icon--instagram social__icon--footer" href="#"
+        aria-label="Наша страница в Instagram"></a>
+    </div>
+    <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+      <p class="copyright__text">Разработано</p>
+      <p class="copyright__label"></p>
+    </a>
+  </footer>
+</body>
+
 </html>
