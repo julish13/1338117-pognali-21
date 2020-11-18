@@ -31,15 +31,18 @@
       <a class="page-header__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
     </div>
     <div class="social social--header">
-      <a class="social__icon social__icon--facebook" href="#" aria-label="Наша страница в  Facebook"></a>
-      <a class="social__icon social__icon--vkontakte" href="#" aria-label="Наша страница Вконтакте"></a>
-      <a class="social__icon social__icon--instagram" href="#" aria-label="Наша страница в Instagram"></a>
+      <a class="social__icon social__icon--facebook social__icon--header" href="#"
+      aria-label="Наша страница в  Facebook"></a>
+      <a class="social__icon social__icon--vkontakte social__icon--header" href="#"
+      aria-label="Наша страница Вконтакте"></a>
+      <a class="social__icon social__icon--instagram social__icon--header" href="#"
+      aria-label="Наша страница в Instagram"></a>
     </div>
   </header>
   <main>
     <h1 class="visually-hidden">Приложение для совместных путешествий Погнали</h1>
     <section class="promo">
-      <h2 class="promo__heading">В&nbsp;путешествие с&nbsp;крутыми попутчиками!</h2>
+      <h2 class="promo__heading main-heading">В&nbsp;путешествие с&nbsp;крутыми попутчиками!</h2>
       <blockquote class="promo__review">
         <p>&laquo;Лучшее приложение, что я&nbsp;видел в&nbsp;жизни!&raquo;</p>
         <cite>Мурат Эльтазин главный редактор газеты &laquo;гаджетлайф&raquo;</cite>
@@ -61,146 +64,146 @@
         А&nbsp;если найдете кого-то близкого по&nbsp;духу&nbsp;&mdash; скорее зовите в&nbsp;совместный трип!
       </p>
     </section>
-    <section class="countries-promo main-index__countries">
-      <h2 class="main-index__subheading">Направления</h2>
-      <p class="countries-promo__description">
+    <section class="countries">
+      <h2 class="index-subheading countries__subheading">Направления</h2>
+      <p class="countries__description">
         Мы&nbsp;не&nbsp;продаем туры и&nbsp;ничего не&nbsp;рекламируем. Люди сами пишут о&nbsp;странах, куда
         хотели&nbsp;бы отправиться и&nbsp;чем можно там заняться.
       </p>
-      <div class="countries-promo__list">
-        <article class="countries-promo__item country country--thailand">
+      <ul class="countries__list">
+        <li class="countries__item country country--thailand">
           <img class="country__photo" src="https://via.placeholder.com/150x150" alt="Фото тайского побережья">
           <h3 class="country__name">
             <a href="">Таиланд</a>
           </h3>
           <p class="country__description">Джунгли зовут!</p>
-          <p class="country__users-promo">
-            <a href="" aria-describedby="количество возможных попутчиков">18321</a>
-          </p>
-        </article>
-        <article class="countries-promo__item country country--france">
+          <p class="country__users"><span class="visually-hidden">количество возможных попутчиков</span>18321</p>
+        </li>
+        <li class="countries__item country country--france">
           <img class="country__photo" src="https://via.placeholder.com/150x150" alt="Фото Парижа">
           <h3 class="country__name">
             <a href="">Франция</a>
           </h3>
           <p class="country__description">Трэ бьен, манифик!</p>
-          <p class="country__users-promo">
-            <a href="" aria-describedby="количество возможных попутчиков">12518</a>
-          </p>
-        </article>
-        <article class="countries-promo__item country country--czech">
+          <p class="country__users"><span class="visually-hidden">количество возможных попутчиков</span>12518</p>
+        </li>
+        <li class="countries__item country country--czech">
           <img class="country__photo" src="https://via.placeholder.com/150x150" alt="Фото Влтавы">
           <h3 class="country__name">
             <a href="">Чехия</a>
           </h3>
           <p class="country__description">Закоулки старой Европы</p>
-          <p class="country__users-promo">
-            <a href="" aria-describedby="количество возможных попутчиков">5326</a>
-          </p>
-        </article>
-      </div>
-      <a class="countries-promo__link button-square" href="form.html">Показать все</a>
+          <p class="country__users"><span class="visually-hidden">количество возможных попутчиков</span>5326</p>
+        </li>
+      </ul>
+      <a class="countries__button button-square" href="form.html">Показать все</a>
     </section>
-    <section class="users-promo">
-      <h2 class="users-promo__subheading">Попутчики</h2>
-      <p class="users-promo__description">
+    <section class="users">
+      <h2 class="users__subheading">Попутчики</h2>
+      <p class="users__description">
         Все мы&nbsp;индивидуальны и&nbsp;у&nbsp;каждого свой взгляд на&nbsp;идеальный отдых. Одному нужен пляж
         и&nbsp;коктейль, а&nbsp;другому маршрут для хайкинга.
       </p>
-      <p class="users-promo__description">Теперь можно легко найти единомышленников!</p>
-      <div class="users-promo__list">
-        <article class="users-promo__item user">
-          <p class="user__level">99 level</p>
-          <a class="user__photo" href="#">
-            <img src="https://via.placeholder.com/150x150" alt="Фото девушки в бассейне">
+      <p class="users__description">Теперь можно легко найти единомышленников!</p>
+      <ul class="users__list">
+        <li class="users__item user-item">
+          <div class="user-item__level level">
+            <p class="level__value">99</p>
+            <p class="level__text">level</p>
+          </div>
+          <a class="user-item__photo" href="#">
+            <img src="https://via.placeholder.com/150x150" alt="Фото пользователя">
           </a>
-          <ul class="user__countries-promo-list">
-            <li class="user__country user__country--sri-lanka"><a href="#" aria-label="Шри Ланка"></a></li>
-            <li class="user__country user__country--thailand"><a href="#" aria-label="Тайланд"></a></li>
-            <li class="user__country user__country--seychelles"><a href="#" aria-label="Сейшелы"></a></li>
+          <ul class="user-item__countries-list users-contries-list">
+            <li class="users-contries-list__country users-contries-list__country--sri-lanka">Шри Ланка</li>
+            <li class="users-contries-list__country users-contries-list__country--thailand">Тайланд</li>
+            <li class="users-contries-list__country users-contries-list__country--seychelles">Сейшелы</li>
           </ul>
-          <span class="user__status user__status--offline" aria-label="офлайн"></span>
-          <a class="user__name" href="#">Таня Фирсова</a>
-          <ul class="user__tag-list">
-            <li class="user__tag">
+          <span class="user-item__status status status--offline visually-hidden">офлайн</span>
+          <h3><a class="user-item__name" href="#">Таня Фирсова</a></h3>
+          <ul class="user-item__tag-list tag-list">
+            <li class="tag-list__tag">
               <a href="#">#ЗОЖ</a>
             </li>
-            <li class="user__tag">
+            <li class="tag-list__tag">
               <a href="#">#ПП</a>
             </li>
-            <li class="user__tag">
+            <li class="tag-list__tag">
               <a href="#">#Фитнес</a>
             </li>
-            <li class="user__tag">
+            <li class="tag-list__tag">
               <a href="#">#пляж</a>
             </li>
-            <li class="user__tag">
+            <li class="tag-list__tag">
               <a href="#">#авокадо</a>
             </li>
-            <li class="user__tag">
+            <li class="tag-list__tag">
               <a href="#">#смузи</a>
             </li>
           </ul>
-          <ul class="user__travel-ways-list">
-            <li class="user__travel-way user__travel-way--plane user__travel-way--checked">
-              <a href="#" aria-label="На самолете" role="checkbox" aria-checked="true"></a>
+          <ul class="user-item__transport transport">
+            <li class="transport__button transport__button--plane transport__button--checked">
+              <span class="visually-hidden">На самолете, активно</span>
             </li>
-            <li class="user__travel-way user__travel-way--bus">
-              <a href="#" aria-label="На автобусе" role="checkbox" aria-checked="false"></a>
+            <li class="transport__button transport__button--bus">
+              <span class="visually-hidden">На автобусе, неактивно</span>
             </li>
-            <li class="user__travel-way user__travel-way--bike">
-              <a href="#" aria-label="На велосипеде" role="checkbox" aria-checked="false"></a>
+            <li class="transport__button transport__button--bike">
+              <span class="visually-hidden">На велосипеде, неактивно</span>
             </li>
-            <li class="user__travel-way user__travel-way--walk">
-              <a href="#" aria-label="Пешком" role="checkbox" aria-checked="false"></a>
+            <li class="transport__button transport__button--walk">
+              <span class="visually-hidden">Пешком, неактивно</span>
             </li>
           </ul>
-        </article>
-        <article class="users-promo__item user">
-          <p class="user__level">80 level</p>
-          <a class="user__photo" href="#">
-            <img src="https://via.placeholder.com/150x150" alt="Портрет мужчины зимой на природе">
+        </li>
+        <li class="users__item user-item">
+          <div class="user-item__level level">
+            <p class="level__value">80</p>
+            <p class="level__text">level</p>
+          </div>
+          <a class="user-item__photo" href="#">
+            <img src="https://via.placeholder.com/150x150" alt="Фото пользователя">
           </a>
-          <ul class="user__countries-promo-list">
-            <li class="user__country user__country--belgium"><a href="#" aria-label="Бельгия"></a></li>
-            <li class="user__country user__country--czech"><a href="#" aria-label="Чехия"></a></li>
+          <ul class="user-item__countries-list users-contries-list">
+            <li class="users-contries-list__country users-contries-list__country--belgium">Бельгия</li>
+            <li class="users-contries-list__country users-contries-list__country--czech">Чехия</li>
           </ul>
-          <span class="user__status user__status--online" aria-label="онлайн"></span>
-          <a class="user__name" href="#">Петя Демин</a>
-          <ul class="user__tag-list">
-            <li class="user__tag">
+          <span class="user-item__status status status--online visually-hidden">онлайн</span>
+          <h3><a class="user-item__name" href="#">Петя Демин</a></h3>
+          <ul class="user-item__tag-list tag-list">
+            <li class="tag-list__tag">
               <a href="#">#бургер</a>
             </li>
-            <li class="user__tag">
+            <li class="tag-list__tag">
               <a href="#">#бар</a>
             </li>
-            <li class="user__tag">
+            <li class="tag-list__tag">
               <a href="#">#футбол</a>
             </li>
-            <li class="user__tag">
+            <li class="tag-list__tag">
               <a href="#">#концерт</a>
             </li>
-            <li class="user__tag">
+            <li class="tag-list__tag">
               <a href="#">#крафт</a>
             </li>
           </ul>
-          <ul class="user__travel-ways-list">
-            <li class="user__travel-way user__travel-way--plane user__travel-way--checked">
-              <a href="#" aria-label="На самолете" role="checkbox" aria-checked="true"></a>
+          <ul class="user-item__transport transport">
+            <li class="transport__button transport__button--plane transport__button--checked">
+              <span class="visually-hidden">На самолете, активно</span>
             </li>
-            <li class="user__travel-way user__travel-way--bus user__travel-way--checked">
-              <a href="#" aria-label="На автобусе" role="checkbox" aria-checked="true"></a>
+            <li class="transport__button transport__button--bus transport__button--checked">
+              <span class="visually-hidden">На автобусе, активно</span>
             </li>
-            <li class="user__travel-way user__travel-way--bike">
-              <a href="#" aria-label="На велосипеде" role="checkbox" aria-checked="false"></a>
+            <li class="transport__button transport__button--bike">
+              <span class="visually-hidden">На велосипеде, неактивно</span>
             </li>
-            <li class="user__travel-way user__travel-way--walk user__travel-way--checked">
-              <a href="#" aria-label="Пешком" role="checkbox" aria-checked="true"></a>
+            <li class="transport__button transport__button--walk transport__button--checked">
+              <span class="visually-hidden">Пешком, активно</span>
             </li>
           </ul>
-        </article>
-      </div>
-      <a class="users-promo__link button-square" href="catalog.html">Показать всеx</a>
+        </li>
+      </ul>
+      <a class="users__link button-square" href="catalog.html">Показать всеx</a>
     </section>
     <section class="pricing">
       <h2 class="visually-hidden">Тарифные планы</h2>
@@ -240,7 +243,7 @@
       <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
       <div class="contacts__location">
         <p class="contacts__address">ул. Большая Конюшенная, 19/8</p>
-        <a class="contacts__map-link button-square" href="https://goo.gl/maps/8R1juvv1aPKCmT4NA">Проложить маршрут</a>
+        <a class="contacts__link button-square" href="https://goo.gl/maps/8R1juvv1aPKCmT4NA">Проложить маршрут</a>
         <div class="contacts__map"></div>
       </div>
     </section>
@@ -250,13 +253,16 @@
       <img src="https://via.placeholder.com/150x150" alt="Логотип Погнали">
     </a>
     <div class="page-footer__social social social--footer">
-      <a class="social__icon social__icon--facebook" href="#" aria-label="Наша страница в  Facebook"></a>
-      <a class="social__icon social__icon--vkontakte" href="#" aria-label="Наша страница Вконтакте"></a>
-      <a class="social__icon social__icon--instagram" href="#" aria-label="Наша страница в Instagram"></a>
+      <a class="social__icon social__icon--facebook social__icon--footer" href="#"
+      aria-label="Наша страница в  Facebook"></a>
+      <a class="social__icon social__icon--vkontakte social__icon--footer" href="#"
+      aria-label="Наша страница Вконтакте"></a>
+      <a class="social__icon social__icon--instagram social__icon--footer" href="#"
+      aria-label="Наша страница в Instagram"></a>
     </div>
-    <a class="copyright">
+    <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
       <p class="copyright__text">Разработано</p>
-      <p class="copyright__label" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy"></p>
+      <p class="copyright__label"></p>
     </a>
   </footer>
 </body>
