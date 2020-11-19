@@ -1,18 +1,16 @@
 $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1440px;
-$mobile-width-only: 767px;
-$mobile-and-tablet-width-only: 1439px;
+
 
 $mobile-max: (
-  max-width: $mobile-width-only,
+  max-width: $mobile-width - 1px,
 );
+
 $tablet-min: (
   min-width: $tablet-width,
 );
-$tablet-max: (
-  max-width: $mobile-and-tablet-width-only,
-);
+
 $desktop-min: (
   min-width: $desktop-width,
 );
