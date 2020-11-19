@@ -1,0 +1,23 @@
+.todo-list {
+  color: $basic-blue;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.todo-list__item {
+  &--choose {
+    background-color: $primary-orange;
+  }
+
+  &--research {
+    background-color: $secondary-orange;
+  }
+
+  &--find {
+    background-color: $secondary-yellow;
+  }
+
+  &--travel {
+    background-color: $primary-yellow;
+  }
+}

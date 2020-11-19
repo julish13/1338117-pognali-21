@@ -9,11 +9,11 @@
 
 <body class="page__body">
   <header class="page-header">
-    <a class="page-header__logo logo">
-      <img src="https://via.placeholder.com/150x150" alt="Логотип Погнали">
-    </a>
     <nav class="main-nav">
-      <button class="main-nav__state" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <a class="main-nav__logo logo">
+        <img src="https://via.placeholder.com/150x150" alt="Логотип Погнали">
+      </a>
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="site-nav">
         <li class="site-nav__item">
           <a class="site-nav__link" href="#">О сервисе</a>
@@ -25,22 +25,25 @@
           <a class="site-nav__link" href="catalog.html">Попутчики</a>
         </li>
       </ul>
+      <a class="main-nav__login" href="#">Авторизация</a>
+      <div class="main-nav__contacts nav-contacts">
+        <a class="nav-contacts__link" href="tel:88005558628">8 800 555-86-28</a>
+        <a class="nav-contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </div>
+      <div class="main-nav__social social social--header">
+        <a class="social__icon social__icon--facebook social__icon--header" href="#"
+          aria-label="Наша страница в  Facebook"></a>
+        <a class="social__icon social__icon--vkontakte social__icon--header" href="#"
+          aria-label="Наша страница Вконтакте"></a>
+        <a class="social__icon social__icon--instagram social__icon--header" href="#"
+          aria-label="Наша страница в Instagram"></a>
+      </div>
     </nav>
-    <a class="page-header__login" href="#"></a>
-    <div class="page-header__contacts">
-      <a class="page-header__phone" href="tel:88005558628">8 800 555-86-28</a>
-      <a class="page-header__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-    </div>
-    <div class="social social--header">
-      <a class="social__icon social__icon--facebook social__icon--header" href="#"
-        aria-label="Наша страница в  Facebook"></a>
-      <a class="social__icon social__icon--vkontakte social__icon--header" href="#"
-        aria-label="Наша страница Вконтакте"></a>
-      <a class="social__icon social__icon--instagram social__icon--header" href="#"
-        aria-label="Наша страница в Instagram"></a>
-    </div>
   </header>
   <main class="main-form">
+    <a class="main-nav__logo logo">
+      <img src="https://via.placeholder.com/150x150" alt="Логотип Погнали">
+    </a>
     <h1 class="main-form__heading main-heading">Направления</h1>
     <section class="profile">
       <h2 class="visually-hidden">Редактирование профиля</h2>

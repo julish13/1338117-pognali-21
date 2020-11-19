@@ -1,0 +1,15 @@
+.level {
+  &--dark {
+    background-color: rgba($basic-black, 0.6);
+    color: $basic-white;
+  }
+}
+
+.level__value {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.level__text {
+  font-size: 14px;
+}

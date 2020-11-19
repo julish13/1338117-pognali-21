@@ -1,0 +1,24 @@
+.country {
+  font-weight: 500;
+}
+
+.country__wrapper {
+  background-color: $basic-white;
+}
+
+.country__name {
+  color: $basic-black;
+}
+
+.country__link {
+  color: inherit;
+}
+
+.country__description {
+  opacity: 0.3;
+}
+
+.country__users {
+  color: $basic-blue;
+  opacity: 0.3;
+}

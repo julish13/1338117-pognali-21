@@ -9,10 +9,10 @@
 
 <body class="page__body">
   <header class="page-header">
-    <a class="page-header__logo logo">
-      <img src="https://via.placeholder.com/150x150" alt="Логотип Погнали">
-    </a>
     <nav class="main-nav">
+      <a class="main-nav__logo logo">
+        <img src="https://via.placeholder.com/150x150" alt="Логотип Погнали">
+      </a>
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="site-nav">
         <li class="site-nav__item">
@@ -25,43 +25,43 @@
           <a class="site-nav__link" href="catalog.html">Попутчики</a>
         </li>
       </ul>
+      <a class="main-nav__login" href="#">Авторизация</a>
+      <div class="main-nav__contacts nav-contacts">
+        <a class="nav-contacts__link" href="tel:88005558628">8 800 555-86-28</a>
+        <a class="nav-contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </div>
+      <div class="main-nav__social social social--header">
+        <a class="social__icon social__icon--facebook social__icon--header" href="#"
+          aria-label="Наша страница в  Facebook"></a>
+        <a class="social__icon social__icon--vkontakte social__icon--header" href="#"
+          aria-label="Наша страница Вконтакте"></a>
+        <a class="social__icon social__icon--instagram social__icon--header" href="#"
+          aria-label="Наша страница в Instagram"></a>
+      </div>
     </nav>
-    <a class="page-header__login" href="#"></a>
-    <div class="page-header__contacts">
-      <a class="page-header__phone" href="tel:88005558628">8 800 555-86-28</a>
-      <a class="page-header__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-    </div>
-    <div class="social social--header">
-      <a class="social__icon social__icon--facebook social__icon--header" href="#"
-        aria-label="Наша страница в  Facebook"></a>
-      <a class="social__icon social__icon--vkontakte social__icon--header" href="#"
-        aria-label="Наша страница Вконтакте"></a>
-      <a class="social__icon social__icon--instagram social__icon--header" href="#"
-        aria-label="Наша страница в Instagram"></a>
-    </div>
   </header>
   <main>
     <h1 class="visually-hidden">Приложение для совместных путешествий Погнали</h1>
     <section class="promo">
       <h2 class="promo__heading main-heading">В&nbsp;путешествие с&nbsp;крутыми попутчиками!</h2>
       <blockquote class="promo__review">
-        <p>&laquo;Лучшее приложение, что я&nbsp;видел в&nbsp;жизни!&raquo;</p>
-        <cite>Мурат Эльтазин главный редактор газеты &laquo;гаджетлайф&raquo;</cite>
+        <p class="promo__quote">&laquo;Лучшее приложение, что я&nbsp;видел в&nbsp;жизни!&raquo;</p>
+        <cite class="promo__author">Мурат Эльтазин главный редактор газеты &laquo;гаджетлайф&raquo;</cite>
       </blockquote>
       <ol class="promo__todo-list todo-list">
-        <li class="todo-list__item">Выберите направление</li>
-        <li class="todo-list__item">Изучите идеи путешественников</li>
-        <li class="todo-list__item">Находите тех, кто похож на вас</li>
-        <li class="todo-list__item">Путешествуйте вместе!</li>
+        <li class="todo-list__item todo-list__item--choose">Выберите направление</li>
+        <li class="todo-list__item todo-list__item--research">Изучите идеи путешественников</li>
+        <li class="todo-list__item todo-list__item--find">Находите тех, кто похож на вас</li>
+        <li class="todo-list__item todo-list__item--travel">Путешествуйте вместе!</li>
       </ol>
     </section>
     <section class="about">
-      <h2 class="about__subheading">О сервисе</h2>
+      <h2 class="about__subheading index-subheading">О сервисе</h2>
       <p class="about__description">
         Любое путешествие веселее с&nbsp;попутчиками, которые на&nbsp;одной волне с&nbsp;тобой! Делитесь своими идеями
         путешествий и&nbsp;черпайте вдохновение в&nbsp;чужих.
       </p>
-      <p class="about__description">
+      <p class="about__description about__description--bold">
         А&nbsp;если найдете кого-то близкого по&nbsp;духу&nbsp;&mdash; скорее зовите в&nbsp;совместный трип!
       </p>
     </section>
@@ -74,41 +74,47 @@
       <ul class="countries__list">
         <li class="countries__item country country--thailand">
           <img class="country__photo" src="https://via.placeholder.com/150x150" alt="Фото тайского побережья">
-          <h3 class="country__name">
-            <a href="">Таиланд</a>
-          </h3>
-          <p class="country__description">Джунгли зовут!</p>
-          <p class="country__users"><span class="visually-hidden">количество возможных попутчиков</span>18321</p>
+          <div class="country__wrapper">
+            <h3 class="country__name">
+              <a class="country__link" href="">Таиланд</a>
+            </h3>
+            <p class="country__description">Джунгли зовут!</p>
+            <p class="country__users"><span class="visually-hidden">количество возможных попутчиков</span>18321</p>
+          </div>
         </li>
         <li class="countries__item country country--france">
           <img class="country__photo" src="https://via.placeholder.com/150x150" alt="Фото Парижа">
-          <h3 class="country__name">
-            <a href="">Франция</a>
-          </h3>
-          <p class="country__description">Трэ бьен, манифик!</p>
-          <p class="country__users"><span class="visually-hidden">количество возможных попутчиков</span>12518</p>
+          <div class="country__wrapper">
+            <h3 class="country__name">
+              <a class="country__link" href="">Франция</a>
+            </h3>
+            <p class="country__description">Трэ бьен, манифик!</p>
+            <p class="country__users"><span class="visually-hidden">количество возможных попутчиков</span>12518</p>
+          </div>
         </li>
         <li class="countries__item country country--czech">
           <img class="country__photo" src="https://via.placeholder.com/150x150" alt="Фото Влтавы">
-          <h3 class="country__name">
-            <a href="">Чехия</a>
-          </h3>
-          <p class="country__description">Закоулки старой Европы</p>
-          <p class="country__users"><span class="visually-hidden">количество возможных попутчиков</span>5326</p>
+          <div class="country__wrapper">
+            <h3 class="country__name">
+              <a class="country__link" href="">Чехия</a>
+            </h3>
+            <p class="country__description">Закоулки старой Европы</p>
+            <p class="country__users"><span class="visually-hidden">количество возможных попутчиков</span>5326</p>
+          </div>
         </li>
       </ul>
       <a class="countries__button button-square" href="form.html">Показать все</a>
     </section>
     <section class="users">
-      <h2 class="users__subheading">Попутчики</h2>
+      <h2 class="users__subheading index-subheading">Попутчики</h2>
       <p class="users__description">
         Все мы&nbsp;индивидуальны и&nbsp;у&nbsp;каждого свой взгляд на&nbsp;идеальный отдых. Одному нужен пляж
         и&nbsp;коктейль, а&nbsp;другому маршрут для хайкинга.
       </p>
-      <p class="users__description">Теперь можно легко найти единомышленников!</p>
+      <p class="users__description users__description--bold">Теперь можно легко найти единомышленников!</p>
       <ul class="users__list">
         <li class="users__item user-item">
-          <div class="user-item__level level">
+          <div class="user-item__level level level--dark">
             <p class="level__value">99</p>
             <p class="level__text">level</p>
           </div>
@@ -123,23 +129,23 @@
           <span class="user-item__status status status--offline visually-hidden">офлайн</span>
           <h3><a class="user-item__name" href="#">Таня Фирсова</a></h3>
           <ul class="user-item__tag-list tag-list">
-            <li class="tag-list__tag">
-              <a href="#">#ЗОЖ</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#ЗОЖ</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#ПП</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#ПП</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#Фитнес</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#Фитнес</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#пляж</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#пляж</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#авокадо</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#авокадо</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#смузи</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#смузи</a>
             </li>
           </ul>
           <ul class="user-item__transport transport">
@@ -158,7 +164,7 @@
           </ul>
         </li>
         <li class="users__item user-item">
-          <div class="user-item__level level">
+          <div class="user-item__level level level--dark">
             <p class="level__value">80</p>
             <p class="level__text">level</p>
           </div>
@@ -172,20 +178,20 @@
           <span class="user-item__status status status--online visually-hidden">онлайн</span>
           <h3><a class="user-item__name" href="#">Петя Демин</a></h3>
           <ul class="user-item__tag-list tag-list">
-            <li class="tag-list__tag">
-              <a href="#">#бургер</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#бургер</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#бар</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#бар</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#футбол</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#футбол</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#концерт</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#концерт</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#крафт</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#крафт</a>
             </li>
           </ul>
           <ul class="user-item__transport transport">
@@ -208,7 +214,7 @@
     </section>
     <section class="pricing">
       <h2 class="visually-hidden">Тарифные планы</h2>
-      <p class="pricing__subheading">Добавьте свой профиль</p>
+      <p class="pricing__subheading index-subheading">Добавьте свой профиль</p>
       <ol class="pricing__price-list price-list">
         <li class="price-list__item">
           <p class="price-list__option">Базовое размещение</p>
@@ -227,7 +233,7 @@
     </section>
     <section class="feedback">
       <h2 class="visually-hidden">Авторизация и регистрация</h2>
-      <p class="feedback__subheading">Заинтересовались?</p>
+      <p class="feedback__subheading index-subheading">Заинтересовались?</p>
       <p class="feedback__description">
         Зарегистрируйтесь, это быстро и&nbsp;бесплатно! Уже зарегистрированы? Тогда скорее
         <a class="feedback__login">авторизуйтесь</a>.
@@ -240,11 +246,11 @@
     <section class="contacts">
       <h2 class="visually-hidden">Контакты</h2>
       <p class="contacts__intro">Остались вопросы? Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!</p>
-      <a class="contacts__phone" href="tel:88005558628">8 800 555-86-28</a>
-      <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      <a class="contacts__link contacts__link--phone" href="tel:88005558628">8 800 555-86-28</a>
+      <a class="contacts__link contacts__link--email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
       <div class="contacts__location">
         <p class="contacts__address">ул. Большая Конюшенная, 19/8</p>
-        <a class="contacts__link button-square" href="https://goo.gl/maps/8R1juvv1aPKCmT4NA">Проложить маршрут</a>
+        <a class="contacts__button button-square" href="https://goo.gl/maps/8R1juvv1aPKCmT4NA">Проложить маршрут</a>
         <div class="contacts__map"></div>
       </div>
     </section>

@@ -1,0 +1,11 @@
+.tag-list {
+  list-style: none;
+}
+
+.tag-list__item {
+  display: inline;
+}
+
+.tag-list__link {
+  color: $basic-grey-font;
+}
