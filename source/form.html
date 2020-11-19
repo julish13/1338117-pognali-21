@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -327,7 +328,7 @@
           </div>
           <a class="button-round planning__button planning__button--next" href="#step_2">Следующий шаг</a>
         </fieldset>
-        <fieldset class="planning__step planning-route route slider__slide">
+        <fieldset class="planning__step route slider__slide">
           <legend class="planning__subheading"><a id="step_2">Шаг 2. Маршрут</a></legend>
           <p class="planning__description">
             Укажите страны, которые вы&nbsp;хотели посетить. Это может быть одна или сразу несколько.
@@ -480,23 +481,23 @@
           <a class="button-round button-round--yellow planning__button" href="#step_3">Следующий шаг</a>
           <a class="planning__button planning__button--previous" href="#step_1">На шаг назад</a>
         </fieldset>
-        <fieldset class="planning__step planning__step--fun slider__slide">
+        <fieldset class="planning__step planning__step fun slider__slide">
           <legend class="planning__subheading"><a id="step_3">Шаг 3. Развлечения</a></legend>
           <p class="planning__description">
             Наконец, расскажите о&nbsp;своих планахвремяпровождения.
             Можно писать в&nbsp;свободной форме и&nbsp;ставить тэги.
           </p>
-          <div class="planning__textarea">
-            <label class="planning__label-country" for="bosnia_and_herzegovina_textarea">Босния и Герцеговина</label>
-            <textarea class="planning__fun" id="bosnia_and_herzegovina_textarea" placeholder="План действий"></textarea>
+          <div class="fun__country">
+            <label class="fun__title" for="bosnia_and_herzegovina_textarea">Босния и Герцеговина</label>
+            <textarea class="fun__textarea" id="bosnia_and_herzegovina_textarea" placeholder="План действий"></textarea>
           </div>
-          <div class="planning__textarea">
-            <label class="planning__label-country" for="czech">Чехия</label>
-            <textarea class="planning__fun" id="czech">
+          <div class="fun__country">
+            <label class="fun__title" for="czech">Чехия</label>
+            <textarea class="fun__textarea" id="czech">
               Пить пиво и&nbsp;лазить по&nbsp;старым замкам, наслаждаться архитектурой и&nbsp;вот это все.
             </textarea>
           </div>
-          <button class="button-round button-round--yellow planning__button" type="submit">Отправить</button>
+          <button class="button-round planning__button" type="submit">Отправить</button>
           <a class="planning__button planning__button--previous" href="#step_2">На шаг назад</a>
         </fieldset>
       </form>
