@@ -1,3 +1,15 @@
-.no-empty {
-  margin: 0;
+.select-country__input {
+  @include border;
+  background-color: inherit;
+  font-family: inherit;
+  color: inherit;
+  font-size: 14px;
+  line-height: 1.29;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &--add {
+    background-color: $grey-background-1;
+    border: none;
+  }
 }

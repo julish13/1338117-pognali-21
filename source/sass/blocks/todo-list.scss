@@ -7,18 +7,18 @@
 
 .todo-list__item {
   &--choose {
-    background-color: $primary-orange;
+    background-color: $orange-1;
   }
 
   &--research {
-    background-color: $secondary-orange;
+    background-color: $orange-2;
   }
 
   &--find {
-    background-color: $secondary-yellow;
+    background-color: $yellow-2;
   }
 
   &--travel {
-    background-color: $primary-yellow;
+    background-color: $yellow-1;
   }
 }

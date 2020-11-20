@@ -3,15 +3,30 @@
 
   &--dark {
     background-color: rgba($basic-black, 0.6);
-    color: $basic-white;
   }
 }
 
 .level__value {
   font-size: 24px;
   font-weight: 700;
+
+  &--promo {
+    color: $basic-white;
+  }
+
+  &--profile {
+    color: $basic-blue;
+    font-size: 38px;
+  }
 }
 
 .level__text {
-  font-size: 14px;
+  color: $basic-grey-font;
+  font-size: 18px;
+  font-weight: 400;
+
+  &--promo {
+    color: $basic-white;
+    font-size: 14px;
+  }
 }

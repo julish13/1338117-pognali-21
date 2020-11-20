@@ -1,3 +1,31 @@
-.no-empty {
-  margin: 0;
+.planning {
+  background-color: $grey-background-3;
+}
+
+.planning__states {
+  font-size: 0;
+}
+
+.planning__step {
+  background-color: $basic-white;
+  border: none;
+}
+
+.planning__subheading {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.planning__description {
+  color: $basic-grey-font;
+  font-weight: 400;
+}
+
+.planning__button {
+  color: inherit;
+  font-size: 17px;
+  line-height: 1.76;
+  font-weight: 700;
+  text-transform: uppercase;
 }
