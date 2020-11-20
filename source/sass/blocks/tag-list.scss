@@ -1,0 +1,12 @@
+.tag-list {
+  list-style: none;
+  line-height: 1;
+}
+
+.tag-list__item {
+  display: inline;
+}
+
+.tag-list__link {
+  color: $basic-grey-font;
+}

@@ -4,14 +4,15 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    <a class="page-header__logo logo">
-      <img src="https://via.placeholder.com/150x150" alt="Логотип Погнали">
-    </a>
     <nav class="main-nav">
+      <a class="main-nav__logo logo">
+        <img src="https://via.placeholder.com/150x150" alt="Логотип Погнали">
+      </a>
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="site-nav">
         <li class="site-nav__item">
@@ -24,20 +25,20 @@
           <a class="site-nav__link" href="catalog.html">Попутчики</a>
         </li>
       </ul>
+      <a class="main-nav__login" href="#"></a>
+      <div class="main-nav__contacts nav-contacts">
+        <a class="nav-contacts__link" href="tel:88005558628">8 800 555-86-28</a>
+        <a class="nav-contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </div>
+      <div class="main-nav__social social social--header">
+        <a class="social__icon social__icon--facebook social__icon--header" href="#"
+          aria-label="Наша страница в  Facebook"></a>
+        <a class="social__icon social__icon--vkontakte social__icon--header" href="#"
+          aria-label="Наша страница Вконтакте"></a>
+        <a class="social__icon social__icon--instagram social__icon--header" href="#"
+          aria-label="Наша страница в Instagram"></a>
+      </div>
     </nav>
-    <a class="page-header__login" href="#"></a>
-    <div class="page-header__contacts">
-      <a class="page-header__phone" href="tel:88005558628">8 800 555-86-28</a>
-      <a class="page-header__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-    </div>
-    <div class="social social--header">
-      <a class="social__icon social__icon--facebook social__icon--header" href="#"
-        aria-label="Наша страница в  Facebook"></a>
-      <a class="social__icon social__icon--vkontakte social__icon--header" href="#"
-        aria-label="Наша страница Вконтакте"></a>
-      <a class="social__icon social__icon--instagram social__icon--header" href="#"
-        aria-label="Наша страница в Instagram"></a>
-    </div>
   </header>
   <main class="main-catalog">
     <h1 class="main-heading main-catalog__heading">Попутчики</h1>
@@ -52,13 +53,13 @@
           <div class="filter-countries__dropdown filter-countries-dropdown">
             <div class="filter-countries-dropdown__lands-list">
               <input class="visually-hidden" type="checkbox" name="europe" id="europe" checked>
-              <label class="filter-countries__land-checkbox" for="europe">Европа</label>
+              <label class="filter-countries__checkbox" for="europe">Европа</label>
               <input class="visually-hidden" type="checkbox" name="asia" id="asia" checked>
-              <label class="filter-countries__land-checkbox" for="asia">Азия</label>
+              <label class="filter-countries__checkbox" for="asia">Азия</label>
               <input class="visually-hidden" type="checkbox" name="america" id="america" checked>
-              <label class="filter-countries__land-checkbox" for="america">Америка</label>
+              <label class="filter-countries__checkbox" for="america">Америка</label>
               <input class="visually-hidden" type="checkbox" name="islands" id="islands" checked>
-              <label class="filter-countries__land-checkbox" for="islands">Острова</label>
+              <label class="filter-countries__checkbox" for="islands">Острова</label>
             </div>
             <table class="filter-countries-dropdown__alphabet alphabet" aria-label="алфавит">
               <tr class="alphabet__row">
@@ -300,23 +301,23 @@
             <span class="user-catalog-item__status status status--offline visually-hidden">офлайн</span>
           </div>
           <ul class="user-catalog-item__tag-list tag-list">
-            <li class="tag-list__tag">
-              <a href="#">#ЗОЖ</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#ЗОЖ</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#ПП</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#ПП</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#Фитнес</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#Фитнес</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#пляж</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#пляж</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#авокадо</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#авокадо</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#смузи</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#смузи</a>
             </li>
           </ul>
           <div class="user-catalog-item__country">
@@ -364,20 +365,20 @@
             <span class="user-catalog-item__status status status--offline visually-hidden">офлайн</span>
           </div>
           <ul class="user-catalog-item__tag-list tag-list">
-            <li class="tag-list__tag">
-              <a href="#">#бургер</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#бургер</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#бар</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#бар</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#футбол</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#футбол</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#концерт</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#концерт</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#крафт</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#крафт</a>
             </li>
           </ul>
           <div class="user-catalog-item__country">
@@ -424,20 +425,20 @@
             <span class="user-catalog-item__status status status--offline visually-hidden">офлайн</span>
           </div>
           <ul class="user-catalog-item__tag-list tag-list">
-            <li class="tag-list__tag">
-              <a href="#">#рэп</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#рэп</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#тату</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#тату</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#хайпбист</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#хайпбист</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#кроссовки</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#кроссовки</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#суприм</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#суприм</a>
             </li>
           </ul>
           <div class="user-catalog-item__country">
@@ -485,17 +486,17 @@
             <span class="user-catalog-item__status status status--offline visually-hidden">офлайн</span>
           </div>
           <ul class="user-catalog-item__tag-list tag-list">
-            <li class="tag-list__tag">
-              <a href="#">#образование</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#образование</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#карьера</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#карьера</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#учеба</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#учеба</a>
             </li>
-            <li class="tag-list__tag">
-              <a href="#">#линкедин</a>
+            <li class="tag-list__item">
+              <a class="tag-list__link" href="#">#линкедин</a>
             </li>
           </ul>
           <div class="user-catalog-item__country">

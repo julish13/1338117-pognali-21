@@ -1,0 +1,11 @@
+.main-nav {
+  background-color: $basic-white;
+  color: $basic-blue;
+}
+
+.main-nav__login {
+  color: inherit;
+  line-height: 1.76;
+  font-weight: 700;
+  text-transform: uppercase;
+}
