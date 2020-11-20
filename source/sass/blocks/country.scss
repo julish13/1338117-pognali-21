@@ -8,6 +8,7 @@
 
 .country__name {
   color: $basic-black;
+  line-height: 1;
 }
 
 .country__link {
@@ -15,10 +16,12 @@
 }
 
 .country__description {
+  line-height: 1.12;
   opacity: 0.3;
 }
 
 .country__users {
   color: $basic-blue;
+  line-height: 1.25;
   opacity: 0.3;
 }
