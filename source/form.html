@@ -16,10 +16,10 @@
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="site-nav">
         <li class="site-nav__item">
-          <a class="site-nav__link" href="#">О сервисе</a>
+          <a class="site-nav__link" href="index.html">О сервисе</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="form.html">Направления</a>
+          <a class="site-nav__link" href="#">Направления</a>
         </li>
         <li class="site-nav__item">
           <a class="site-nav__link" href="catalog.html">Попутчики</a>
@@ -41,14 +41,11 @@
     </nav>
   </header>
   <main class="main-form">
-    <a class="main-nav__logo logo">
-      <img src="https://via.placeholder.com/150x150" alt="Логотип Погнали">
-    </a>
     <h1 class="main-form__heading main-heading">Направления</h1>
     <section class="profile">
       <h2 class="visually-hidden">Редактирование профиля</h2>
       <div class="profile__level level">
-        <p class="level__value">80</p>
+        <p class="level__value level__value--profile">80</p>
         <p class="level__text">level</p>
       </div>
       <img class="profile__avatar" src="https://via.placeholder.com/150x150" alt="Фото профиля">
@@ -129,7 +126,7 @@
           </div>
           <div class="planning-dates__children">
             <input class="visually-hidden" type=checkbox name="children" id="children" checked>
-            <label class="planning-dates__checkbox" for="children">Можно с детьми</label>
+            <label class="planning-dates__checkbox-label" for="children">Можно с детьми</label>
           </div>
           <div class="planning-dates__calendar calendar slider">
             <button class="calendar__swipe calendar__swipe--left slider__swipe slider__swipe--left" type="button"
@@ -349,7 +346,8 @@
             <input class="select-country__input" type="button" value="Выберите страну" id="any_country_select">
           </div>
           <div class="route__country select-country">
-            <input class="select-country__input" type="button" value="Добавить страну" id="add_country_select">
+            <input class="select-country__input select-country__input--add" type="button"
+            value="Добавить страну" id="add_country_select">
           </div>
 
           <div class="route__dropdown route-dropdown">
@@ -487,7 +485,7 @@
         <fieldset class="planning__step planning__step fun slider__slide">
           <legend class="planning__subheading"><a id="step_3">Шаг 3. Развлечения</a></legend>
           <p class="planning__description">
-            Наконец, расскажите о&nbsp;своих планахвремяпровождения.
+            Наконец, расскажите о&nbsp;своих планах времяпровождения.
             Можно писать в&nbsp;свободной форме и&nbsp;ставить тэги.
           </p>
           <div class="fun__country">

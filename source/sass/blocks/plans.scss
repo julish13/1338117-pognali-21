@@ -1,3 +1,21 @@
-.no-empty {
-  margin: 0;
+.plans {
+  background-color: $light-blue-background-1;
+}
+
+.plans__item {
+  background-color: $basic-white;
+  font-size: 14px;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.plans__title {
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 700;
+}
+
+.plans__edit {
+  color: rgba($basic-black, 0.3);
 }

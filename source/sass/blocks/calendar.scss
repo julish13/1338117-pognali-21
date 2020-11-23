@@ -1,3 +1,17 @@
-.no-empty {
-  margin: 0;
+.calendar__table {
+  font-size: 14px;
+  line-height: 1.29;
+  font-weight: 400;
+}
+
+.calendar__day {
+  font-weight: inherit;
+
+  &--weekend {
+    color: $orange-3;
+  }
+}
+
+.calendar__label {
+  color: rgba($basic-grey-font, 0.3);
 }
