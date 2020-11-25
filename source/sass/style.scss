@@ -3,13 +3,16 @@
 @import "global/font-face.scss";
 @import "global/mixins.scss";
 @import "global/variables.scss";
+@import "blocks/visually-hidden.scss";
+@import "blocks/button-square.scss";
+@import "blocks/button-round.scss";
+@import "blocks/slider.scss";
 @import "blocks/page.scss";
 @import "blocks/page-header.scss";
 @import "blocks/logo.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/site-nav.scss";
 @import "blocks/social.scss";
-@import "blocks/visually-hidden.scss";
 @import "blocks/promo.scss";
 @import "blocks/main-heading.scss";
 @import "blocks/todo-list.scss";
@@ -28,7 +31,6 @@
 @import "blocks/price-list.scss";
 @import "blocks/feedback.scss";
 @import "blocks/sign-up-form.scss";
-@import "blocks/button-square.scss";
 @import "blocks/contacts.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/copyright.scss";
@@ -38,7 +40,6 @@
 @import "blocks/filter-countries-dropdown.scss";
 @import "blocks/alphabet.scss";
 @import "blocks/dropdown-countries-list.scss";
-@import "blocks/button-round.scss";
 @import "blocks/filter-personality.scss";
 @import "blocks/filter-personality-field.scss";
 @import "blocks/level-filter.scss";
@@ -49,9 +50,9 @@
 @import "blocks/profile.scss";
 @import "blocks/profile-form.scss";
 @import "blocks/plans.scss";
+@import "blocks/planning-subheading.scss";
 @import "blocks/form-heading.scss";
 @import "blocks/planning.scss";
-@import "blocks/slider.scss";
 @import "blocks/planning-dates.scss";
 @import "blocks/planning-dates-option.scss";
 @import "blocks/calendar.scss";

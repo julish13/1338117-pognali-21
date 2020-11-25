@@ -11,21 +11,13 @@
   border: none;
 }
 
-.planning__subheading {
-  font-size: 20px;
-  line-height: 1;
-  font-weight: 700;
-}
-
 .planning__description {
   color: $basic-grey-font;
   font-weight: 400;
 }
 
 .planning__button {
-  color: inherit;
-  font-size: 17px;
   line-height: 1.76;
-  font-weight: 700;
+
   text-transform: uppercase;
 }
