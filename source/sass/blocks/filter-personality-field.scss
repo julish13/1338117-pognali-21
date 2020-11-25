@@ -1,3 +1,13 @@
-.no-empty {
-  margin: 0;
+.filter-personality-field__title {
+  font-size: 16px;
+  line-height: 1.12;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter-personality-field__label {
+  color: $basic-black;
+  font-size: 15px;
+  line-height: 1.33;
+  font-weight: 400;
 }

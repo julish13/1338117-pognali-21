@@ -1,3 +1,12 @@
-.no-empty {
-  margin: 0;
+.filter-countries {
+  border: none;
+  background-color: $grey-background-2;
+  color: $blue-background-1;
+  line-height: 1.12;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.filter-countries__label {
+  opacity: 0.3;
 }

@@ -1,3 +1,15 @@
 .users-contries-list {
   list-style: none;
 }
+
+.users-contries-list__country {
+  color: $basic-blue-light;
+  font-size: 15px;
+  line-height: 1.07;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &--no-text {
+    font-size: 0;
+  }
+}

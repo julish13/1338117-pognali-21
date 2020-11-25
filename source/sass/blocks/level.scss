@@ -18,6 +18,10 @@
     color: $basic-blue;
     font-size: 38px;
   }
+
+  &--catalog {
+    color: $basic-blue-light;
+  }
 }
 
 .level__text {
@@ -28,5 +32,11 @@
   &--promo {
     color: $basic-white;
     font-size: 14px;
+  }
+
+  &--inherit {
+    font-size: inherit;
+    line-height: inherit;
+    font-weight: inherit;
   }
 }

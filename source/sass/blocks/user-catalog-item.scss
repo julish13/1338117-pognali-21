@@ -1,3 +1,18 @@
-.no-empty {
-  margin: 0;
+.user-catalog-item {
+  background-color: $basic-white;
+  color: $basic-grey-font;
+  font-size: 15px;
+  line-height: 1.07;
+  font-weight: 400;
+}
+
+.user-catalog-item__name {
+  color: $basic-blue-light;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.user-catalog-item__tag-list {
+  line-height: 1.2;
 }

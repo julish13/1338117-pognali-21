@@ -16,13 +16,13 @@
       <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="site-nav">
         <li class="site-nav__item">
-          <a class="site-nav__link" href="#">О сервисе</a>
+          <a class="site-nav__link" href="index.html">О сервисе</a>
         </li>
         <li class="site-nav__item">
           <a class="site-nav__link" href="form.html">Направления</a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="catalog.html">Попутчики</a>
+          <a class="site-nav__link" href="#">Попутчики</a>
         </li>
       </ul>
       <a class="main-nav__login" href="#"></a>
@@ -53,13 +53,13 @@
           <div class="filter-countries__dropdown filter-countries-dropdown">
             <div class="filter-countries-dropdown__lands-list">
               <input class="visually-hidden" type="checkbox" name="europe" id="europe" checked>
-              <label class="filter-countries__checkbox" for="europe">Европа</label>
+              <label class="filter-countries__label" for="europe">Европа</label>
               <input class="visually-hidden" type="checkbox" name="asia" id="asia" checked>
-              <label class="filter-countries__checkbox" for="asia">Азия</label>
+              <label class="filter-countries__label" for="asia">Азия</label>
               <input class="visually-hidden" type="checkbox" name="america" id="america" checked>
-              <label class="filter-countries__checkbox" for="america">Америка</label>
+              <label class="filter-countries__label" for="america">Америка</label>
               <input class="visually-hidden" type="checkbox" name="islands" id="islands" checked>
-              <label class="filter-countries__checkbox" for="islands">Острова</label>
+              <label class="filter-countries__label" for="islands">Острова</label>
             </div>
             <table class="filter-countries-dropdown__alphabet alphabet" aria-label="алфавит">
               <tr class="alphabet__row">
@@ -186,7 +186,9 @@
               <li class="dropdown-countries-list__country">Армения</li>
               <li class="dropdown-countries-list__country">Афганистан</li>
             </ul>
-            <button class="filter-countries-dropdown__button button-round" type="button">Свернуть</button>
+            <button class="filter-countries-dropdown__button button-round button-round--grey" type="button">
+              Свернуть
+            </button>
           </div>
         </fieldset>
         <fieldset class="filter__personality filter-personality">
@@ -198,11 +200,11 @@
             </div>
             <div class="filter-personality-field__list">
               <input class="visually-hidden" type="checkbox" name="gym" id="gym" checked>
-              <label class="filter-personality-field__checkbox" for="gym">Спортзал</label>
+              <label class="filter-personality-field__label" for="gym">Спортзал</label>
               <input class="visually-hidden" type="checkbox" name="hookah" id="hookah">
-              <label class="filter-personality-field__checkbox" for="hookah">Кальян</label>
+              <label class="filter-personality-field__label" for="hookah">Кальян</label>
               <input class="visually-hidden" type="checkbox" name="sofa" id="sofa">
-              <label class="filter-personality-field__checkbox" for="sofa">Диван</label>
+              <label class="filter-personality-field__label" for="sofa">Диван</label>
             </div>
           </div>
           <div class="filter-personality__field filter-personality-field">
@@ -212,11 +214,11 @@
             </div>
             <div class="filter-personality-field__list">
               <input class="visually-hidden" type="checkbox" name="hardrock" id="hardrock" checked>
-              <label class="filter-personality-field__checkbox" for="hardrock">Тяжелый рок</label>
+              <label class="filter-personality-field__label" for="hardrock">Тяжелый рок</label>
               <input class="visually-hidden" type="checkbox" name="russian_rap" id="russian_rap">
-              <label class="filter-personality-field__checkbox" for="russian_rap">Русский рэп</label>
+              <label class="filter-personality-field__label" for="russian_rap">Русский рэп</label>
               <input class="visually-hidden" type="checkbox" name="eurodance" id="eurodance">
-              <label class="filter-personality-field__checkbox" for="eurodance">Евроденс</label>
+              <label class="filter-personality-field__label" for="eurodance">Евроденс</label>
             </div>
           </div>
           <div class="filter-personality__field filter-personality-field">
@@ -226,11 +228,11 @@
             </div>
             <div class="filter-personality-field__list">
               <input class="visually-hidden" type="checkbox" name="meat" id="meat" checked>
-              <label class="filter-personality-field__checkbox" for="meat">Мясоед</label>
+              <label class="filter-personality-field__label" for="meat">Мясоед</label>
               <input class="visually-hidden" type="checkbox" name="healthy_food" id="healthy_food">
-              <label class="filter-personality-field__checkbox" for="healthy_food">Сидит на ПП</label>
+              <label class="filter-personality-field__label" for="healthy_food">Сидит на ПП</label>
               <input class="visually-hidden" type="checkbox" name="raw_vegan" id="raw_vegan">
-              <label class="filter-personality-field__checkbox" for="raw_vegan">Веган-сыроед</label>
+              <label class="filter-personality-field__label" for="raw_vegan">Веган-сыроед</label>
             </div>
           </div>
           <div class="filter-personality__field filter-personality-field">
@@ -241,19 +243,18 @@
             <div class="filter-personality-field__list transport">
               <input class="visually-hidden transport__input" type=checkbox name="plane" id="plane" checked
                 aria-label="На самолете">
-              <label class="filter-personality-field__checkbox transport__button transport__button--plane"
+              <label class="filter-personality-field__label transport__button transport__button--plane"
                 for="plane"></label>
               <input class="visually-hidden transport__input" type=checkbox name="bus" id="bus" checked
                 aria-label="На автобусе">
-              <label class="filter-personality-field__checkbox transport__button transport__button--bus"
-                for="bus"></label>
+              <label class="filter-personality-field__label transport__button transport__button--bus" for="bus"></label>
               <input class="visually-hidden transport__input" type=checkbox name="bike" id="bike" checked
                 aria-label="На велосипеде">
-              <label class="filter-personality-field__checkbox transport__button transport__button--bike"
+              <label class="filter-personality-field__label transport__button transport__button--bike"
                 for="bike"></label>
               <input class="visually-hidden transport__input" type=checkbox name="walk" id="walk" checked
                 aria-label="Пешком">
-              <label class="filter-personality-field__checkbox transport__button transport__button--walk"
+              <label class="filter-personality-field__label transport__button transport__button--walk"
                 for="walk"></label>
             </div>
           </div>
@@ -279,7 +280,9 @@
               </div>
             </div>
           </div>
-          <button class="filter-personality__button button-round" type="submit">Показать</button>
+          <button class="filter-personality__button button-round button-round--white" type="submit">
+            Показать
+          </button>
         </fieldset>
       </form>
     </section>
@@ -294,7 +297,7 @@
             <a class="user-catalog-item__name" href="#">Таня Фирсова</a>
             <div class="user-catalog-item__likes likes">
               <label class="likes__amount">
-                <input class="likes__button" type="checkbox" aria-label="лайк">1,5 М
+                <input class="likes__button visually-hidden" type="checkbox" aria-label="лайк">1,5 М
               </label>
             </div>
 
@@ -346,10 +349,10 @@
             </ul>
           </div>
           <div class="user-catalog-item__level level">
-            <p class="level__text">левел:</p>
-            <p class="level__value">99</p>
+            <p class="level__text level__text--inherit">левел:</p>
+            <p class="level__value level__value--catalog">99</p>
           </div>
-          <a class="user-catalog-item__button button-round" href="#">Позвать</a>
+          <a class="user-catalog-item__button button-round button-round--darker-font" href="#">Позвать</a>
         </li>
         <li class="user-catalog__item user-catalog-item">
           <div class="user-catalog-item__header">
@@ -359,7 +362,7 @@
             <a class="user-catalog-item__name" href="#">Петя Демин</a>
             <div class="user-catalog-item__likes likes">
               <label class="likes__amount">
-                <input class="likes__button" type="checkbox" aria-label="лайк">1500
+                <input class="likes__button visually-hidden" type="checkbox" aria-label="лайк">1500
               </label>
             </div>
             <span class="user-catalog-item__status status status--offline visually-hidden">офлайн</span>
@@ -406,10 +409,10 @@
             </ul>
           </div>
           <div class="user-catalog-item__level level">
-            <p class="level__text">левел:</p>
-            <p class="level__value">80</p>
+            <p class="level__text level__text--inherit">левел:</p>
+            <p class="level__value level__value--catalog">80</p>
           </div>
-          <a class="user-catalog-item__button button-round" href="#">Позвать</a>
+          <a class="user-catalog-item__button button-round button-round--darker-font" href="#">Позвать</a>
         </li>
         <li class="user-catalog__item user-catalog-item">
           <div class="user-catalog-item__header">
@@ -419,7 +422,7 @@
             <a class="user-catalog-item__name" href="#">Марк Смолов</a>
             <div class="user-catalog-item__likes likes">
               <label class="likes__amount">
-                <input class="likes__button" type="checkbox" aria-label="лайк">170
+                <input class="likes__button visually-hidden" type="checkbox" aria-label="лайк">170
               </label>
             </div>
             <span class="user-catalog-item__status status status--offline visually-hidden">офлайн</span>
@@ -467,10 +470,10 @@
             </ul>
           </div>
           <div class="user-catalog-item__level level">
-            <p class="level__text">левел:</p>
-            <p class="level__value">25</p>
+            <p class="level__text level__text--inherit">левел:</p>
+            <p class="level__value level__value--catalog">25</p>
           </div>
-          <a class="user-catalog-item__button button-round" href="#">Позвать</a>
+          <a class="user-catalog-item__button button-round button-round--darker-font" href="#">Позвать</a>
         </li>
         <li class="user-catalog__item user-catalog-item">
           <div class="user-catalog-item__header">
@@ -480,7 +483,7 @@
             <a class="user-catalog-item__name" href="#">Лариса Роговая</a>
             <div class="user-catalog-item__likes likes">
               <label class="likes__amount">
-                <input class="likes__button" type="checkbox" aria-label="лайк">23
+                <input class="likes__button visually-hidden" type="checkbox" aria-label="лайк">23
               </label>
             </div>
             <span class="user-catalog-item__status status status--offline visually-hidden">офлайн</span>
@@ -524,10 +527,10 @@
             </ul>
           </div>
           <div class="user-catalog-item__level level">
-            <p class="level__text">левел:</p>
-            <p class="level__value">50</p>
+            <p class="level__text level__text--inherit">левел:</p>
+            <p class="level__value level__value--catalog">50</p>
           </div>
-          <a class="user-catalog-item__button button-round" href="#">Позвать</a>
+          <a class="user-catalog-item__button button-round button-round--darker-font" href="#">Позвать</a>
         </li>
       </ul>
       <a class="user-catalog__expand" href="#">Показать еще</a>
