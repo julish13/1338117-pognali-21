@@ -1,3 +1,12 @@
-.no-empty {
-  margin: 0;
+.filter-personality {
+  border: none;
+  background-color: $yellow-1;
+}
+
+.filter-personality__heading {
+  float: left;
+  width: 100%;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 700;
 }

@@ -2,7 +2,6 @@ $mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1440px;
 
-
 $mobile-max: (
   max-width: $tablet-width - 1px,
 );
@@ -14,7 +13,6 @@ $tablet-min: (
 $desktop-min: (
   min-width: $desktop-width,
 );
-
 
 $basic-white: hsl(0, 0, 100%);
 $basic-black: hsl(0, 100%, 0%);
@@ -30,6 +28,7 @@ $grey-background-1: hsl(227, 33%, 95%);
 $grey-background-2: hsl(229, 28%, 92%);
 $grey-background-3: hsl(227, 37%, 88%);
 $light-blue-background-1: hsl(226, 36%, 91%);
+$light-blue-background-2: hsl(230, 39%, 88%);
 $grey-1: hsl(227, 16%, 82%);
 
 $orange-1: hsl(27, 100%, 59%);

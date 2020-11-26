@@ -1,5 +1,24 @@
 .button-round {
-  font-family: inherit;
   background-color: $yellow-1;
   border: none;
+  font-family: inherit;
+  color: $basic-blue-light;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  &--grey {
+    background-color: $light-blue-background-2;
+    color: $blue-background-1;
+  }
+
+  &--white {
+    background-color: $basic-white;
+    color: $basic-blue;
+  }
+
+  &--darker-font {
+    color: $basic-blue;
+  }
 }
