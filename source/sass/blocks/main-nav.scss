@@ -3,9 +3,73 @@
   color: $basic-blue;
 }
 
+.main-nav__inner {
+  @media #{$min-tablet} {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__logo {
+  @media #{$min-tablet} {
+    order: -3;
+  }
+}
+
+.main-nav__toggle {
+  @media #{$min-tablet} {
+    order: -2;
+  }
+
+  @media #{$min-desktop} {
+    display: none;
+  }
+}
+
 .main-nav__login {
+  display: block;
   color: inherit;
   line-height: 1.76;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
+
+  @media #{$min-tablet} {
+    order: -1;
+  }
+
+  @media #{$min-desktop} {
+    order: 1;
+  }
+}
+
+.main-nav__site-nav {
+  @media #{$min-tablet} {
+    flex-basis: 100%;
+  }
+
+  @media #{$min-desktop} {
+    flex-basis: auto;
+  }
+}
+
+.main-nav__contacts {
+  @media #{$min-tablet} {
+    flex-basis: 100%;
+  }
+
+  @media #{$min-desktop} {
+    flex-basis: auto;
+  }
+}
+
+.main-nav__social {
+  @media #{$min-tablet} {
+    flex-basis: 100%;
+  }
+
+  @media #{$min-desktop} {
+    display: none;
+  }
 }

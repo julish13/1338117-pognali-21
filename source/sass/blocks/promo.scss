@@ -1,4 +1,14 @@
+.promo__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .promo__author {
   font-style: normal;
   font-weight: 700;
+}
+
+.promo__todo-list {
+  flex-basis: 100%;
 }

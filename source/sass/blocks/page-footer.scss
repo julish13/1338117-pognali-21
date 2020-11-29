@@ -1,3 +1,10 @@
 .page-footer {
   background-color: $basic-white;
 }
+
+.page-footer__inner {
+  @media #{$min-tablet} {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

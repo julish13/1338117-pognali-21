@@ -3,3 +3,9 @@
     font-weight: 700;
   }
 }
+
+.about__button {
+  @media #{$max-mobile} {
+    display: none;
+  }
+}

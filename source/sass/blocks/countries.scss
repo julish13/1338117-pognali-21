@@ -3,6 +3,18 @@
   color: $basic-grey-font;
 }
 
+.countries__inner {
+  @media #{$min-desktop} {
+    display: grid;
+    grid-template: repeat(3, min-content) / repeat(2, 1fr);
+  }
+}
+
 .countries__list {
   list-style: none;
+
+  @media #{$min-desktop} {
+    order: -1;
+    grid-row: span 3;
+  }
 }

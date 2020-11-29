@@ -1,3 +1,10 @@
+.users__inner {
+  @media #{$min-desktop} {
+    display: grid;
+    grid-template: repeat(4, min-content) / repeat(2, 1fr);
+  }
+}
+
 .users__description {
   &--bold {
     font-weight: 700;
@@ -6,4 +13,22 @@
 
 .users__list {
   list-style: none;
+
+  @media #{$min-tablet} {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media #{$min-desktop} {
+    order: 1;
+    grid-column: 2;
+    grid-row: 1 / span 4;
+  }
+}
+
+.users__item {
+  @media #{$min-tablet} {
+    flex-basis: 50%;
+  }
 }

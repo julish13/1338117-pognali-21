@@ -1,3 +1,9 @@
+.contacts__links {
+  @media #{$min-desktop} {
+    display: flex;
+  }
+}
+
 .contacts__link {
   color: $yellow-1;
   font-weight: 700;
