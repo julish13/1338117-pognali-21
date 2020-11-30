@@ -1,9 +1,17 @@
 .country {
   font-weight: 500;
+
+  @media #{$min-tablet} {
+    display: flex;
+  }
 }
 
 .country__wrapper {
   background-color: $basic-white;
+
+  @media #{$min-tablet} {
+    order: -1;
+  }
 }
 
 .country__name {

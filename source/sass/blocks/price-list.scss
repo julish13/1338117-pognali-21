@@ -1,3 +1,10 @@
 .price-list {
   line-height: 1;
 }
+
+.price-list__item {
+  @media #{$min-tablet} {
+    display: flex;
+    justify-content: space-between;
+  }
+}
