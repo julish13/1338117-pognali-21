@@ -1,9 +1,20 @@
 .site-nav {
+  padding: 0;
   list-style: none;
   font-weight: 500;
   font-size: 30px;
   line-height: 1.17;
   text-transform: uppercase;
+  text-align: center;
+
+  @media #{$min-tablet} {
+    text-align: left;
+  }
+
+  @media #{$min-desktop} {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .site-nav__link {

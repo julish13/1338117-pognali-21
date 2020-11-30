@@ -1,8 +1,15 @@
-.page__body {
-  background-color: $blue-background-1;
+.page {
+  height: 100vh;
   font-family: "Blogger Sans", "Arial", sans-serif;
   font-size: 16px;
-  color: $basic-white;
   line-height: 1.37;
   font-weight: 300;
+}
+
+.page__body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background-color: $blue-background-1;
+  color: $basic-white;
 }

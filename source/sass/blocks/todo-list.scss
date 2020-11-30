@@ -1,11 +1,23 @@
 .todo-list {
+  padding: 0;
   color: $basic-blue;
   font-size: 18px;
   line-height: 1;
   font-weight: 700;
+
+  @media #{$min-tablet} {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  }
+
+  @media #{$min-desktop} {
+    grid-template: auto / repeat(4, 1fr);
+  }
 }
 
 .todo-list__item {
+  padding: 22px 24px;
+
   &--choose {
     background-color: $orange-1;
   }
