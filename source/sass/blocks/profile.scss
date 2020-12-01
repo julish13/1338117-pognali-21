@@ -8,7 +8,7 @@
   }
 }
 
-.profile__fieldset {
+.profile__item {
   @include border;
 
   &--file {
@@ -58,6 +58,10 @@
   line-height: 1.12;
   font-weight: 700;
   text-transform: uppercase;
+
+  &--label {
+    display: block;
+  }
 }
 
 .profile__tags {

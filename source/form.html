@@ -54,28 +54,38 @@
             <p class="level__text">level</p>
           </div>
           <img class="profile__avatar" src="https://via.placeholder.com/150x150" alt="Фото профиля">
-          <fieldset class="profile__fieldset profile__fieldset--file">
+          <p class="profile__item profile__item--file">
             <input class="visually-hidden" type="file" name="avatar" id="avatar" accept="image/*">
             <label class="profile__file-label" for="avatar">Сменить фото</label>
-          </fieldset>
-          <fieldset class="profile__fieldset profile__fieldset--tags">
-            <legend class="profile__subheading">Тэги</legend>
+          </p>
+          <p class="profile__item profile__item--tags">
+            <label class="profile__subheading profile__subheading--label">Тэги</label>
             <textarea class="profile__tags">#бургер #бар #футбол #концерт #крафт</textarea>
-          </fieldset>
-          <fieldset class="profile__fieldset profile__fieldset--transport transport">
+          </p>
+          <fieldset class="profile__item profile__item--transport">
             <legend class="profile__subheading">Транспорт</legend>
-            <input class="visually-hidden transport__input" type=checkbox name="plane" id="plane" checked
-              aria-label="На самолете">
-            <label class="profile__checkbox transport__button transport__button--plane" for="plane"></label>
-            <input class="visually-hidden transport__input" type=checkbox name="bus" id="bus" checked
-              aria-label="На автобусе">
-            <label class="profile__checkbox transport__button transport__button--bus" for="bus"></label>
-            <input class="visually-hidden transport__input" type=checkbox name="bike" id="bike" checked
-              aria-label="На велосипеде">
-            <label class="profile__checkbox transport__button transport__button--bike" for="bike"></label>
-            <input class="visually-hidden transport__input" type=checkbox name="walk" id="walk" checked
-              aria-label="Пешком">
-            <label class="profile__checkbox transport__button transport__button--walk" for="walk"></label>
+            <ul class="profile__transport transport" role="none">
+              <li class="transport__item">
+                <input class="visually-hidden transport__input" type=checkbox name="plane" id="plane" checked
+                aria-label="На самолете">
+                <label class="profile__checkbox transport__button transport__button--plane" for="plane"></label>
+              </li>
+              <li class="transport__item">
+                <input class="visually-hidden transport__input" type=checkbox name="bus" id="bus" checked
+                aria-label="На автобусе">
+              <label class="profile__checkbox transport__button transport__button--bus" for="bus"></label>
+              </li>
+              <li class="transport__item">
+                <input class="visually-hidden transport__input" type=checkbox name="bike" id="bike" checked
+                aria-label="На велосипеде">
+                <label class="profile__checkbox transport__button transport__button--bike" for="bike"></label>
+              </li>
+              <li class="transport__item">
+                <input class="visually-hidden transport__input" type=checkbox name="walk" id="walk" checked
+                aria-label="Пешком">
+                <label class="profile__checkbox transport__button transport__button--walk" for="walk"></label>
+              </li>
+            </ul>
           </fieldset>
         </form>
       </div>
@@ -128,25 +138,25 @@
               <div class="planning-dates__option planning-dates__option--companions planning-dates-option">
                 <p class="planning-dates-option__title">Ищу попутчиков:</p>
                 <p class="planning-dates-option__unit">Чел.</p>
-                <div class="planning-dates-option__input">
+                <p class="planning-dates-option__input">
                   <button class="planning-dates-option__minus" type="button" aria-label="минус">-</button>
                   <input class="planning-dates-option__value" type="number" min="1" max="100" step="1" value="2">
                   <button class="planning-dates-option__plus" type="button" aria-label="плюс">+</button>
-                </div>
+                </p>
               </div>
               <div class="planning-dates__option--duration planning-dates-option">
                 <p class="planning-dates-option__title">Длительность:</p>
                 <p class="planning-dates-option__unit">Дн.</p>
-                <div class="planning-dates-option__input">
+                <p class="planning-dates-option__input">
                   <button class="planning-dates-option__minus" type="button" aria-label="минус">-</button>
                   <input class="planning-dates-option__value" type="number" min="1" max="100" step="1" value="2">
                   <button class="planning-dates-option__plus" type="button" aria-label="плюс">+</button>
-                </div>
+                </p>
               </div>
-              <div class="planning-dates__children">
+              <p class="planning-dates__children">
                 <input class="visually-hidden" type=checkbox name="children" id="children" checked>
                 <label class="planning-dates__checkbox-label" for="children">Можно с детьми</label>
-              </div>
+              </p>
               <div class="planning-dates__calendar calendar slider">
                 <header class="calendar__header">
                   <button class="calendar__swipe calendar__swipe--left slider__swipe slider__swipe--left" type="button"
@@ -408,22 +418,22 @@
               Укажите страны, которые вы&nbsp;хотели посетить. Это может быть одна или сразу несколько.
             </p>
             <div class="planning__body">
-              <div class="route__country select-country">
+              <p class="route__country select-country">
                 <input class="select-country__input" type="button" value="Босния и Герцеговина"
                   id="bosnia_and_herzegovina_select">
                 <label for="bosnia_and_herzegovina_select"></label>
-              </div>
-              <div class="route__country select-country">
+              </p>
+              <p class="route__country select-country">
                 <input class="select-country__input" type="button" value="Чехия" id="czech_select">
                 <label for="czech_select"></label>
-              </div>
-              <div class="route__country select-country">
+              </p>
+              <p class="route__country select-country">
                 <input class="select-country__input" type="button" value="Выберите страну" id="any_country_select">
-              </div>
-              <div class="route__country select-country">
+              </p>
+              <p class="route__country select-country">
                 <input class="select-country__input select-country__input--add" type="button" value="Добавить страну"
                   id="add_country_select">
-              </div>
+              </p>
               <div class="route__dropdown route-dropdown">
                 <header class="route-dropdown__header">
                   <p class="route-dropdown__title">Выберите страну</p>
@@ -580,17 +590,17 @@
               Можно писать в&nbsp;свободной форме и&nbsp;ставить тэги.
             </p>
             <div class="planning__body">
-              <div class="fun__country">
+              <p class="fun__country">
                 <label class="fun__title" for="bosnia_and_herzegovina_textarea">Босния и Герцеговина</label>
                 <textarea class="fun__textarea" id="bosnia_and_herzegovina_textarea"
                   placeholder="План действий"></textarea>
-              </div>
-              <div class="fun__country">
+              </p>
+              <p class="fun__country">
                 <label class="fun__title" for="czech">Чехия</label>
                 <textarea class="fun__textarea" id="czech">
                   Пить пиво и&nbsp;лазить по&nbsp;старым замкам, наслаждаться архитектурой и&nbsp;вот это все.
                 </textarea>
-              </div>
+              </p>
             </div>
             <div class="planning__buttons">
               <button class="button-round planning__button" type="submit">Отправить</button>
