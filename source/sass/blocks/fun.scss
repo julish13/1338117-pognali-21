@@ -7,9 +7,7 @@
 
 .fun__textarea {
   @include border;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
+  font: inherit;
   color: $basic-grey-font;
 
   &::placeholder {
