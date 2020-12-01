@@ -3,15 +3,19 @@ $tablet-width: 768px;
 $desktop-width: 1440px;
 
 $max-mobile: (
-  max-width: $tablet-width - 1px
+  max-width: $tablet-width - 1px,
 );
 
 $min-tablet: (
-  min-width: $tablet-width
+  min-width: $tablet-width,
+);
+
+$max-tablet: (
+  max-width: $desktop-width - 1px,
 );
 
 $min-desktop: (
-  min-width: $desktop-width
+  min-width: $desktop-width,
 );
 
 $basic-white: hsl(0, 0, 100%);

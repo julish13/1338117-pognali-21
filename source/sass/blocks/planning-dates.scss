@@ -1,4 +1,38 @@
+.planning-dates__options {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media #{$min-desktop} {
+    flex-direction: row;
+  }
+}
+
+.planning-dates__option {
+  &--companions {
+    @media #{$min-tablet} {
+      order: -2;
+    }
+  }
+
+  &--duration {
+    @media #{$min-desktop} {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.planning-dates__children {
+  @media #{$min-tablet} {
+    order: -1;
+  }
+}
+
 .planning-dates__checkbox-label {
   font-size: 15px;
   line-height: 1;
+}
+
+.planning-dates__calendar {
+  flex-basis: 100%;
 }
