@@ -1,0 +1,17 @@
+.planning-states {
+  &--no-text {
+    font-size: 0;
+
+    @media #{$min-desktop} {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @media #{$min-desktop} {
+      display: block;
+    }
+  }
+}

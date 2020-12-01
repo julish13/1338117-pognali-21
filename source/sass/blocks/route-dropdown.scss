@@ -7,3 +7,9 @@
   letter-spacing: 0.02em;
   text-transform: uppercase;
 }
+
+.route-dropdown__body {
+  @media #{$min-tablet} {
+    display: flex;
+  }
+}
