@@ -11,33 +11,35 @@
 <body class="page__body">
   <header class="page-header">
     <nav class="main-nav">
-      <a class="main-nav__logo logo">
-        <img src="https://via.placeholder.com/150x150" alt="Логотип Погнали">
-      </a>
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-      <ul class="site-nav">
-        <li class="site-nav__item">
-          <a class="site-nav__link" href="index.html">О сервисе</a>
-        </li>
-        <li class="site-nav__item">
-          <a class="site-nav__link" href="form.html">Направления</a>
-        </li>
-        <li class="site-nav__item">
-          <a class="site-nav__link">Попутчики</a>
-        </li>
-      </ul>
-      <a class="main-nav__login" href="#"></a>
-      <div class="main-nav__contacts nav-contacts">
-        <a class="nav-contacts__link" href="tel:88005558628">8 800 555-86-28</a>
-        <a class="nav-contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </div>
-      <div class="main-nav__social social social--header">
-        <a class="social__icon social__icon--facebook social__icon--header" href="#"
-          aria-label="Наша страница в  Facebook"></a>
-        <a class="social__icon social__icon--vkontakte social__icon--header" href="#"
-          aria-label="Наша страница Вконтакте"></a>
-        <a class="social__icon social__icon--instagram social__icon--header" href="#"
-          aria-label="Наша страница в Instagram"></a>
+      <div class="container main-nav__inner">
+        <a class="main-nav__logo logo" href="index.html">
+          <img src="https://via.placeholder.com/150x150" alt="Логотип Погнали">
+        </a>
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <ul class="main-nav__site-nav site-nav">
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#">О сервисе</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="form.html">Направления</a>
+          </li>
+          <li class="site-nav__item">
+            <a class="site-nav__link">Попутчики</a>
+          </li>
+        </ul>
+        <a class="main-nav__login button-round" href="#">Авторизация</a>
+        <address class="main-nav__contacts nav-contacts">
+          <a class="nav-contacts__link" href="tel:88005558628">8 800 555-86-28</a>
+          <a class="nav-contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </address>
+        <div class="main-nav__social social social--header">
+          <a class="social__icon social__icon--facebook social__icon--header" href="#"
+            aria-label="Наша страница в  Facebook">Facebook</a>
+          <a class="social__icon social__icon--vkontakte social__icon--header" href="#"
+            aria-label="Наша страница Вконтакте">Вконтакте</a>
+          <a class="social__icon social__icon--instagram social__icon--header" href="#"
+            aria-label="Наша страница в Instagram">Instagram</a>
+        </div>
       </div>
     </nav>
   </header>
@@ -47,21 +49,29 @@
       <h2 class="visually-hidden">Фильтрация попутчиков</h2>
       <form class="filter__form">
         <fieldset class="filter__countries filter-countries">
-          <div class="filter-countries__header">
-            <p class="filter-countries__heading">Фильтрация по странам:</p>
+          <legend class="filter-countries__header">
+            <span class="filter-countries__heading">Фильтрация по странам:</span>
             <button class="filter-countries__toggle" type="button" aria-label="Открыть меню"></button>
-          </div>
+          </legend>
           <div class="filter-countries__dropdown filter-countries-dropdown">
-            <div class="filter-countries-dropdown__lands-list">
-              <input class="visually-hidden" type="checkbox" name="europe" id="europe" checked>
-              <label class="filter-countries__label" for="europe">Европа</label>
-              <input class="visually-hidden" type="checkbox" name="asia" id="asia" checked>
-              <label class="filter-countries__label" for="asia">Азия</label>
-              <input class="visually-hidden" type="checkbox" name="america" id="america" checked>
-              <label class="filter-countries__label" for="america">Америка</label>
-              <input class="visually-hidden" type="checkbox" name="islands" id="islands" checked>
-              <label class="filter-countries__label" for="islands">Острова</label>
-            </div>
+            <ul class="filter-countries-dropdown__lands-list">
+              <li class="filter-countries-dropdown__land">
+                <input class="visually-hidden" type="checkbox" name="europe" id="europe" checked>
+                <label class="filter-countries__label" for="europe">Европа</label>
+              </li>
+              <li class="filter-countries-dropdown__land">
+                <input class="visually-hidden" type="checkbox" name="asia" id="asia" checked>
+                <label class="filter-countries__label" for="asia">Азия</label>
+              </li>
+              <li class="filter-countries-dropdown__land">
+                <input class="visually-hidden" type="checkbox" name="america" id="america" checked>
+                <label class="filter-countries__label" for="america">Америка</label>
+              </li>
+              <li class="filter-countries-dropdown__land">
+                <input class="visually-hidden" type="checkbox" name="islands" id="islands" checked>
+                <label class="filter-countries__label" for="islands">Острова</label>
+              </li>
+            </ul>
             <table class="filter-countries-dropdown__alphabet alphabet" aria-label="алфавит">
               <tr class="alphabet__row">
                 <td class="alphabet__letter">
@@ -195,75 +205,101 @@
         <fieldset class="filter__personality filter-personality">
           <legend class="filter-personality__heading">Подберите идеального попутчика</legend>
           <div class="filter-personality__field filter-personality-field">
-            <div class="filter-personality-field__header">
-              <p class="filter-personality-field__title">Хобби</p>
+            <p class="filter-personality-field__header">
+              <span class="filter-personality-field__title">Хобби</span>
               <button class="filter-personality-field__toggle" type="button" aria-label="Открыть меню"></button>
-            </div>
-            <div class="filter-personality-field__list">
-              <input class="visually-hidden" type="checkbox" name="gym" id="gym" checked>
-              <label class="filter-personality-field__label" for="gym">Спортзал</label>
-              <input class="visually-hidden" type="checkbox" name="hookah" id="hookah">
-              <label class="filter-personality-field__label" for="hookah">Кальян</label>
-              <input class="visually-hidden" type="checkbox" name="sofa" id="sofa">
-              <label class="filter-personality-field__label" for="sofa">Диван</label>
-            </div>
+            </p>
+            <ul class="filter-personality-field__list">
+              <li class="filter-personality-field__item">
+                <input class="visually-hidden" type="checkbox" name="gym" id="gym" checked>
+                <label class="filter-personality-field__label" for="gym">Спортзал</label>
+              </li>
+              <li class="filter-personality-field__item">
+                <input class="visually-hidden" type="checkbox" name="hookah" id="hookah">
+                <label class="filter-personality-field__label" for="hookah">Кальян</label>
+              </li>
+              <li class="filter-personality-field__item">
+                <input class="visually-hidden" type="checkbox" name="sofa" id="sofa">
+                <label class="filter-personality-field__label" for="sofa">Диван</label>
+              </li>
+            </ul>
           </div>
           <div class="filter-personality__field filter-personality-field">
-            <div class="filter-personality-field__header">
-              <p class="filter-personality-field__title">Музыка</p>
+            <p class="filter-personality-field__header">
+              <span class="filter-personality-field__title">Музыка</span>
               <button class="filter-personality-field__toggle" type="button" aria-label="Открыть меню"></button>
-            </div>
-            <div class="filter-personality-field__list">
-              <input class="visually-hidden" type="checkbox" name="hardrock" id="hardrock" checked>
-              <label class="filter-personality-field__label" for="hardrock">Тяжелый рок</label>
-              <input class="visually-hidden" type="checkbox" name="russian_rap" id="russian_rap">
-              <label class="filter-personality-field__label" for="russian_rap">Русский рэп</label>
-              <input class="visually-hidden" type="checkbox" name="eurodance" id="eurodance">
-              <label class="filter-personality-field__label" for="eurodance">Евроденс</label>
-            </div>
+            </p>
+            <ul class="filter-personality-field__list">
+              <li class="filter-personality-field__item">
+                <input class="visually-hidden" type="checkbox" name="hardrock" id="hardrock" checked>
+                <label class="filter-personality-field__label" for="hardrock">Тяжелый рок</label>
+              </li>
+              <li class="filter-personality-field__item">
+                <input class="visually-hidden" type="checkbox" name="russian_rap" id="russian_rap">
+                <label class="filter-personality-field__label" for="russian_rap">Русский рэп</label>
+              </li>
+              <li class="filter-personality-field__item">
+                <input class="visually-hidden" type="checkbox" name="eurodance" id="eurodance">
+                <label class="filter-personality-field__label" for="eurodance">Евроденс</label>
+              </li>
+            </ul>
           </div>
           <div class="filter-personality__field filter-personality-field">
-            <div class="filter-personality-field__header">
-              <p class="filter-personality-field__title">Еда</p>
+            <p class="filter-personality-field__header">
+              <span class="filter-personality-field__title">Еда</span>
               <button class="filter-personality-field__toggle" type="button" aria-label="Открыть меню"></button>
-            </div>
-            <div class="filter-personality-field__list">
-              <input class="visually-hidden" type="checkbox" name="meat" id="meat" checked>
-              <label class="filter-personality-field__label" for="meat">Мясоед</label>
-              <input class="visually-hidden" type="checkbox" name="healthy_food" id="healthy_food">
-              <label class="filter-personality-field__label" for="healthy_food">Сидит на ПП</label>
-              <input class="visually-hidden" type="checkbox" name="raw_vegan" id="raw_vegan">
-              <label class="filter-personality-field__label" for="raw_vegan">Веган-сыроед</label>
-            </div>
+            </p>
+            <ul class="filter-personality-field__list">
+              <li class="filter-personality-field__item">
+                <input class="visually-hidden" type="checkbox" name="meat" id="meat" checked>
+                <label class="filter-personality-field__label" for="meat">Мясоед</label>
+              </li>
+              <li class="filter-personality-field__item">
+                <input class="visually-hidden" type="checkbox" name="healthy_food" id="healthy_food">
+                <label class="filter-personality-field__label" for="healthy_food">Сидит на ПП</label>
+              </li>
+              <li class="filter-personality-field__item">
+                <input class="visually-hidden" type="checkbox" name="raw_vegan" id="raw_vegan">
+                <label class="filter-personality-field__label" for="raw_vegan">Веган-сыроед</label>
+              </li>
+            </ul>
           </div>
           <div class="filter-personality__field filter-personality-field">
-            <div class="filter-personality-field__header">
-              <p class="filter-personality-field__title">Еда</p>
+            <p class="filter-personality-field__header">
+              <span class="filter-personality-field__title">Транспорт</span>
               <button class="filter-personality-field__toggle" type="button" aria-label="Открыть меню"></button>
-            </div>
-            <div class="filter-personality-field__list transport">
-              <input class="visually-hidden transport__input" type=checkbox name="plane" id="plane" checked
+            </p>
+            <ul class="filter-personality-field__list transport">
+              <li class="filter-personality-field__item">
+                <input class="visually-hidden transport__input" type=checkbox name="plane" id="plane" checked
                 aria-label="На самолете">
-              <label class="filter-personality-field__label transport__button transport__button--plane"
+                <label class="filter-personality-field__label transport__button transport__button--plane"
                 for="plane"></label>
-              <input class="visually-hidden transport__input" type=checkbox name="bus" id="bus" checked
+              </li>
+              <li class="filter-personality-field__item">
+                <input class="visually-hidden transport__input" type=checkbox name="bus" id="bus" checked
                 aria-label="На автобусе">
-              <label class="filter-personality-field__label transport__button transport__button--bus" for="bus"></label>
-              <input class="visually-hidden transport__input" type=checkbox name="bike" id="bike" checked
+                <label class="filter-personality-field__label transport__button transport__button--bus" for="bus"></label>
+              </li>
+              <li class="filter-personality-field__item">
+                <input class="visually-hidden transport__input" type=checkbox name="bike" id="bike" checked
                 aria-label="На велосипеде">
-              <label class="filter-personality-field__label transport__button transport__button--bike"
+                <label class="filter-personality-field__label transport__button transport__button--bike"
                 for="bike"></label>
-              <input class="visually-hidden transport__input" type=checkbox name="walk" id="walk" checked
+              </li>
+              <li class="filter-personality-field__item">
+                <input class="visually-hidden transport__input" type=checkbox name="walk" id="walk" checked
                 aria-label="Пешком">
-              <label class="filter-personality-field__label transport__button transport__button--walk"
+                <label class="filter-personality-field__label transport__button transport__button--walk"
                 for="walk"></label>
-            </div>
+              </li>
+            </ul>
           </div>
           <div class="filter-personality__field filter-personality-field">
-            <div class="filter-personality-field__header">
-              <p class="filter-personality-field__title">Левел</p>
+            <p class="filter-personality-field__header">
+              <span class="filter-personality-field__title">Левел</span>
               <button class="filter-personality-field__toggle" type="button" aria-label="Открыть меню"></button>
-            </div>
+            </p>
             <div class="filter-personality-field__level-filter level-filter">
               <div class="level-filter__range-controls">
                 <div class="level-filter__scale">
@@ -542,21 +578,23 @@
     </section>
   </main>
   <footer class="page-footer">
-    <a class="page-footer__logo logo">
-      <img src="https://via.placeholder.com/150x150" alt="Логотип Погнали">
-    </a>
-    <div class="page-footer__social social social--footer">
-      <a class="social__icon social__icon--facebook social__icon--footer" href="#"
-        aria-label="Наша страница в  Facebook"></a>
-      <a class="social__icon social__icon--vkontakte social__icon--footer" href="#"
-        aria-label="Наша страница Вконтакте"></a>
-      <a class="social__icon social__icon--instagram social__icon--footer" href="#"
-        aria-label="Наша страница в Instagram"></a>
+    <div class="page-footer__inner container">
+      <a class="page-footer__logo logo">
+        <img src="https://via.placeholder.com/150x150" alt="Логотип Погнали">
+      </a>
+      <div class="page-footer__social social social--footer">
+        <a class="social__icon social__icon--facebook social__icon--footer" href="#"
+          aria-label="Наша страница в  Facebook"></a>
+        <a class="social__icon social__icon--vkontakte social__icon--footer" href="#"
+          aria-label="Наша страница Вконтакте"></a>
+        <a class="social__icon social__icon--instagram social__icon--footer" href="#"
+          aria-label="Наша страница в Instagram"></a>
+      </div>
+      <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+        <p class="copyright__text">Разработано</p>
+        <p class="copyright__label"></p>
+      </a>
     </div>
-    <a class="copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
-      <p class="copyright__text">Разработано</p>
-      <p class="copyright__label"></p>
-    </a>
   </footer>
 </body>
 
