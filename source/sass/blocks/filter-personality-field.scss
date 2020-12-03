@@ -1,8 +1,33 @@
+.filter-personality-field {
+  @media #{$min-tablet} {
+    display: flex;
+  }
+}
+
+.filter-personality-field__header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .filter-personality-field__title {
   font-size: 16px;
   line-height: 1.12;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.filter-personality-field__toggle {
+  @media #{$min-tablet} {
+    display: none;
+  }
+}
+
+.filter-personality-field__list {
+  list-style: none;
+
+  @media #{$min-tablet} {
+    display: flex;
+  }
 }
 
 .filter-personality-field__label {

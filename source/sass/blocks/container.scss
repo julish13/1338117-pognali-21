@@ -9,4 +9,10 @@
   @media #{$min-desktop} {
     width: 1320px;
   }
+
+  &--catalog {
+    @media #{$min-desktop} {
+      width: auto;
+    }
+  }
 }

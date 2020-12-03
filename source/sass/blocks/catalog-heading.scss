@@ -1,18 +1,15 @@
-.main-catalog {
-  background-color: $grey-background-1;
-  color: $basic-blue-light;
-}
-
-.main-catalog__heading {
+.catalog-heading {
   background-color: $blue-background-2;
   color: $basic-white;
+}
 
+.catalog-heading__inner {
   @media #{$min-tablet} {
     display: flex;
   }
 }
 
-.main-catalog__home {
+.catalog-heading__home {
   @media #{$max-mobile} {
     display: none;
   }

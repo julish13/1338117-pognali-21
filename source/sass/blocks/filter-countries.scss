@@ -1,12 +1,49 @@
 .filter-countries {
-  border: none;
-  background-color: $grey-background-2;
   color: $blue-background-1;
   line-height: 1.12;
   font-weight: 700;
   text-transform: uppercase;
 }
 
+.filter-countries__fieldset {
+  display: grid;
+  grid-template: repeat(3, min-content) / 80% 20%;
+  border: none;
+  background-color: $grey-background-2;
+
+  @media #{$min-tablet} {
+    grid-template: repeat(2, min-content) / 70% 30%;
+  }
+}
+
+.filter-countries__heading {
+  float: left;
+  width: 100%;
+
+  @media #{$min-tablet} and #{$max-tablet} {
+    font-size: 0;
+  }
+}
+
+.filter-countries__toggle {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.filter-countries__lands-list {
+  grid-column: span 2;
+  list-style: none;
+
+  @media #{$min-tablet} {
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+  }
+}
+
 .filter-countries__label {
   opacity: 0.3;
+}
+
+
+.filter-countries__dropdown {
+  grid-column: span 2;
 }

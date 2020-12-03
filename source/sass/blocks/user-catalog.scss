@@ -1,8 +1,10 @@
 .user-catalog__list {
+  padding: 0;
   list-style: none;
 }
 
 .user-catalog__expand {
+  display: block;
   color: inherit;
   font-size: 17px;
   line-height: 1.76;

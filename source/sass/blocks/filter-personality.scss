@@ -1,6 +1,8 @@
-.filter-personality {
-  border: none;
+.filter-personality__fieldset {
+  display: flex;
+  flex-direction: column;
   background-color: $yellow-1;
+  border: none;
 }
 
 .filter-personality__heading {
@@ -9,4 +11,10 @@
   font-size: 22px;
   line-height: 1;
   font-weight: 700;
+}
+
+
+.filter-personality__inner {
+  display: flex;
+  flex-direction: column;
 }
