@@ -1,15 +1,15 @@
-.catalog-heading {
+.catalog-header {
   background-color: $blue-background-2;
   color: $basic-white;
 }
 
-.catalog-heading__inner {
+.catalog-header__inner {
   @media #{$min-tablet} {
     display: flex;
   }
 }
 
-.catalog-heading__home {
+.catalog-header__home {
   @media #{$max-mobile} {
     display: none;
   }

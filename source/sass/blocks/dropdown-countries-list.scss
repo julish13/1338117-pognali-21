@@ -1,6 +1,12 @@
 .dropdown-countries-list {
+  display: none;
   list-style: none;
   color: $basic-grey-font;
   font-weight: 400;
   text-transform: none;
+
+
+  &--active {
+    display: block;
+  }
 }

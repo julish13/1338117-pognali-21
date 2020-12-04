@@ -1,5 +1,5 @@
 .filter-personality-field {
-  @media #{$min-tablet} {
+  @media #{$min-tablet} and #{$max-tablet} {
     display: flex;
   }
 }
@@ -17,7 +17,7 @@
 }
 
 .filter-personality-field__toggle {
-  @media #{$min-tablet} {
+  @media #{$min-tablet} and #{$max-tablet} {
     display: none;
   }
 }
@@ -25,7 +25,7 @@
 .filter-personality-field__list {
   list-style: none;
 
-  @media #{$min-tablet} {
+  @media #{$min-tablet} and #{$max-tablet} {
     display: flex;
   }
 }

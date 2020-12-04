@@ -1,12 +1,55 @@
-.filter-countries-dropdown {
+.filter-countries-dropdown__alphabet {
   @media #{$min-tablet} {
     display: grid;
-    grid-template: repeat(2, min-content) / 80% 20%;
+    grid-template: repeat(5, min-content) / 75% 25%;
+  }
+
+  @media #{$min-desktop} {
+    grid-template: repeat(10, min-content) / repeat(5, 20%);
   }
 }
 
-.filter-countries-dropdown__button {
+.filter-countries-dropdown__alphabet-row {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+
+  @media #{$min-desktop} {
+    grid-column: span 5;
+  }
+
+  &:nth-child(2) {
+    @media #{$min-desktop} {
+      grid-row: 3;
+    }
+  }
+
+  &:nth-child(3) {
+    @media #{$min-desktop} {
+      grid-row: 5;
+    }
+  }
+
+  &:nth-child(4) {
+    @media #{$min-desktop} {
+      grid-row: 7;
+    }
+  }
+
+  &:nth-child(5) {
+    @media #{$min-desktop} {
+      grid-row: 9;
+    }
+  }
+}
+
+.filter-countries-dropdown__countries-list {
   @media #{$min-tablet} {
-    grid-column: span 2;
+    grid-area: 1 / 2 / span 5 / span 1;
+  }
+
+  @media #{$min-desktop} {
+    display: block;
+    grid-area: auto;
   }
 }

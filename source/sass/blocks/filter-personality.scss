@@ -17,4 +17,8 @@
 .filter-personality__inner {
   display: flex;
   flex-direction: column;
+
+  @media #{$min-desktop} {
+    width: 100%;
+  }
 }

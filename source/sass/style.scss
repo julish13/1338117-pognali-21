@@ -35,11 +35,10 @@
 @import "blocks/page-footer.scss";
 @import "blocks/copyright.scss";
 @import "blocks/main-catalog.scss";
-@import "blocks/filter.scss";
 @import "blocks/filter-countries.scss";
+@import "blocks/dropdown-countries-list.scss";
 @import "blocks/filter-countries-dropdown.scss";
 @import "blocks/alphabet.scss";
-@import "blocks/dropdown-countries-list.scss";
 @import "blocks/filter-personality.scss";
 @import "blocks/filter-personality-field.scss";
 @import "blocks/level-filter.scss";
@@ -62,4 +61,5 @@
 @import "blocks/nav-contacts.scss";
 @import "blocks/container.scss";
 @import "blocks/planning-states.scss";
-@import "blocks/catalog-heading.scss";
+@import "blocks/catalog-header.scss";
+@import "blocks/pagination.scss";
