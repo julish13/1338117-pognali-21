@@ -1,0 +1,5 @@
+.pagination__pages {
+  @media #{$max-tablet} {
+    display: none;
+  }
+}

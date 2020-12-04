@@ -3,6 +3,36 @@
   color: $basic-blue-light;
 }
 
-.main-catalog__heading {
+.main-catalog__header {
   background-color: $blue-background-2;
+  color: $basic-white;
+
+  @media #{$min-tablet} {
+    display: flex;
+  }
+}
+
+.main-catalog__home {
+  @media #{$max-mobile} {
+    display: none;
+  }
+}
+
+.main-catalog__inner {
+  @media #{$min-desktop} {
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+}
+
+.main-catalog__filter-personality {
+  @media #{$min-desktop} {
+    grid-area: 1 / 2 / span 1 / span 1;
+  }
+}
+
+.main-catalog__user-catalog {
+  @media #{$min-desktop} {
+    grid-area: 1 / 1 / span 1 / span 1;
+  }
 }

@@ -44,11 +44,13 @@
     </nav>
   </header>
   <main class="main-form">
-    <h1 class="main-form__heading main-heading">Направления</h1>
+    <div class="main-form__heading">
+      <h1 class="main-heading container">Направления</h1>
+    </div>
     <section class="profile">
       <div class="container">
         <h2 class="visually-hidden">Редактирование профиля</h2>
-        <form class="profile__form">
+        <form class="profile__form" action="https://echo.htmlacademy.ru" method="post">
           <div class="profile__level level">
             <p class="level__value level__value--profile">80</p>
             <p class="level__text">level</p>
@@ -64,7 +66,7 @@
           </p>
           <fieldset class="profile__item profile__item--transport">
             <legend class="profile__subheading">Транспорт</legend>
-            <ul class="profile__transport transport" role="none">
+            <ul class="profile__transport transport">
               <li class="transport__item">
                 <input class="visually-hidden transport__input" type=checkbox name="plane" id="plane" checked
                 aria-label="На самолете">
@@ -117,7 +119,7 @@
           <li class="planning-states__state">Маршрут</li>
           <li class="planning-states__state">Развлечения</li>
         </ul>
-        <form class="planning__form slider">
+        <form class="planning__form slider" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="planning__step planning-dates slider__slide slider__slide--active">
             <legend class="planning__subheading planning-subheading">
               <a id="step_1">

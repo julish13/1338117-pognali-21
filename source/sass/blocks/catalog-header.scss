@@ -1,0 +1,16 @@
+.catalog-header {
+  background-color: $blue-background-2;
+  color: $basic-white;
+}
+
+.catalog-header__inner {
+  @media #{$min-tablet} {
+    display: flex;
+  }
+}
+
+.catalog-header__home {
+  @media #{$max-mobile} {
+    display: none;
+  }
+}

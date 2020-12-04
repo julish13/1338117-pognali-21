@@ -1,18 +1,126 @@
 .user-catalog-item {
+  display: grid;
+  grid-template: repeat(6, min-content) / 40% 45% 15%;
   background-color: $basic-white;
   color: $basic-grey-font;
   font-size: 15px;
   line-height: 1.07;
   font-weight: 400;
+
+  @media #{$min-tablet} {
+    grid-template: repeat(4, min-content) / 30% 25% 25% 20%;
+  }
+
+  @media #{$min-desktop} {
+    grid-template: repeat(3, min-content) / 35% 20% 15% 20% 10%;
+  }
+}
+
+.user-catalog-item__photo {
+  grid-area: 1 / 1 / span 2 / span 1;
+
+  @media #{$min-tablet} {
+    grid-area: 1 / 1 / span 3 / span 1;
+  }
 }
 
 .user-catalog-item__name {
+  grid-area: 1 / 2 / span 1 / span 1;
   color: $basic-blue-light;
   font-size: 20px;
   line-height: 1;
   font-weight: 700;
+
+  @media #{$min-desktop} {
+    grid-area: 1 / 2 / span 1 / span 2;
+  }
+}
+
+.user-catalog-item__likes {
+  grid-area: 2 / 2 / span 1 / span 1;
+
+  @media #{$min-tablet} {
+    grid-area: 3 / 3 / span 1 / span 1;
+  }
+
+  @media #{$min-desktop} {
+    grid-area: 3 / 3 / span 1 / span 1;
+  }
 }
 
 .user-catalog-item__tag-list {
+  grid-area: 3 / 1 / span 1 / span 3;
   line-height: 1.2;
+
+  @media #{$min-tablet} {
+    grid-area: 2 / 2 / span 1 / span 2;
+  }
+
+  @media #{$min-desktop} {
+    grid-area: 2 / 2 / span 1 / span 2;
+  }
+}
+
+.user-catalog-item__country {
+  grid-area: 4 / 1 / span 1 / span 3;
+
+  @media #{$min-tablet} {
+    grid-area: 4 / 1 / span 1 / span 4;
+  }
+
+  @media #{$min-desktop} {
+    grid-area: 1 / 4 / span 2 / span 2;
+  }
+}
+
+.user-catalog-item__countries-list {
+  @media #{$max-mobile} {
+    display: block;
+  }
+
+  @media #{$min-desktop} {
+    display: block;
+  }
+}
+
+.user-catalog-item__transport {
+  grid-area: 5 / 1 / span 1 / span 2;
+
+  @media #{$min-tablet} {
+    grid-area: 1 / 4 / span 2 / span 1;
+  }
+
+  @media #{$min-desktop} {
+    grid-area: 3 / 4 / span 1 / span 1;
+  }
+}
+
+.user-catalog-item__transport-list {
+  @media #{$min-tablet} and #{$max-tablet} {
+    display: block;
+  }
+}
+
+.user-catalog-item__level {
+  grid-area: 5 / 3 / span 1 / span 1;
+
+  @media #{$min-tablet} {
+    grid-area: 3 / 4 / span 1 / span 1;
+  }
+
+  @media #{$min-desktop} {
+    grid-area: 3 / 5 / span 1 / span 1;
+  }
+}
+
+.user-catalog-item__button {
+  grid-area: 6 / 1 / span 1 / span 3;
+
+  @media #{$min-tablet} {
+    grid-area: 3 / 2 / span 1 / span 1;
+  }
+
+  @media #{$min-desktop} {
+    grid-area: 3 / 2 / span 1 / span 1;
+  }
 }
