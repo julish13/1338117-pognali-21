@@ -1,3 +1,9 @@
+.promo__wrap {
+  background-image: url("../img/globe-back-mobile.png");
+  background-position-y: -30%;
+  background-repeat: no-repeat;
+}
+
 .promo__inner {
   display: flex;
   flex-wrap: wrap;
@@ -5,14 +11,11 @@
 }
 
 .promo__heading {
+  padding: 15px 0 50px;
+  min-height: 400px;
   text-align: center;
 }
 
-.promo__author {
-  font-style: normal;
-  font-weight: 700;
-}
-
-.promo__todo-list {
-  flex-basis: 100%;
+.promo__review {
+  margin: 0;
 }

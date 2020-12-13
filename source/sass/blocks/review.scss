@@ -1,0 +1,22 @@
+$review-width: 160px;
+
+.review {
+  width: 100%;
+  background-color: $basic-blue;
+}
+
+.review__wrap {
+  padding-top: 50px;
+}
+
+.review__author {
+  display: block;
+  font-style: normal;
+  font-weight: 700;
+  width: $review-width;
+}
+
+.review__quote {
+  display: block;
+  width: $review-width;
+}
