@@ -1,12 +1,19 @@
 .container {
   margin: auto;
-  width: 270px;
+  padding-left: 25px;
+  padding-right: 25px;
+  width: 320px;
+
 
   @media #{$min-tablet} {
-    width: 688px;
+    width: 768px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   @media #{$min-desktop} {
-    width: 1320px;
+    width: 1440px;
+    padding-left: 120px;
+    padding-right: 120px;
   }
 }
