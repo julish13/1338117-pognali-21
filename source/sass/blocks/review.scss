@@ -1,6 +1,6 @@
 @mixin review {
   display: block;
-  width: 160px;
+  width: 63%;
   margin-left: 25px;
 }
 
@@ -12,6 +12,7 @@
 }
 
 .review__wrap {
+  width: 100%;
   padding-top: 35px;
   padding-bottom: 35px;
 }
