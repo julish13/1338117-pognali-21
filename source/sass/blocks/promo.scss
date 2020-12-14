@@ -1,6 +1,6 @@
-.promo__wrap {
+.promo__header {
   background-image: url("../img/traveller-illustration-mobile.png"), url("../img/globe-back-mobile.png");
-  background-position: 60% bottom, center 45%;
+  background-position: 60% bottom, center 30%;
   background-size: auto, 100% 568px;
   background-repeat: no-repeat;
   width: 100%;
@@ -13,6 +13,7 @@
 }
 
 .promo__heading {
+  margin-bottom: auto;
   position: relative;
   z-index: 1;
   padding: 15px 0 50px;
@@ -22,4 +23,12 @@
 
 .promo__review {
   margin: 0;
+}
+
+.promo__wrap {
+  background-color: $blue-3;
+}
+
+.promo__todo-list {
+  margin-top: -80px;
 }

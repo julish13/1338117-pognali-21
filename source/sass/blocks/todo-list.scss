@@ -1,9 +1,10 @@
 .todo-list {
-  padding: 0;
+  border-radius: 5px;
   color: $basic-blue;
   font-size: 18px;
   line-height: 1;
   font-weight: 700;
+  counter-reset: myCounter;
 
   @media #{$min-tablet} {
     display: grid;
@@ -16,6 +17,8 @@
 }
 
 .todo-list__item {
+  position: relative;
+  list-style: none;
   padding: 22px 24px;
 
   &--choose {
@@ -33,4 +36,27 @@
   &--travel {
     background-color: $yellow-1;
   }
+
+  &:first-child {
+    border-radius: 7px 7px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 7px 7px;
+  }
+}
+
+.todo-list__item::after {
+  position: absolute;
+  top: 30%;
+  right: 8%;
+  counter-increment: myCounter;
+  content:counter(myCounter);
+  color: $basic-white;
+}
+
+.todo-list__text {
+  padding: 0;
+  margin: 0;
+  width: 142px;
 }

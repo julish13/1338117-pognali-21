@@ -1,22 +1,28 @@
-$review-width: 160px;
+@mixin review {
+  display: block;
+  width: 160px;
+  margin-left: 25px;
+}
+
 
 .review {
   width: 100%;
+  min-height: 285px;
   background-color: $basic-blue;
 }
 
 .review__wrap {
-  padding-top: 50px;
-}
-
-.review__author {
-  display: block;
-  font-style: normal;
-  font-weight: 700;
-  width: $review-width;
+  padding-top: 35px;
+  padding-bottom: 35px;
 }
 
 .review__quote {
-  display: block;
-  width: $review-width;
+  @include review;
+  margin-bottom: 20px;
+}
+
+.review__author {
+  @include review;
+  font-style: normal;
+  font-weight: 700;
 }

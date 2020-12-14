@@ -15,7 +15,7 @@
     `.main-nav-contact`
   );
   const promoBlock = document.querySelector(`.promo`);
-  const promoWrapElement = promoBlock.querySelector(`.promo__wrap`);
+  const promoHeaderElement = promoBlock.querySelector(`.promo__header`);
   const promoHeadingElement = promoBlock.querySelector(`.promo__heading`);
 
   const setClosedMenuState = () => {
@@ -43,7 +43,7 @@
       PROMO_HEADING_Y +
       contactsElement.offsetHeight / 2
     }px`;
-    promoWrapElement.style.backgroundPosition = `60% bottom, center top`;
+    promoHeaderElement.style.backgroundPosition = `60% bottom, center top`;
   };
 
   mainNavBlock.classList.remove(`main-nav--nojs`);
