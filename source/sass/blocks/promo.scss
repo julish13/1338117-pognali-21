@@ -1,7 +1,9 @@
 .promo__wrap {
-  background-image: url("../img/globe-back-mobile.png");
-  background-position-y: -25%;
+  background-image: url("../img/traveller-illustration-mobile.png"), url("../img/globe-back-mobile.png");
+  background-position: 60% bottom, center 45%;
+  background-size: auto, 100% 568px;
   background-repeat: no-repeat;
+  width: 100%;
 }
 
 .promo__inner {
@@ -11,6 +13,8 @@
 }
 
 .promo__heading {
+  position: relative;
+  z-index: 1;
   padding: 15px 0 50px;
   min-height: 400px;
   text-align: center;

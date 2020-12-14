@@ -43,7 +43,7 @@
       PROMO_HEADING_Y +
       contactsElement.offsetHeight / 2
     }px`;
-    promoWrapElement.style.backgroundPosition = `unset`;
+    promoWrapElement.style.backgroundPosition = `60% bottom, center top`;
   };
 
   mainNavBlock.classList.remove(`main-nav--nojs`);
