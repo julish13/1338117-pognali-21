@@ -1,9 +1,8 @@
-"use strict";
+'use strict';
 
 (function () {
-  const PROMO_HEADING_X = 75;
+  const PROMO_HEADING_Y = 75;
 
-  const pageHeader = document.querySelector(`.page-header`);
   const mainNavBlock = document.querySelector(`.main-nav`);
   const mainNavInnerElement = document.querySelector(`.main-nav__inner`);
   const logoElement = document
@@ -38,18 +37,13 @@
   };
 
   const setClosedMenuPositioning = () => {
-    const promoHeadingBottomX =
-      PROMO_HEADING_X + promoHeadingElement.offsetHeight;
-    const buttonsHeight = contactsElement.offsetHeight;
-
-    contactsElement.style.top = `${promoHeadingBottomX - buttonsHeight / 2}px`;
-
-    loginElement.style.top = `${promoHeadingBottomX - buttonsHeight / 2}px`;
-    loginElement.style.left = `${
-      contactsElement.offsetLeft + contactsElement.offsetWidth
+    promoHeadingElement.style.marginTop = `${PROMO_HEADING_Y}px`;
+    mainNavInnerElement.style.minHeight = `${
+      promoHeadingElement.offsetHeight +
+      PROMO_HEADING_Y +
+      contactsElement.offsetHeight / 2
     }px`;
-
-    promoWrapElement.style.backgroundPositionY = `-25%`;
+    promoWrapElement.style.backgroundPosition = `unset`;
   };
 
   mainNavBlock.classList.remove(`main-nav--nojs`);

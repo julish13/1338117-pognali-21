@@ -132,7 +132,8 @@
 }
 
 .main-nav--closed {
-  background-color: $basic-blue;
+  background-color: transparent;
+  position: absolute;
 
   .main-nav__inner {
     padding-bottom: 0;
@@ -165,16 +166,15 @@
   }
 
   .main-nav__login {
-    position: absolute;
     margin: 0;
+    align-self: flex-end;
     order: 1;
   }
 
   .main-nav__contacts {
-    position: absolute;
     display: flex;
     flex-wrap: wrap;
-    align-self: center;
+    align-self: flex-end;
     margin: 0;
     flex-basis: auto;
   }
