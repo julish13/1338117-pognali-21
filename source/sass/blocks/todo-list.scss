@@ -51,7 +51,7 @@
   top: 30%;
   right: 8%;
   counter-increment: myCounter;
-  content:counter(myCounter);
+  content: counter(myCounter);
   color: $basic-white;
 }
 
