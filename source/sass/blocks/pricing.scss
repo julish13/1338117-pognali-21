@@ -3,6 +3,10 @@
   color: $basic-grey-font;
 }
 
+.pricing__wrap {
+  width: $mobile-width;
+}
+
 .pricing__inner {
   @include index-text-margin-left;
   padding-top: 20px;

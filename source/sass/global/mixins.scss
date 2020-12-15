@@ -1,3 +1,9 @@
+@mixin container-fix {
+  margin-left: auto;
+  margin-right: auto;
+  width: $mobile-width - 2 * $mobile-padding;
+}
+
 @mixin border {
   border: 1px solid $grey-1;
 }

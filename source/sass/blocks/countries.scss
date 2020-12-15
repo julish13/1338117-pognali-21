@@ -3,9 +3,7 @@
   color: $basic-grey-font;
 }
 
-.countries__inner {
-  width: $mobile-width;
-
+.countries__wrap {
   @media #{$min-desktop} {
     display: grid;
     grid-template: repeat(3, min-content) / repeat(2, 1fr);
@@ -15,13 +13,17 @@
 .countries__subheading {
   @include index-text-margin-left;
   margin-top: 0;
-  margin-left: 50px;
+  margin-right: 50px;
 }
 
 .countries__description {
   @include index-text-margin-left;
-  margin-left: 50px;
+  margin-right: 50px;
   margin-bottom: 65px;
+}
+
+.countries__inner {
+  @include container-fix;
 }
 
 .countries__list {
