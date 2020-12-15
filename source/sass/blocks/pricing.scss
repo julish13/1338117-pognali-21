@@ -3,6 +3,23 @@
   color: $basic-grey-font;
 }
 
+.pricing__inner {
+  @include index-text-margin-left;
+  padding-top: 20px;
+  background-image: url("../img/pricing.png");
+  background-repeat: no-repeat;
+  background-position: right top 2%;
+}
+
+.pricing__subheading {
+  margin-top: 0;
+  margin-right: 95px;
+}
+
+.pricing__price-list {
+  margin: 45px 45px 26px 0;
+}
+
 .pricing__link {
   color: $blue-1;
   line-height: 1;

@@ -1,10 +1,59 @@
 .price-list {
+  padding-left: 0;
   line-height: 1;
+  counter-reset: myCounter;
 }
 
 .price-list__item {
+  position: relative;
+  border-top: 1px solid $grey-3;
+  padding-top: 6px;
+  padding-bottom: 11px;
+  list-style: none;
+
   @media #{$min-tablet} {
     display: flex;
     justify-content: space-between;
   }
+
+  &::after {
+    position: absolute;
+    top: 3px;
+    right: -45px;
+    padding: 7px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: $orange-1;
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    color: $basic-white;
+    text-align: center;
+  }
+
+  &:nth-child(2) {
+    &::after {
+      background-color: $yellow-2;
+    }
+  }
+
+  &:nth-child(3) {
+    &::after {
+      background-color: $yellow-1;
+    }
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $grey-3;
+  }
+}
+
+.price-list__option {
+  margin-top: 5px;
+  margin-bottom: 6px;
+}
+
+.price-list__price {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
