@@ -3,20 +3,39 @@
 }
 
 .users__inner {
+  position: relative;
+  padding-top: 20px;
+  background-image: url("../img/rogovaya-back-mobile.png"), url("../img/smolov-back-mobile.png");
+  background-position: left top 280px, right 25px top 10px;
+  background-repeat: no-repeat, no-repeat;
+
   @media #{$min-desktop} {
     display: grid;
     grid-template: repeat(4, min-content) / repeat(2, 1fr);
+  }
+
+  &::before {
+    position: absolute;
+    left: 0px;
+    top: 8px;
+    content: "";
+    border-radius: 0 20px 20px 0;
+    width: 113px;
+    height: 132px;
+    background-color: $blue-4;
   }
 }
 
 .users__subheading {
   @include index-text-margin-left;
+  position: relative;
   margin-right: 25px;
   margin-bottom: 22px;
 }
 
 .users__description {
   @include index-text-margin-left;
+  position: relative;
   margin-right: 25px;
   margin-bottom: 22px;
 
