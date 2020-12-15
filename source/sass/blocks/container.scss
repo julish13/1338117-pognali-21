@@ -6,14 +6,14 @@
   min-width: $mobile-width;
 
   @media #{$min-tablet} {
-    width: 768px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-right: $tablet-padding;
+    padding-left: $tablet-padding;
+    min-width: $tablet-width;
   }
 
   @media #{$min-desktop} {
-    width: 1440px;
-    padding-left: 120px;
-    padding-right: 120px;
+    padding-right: $desktop-padding;
+    padding-left: $desktop-padding;
+    min-width: $desktop-width;
   }
 }
