@@ -3,6 +3,10 @@
   list-style: none;
   line-height: 1;
   font-weight: 400;
+
+  &--index {
+    line-height: 1.15;
+  }
 }
 
 .tag-list__item {
