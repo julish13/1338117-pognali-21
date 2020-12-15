@@ -58,6 +58,12 @@
           d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"
         />
       </symbol>
+      <symbol viewBox="0 0 21 21" id="location">
+        <path
+          d="M10.5 0a7.88 7.88 0 00-7.88 7.88c0 5.05 3.8 7.26 4.65 8.27C9.29 18.58 9.4 21 10.5 21s1.21-2.42 3.23-4.85c.84-1 4.64-3.22 4.64-8.27A7.88 7.88 0 0010.5 0zm0 13.13a5.25 5.25 0 110-10.5 5.25 5.25 0 010 10.5zm0-7.88a2.63 2.63 0 100 5.25 2.63 2.63 0 000-5.25z"
+        />
+        <circle cx="10.5" cy="7.88" r=".88" />
+      </symbol>
     </svg>
     <header class="page-header">
       <nav class="main-nav main-nav--nojs">
@@ -116,7 +122,7 @@
               href="mailto:mail@htmlacademy.ru"
               aria-label="почта mail@htmlacademy.ru"
             >
-              <span class="contacts-link__wrap contacts-link__wrap--mail">
+              <span class="contacts-link__wrap  contacts-link__wrap--mail">
                 <svg
                   class="contacts-link__icon contacts-link__icon--mail-1"
                   role="img"
@@ -224,7 +230,7 @@
             сами пишут о&nbsp;странах, куда хотели&nbsp;бы отправиться
             и&nbsp;чем можно там заняться.
           </p>
-          <div class="countries__inner">
+          <div class="container-fix">
             <ul class="countries__list">
               <li class="countries__item country country--thailand">
                 <img
@@ -304,7 +310,7 @@
           <p class="users__description users__description--bold">
             Теперь можно легко найти единомышленников!
           </p>
-          <div class="users__inner">
+          <div class="container-fix">
             <ul class="users__list">
               <li class="users__item user-item user-item--offline">
                 <div class="user-item__level level level--index">
@@ -326,7 +332,9 @@
                   />
                 </a>
                 <div class="user-item__info">
-                  <ul class="user-item__countries-list users-contries-list-index">
+                  <ul
+                    class="user-item__countries-list users-contries-list-index"
+                  >
                     <li
                       class="users-contries-list-index__country users-contries-list-index__country--sri-lanka"
                     >
@@ -371,7 +379,9 @@
                       <span class="visually-hidden">На самолете, активно</span>
                     </li>
                     <li class="transport-button transport-button--bus">
-                      <span class="visually-hidden">На автобусе, неактивно</span>
+                      <span class="visually-hidden"
+                        >На автобусе, неактивно</span
+                      >
                     </li>
                     <li class="transport-button transport-button--bike">
                       <span class="visually-hidden"
@@ -404,7 +414,9 @@
                   />
                 </a>
                 <div class="user-item__info">
-                  <ul class="user-item__countries-list users-contries-list-index">
+                  <ul
+                    class="user-item__countries-list users-contries-list-index"
+                  >
                     <li
                       class="users-contries-list-index__country users-contries-list-index__country--belgium"
                     >
@@ -490,27 +502,23 @@
           </div>
         </div>
       </section>
-      <section class="feedback">
-        <div class="container">
+      <section class="main-index__feedback feedback">
+        <div class="container-fix">
           <h2 class="visually-hidden">Авторизация и регистрация</h2>
           <p class="feedback__subheading index-subheading">Заинтересовались?</p>
           <p class="feedback__description">
-            Зарегистрируйтесь, это быстро и&nbsp;бесплатно! Уже
+            Зарегистрируйтесь,<br />это быстро и&nbsp;бесплатно!<br />Уже
             зарегистрированы? Тогда скорее
             <a class="feedback__login">авторизуйтесь</a>.
           </p>
           <form
-            class="feedback__sign-up-form sign-up-form"
+            class="feedback__form"
             action="https://echo.htmlacademy.ru"
             method="post"
           >
-            <input
-              class="sign-up-form__email"
-              type="email"
-              placeholder="E-mail"
-            />
+            <input class="feedback__input" type="email" placeholder="E-mail" />
             <button
-              class="button-square"
+              class="feedback__button button-square"
               type="submit"
               aria-label="Зарегистрироваться"
             ></button>
@@ -519,33 +527,76 @@
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <address class="container">
-          <p class="contacts__intro">
-            Остались вопросы? Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!
-          </p>
-          <p class="contacts__links">
+        <div class="contacts__wrap">
+          <address class="contacts__inner container-fix">
+            <p class="contacts__intro">
+              Остались вопросы?<br />
+              Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!
+            </p>
+            <p class="contacts__links">
+              <a
+                class="contacts__link contacts-link"
+                href="tel:88005558628"
+                aria-label="телефон 88005558628"
+              >
+                <span class="contacts-link__wrap">
+                  <svg
+                    class="contacts-link__icon contacts-link__icon--phone-1"
+                    role="img"
+                    width="17px"
+                    height="15px"
+                  >
+                    <use xlink:href="#phone-1"></use>
+                  </svg>
+                </span>
+                <span class="contacts-link__text">8 800 555-86-28</span>
+              </a>
+              <a
+                class="contacts__link contacts-link"
+                href="mailto:mail@htmlacademy.ru"
+                aria-label="почта mail@htmlacademy.ru"
+              >
+                <span class="contacts-link__wrap">
+                  <svg
+                    class="contacts-link__icon contacts-link__icon--mail-1"
+                    role="img"
+                    width="24px"
+                    height="25px"
+                  >
+                    <use xlink:href="#mail-1"></use>
+                  </svg>
+                </span>
+                <span class="contacts-link__text">mail@htmlacademy.ru</span>
+              </a>
+            </p>
+          </address>
+        </div>
+        <div class="contacts__map map" id="map">
+          <div class="map__pin" id="pin"></div>
+        </div>
+        <div class="contacts__location location">
+          <address class="location__inner container-fix">
+            <p class="location__address contacts-link">
+              <span class="contacts-link__wrap">
+                <svg
+                  class="contacts-link__icon contacts-link__icon--location"
+                  role="img"
+                  width="21px"
+                  height="21px"
+                >
+                  <use xlink:href="#location"></use>
+                </svg>
+              </span>
+              <span class="contacts-link__text"
+                >ул. Большая<br> Конюшенная, 19/8</span
+              >
+            </p>
             <a
-              class="contacts__link contacts__link--phone"
-              href="tel:88005558628"
-              >8 800 555-86-28</a
-            >
-            <a
-              class="contacts__link contacts__link--email"
-              href="mailto:mail@htmlacademy.ru"
-              >mail@htmlacademy.ru</a
-            >
-          </p>
-        </address>
-        <div class="contacts__location">
-          <address class="container">
-            <p class="contacts__address">ул. Большая Конюшенная, 19/8</p>
-            <a
-              class="contacts__button button-square"
+              class="location__button button-square"
               href="https://goo.gl/maps/8R1juvv1aPKCmT4NA"
               >Проложить маршрут</a
             >
           </address>
-          <div class="contacts__map"></div>
         </div>
       </section>
     </main>

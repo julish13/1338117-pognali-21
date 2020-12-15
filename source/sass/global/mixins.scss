@@ -1,7 +1,5 @@
-@mixin container-fix {
-  margin-left: auto;
-  margin-right: auto;
-  width: $mobile-width - 2 * $mobile-padding;
+@mixin section-border-radius {
+  border-radius: 0 0 27px 27px;
 }
 
 @mixin border {

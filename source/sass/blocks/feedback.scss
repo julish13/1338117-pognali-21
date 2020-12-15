@@ -1,3 +1,52 @@
+.feedback {
+  background-color: $blue-3;
+  text-align: center;
+}
+
+.feedback__subheading {
+  margin-bottom: 22px;
+}
+
+.feedback__description {
+  margin-right: auto;
+  margin-bottom: 30px;
+  margin-left: auto;
+  width: 240px;
+}
+
 .feedback__login {
+  border-bottom: 1px solid;
   color: $yellow-1;
+}
+
+.feedback__form {
+  display: flex;
+}
+
+.feedback__input {
+  border: none;
+  border-radius: 10px;
+  padding: 19px 25px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+
+  &::placeholder {
+    color: $basic-grey-font;
+    opacity: 0.3;
+  }
+}
+
+.feedback__button {
+  margin-left: -18px;
+  padding: 0;
+  border: none;
+  width: 60px;
+  height: 62px;
+
+  &::after {
+    top: 40%;
+    right: 40%;
+  }
 }

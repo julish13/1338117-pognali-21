@@ -43,10 +43,6 @@
   }
 }
 
-.users__inner {
-  @include container-fix;
-}
-
 .users__list {
   margin-top: 55px;
   margin-bottom: 19px;

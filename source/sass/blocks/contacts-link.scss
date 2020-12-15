@@ -1,8 +1,6 @@
 .contacts-link {
   display: flex;
   align-items: center;
-  color: inherit;
-  line-height: 1.12;
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
@@ -18,7 +16,7 @@
 
 .contacts-link__icon {
   position: absolute;
-  fill: currentColor;
+  fill: $yellow-1;
 
   &--phone-1 {
     top: 35%;
@@ -30,6 +28,11 @@
     left: 25%;
   }
 
+  &--location {
+    top: 26%;
+    left: 27%;
+  }
+
   &--phone-2,
   &--mail-2 {
     display: none;
@@ -37,6 +40,7 @@
 }
 
 .contacts-link__text {
+  color: inherit;
   margin-left: 15px;
 }
 

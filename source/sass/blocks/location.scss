@@ -1,0 +1,17 @@
+.location {
+  background-color: $yellow-1;
+  color: $basic-blue-light;
+}
+
+.location__inner {
+  font-style: normal;
+}
+
+.location__address {
+  margin-bottom: 33px;
+}
+
+.location__button {
+  border: $blue-3 3px solid;
+  padding: 18px 20px 20px;
+}
