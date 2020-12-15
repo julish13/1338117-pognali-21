@@ -1,0 +1,17 @@
+.social-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &--background {
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-color: $yellow-1;
+  }
+}
+
+.social-item__icon {
+  fill: $blue-3;
+}

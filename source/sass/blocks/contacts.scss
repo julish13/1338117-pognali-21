@@ -1,5 +1,5 @@
 .contacts__wrap {
-  @include section-border-radius;
+  @include section-bottom-border-radius;
   position: relative;
   z-index: 5;
   padding-bottom: 12px;
@@ -34,7 +34,7 @@
 }
 
 .contacts__location {
-  @include section-border-radius;
+  @include section-bottom-border-radius;
   position: relative;
   z-index: 4;
   margin-top: -30px;

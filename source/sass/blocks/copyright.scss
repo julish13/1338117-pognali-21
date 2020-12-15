@@ -1,5 +1,12 @@
 .copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: $basic-grey-font;
   line-height: 1;
   font-weight: 400;
+}
+
+.copyright__icon {
+  fill: $blue-background-1;
 }

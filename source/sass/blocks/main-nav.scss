@@ -7,7 +7,6 @@
 .main-nav__inner {
   padding-top: 27px;
   padding-bottom: 30px;
-  width: $mobile-width;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -92,8 +91,12 @@
 }
 
 .main-nav__social {
-  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: baseline;
   margin: 10px 21%;
+  flex-basis: 100%;
 
   @media #{$min-desktop} {
     display: none;

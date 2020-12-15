@@ -1,5 +1,9 @@
-@mixin section-border-radius {
+@mixin section-bottom-border-radius {
   border-radius: 0 0 27px 27px;
+}
+
+@mixin section-top-border-radius {
+  border-radius: 27px 27px 0 0;
 }
 
 @mixin border {

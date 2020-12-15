@@ -3,8 +3,34 @@
 }
 
 .page-footer__inner {
+  text-align: center;
+
   @media #{$min-tablet} {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+.page-footer__logo {
+  display: block;
+  margin-bottom: 34px;
+}
+
+.page-footer__social {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+}
+
+.page-footer__copyright {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -13px;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $grey-4;
   }
 }

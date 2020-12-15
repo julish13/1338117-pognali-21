@@ -13,3 +13,11 @@
   background-color: $blue-background-1;
   color: $basic-white;
 }
+
+.page__footer {
+  @include section-top-border-radius;
+  position: relative;
+  margin-top: -110px;
+  padding-top: 39px;
+  padding-bottom: 1px;
+}
