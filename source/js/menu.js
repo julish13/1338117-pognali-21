@@ -4,8 +4,8 @@
   const PROMO_HEADING_Y = 75;
 
   const mainNavBlock = document.querySelector(`.main-nav`);
-  const mainNavInnerElement = document.querySelector(`.main-nav__inner`);
-  const logoElement = document
+  const mainNavInnerElement = mainNavBlock.querySelector(`.main-nav__inner`);
+  const logoElement = mainNavInnerElement
     .querySelector(`.main-nav__logo`)
     .querySelector(`img`);
   const toggleElement = mainNavBlock.querySelector(`.main-nav__toggle`);

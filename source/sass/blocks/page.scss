@@ -7,8 +7,8 @@
 }
 
 .page__body {
-  overflow: scroll;
   min-height: 100vh;
+  min-width: $mobile-width;
   margin: 0;
   background-color: $blue-background-1;
   color: $basic-white;
