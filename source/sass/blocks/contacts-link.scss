@@ -18,7 +18,7 @@
 
 .contacts-link__icon {
   position: absolute;
-  fill: $yellow-1;
+  fill: currentColor;
 
   &--phone-1 {
     top: 35%;
@@ -59,7 +59,7 @@
   }
 
   .contacts-link__icon {
-    fill: $basic-blue;
+    fill: currentColor;
 
     &--phone-1,
     &--mail-1 {

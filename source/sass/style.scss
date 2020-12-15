@@ -5,6 +5,9 @@
 @import "global/variables.scss";
 @import "blocks/visually-hidden.scss";
 @import "blocks/container.scss";
+@import "blocks/main-index.scss";
+@import "blocks/main-catalog.scss";
+@import "blocks/main-form.scss";
 @import "blocks/button-square.scss";
 @import "blocks/button-round.scss";
 @import "blocks/main-heading.scss";
@@ -27,7 +30,7 @@
 @import "blocks/users-contries-list.scss";
 @import "blocks/status.scss";
 @import "blocks/tag-list.scss";
-@import "blocks/transport.scss";
+@import "blocks/transport-button.scss";
 @import "blocks/pricing.scss";
 @import "blocks/price-list.scss";
 @import "blocks/feedback.scss";
@@ -35,7 +38,6 @@
 @import "blocks/contacts.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/copyright.scss";
-@import "blocks/main-catalog.scss";
 @import "blocks/filter-countries.scss";
 @import "blocks/dropdown-countries-list.scss";
 @import "blocks/filter-countries-dropdown.scss";
@@ -46,7 +48,6 @@
 @import "blocks/user-catalog.scss";
 @import "blocks/user-catalog-item.scss";
 @import "blocks/likes.scss";
-@import "blocks/main-form.scss";
 @import "blocks/profile.scss";
 @import "blocks/plans.scss";
 @import "blocks/planning-subheading.scss";
@@ -64,3 +65,4 @@
 @import "blocks/pagination.scss";
 @import "blocks/contacts-link.scss";
 @import "blocks/review.scss";
+@import "blocks/users-contries-list-index.scss";

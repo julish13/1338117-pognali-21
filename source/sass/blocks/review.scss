@@ -1,9 +1,8 @@
 @mixin review {
+  @include index-text-margin-left;
   display: block;
   width: 63%;
-  margin-left: 25px;
 }
-
 
 .review {
   width: 100%;

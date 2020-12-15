@@ -1,0 +1,49 @@
+.transport-button {
+  position: relative;
+  width: 33px;
+  height: 33px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    opacity: 0.15;
+  }
+
+  &--plane {
+    &::before {
+      width: 18px;
+      height: 20px;
+      background-image: url("../img/plane.svg");
+    }
+  }
+
+  &--bus {
+    &::before {
+      width: 18px;
+      height: 21px;
+      background-image: url("../img/bus.svg");
+    }
+  }
+
+  &--bike {
+    &::before {
+      width: 25px;
+      height: 24px;
+      background-image: url("../img/bicycle.svg");
+    }
+  }
+
+  &--walk {
+    &::before {
+      width: 21px;
+      height: 24px;
+      background-image: url("../img/walk.svg");
+    }
+  }
+
+  &--checked {
+    &::before {
+      opacity: 1;
+    }
+  }
+}

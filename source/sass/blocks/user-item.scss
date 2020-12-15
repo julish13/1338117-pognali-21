@@ -1,11 +1,74 @@
 .user-item {
+  position: relative;
   background-color: $basic-white;
+  border-radius: 8px;
   color: $basic-blue;
 }
 
+.user-item__level {
+  position: absolute;
+  top: 15px;
+  left: 18px;
+}
+
+.user-item__photo {
+  display: block;
+  border-radius: 8px 8px 0 0;
+}
+
+.user-item__info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 27px 20px 10px;
+}
+
+.user-item__countries-list {
+  position: absolute;
+  top: -10px;
+  width: 100%;
+}
+
 .user-item__name {
+  position: relative;
+  margin-bottom: 15px;
   color: $basic-blue-light;
   font-size: 21px;
   line-height: 1;
   font-weight: 700;
+
+  &::before {
+    @include user-status;
+    position: absolute;
+    top: 30%;
+    left: -13%;
+    content: "";
+  }
+
+  .user-item--offline & {
+    &::before {
+      @include user-status-offline;
+    }
+  }
+
+  .user-item--online & {
+    &::before {
+      @include user-status-online;
+    }
+  }
+}
+
+.user-item__tag-list {
+  margin-bottom: 18px;
+  width: 180px;
+  text-align: center;
+}
+
+.user-item__transport {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-left: 10px;
+  list-style: none;
 }

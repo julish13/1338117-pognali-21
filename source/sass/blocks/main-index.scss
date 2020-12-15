@@ -1,0 +1,27 @@
+@mixin section-border-radius {
+  border-radius: 0 0 27px 27px;
+}
+
+.main-index__about {
+  @include section-border-radius;
+  position: relative;
+  z-index: 10;
+}
+
+.main-index__countries {
+  @include section-border-radius;
+  position: relative;
+  z-index: 9;
+  margin-top: -30px;
+  padding-top: 100px;
+  padding-bottom: 32px;
+}
+
+.main-index__users {
+  @include section-border-radius;
+  position: relative;
+  z-index: 8;
+  margin-top: -30px;
+  padding-top: 76px;
+  padding-bottom: 32px;
+}

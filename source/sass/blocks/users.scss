@@ -1,3 +1,7 @@
+.users {
+  background-color: $blue-3;
+}
+
 .users__inner {
   @media #{$min-desktop} {
     display: grid;
@@ -5,13 +9,26 @@
   }
 }
 
+.users__subheading {
+  @include index-text-margin-left;
+  margin-right: 25px;
+  margin-bottom: 22px;
+}
+
 .users__description {
+  @include index-text-margin-left;
+  margin-right: 25px;
+  margin-bottom: 22px;
+
   &--bold {
     font-weight: 700;
   }
 }
 
 .users__list {
+  margin-top: 55px;
+  margin-bottom: 20px;
+  padding-left: 0;
   list-style: none;
 
   @media #{$min-tablet} {
@@ -28,6 +45,8 @@
 }
 
 .users__item {
+  margin-bottom: 10px;
+
   @media #{$min-tablet} {
     flex-basis: 50%;
   }

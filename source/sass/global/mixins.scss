@@ -1,3 +1,26 @@
 @mixin border {
   border: 1px solid $grey-1;
 }
+
+@mixin index-text-margin-left {
+  margin-left: 25px;
+}
+
+@mixin user-status {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+
+  @media #{$min-tablet} {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@mixin user-status-online {
+  background-color: $green-1;
+}
+
+@mixin user-status-offline {
+  background-color: $red-1;
+}

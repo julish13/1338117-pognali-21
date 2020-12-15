@@ -4,13 +4,29 @@
 }
 
 .countries__inner {
+  width: $mobile-width;
+
   @media #{$min-desktop} {
     display: grid;
     grid-template: repeat(3, min-content) / repeat(2, 1fr);
   }
 }
 
+.countries__subheading {
+  @include index-text-margin-left;
+  margin-top: 0;
+  margin-left: 50px;
+}
+
+.countries__description {
+  @include index-text-margin-left;
+  margin-left: 50px;
+  margin-bottom: 65px;
+}
+
 .countries__list {
+  margin-bottom: 25px;
+  padding-left: 0;
   list-style: none;
 
   @media #{$min-desktop} {

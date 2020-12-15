@@ -1,4 +1,40 @@
+.about {
+  width: 100%;
+  background-color: $blue-3;
+}
+
+.about::before {
+  position: absolute;
+  content: "";
+  width: 113px;
+  height: 132px;
+  background-color: $blue-4;
+  border-radius: 20px;
+}
+
+.about__wrap {
+  position: relative;
+  z-index: 11;
+  min-height: 353px;
+  background-image: url("../img/about-mobile.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.about__inner {
+  @include index-text-margin-left;
+  margin-right: 35px;
+  padding-top: 32px;
+  padding-bottom: 35px;
+}
+
+.about__subheading {
+  margin-top: 0;
+}
+
 .about__description {
+  margin-bottom: 20px;
+
   &--bold {
     font-weight: 700;
   }
