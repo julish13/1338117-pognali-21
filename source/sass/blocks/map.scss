@@ -1,0 +1,19 @@
+.map {
+  width: $mobile-width;
+  height: 424px;
+  background-image: url("../img/map-mobile.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.map__pin {
+  position: absolute;
+  top: 149px;
+  left: 158px;
+  border: 12px solid $basic-white;
+  border-radius: 50%;
+  width: 41px;
+  height: 41px;
+  background-color: $blue-background-2;
+}

@@ -571,9 +571,6 @@
             </p>
           </address>
         </div>
-        <div class="contacts__map map" id="map">
-          <div class="map__pin" id="pin"></div>
-        </div>
         <div class="contacts__location location">
           <address class="location__inner container-fix">
             <p class="location__address contacts-link">
@@ -598,15 +595,21 @@
             >
           </address>
         </div>
+        <div class="contacts__map map" id="map">
+          <div class="map__pin" id="pin"></div>
+        </div>
       </section>
     </main>
     <footer class="page-footer">
       <div class="page-footer__inner container">
-        <a class="page-footer__logo logo">
-          <img
-            src="https://via.placeholder.com/150x150"
-            alt="Логотип Погнали"
-          />
+          <a class="page-footer__logo logo">
+            <img
+              src="img/logo-mobile-dark.png"
+              width="100"
+              height="15"
+              alt="Логотип Погнали"
+            />
+          </a>
         </a>
         <div class="page-footer__social social social--footer">
           <a
@@ -637,5 +640,7 @@
     </footer>
     <script src="js/menu.js"></script>
     <script src="js/level.js"></script>
+    <script src="js/map.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXmwjGqbP-jxTZ8QsfhLzsMq8csUyF2tk&callback=initMap"></script>
   </body>
 </html>
