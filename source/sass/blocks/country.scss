@@ -53,6 +53,11 @@
   @media #{$min-tablet} {
     order: -1;
   }
+
+  .country--czech & {
+    padding-top: 20px;
+    padding-bottom: 7px;
+  }
 }
 
 .country__name {
