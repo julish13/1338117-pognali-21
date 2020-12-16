@@ -1,9 +1,9 @@
-@mixin short-contacts-link {
-  .contacts-link__text {
+@mixin short-contact-link {
+  .contact-link__text {
     display: none;
   }
 
-  .contacts-link__wrap {
+  .contact-link__wrap {
     width: 40px;
     height: 40px;
 
@@ -16,7 +16,7 @@
     }
   }
 
-  .contacts-link__icon {
+  .contact-link__icon {
     fill: currentColor;
 
     &--phone-1,
@@ -38,7 +38,7 @@
   }
 }
 
-.contacts-link__wrap {
+.contact-link__wrap {
   position: relative;
   width: 45px;
   height: 45px;
@@ -51,7 +51,7 @@
   }
 }
 
-.contacts-link__icon {
+.contact-link__icon {
   position: absolute;
   fill: $yellow-1;
 
@@ -87,7 +87,7 @@
   }
 }
 
-.contacts-link__text {
+.contact-link__text {
   color: inherit;
   margin-left: 15px;
 
@@ -96,17 +96,17 @@
   }
 }
 
-.contacts-link {
+.contact-link {
   display: flex;
   align-items: center;
 
   &--mobile-closed {
     @media #{$max-mobile} {
-      @include short-contacts-link;
+      @include short-contact-link;
     }
   }
 
   @media #{$min-desktop} {
-    @include short-contacts-link;
+    @include short-contact-link;
   }
 }

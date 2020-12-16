@@ -22,7 +22,7 @@
     mainNavBlock.classList.add(`main-nav--closed`);
     loginElement.classList.add(`main-nav__login--short`);
     contactsCollection.forEach((contact) =>
-      contact.classList.add(`contacts-link--mobile-closed`)
+      contact.classList.add(`contact-link--mobile-closed`)
     );
     mobileLogoElement.src = `img/logo-mobile-white.png`;
     tabletLogoElement.srcset = `img/logo-tablet-white.png 1x`;
@@ -32,7 +32,7 @@
     mainNavBlock.classList.add(`main-nav--opened`);
     loginElement.classList.remove(`main-nav__login--short`);
     contactsCollection.forEach((contact) =>
-      contact.classList.remove(`contacts-link--mobile-closed`)
+      contact.classList.remove(`contact-link--mobile-closed`)
     );
     mobileLogoElement.src = `img/logo-mobile-dark.png`;
     tabletLogoElement.srcset = `img/logo-tablet-dark.png 1x`;
