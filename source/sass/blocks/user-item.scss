@@ -1,19 +1,28 @@
 .user-item {
+  overflow: hidden;
   position: relative;
   background-color: $basic-white;
   border-radius: 8px;
   color: $basic-blue;
+
+  @media #{$min-tablet} {
+    border-radius: 20px;
+  }
 }
 
 .user-item__level {
   position: absolute;
   top: 15px;
   left: 18px;
+
+  @media #{$min-tablet} {
+    top: 18px;
+    left: 21px;
+  }
 }
 
 .user-item__photo {
   display: block;
-  border-radius: 8px 8px 0 0;
 
   @media #{$min-tablet} {
     width: 285px;
@@ -27,12 +36,20 @@
   flex-direction: column;
   align-items: center;
   padding: 25px 20px 12px;
+
+  @media #{$min-tablet} {
+    padding: 28px 20px 16px;
+  }
 }
 
 .user-item__countries-list {
   position: absolute;
   top: -10px;
   width: 100%;
+
+  @media #{$min-tablet} {
+    top: -13px;
+  }
 }
 
 .user-item__name {
@@ -44,6 +61,9 @@
   font-weight: 700;
 
   @media #{$min-tablet} {
+    display: block;
+    margin-bottom: 24px;
+    width: 150px;
     font-size: 24px;
     line-height: 0.92;
   }
@@ -73,6 +93,11 @@
   margin-bottom: 15px;
   width: 180px;
   text-align: center;
+
+  @media #{$min-tablet} {
+    margin-bottom: 29px;
+    width: 225px;
+  }
 }
 
 .user-item__transport {

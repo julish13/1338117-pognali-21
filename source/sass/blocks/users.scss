@@ -1,10 +1,15 @@
 .users {
   background-color: $blue-3;
   position: relative;
-
   background-image: url("../img/rogovaya-back-mobile.png"), url("../img/smolov-back-mobile.png");
   background-position: left top 335px, right 25px top 65px;
   background-repeat: no-repeat, no-repeat;
+
+  @media #{$min-tablet} {
+    background-image: url("../img/rogovaya-back-tablet.png"), url("../img/smolov-back-tablet.png");
+    background-position: right 73px top 140px, left 40px top 487px;
+    background-repeat: no-repeat, no-repeat;
+  }
 
   &::before {
     position: absolute;
@@ -15,6 +20,14 @@
     width: 113px;
     height: 132px;
     background-color: $blue-4;
+
+    @media #{$min-tablet} {
+      left: 40px;
+      top: 130px;
+      border-radius: 20px;
+      width: 212px;
+      height: 212px;
+    }
   }
 }
 
@@ -84,6 +97,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 61px;
+    margin-bottom: 71px;
   }
 
   @media #{$min-desktop} {
