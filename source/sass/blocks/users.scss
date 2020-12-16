@@ -31,6 +31,10 @@
   @include index-text-margin-left;
   margin-right: 25px;
   margin-bottom: 22px;
+
+  @media #{$min-tablet} {
+    margin-bottom: 57px;
+  }
 }
 
 .users__description {
@@ -38,8 +42,34 @@
   margin-right: 25px;
   margin-bottom: 22px;
 
+  @media #{$min-tablet} {
+    margin-right: 190px;
+    margin-bottom: 45px;
+  }
+
   &--bold {
     font-weight: 700;
+
+    @media #{$min-tablet} {
+      font-size: 21px;
+      line-height: 1.14;
+    }
+
+    br {
+      display: none;
+
+      @media #{$min-tablet} {
+        display: inline;
+      }
+    }
+  }
+
+  &--normal {
+    br {
+      @media #{$min-tablet} {
+        display: none;
+      }
+    }
   }
 }
 
@@ -53,6 +83,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 61px;
   }
 
   @media #{$min-desktop} {
@@ -66,6 +97,6 @@
   margin-bottom: 10px;
 
   @media #{$min-tablet} {
-    flex-basis: 50%;
+    flex-basis: 46%;
   }
 }

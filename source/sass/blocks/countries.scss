@@ -58,7 +58,6 @@
 
   @media #{$min-tablet} {
     margin-bottom: 45px;
-    padding: 0 35px;
   }
 
   @media #{$min-desktop} {
@@ -75,8 +74,3 @@
   }
 }
 
-.countries__button {
-  @media #{$min-tablet} {
-    margin: 0 35px;
-  }
-}

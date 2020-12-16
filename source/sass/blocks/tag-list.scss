@@ -4,6 +4,11 @@
   line-height: 1;
   font-weight: 400;
 
+  @media #{$min-tablet} {
+    font-size: 20px;
+    line-height: 1.15;
+  }
+
   &--index {
     line-height: 1.15;
   }
