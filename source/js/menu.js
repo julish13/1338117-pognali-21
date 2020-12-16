@@ -6,9 +6,8 @@
 
   const mainNavBlock = document.querySelector(`.main-nav`);
   const mainNavInnerElement = mainNavBlock.querySelector(`.main-nav__inner`);
-  const logoElement = mainNavInnerElement
-    .querySelector(`.main-nav__logo`)
-    .querySelector(`img`);
+  const mobileLogoElement = mainNavInnerElement.querySelector(`#logo-mobile`);
+  const tabletLogoElement = mainNavInnerElement.querySelector(`#logo-tablet`);
   const toggleElement = mainNavBlock.querySelector(`.main-nav__toggle`);
   const loginElement = mainNavBlock.querySelector(`.main-nav__login`);
   const contactsElement = mainNavBlock.querySelector(`.main-nav__contacts`);
@@ -25,7 +24,8 @@
     contactsCollection.forEach((contact) =>
       contact.classList.add(`contacts-link--mobile-closed`)
     );
-    logoElement.src = `img/logo-mobile-white.png`;
+    mobileLogoElement.src = `img/logo-mobile-white.png`;
+    tabletLogoElement.srcset = `img/logo-tablet-white.png 1x`;
   };
 
   const setOpenedMenuState = () => {
@@ -34,7 +34,8 @@
     contactsCollection.forEach((contact) =>
       contact.classList.remove(`contacts-link--mobile-closed`)
     );
-    logoElement.src = `img/logo-mobile-dark.png`;
+    mobileLogoElement.src = `img/logo-mobile-dark.png`;
+    tabletLogoElement.srcset = `img/logo-tablet-dark.png 1x`;
   };
 
   const setMobileClosedMenuPositioning = () => {
