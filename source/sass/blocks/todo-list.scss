@@ -10,6 +10,7 @@
   @media #{$min-tablet} {
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    font-size: 24px;
   }
 
   @media #{$min-desktop} {
@@ -21,6 +22,10 @@
   position: relative;
   list-style: none;
   padding: 22px 24px;
+
+  @media #{$min-tablet} {
+    padding: 30px 25px 62px 32px;
+  }
 
   &--choose {
     background-color: $orange-1;
@@ -40,10 +45,30 @@
 
   &:first-child {
     border-radius: 7px 7px 0 0;
+
+    @media #{$min-tablet} {
+      border-radius: 21px 0 0 0;
+    }
+  }
+
+  &:nth-child(2) {
+    @media #{$min-tablet} {
+      border-radius: 0 21px 0 0;
+    }
   }
 
   &:last-child {
     border-radius: 0 0 7px 7px;
+
+    @media #{$min-tablet} {
+      border-radius: 0 0 21px 0;
+    }
+  }
+
+  &:nth-last-child(2) {
+    @media #{$min-tablet} {
+      border-radius: 0 0 0 21px;
+    }
   }
 }
 
@@ -54,6 +79,12 @@
   counter-increment: myCounter;
   content: counter(myCounter);
   color: $basic-white;
+
+  @media #{$min-tablet} {
+    font-size: 30px;
+    top: 60%;
+    left: 10%;
+  }
 }
 
 .todo-list__text {

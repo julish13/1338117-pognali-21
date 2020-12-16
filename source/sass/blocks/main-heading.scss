@@ -1,7 +1,11 @@
 .main-heading {
   color: $basic-white;
   font-size: 36px;
-  line-height: 1.11;
+  line-height: 1;
   font-weight: 700;
   text-align: left;
+
+  @media #{$min-tablet} {
+    font-size: 60px;
+  }
 }

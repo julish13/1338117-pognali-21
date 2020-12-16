@@ -14,4 +14,25 @@
 
 .social-item__icon {
   fill: $blue-3;
+
+  &--facebook-header {
+    @media #{$min-tablet} {
+      width: 14px;
+      height: 28px;
+    }
+  }
+
+  &--vkontakte-header {
+    @media #{$min-tablet} {
+      width: 31px;
+      height: 16px;
+    }
+  }
+
+  &--instagram-header {
+    @media #{$min-tablet} {
+      width: 24px;
+      height: 24px;
+    }
+  }
 }

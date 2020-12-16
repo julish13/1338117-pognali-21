@@ -69,12 +69,15 @@
       <nav class="main-nav main-nav--nojs">
         <div class="main-nav__inner container-fix">
           <a class="main-nav__logo logo">
-            <img
-              src="img/logo-mobile-dark.png"
-              width="100"
-              height="15"
-              alt="Логотип Погнали"
-            />
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x">
+              <img
+                src="img/logo-mobile-dark.png"
+                width="100"
+                height="15"
+                alt="Логотип Погнали"
+              />
+            </picture>
           </a>
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
@@ -144,18 +147,18 @@
             </a>
           </address>
           <div class="main-nav__social">
-            <a class="social-item" href="#" aria-label="Наша страница в  Facebook">
-              <svg class="social-item__icon" role="img" width="11" height="21">
+            <a class="main-nav__social-item social-item" href="#" aria-label="Наша страница в  Facebook">
+              <svg class="social-item__icon social-item__icon--facebook-header" role="img" width="11" height="21">
                 <use xlink:href="#facebook"></use>
               </svg>
             </a>
-            <a class="social-item" href="#" aria-label="Наша страница Вконтакте">
-              <svg class="social-item__icon" role="img" width="23" height="12">
+            <a class="main-nav__social-item social-item" href="#" aria-label="Наша страница Вконтакте">
+              <svg class="social-item__icon social-item__icon--vkontakte-header" role="img" width="23" height="12">
                 <use xlink:href="#vkontakte"></use>
               </svg>
             </a>
-            <a class="social-item" href="#" aria-label="Наша страница в Instagram">
-              <svg class="social-item__icon" role="img" width="18" height="18">
+            <a class="main-nav__social-item social-item" href="#" aria-label="Наша страница в Instagram">
+              <svg class="social-item__icon social-item__icon--instagram-header" role="img" width="18" height="18">
                 <use xlink:href="#instagram"></use>
               </svg>
             </a>
@@ -170,23 +173,23 @@
       <section class="promo">
         <h2 class="visually-hidden">Промо информация</h2>
         <div class="promo__inner">
-          <div class="promo__header">
-            <p class="container promo__heading main-heading">
+          <div class="promo__header container">
+            <p class="promo__heading main-heading">
               В&nbsp;путешествие с&nbsp;крутыми попутчиками!
             </p>
           </div>
           <blockquote class="promo__review review">
-            <div class="container review__wrap">
+            <div class="review__wrap container">
               <p class="review__quote">
                 &laquo;Лучшее приложение, что я&nbsp;видел в&nbsp;жизни!&raquo;
               </p>
               <cite class="review__author">
-                Мурат Эльтазин главный редактор газеты &laquo;гаджетлайф&raquo;
+                Мурат Эльтазин <br> главный редактор газеты &laquo;гаджетлайф&raquo;
               </cite>
             </div>
           </blockquote>
           <div class="promo__wrap">
-            <ol class="container promo__todo-list todo-list">
+            <ol class="promo__todo-list todo-list container">
               <li class="todo-list__item todo-list__item--choose">
                 <p class="todo-list__text">Выберите направление</p>
               </li>

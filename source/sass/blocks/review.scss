@@ -2,27 +2,50 @@
   @include index-text-margin-left;
   display: block;
   width: 63%;
+
+  @media #{$min-tablet} {
+    width: 38%;
+  }
 }
 
 .review {
   width: 100%;
   min-height: 285px;
   background-color: $basic-blue;
+
+  @media #{$min-tablet} {
+    background-color: transparent;
+  }
 }
 
 .review__wrap {
   width: 100%;
   padding-top: 35px;
   padding-bottom: 35px;
+
+  @media #{$min-tablet} {
+    padding-top: 10px;
+  }
 }
 
 .review__quote {
   @include review;
   margin-bottom: 20px;
+
+  @media #{$min-tablet} {
+    margin-bottom: 45px;
+    font-size: 28px;
+    line-height: 1.18;
+  }
 }
 
 .review__author {
   @include review;
   font-style: normal;
   font-weight: 700;
+
+  @media #{$min-tablet} {
+    font-size: 21px;
+    line-height: 1.19;
+  }
 }

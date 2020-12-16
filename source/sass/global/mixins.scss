@@ -12,6 +12,10 @@
 
 @mixin index-text-margin-left {
   margin-left: 25px;
+
+  @media #{$min-tablet} {
+    margin-left: 33px;
+  }
 }
 
 @mixin user-status {

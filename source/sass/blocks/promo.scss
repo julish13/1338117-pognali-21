@@ -1,16 +1,28 @@
+.promo__inner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  @media #{$min-tablet} {
+    min-height: 995px;
+    background-image: url("../img/traveller-illustration-tablet.png"),
+      url("../img/globe-back-tablet.png");
+    background-position: right 28% bottom 25%, center bottom;
+    background-size: auto, 100% 612px;
+    background-repeat: no-repeat;
+  }
+}
+
 .promo__header {
   background-image: url("../img/traveller-illustration-mobile.png"),
     url("../img/globe-back-mobile.png");
   background-position: 60% bottom, center 30%;
   background-size: auto, 100% 568px;
   background-repeat: no-repeat;
-  width: 100%;
-}
 
-.promo__inner {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  @media #{$min-tablet} {
+    background-image: none;
+  }
 }
 
 .promo__heading {
@@ -20,6 +32,13 @@
   padding: 15px 0 50px;
   min-height: 400px;
   text-align: center;
+  line-height: 1.11;
+
+  @media #{$min-tablet} {
+    margin: 142px 10% 0;
+    min-height: unset;
+    line-height: 1.17;
+  }
 }
 
 .promo__review {
@@ -30,9 +49,21 @@
   padding-bottom: 40px;
   flex-basis: 100%;
   background-color: $blue-3;
+
+  @media #{$min-tablet} {
+    margin-top: auto;
+    background-color: transparent;
+  }
 }
 
 .promo__todo-list {
   margin-bottom: 0;
   margin-top: -80px;
+
+  @media #{$min-tablet} {
+    position: relative;
+    z-index: 20;
+    margin-top: 0;
+    margin-bottom: -180px;
+  }
 }

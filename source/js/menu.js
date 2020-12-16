@@ -2,6 +2,7 @@
 
 (function () {
   const PROMO_HEADING_Y = 75;
+  const TABLET_WIDTH = 768;
 
   const mainNavBlock = document.querySelector(`.main-nav`);
   const mainNavInnerElement = mainNavBlock.querySelector(`.main-nav__inner`);
@@ -22,7 +23,7 @@
     mainNavBlock.classList.add(`main-nav--closed`);
     loginElement.classList.add(`main-nav__login--short`);
     contactsCollection.forEach((contact) =>
-      contact.classList.add(`contacts-link--short`)
+      contact.classList.add(`contacts-link--mobile-closed`)
     );
     logoElement.src = `img/logo-mobile-white.png`;
   };
@@ -31,24 +32,27 @@
     mainNavBlock.classList.add(`main-nav--opened`);
     loginElement.classList.remove(`main-nav__login--short`);
     contactsCollection.forEach((contact) =>
-      contact.classList.remove(`contacts-link--short`)
+      contact.classList.remove(`contacts-link--mobile-closed`)
     );
     logoElement.src = `img/logo-mobile-dark.png`;
   };
 
-  const setClosedMenuPositioning = () => {
-    promoHeadingElement.style.marginTop = `${PROMO_HEADING_Y}px`;
-    mainNavInnerElement.style.minHeight = `${
-      promoHeadingElement.offsetHeight +
-      PROMO_HEADING_Y +
-      contactsElement.offsetHeight / 2
-    }px`;
-    promoHeaderElement.style.backgroundPosition = `60% bottom, center top`;
+  const setMobileClosedMenuPositioning = () => {
+    const windowWidth = document.documentElement.clientWidth;
+    if (windowWidth < TABLET_WIDTH) {
+      promoHeadingElement.style.marginTop = `${PROMO_HEADING_Y}px`;
+      mainNavInnerElement.style.minHeight = `${
+        promoHeadingElement.offsetHeight +
+        PROMO_HEADING_Y +
+        contactsElement.offsetHeight / 2
+      }px`;
+      promoHeaderElement.style.backgroundPosition = `60% bottom, center top`;
+    }
   };
 
   mainNavBlock.classList.remove(`main-nav--nojs`);
   setClosedMenuState();
-  setClosedMenuPositioning();
+  setMobileClosedMenuPositioning();
 
   toggleElement.addEventListener(`click`, function () {
     if (mainNavBlock.classList.contains(`main-nav--closed`)) {
@@ -58,7 +62,18 @@
     } else {
       mainNavBlock.classList.remove(`main-nav--opened`);
       setClosedMenuState();
-      setClosedMenuPositioning();
+      setMobileClosedMenuPositioning();
     }
   });
+
+
+  // let lastTimeout = null;
+  // window.onresize = function(){
+  //   clearTimeout(lastTimeout);
+  //   localStorage.setItem('scrollPosition', window.scrollY);
+  //   lastTimeout = setTimeout(function () {
+  //     location.reload();
+  //     window.scrollTo(0, localStorage.getItem('scrollPosition'));
+  //   }, 100);
+  // };
 })();
