@@ -2,6 +2,10 @@
   @include section-bottom-border-radius;
   position: relative;
   z-index: 10;
+
+  @media #{$min-tablet} {
+    padding-bottom: 53px;
+  }
 }
 
 .main-index__countries {

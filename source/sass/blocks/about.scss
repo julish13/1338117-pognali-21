@@ -10,6 +10,13 @@
   height: 132px;
   background-color: $blue-4;
   border-radius: 20px;
+
+  @media #{$min-tablet} {
+    top: 26%;
+    left: 5%;
+    width: 688px;
+    height: 212px;
+  }
 }
 
 .about__wrap {
@@ -19,6 +26,11 @@
   background-image: url("../img/about-mobile.png");
   background-position: center top;
   background-repeat: no-repeat;
+
+  @media #{$min-tablet} {
+    background-image: url("../img/about-tablet.png");
+    background-position: 98% 90%;
+  }
 }
 
 .about__inner {
@@ -26,6 +38,11 @@
   margin-right: 35px;
   padding-top: 32px;
   padding-bottom: 35px;
+
+  @media #{$min-tablet} {
+    padding-top: 276px;
+    padding-right: 315px;
+  }
 }
 
 .about__subheading {
@@ -35,13 +52,34 @@
 .about__description {
   margin-bottom: 20px;
 
+  @media #{$min-tablet} {
+    margin-bottom: 35px;
+  }
+
   &--bold {
     font-weight: 700;
+
+    @media #{$min-tablet} {
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+
+  br {
+    @media #{$min-tablet} {
+      display: none;
+    }
   }
 }
 
 .about__button {
   @media #{$max-mobile} {
     display: none;
+  }
+
+  @media #{$min-tablet} {
+    margin-top: 54px;
+    margin-right: 27px;
+    max-width: 400px;
   }
 }

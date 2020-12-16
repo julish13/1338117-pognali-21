@@ -1,5 +1,9 @@
 @mixin section-bottom-border-radius {
   border-radius: 0 0 27px 27px;
+
+  @media #{$min-tablet} {
+    border-radius: 0 0 57px 57px;
+  }
 }
 
 @mixin section-top-border-radius {

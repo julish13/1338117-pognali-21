@@ -4,6 +4,11 @@
   font-size: 16px;
   line-height: 1.37;
   font-weight: 300;
+
+  @media #{$min-tablet} {
+    font-size: 28px;
+    line-height: 1.18;
+  }
 }
 
 .page__body {
