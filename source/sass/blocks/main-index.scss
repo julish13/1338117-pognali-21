@@ -15,6 +15,11 @@
   z-index: 9;
   padding-top: 100px;
   padding-bottom: 34px;
+
+  @media #{$min-tablet} {
+    padding-top: 131px;
+    padding-bottom: 83px;
+  }
 }
 
 .main-index__users {

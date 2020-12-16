@@ -4,9 +4,29 @@
 }
 
 .countries__wrap {
+
+  @media #{$min-tablet} {
+    background-image: url("../img/flags-back-tablet.png");
+    background-position: 92% 3%;
+    background-repeat: no-repeat;
+  }
+
   @media #{$min-desktop} {
     display: grid;
     grid-template: repeat(3, min-content) / repeat(2, 1fr);
+  }
+
+  &::before {
+    @media #{$min-tablet} {
+      position: absolute;
+      content: "";
+      background-color: $grey-background-4;
+      border-radius: 20px;
+      top: 40%;
+      left: 5%;
+      width: 141px;
+      height: 141px;
+    }
   }
 }
 
@@ -14,12 +34,21 @@
   @include index-text-margin-left;
   margin-top: 0;
   margin-right: 50px;
+
+  @media #{$min-tablet} {
+    margin-bottom: 58px;
+  }
 }
 
 .countries__description {
   @include index-text-margin-left;
   margin-right: 50px;
   margin-bottom: 65px;
+
+  @media #{$min-tablet} {
+    margin-right: 315px;
+    margin-bottom: 107px;
+  }
 }
 
 .countries__list {
@@ -27,8 +56,27 @@
   padding-left: 0;
   list-style: none;
 
+  @media #{$min-tablet} {
+    margin-bottom: 45px;
+    padding: 0 35px;
+  }
+
   @media #{$min-desktop} {
     order: -1;
     grid-row: span 3;
+  }
+}
+
+.countries__item {
+  margin-bottom: 15px;
+
+  @media #{$min-tablet} {
+    margin-bottom: 11px;
+  }
+}
+
+.countries__button {
+  @media #{$min-tablet} {
+    margin: 0 35px;
   }
 }

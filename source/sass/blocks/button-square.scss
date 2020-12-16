@@ -27,7 +27,9 @@
     border-color: transparent transparent transparent $basic-blue-light;
 
     @media #{$min-tablet} {
-      right: 13.5%;
+      border-width: 7px 0 7px 10.22px;
+      right: 32px;
+      top: 33px;
     }
   }
 }
