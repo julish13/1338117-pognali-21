@@ -51,6 +51,14 @@
   }
 }
 
+.countries__inner {
+  @media #{$min-desktop} {
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+  }
+}
+
 .countries__list {
   margin-bottom: 28px;
   padding-left: 0;

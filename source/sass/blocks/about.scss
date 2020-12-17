@@ -42,7 +42,7 @@
   @media #{$min-desktop} {
     min-height: 750px;;
     background-image: url("../img/about-desktop.png");
-    background-position: 93% bottom;
+    background-position: calc(50% + 348px) bottom;
   }
 }
 
