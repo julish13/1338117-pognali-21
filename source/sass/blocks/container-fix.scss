@@ -5,17 +5,11 @@
 
   @media #{$min-tablet} {
     width: $tablet-width - 2 * $tablet-padding;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
   @media #{$min-desktop} {
     width: $desktop-width - 2 * $desktop-padding;
-  }
-
-  &--tablet {
-    @media #{$min-tablet} {
-      width: $tablet-width - 2 * $tablet-padding;
-      padding-left: 35px;
-      padding-right: 35px;
-    }
   }
 }

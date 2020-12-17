@@ -16,6 +16,8 @@
   @media #{$min-desktop} {
     display: flex;
     flex-wrap: wrap;
+    font-size: 20px;
+    color: $basic-white;
   }
 }
 
