@@ -12,8 +12,8 @@
   }
 
   @media #{$min-desktop} {
-    display: grid;
-    grid-template: repeat(3, min-content) / repeat(2, 1fr);
+    // display: grid;
+    // grid-template: repeat(3, min-content) / repeat(2, 1fr);
   }
 
   &::before {

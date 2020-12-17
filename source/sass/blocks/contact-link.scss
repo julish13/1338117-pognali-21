@@ -14,6 +14,11 @@
     &--mail {
       background-color: $yellow-2;
     }
+
+    @media #{$min-desktop} {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   .contact-link__icon {
@@ -34,6 +39,10 @@
       display: block;
       top: 30%;
       left: 25%;
+
+      @media #{$min-desktop} {
+        left: 31%;
+      }
     }
   }
 }
@@ -111,7 +120,9 @@
     }
   }
 
-  @media #{$min-desktop} {
-    @include short-contact-link;
+  &--nav {
+    @media #{$min-desktop} {
+      @include short-contact-link;
+    }
   }
 }

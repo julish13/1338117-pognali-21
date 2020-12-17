@@ -13,7 +13,7 @@
 
   @media #{$min-desktop} {
     padding-right: $desktop-padding;
-    padding-left: $desktop-padding;
-    min-width: $desktop-width;
+    padding-left: $desktop-padding; //60
+    width: $desktop-width; //1440
   }
 }

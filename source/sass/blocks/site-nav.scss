@@ -21,6 +21,12 @@
   }
 }
 
+.site-nav__item {
+  @media #{$min-desktop} {
+    margin-right: 34px;
+  }
+}
+
 .site-nav__link {
   color: inherit;
 }
