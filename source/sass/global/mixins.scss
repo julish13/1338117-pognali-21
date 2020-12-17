@@ -34,6 +34,10 @@
   }
 }
 
+@mixin index-section-desktop-margin-left {
+  margin-left: 70px;
+}
+
 @mixin user-status {
   width: 6px;
   height: 6px;

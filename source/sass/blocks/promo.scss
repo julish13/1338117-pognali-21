@@ -46,7 +46,7 @@
   }
 
   @media #{$min-desktop} {
-    margin-left: 70px;
+    @include index-section-desktop-margin-left;
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
