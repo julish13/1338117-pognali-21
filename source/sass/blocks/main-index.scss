@@ -24,6 +24,10 @@
     padding-top: 131px;
     padding-bottom: 83px;
   }
+
+  @media #{$min-desktop} {
+    padding-top: 222px;
+  }
 }
 
 .main-index__users {
