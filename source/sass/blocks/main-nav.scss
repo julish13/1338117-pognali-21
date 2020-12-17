@@ -172,7 +172,6 @@
 
   @media #{$min-desktop} {
     order: 1;
-    padding: 13px 25px 10px;
     font-weight: 700;
   }
 
@@ -180,6 +179,11 @@
     padding: 12px 39px 8px;
     flex-basis: auto;
     line-height: 1.18;
+
+    @media #{$min-desktop} {
+      line-height: 1;
+      padding: 14px 25px 16px;
+    }
   }
 
   .main-nav--closed & {

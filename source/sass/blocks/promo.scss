@@ -1,3 +1,13 @@
+.promo {
+  @media #{$min-desktop} {
+  background-image: url("../img/traveller-illustration-desktop.png"),
+    url("../img/globe-back-desktop.png");
+  background-position: right 40% bottom, center bottom;
+  background-size: auto, 100% 750px;
+  background-repeat: no-repeat;
+  }
+}
+
 .promo__inner {
   display: flex;
   flex-wrap: wrap;
@@ -11,6 +21,17 @@
     background-size: auto, 100% 612px;
     background-repeat: no-repeat;
   }
+
+  @media #{$min-desktop} {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 190px $desktop-padding 83px;
+    width: $desktop-width;
+    min-height: 750px;
+    background-image: none;
+  }
 }
 
 .promo__header {
@@ -22,6 +43,15 @@
 
   @media #{$min-tablet} {
     background-image: none;
+  }
+
+  @media #{$min-desktop} {
+    margin-left: 70px;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    min-width: auto;
+    width: 420px;
   }
 }
 
@@ -39,13 +69,23 @@
     min-height: unset;
     line-height: 1.17;
   }
+
+  @media #{$min-desktop} {
+    margin: 0;
+    text-align: left;
+  }
 }
 
 .promo__review {
   margin: 0;
+
+  @media #{$min-desktop} {
+    margin-top: 17px;
+    margin-right: 20px;
+  }
 }
 
-.promo__wrap {
+.promo__todo-list-wrap {
   padding-bottom: 40px;
   flex-basis: 100%;
   background-color: $blue-3;
@@ -65,5 +105,12 @@
     z-index: 20;
     margin-top: 0;
     margin-bottom: -180px;
+  }
+
+  @media #{$min-desktop} {
+    margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: auto;
   }
 }

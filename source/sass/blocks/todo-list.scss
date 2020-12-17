@@ -1,11 +1,17 @@
+$radius-mobile: 7px;
+$radius-tablet: 21px;
+
 .todo-list {
-  width: 100%;
   border-radius: 5px;
   color: $basic-blue;
   font-size: 18px;
   line-height: 1;
   font-weight: 700;
   counter-reset: myCounter;
+
+  @media #{$max-tablet} {
+    width: 100%;
+  }
 
   @media #{$min-tablet} {
     display: grid;
@@ -14,7 +20,7 @@
   }
 
   @media #{$min-desktop} {
-    grid-template: auto / repeat(4, 1fr);
+    grid-template: auto / repeat(3, 345px) 1fr;
   }
 }
 
@@ -25,6 +31,32 @@
 
   @media #{$min-tablet} {
     padding: 30px 35px 62px 32px;
+  }
+
+  @media #{$min-desktop} {
+    padding: 30px 45px 30px 32px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 30%;
+    right: 8%;
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    color: $basic-white;
+
+    @media #{$min-tablet} {
+      font-size: 30px;
+      top: 60%;
+      left: 33px;
+    }
+
+    @media #{$min-desktop} {
+      top: 25%;
+      right: 60px;
+      left: unset;
+      font-size: inherit;
+    }
   }
 
   &--choose {
@@ -44,52 +76,61 @@
   }
 
   &:first-child {
-    border-radius: 7px 7px 0 0;
+    border-radius: $radius-mobile $radius-mobile 0 0;
 
     @media #{$min-tablet} {
-      border-radius: 21px 0 0 0;
+      border-radius: $radius-tablet 0 0 0;
     }
   }
 
   &:nth-child(2) {
     @media #{$min-tablet} {
-      border-radius: 21px 21px 0 0;
+      border-radius: $radius-tablet $radius-tablet 0 0;
     }
   }
 
   &:last-child {
-    border-radius: 0 0 7px 7px;
+    border-radius: 0 0 $radius-mobile $radius-mobile;
 
     @media #{$min-tablet} {
-      border-radius: 0 0 21px 21px;
+      border-radius: 0 0 $radius-tablet $radius-tablet;
     }
   }
 
   &:nth-last-child(2) {
     @media #{$min-tablet} {
-      border-radius: 0 0 0 21px;
+      border-radius: 0 0 0 $radius-tablet;
     }
   }
 
   &:nth-child(odd) {
-    @media #{$min-tablet} {
+    @media #{$min-tablet} and #{$max-tablet} {
       margin-right: -20px;
     }
   }
-}
 
-.todo-list__item::after {
-  position: absolute;
-  top: 30%;
-  right: 8%;
-  counter-increment: myCounter;
-  content: counter(myCounter);
-  color: $basic-white;
+  &:not(:nth-child(4n)) {
+    @media #{$min-desktop} {
+      border-radius: $radius-tablet 0 0 $radius-tablet;
+    }
+  }
 
-  @media #{$min-tablet} {
-    font-size: 30px;
-    top: 60%;
-    left: 33px;
+  &:nth-child(4n) {
+    @media #{$min-desktop} {
+      border-radius: $radius-tablet $radius-tablet $radius-tablet $radius-tablet;
+    }
+
+    &::after {
+      @media #{$min-desktop} {
+        right: 33px;
+      }
+    }
+  }
+
+  &:not(:first-child) {
+    @media #{$min-desktop} {
+      margin-left: -30px;
+    }
   }
 }
 
