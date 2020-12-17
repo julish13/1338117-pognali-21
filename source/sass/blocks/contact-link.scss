@@ -79,6 +79,11 @@
   &--location {
     top: 26%;
     left: 27%;
+
+    @media #{$min-tablet} {
+      width: 31.7px;
+      height: 31.7px;
+    }
   }
 
   &--phone-2,

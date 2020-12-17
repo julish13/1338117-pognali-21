@@ -9,6 +9,11 @@
     width: 45px;
     height: 45px;
     background-color: $yellow-1;
+
+    @media #{$min-tablet} {
+      width: 62px;
+      height: 62px;
+    }
   }
 }
 
@@ -33,6 +38,27 @@
     @media #{$min-tablet} {
       width: 24px;
       height: 24px;
+    }
+  }
+
+  &--facebook-footer {
+    @media #{$min-tablet} {
+      width: 14px;
+      height: 26px;
+    }
+  }
+
+  &--vkontakte-footer {
+    @media #{$min-tablet} {
+      width: 28px;
+      height: 18px;
+    }
+  }
+
+  &--instagram-footer {
+    @media #{$min-tablet} {
+      width: 22px;
+      height: 22px;
     }
   }
 }

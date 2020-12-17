@@ -50,15 +50,17 @@
 }
 
 .main-index__feedback {
-  padding-top: 45px;
+  @include section-top-negative-margin;
+  padding-top: 75px;
   margin-bottom: 29px;
+
+  @media #{$min-tablet} {
+    padding-top: 87px;
+  }
 }
 
-// .main-index__contacts {
-//   @include section-bottom-border-radius;
-//   position: relative;
-//   z-index: 5;
-//     @include section-top-negative-margin;
-//   padding-top: 60px;
-//   padding-bottom: 35px;
-// }
+.main-index__contacts {
+  @media #{$min-tablet} {
+    margin-top: 56px;
+  }
+}

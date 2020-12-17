@@ -71,7 +71,7 @@
     }
   }
 
-  &:nth-child(2n+1) {
+  &:nth-child(odd) {
     @media #{$min-tablet} {
       margin-right: -20px;
     }

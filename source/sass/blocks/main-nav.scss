@@ -56,13 +56,6 @@
     flex-basis: auto;
     order: -3;
   }
-
-  img {
-    @media #{$min-tablet} {
-      width: 164px;
-      height: 42px;
-    }
-  }
 }
 
 .main-nav__toggle {
@@ -246,7 +239,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: baseline;
   margin: 10px 21%;
   flex-basis: 100%;
 

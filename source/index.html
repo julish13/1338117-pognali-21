@@ -533,7 +533,10 @@
           <h2 class="visually-hidden">Авторизация и регистрация</h2>
           <p class="feedback__subheading index-subheading">Заинтересовались?</p>
           <p class="feedback__description">
-            Зарегистрируйтесь,<br /> это быстро и&nbsp;бесплатно!<br /> Уже&nbsp;зарегистрированы? Тогда скорее
+            Зарегистрируйтесь,<br /> это быстро и&nbsp;бесплатно!
+          </p>
+          <p class="feedback__description">
+            Уже зарегистрированы? Тогда скорее
             <a class="feedback__login">авторизуйтесь</a>.
           </p>
           <form
@@ -550,10 +553,10 @@
           </form>
         </div>
       </section>
-      <section class="contacts">
+      <section class="main-index__contacts contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__wrap">
-          <address class="contacts__inner container-fix">
+          <address class="contacts__inner container-fix container-fix--tablet">
             <p class="contacts__intro">
               Остались вопросы?<br />
               Мы&nbsp;с&nbsp;радостью на&nbsp;них ответим!
@@ -597,7 +600,7 @@
           </address>
         </div>
         <div class="contacts__location location">
-          <address class="location__inner container-fix">
+          <address class="location__inner container-fix container-fix--tablet">
             <p class="location__address contact-link">
               <span class="contact-link__wrap">
                 <svg
@@ -626,33 +629,34 @@
       </section>
     </main>
     <footer class="page__footer page-footer container">
-      <div class="page-footer__inner container-fix">
-          <a class="page-footer__logo logo">
+        <a class="page-footer__logo logo">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-dark.png 1x">
             <img
               src="img/logo-mobile-dark.png"
               width="100"
               height="15"
               alt="Логотип Погнали"
             />
-          </a>
+          </picture>
         </a>
-        <div class="page-footer__social">
-          <a class="social-item social-item--background" href="#" aria-label="Наша страница в  Facebook">
-            <svg class="social-item__icon" role="img" width="11" height="21">
-              <use xlink:href="#facebook"></use>
-            </svg>
-          </a>
-          <a class="social-item social-item--background" href="#" aria-label="Наша страница Вконтакте">
-            <svg class="social-item__icon" role="img" width="23" height="12">
-              <use xlink:href="#vkontakte"></use>
-            </svg>
-          </a>
-          <a class="social-item social-item--background" href="#" aria-label="Наша страница в Instagram">
-            <svg class="social-item__icon" role="img" width="18" height="18">
-              <use xlink:href="#instagram"></use>
-            </svg>
-          </a>
-        </div>
+      </a>
+      <div class="page-footer__social">
+        <a class="social-item social-item--background" href="#" aria-label="Наша страница в  Facebook">
+          <svg class="social-item__icon social-item__icon--facebook-footer" role="img" width="11" height="21">
+            <use xlink:href="#facebook"></use>
+          </svg>
+        </a>
+        <a class="social-item social-item--background" href="#" aria-label="Наша страница Вконтакте">
+          <svg class="social-item__icon social-item__icon--vkontakte-footer" role="img" width="23" height="12">
+            <use xlink:href="#vkontakte"></use>
+          </svg>
+        </a>
+        <a class="social-item social-item--background" href="#" aria-label="Наша страница в Instagram">
+          <svg class="social-item__icon social-item__icon--instagram-footer" role="img" width="18" height="18">
+            <use xlink:href="#instagram"></use>
+          </svg>
+        </a>
       </div>
       <p
         class="page-footer__copyright copyright"
@@ -669,5 +673,6 @@
     <script src="js/level.js"></script>
     <script src="js/map.js"></script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXmwjGqbP-jxTZ8QsfhLzsMq8csUyF2tk&callback=initMap"></script>
+
   </body>
 </html>

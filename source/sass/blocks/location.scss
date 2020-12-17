@@ -12,9 +12,17 @@
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
+
+  @media #{$min-tablet} {
+    margin-bottom: 44px;
+  }
 }
 
 .location__button {
   border: $blue-3 3px solid;
   padding: 18px 20px 20px;
+
+  @media #{$min-tablet} {
+    padding: 25px 32px;
+  }
 }

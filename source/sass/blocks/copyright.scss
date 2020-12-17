@@ -5,6 +5,16 @@
   color: $basic-grey-font;
   line-height: 1;
   font-weight: 400;
+
+  @media #{$min-tablet} {
+    font-size: 20px;
+  }
+}
+
+.copyright__text {
+  @media #{$min-tablet} {
+    margin-right: 25px;
+  }
 }
 
 .copyright__icon {

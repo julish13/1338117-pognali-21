@@ -16,6 +16,10 @@
 
 @mixin section-top-border-radius {
   border-radius: 27px 27px 0 0;
+
+  @media #{$min-tablet} {
+    border-radius: 57px 57px 0 0;
+  }
 }
 
 @mixin border {

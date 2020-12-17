@@ -5,13 +5,33 @@
 
 .feedback__subheading {
   margin-bottom: 22px;
+
+  @media #{$min-tablet} {
+    margin-bottom: 60px;
+  }
 }
 
 .feedback__description {
-  margin-right: auto;
-  margin-bottom: 30px;
-  margin-left: auto;
+  margin: 0 auto;
   width: 240px;
+
+  @media #{$min-tablet} {
+    width: auto;
+  }
+
+  &:nth-of-type(2) {
+    margin-left: 10px;
+
+    @media #{$min-tablet} {
+      margin-left: -22px;
+    }
+  }
+
+  br {
+    @media #{$min-tablet} {
+      display: none;
+    }
+  }
 }
 
 .feedback__login {
@@ -20,10 +40,16 @@
 }
 
 .feedback__form {
+  margin-top: 30px;
   display: flex;
+
+  @media #{$min-tablet} {
+    margin-top: 67px;
+  }
 }
 
 .feedback__input {
+  flex-grow: 1;
   border: none;
   border-radius: 10px;
   padding: 19px 25px;
@@ -31,6 +57,12 @@
   font-size: 18px;
   line-height: 1;
   font-weight: 700;
+
+  @media #{$min-tablet} {
+    border-radius: 20px;
+    padding: 26px 38px;
+    font-size: 24px;
+  }
 
   &::placeholder {
     color: $basic-grey-font;
@@ -45,8 +77,14 @@
   width: 60px;
   height: 62px;
 
+  @media #{$min-tablet} {
+    border-radius: 0 20px 20px 0;
+    width: 80px;
+    height: 80px;
+  }
+
   &::after {
-    top: 40%;
-    right: 40%;
+    top: 42%;
+    right: 45%;
   }
 }

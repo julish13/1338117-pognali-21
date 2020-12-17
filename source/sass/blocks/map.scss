@@ -5,6 +5,12 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% auto;
+
+  @media #{$min-tablet} {
+    width: $tablet-width;
+    height: 581px;
+    background-image: url("../img/map-tablet.png");
+  }
 }
 
 .map__pin {
@@ -16,4 +22,12 @@
   width: 41px;
   height: 41px;
   background-color: $blue-background-2;
+
+  @media #{$min-tablet} {
+    top: 235px;
+    left: 345px;
+    border-width: 15px;
+    width: 56px;
+    height: 56px;
+  }
 }
