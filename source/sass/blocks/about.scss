@@ -29,7 +29,7 @@
 .about__wrap {
   position: relative;
   z-index: 11;
-  min-height: 353px;
+  min-height: 356px;
   background-image: url("../img/about-mobile.png");
   background-position: center top;
   background-repeat: no-repeat;
@@ -47,24 +47,26 @@
 }
 
 .about__inner {
-  @include index-text-margin-left;
+  margin-left: 25px;
   margin-right: 34px;
   padding-top: 32px;
   padding-bottom: 35px;
 
   @media #{$min-tablet} {
+    margin-left: 33px;
     padding-top: 276px;
     padding-right: 315px;
   }
 
   @media #{$min-desktop} {
-    @include index-section-desktop-margin-left;
+    margin-left: 70px;
     padding-top: 128px;
   }
 }
 
 .about__subheading {
   margin-top: 0;
+  margin-bottom: 23px;
 
   @media #{$min-desktop} {
     margin-bottom: 60px;

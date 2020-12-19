@@ -51,13 +51,14 @@
 
 .contacts__location {
   @include section-bottom-border-radius;
-  @include section-top-negative-margin;
   position: relative;
   z-index: 4;
+  margin-top: -30px;
   padding-top: 45px;
   padding-bottom: 34px;
 
   @media #{$min-tablet} {
+    margin-top: -60px;
     padding-top: 80px;
     padding-bottom: 85px;
   }

@@ -41,21 +41,23 @@
 }
 
 .users__subheading {
-  @include index-text-margin-left;
+  margin-left: 25px;
   margin-right: 25px;
   margin-bottom: 22px;
 
   @media #{$min-tablet} {
+    margin-left: 33px;
     margin-bottom: 57px;
   }
 }
 
 .users__description {
-  @include index-text-margin-left;
+  margin-left: 25px;
   margin-right: 25px;
   margin-bottom: 22px;
 
   @media #{$min-tablet} {
+    margin-left: 33px;
     margin-right: 190px;
     margin-bottom: 45px;
   }
@@ -88,7 +90,7 @@
 
 .users__list {
   margin-top: 55px;
-  margin-bottom: 19px;
+  margin-bottom: 21px;
   list-style: none;
 
   @media #{$max-mobile} {

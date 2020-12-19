@@ -8,10 +8,11 @@
 }
 
 .pricing__inner {
-  @include index-text-margin-left;
+  margin-left: 25px;
   padding-top: 20px;
 
   @media #{$min-tablet} {
+    margin-left: 33px;
     margin-left: 0;
   }
 }

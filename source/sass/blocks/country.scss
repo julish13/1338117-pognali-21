@@ -95,7 +95,7 @@
   }
 
   .country--czech & {
-    padding-top: 20px;
+    padding-top: 25px;
     padding-bottom: 7px;
 
     @media #{$min-tablet} {
@@ -105,7 +105,7 @@
 }
 
 .country__name {
-  margin: 0;
+  margin: 0 0 3px;
   font-size: 21px;
   color: $basic-black;
   line-height: 1;

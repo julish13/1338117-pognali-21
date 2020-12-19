@@ -1,4 +1,10 @@
 .promo {
+  background-color: $basic-blue;
+
+  @media #{$min-tablet} {
+    background-color: $blue-background-2;
+  }
+
   @media #{$min-desktop} {
   background-image: url("../img/traveller-illustration-desktop.png"),
     url("../img/globe-back-desktop.png");
@@ -37,8 +43,7 @@
 .promo__header {
   background-image: url("../img/traveller-illustration-mobile.png"),
     url("../img/globe-back-mobile.png");
-  background-position: 60% bottom, center 30%;
-  background-size: auto, 100% 568px;
+  background-position: 63% bottom, left top;
   background-repeat: no-repeat;
 
   @media #{$min-tablet} {
@@ -46,7 +51,7 @@
   }
 
   @media #{$min-desktop} {
-    @include index-section-desktop-margin-left;
+    margin-left: 70px;
     margin-right: 0;
     padding-left: 0;
     padding-right: 0;
@@ -59,13 +64,16 @@
   margin-bottom: auto;
   position: relative;
   z-index: 1;
-  padding: 56px 0 50px;
-  min-height: 439px;
+  padding-top: 56px;
+  padding-bottom: 50px;
+  min-height: 441px;
   text-align: center;
   line-height: 1.11;
 
   @media #{$min-tablet} {
-    margin: 142px 10% 0;
+    margin-top: 103px;
+    padding-left: 10%;
+    padding-right: 10%;
     min-height: unset;
     line-height: 1.17;
   }

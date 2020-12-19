@@ -27,7 +27,9 @@ $radius-tablet: 21px;
 .todo-list__item {
   position: relative;
   list-style: none;
-  padding: 22px 24px;
+  margin-bottom: -4px;
+  padding: 22px 24px 26px;
+  border-radius: $radius-mobile $radius-mobile 0 0;
 
   @media #{$min-tablet} {
     padding: 30px 35px 62px 32px;
@@ -39,7 +41,7 @@ $radius-tablet: 21px;
 
   &::after {
     position: absolute;
-    top: 30%;
+    top: 25%;
     right: 8%;
     counter-increment: myCounter;
     content: counter(myCounter);
@@ -76,8 +78,6 @@ $radius-tablet: 21px;
   }
 
   &:first-child {
-    border-radius: $radius-mobile $radius-mobile 0 0;
-
     @media #{$min-tablet} {
       border-radius: $radius-tablet 0 0 0;
     }
@@ -90,7 +90,8 @@ $radius-tablet: 21px;
   }
 
   &:last-child {
-    border-radius: 0 0 $radius-mobile $radius-mobile;
+    border-radius: $radius-mobile $radius-mobile $radius-mobile $radius-mobile;
+    padding-bottom: 22px;
 
     @media #{$min-tablet} {
       border-radius: 0 0 $radius-tablet $radius-tablet;
