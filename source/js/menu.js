@@ -20,7 +20,7 @@
 
   const setClosedMenuState = () => {
     mainNavBlock.classList.add(`main-nav--closed`);
-    loginElement.classList.add(`main-nav__login--short`);
+    // loginElement.classList.add(`main-nav__login--short`);
     contactsCollection.forEach((contact) =>
       contact.classList.add(`contact-link--mobile-closed`)
     );
@@ -30,7 +30,7 @@
 
   const setOpenedMenuState = () => {
     mainNavBlock.classList.add(`main-nav--opened`);
-    loginElement.classList.remove(`main-nav__login--short`);
+    // loginElement.classList.remove(`main-nav__login--short`);
     contactsCollection.forEach((contact) =>
       contact.classList.remove(`contact-link--mobile-closed`)
     );
@@ -38,32 +38,32 @@
     tabletLogoElement.srcset = `img/logo-tablet-dark.png 1x`;
   };
 
-  const setMobileClosedMenuPositioning = () => {
-    const windowWidth = document.documentElement.clientWidth;
-    if (windowWidth < TABLET_WIDTH) {
-      promoHeadingElement.style.marginTop = `${PROMO_HEADING_Y}px`;
-      mainNavInnerElement.style.minHeight = `${
-        promoHeadingElement.offsetHeight +
-        PROMO_HEADING_Y +
-        contactsElement.offsetHeight / 2
-      }px`;
-      promoHeaderElement.style.backgroundPosition = `60% bottom, center top`;
-    }
-  };
+  // const setMobileClosedMenuPositioning = () => {
+  //   const windowWidth = document.documentElement.clientWidth;
+  //   if (windowWidth < TABLET_WIDTH) {
+  //     promoHeadingElement.style.marginTop = `${PROMO_HEADING_Y}px`;
+  //     mainNavInnerElement.style.minHeight = `${
+  //       promoHeadingElement.offsetHeight +
+  //       PROMO_HEADING_Y +
+  //       contactsElement.offsetHeight / 2
+  //     }px`;
+  //     promoHeaderElement.style.backgroundPosition = `60% bottom, center top`;
+  //   }
+  // };
 
   mainNavBlock.classList.remove(`main-nav--nojs`);
   setClosedMenuState();
-  setMobileClosedMenuPositioning();
+  // setMobileClosedMenuPositioning();
 
   toggleElement.addEventListener(`click`, function () {
     if (mainNavBlock.classList.contains(`main-nav--closed`)) {
       mainNavBlock.classList.remove(`main-nav--closed`);
       setOpenedMenuState();
-      mainNavInnerElement.style.minHeight = `auto`;
+      // mainNavInnerElement.style.minHeight = `auto`;
     } else {
       mainNavBlock.classList.remove(`main-nav--opened`);
       setClosedMenuState();
-      setMobileClosedMenuPositioning();
+      // setMobileClosedMenuPositioning();
     }
   });
 })();

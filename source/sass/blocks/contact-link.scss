@@ -115,8 +115,12 @@
   align-items: center;
 
   &--mobile-closed {
-    @media #{$max-mobile} {
-      @include short-contact-link;
+    // @media #{$max-mobile} {
+    //   @include short-contact-link;
+    // }
+    @include short-contact-link;
+    @media #{$min-tablet} {
+      display: none;
     }
   }
 
