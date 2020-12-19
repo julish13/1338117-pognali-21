@@ -89,7 +89,7 @@
     display: block;
     margin-top: 0;
     border-radius: 20px 0 0 20px;
-    padding: 30px 30px 15px;
+    padding: 27px 30px 19px;
     flex-grow: 1;
     order: -1;
   }
@@ -99,7 +99,7 @@
     padding-bottom: 7px;
 
     @media #{$min-tablet} {
-      padding: 30px 30px 15px;
+      padding: 26px 30px 18px;
     }
   }
 }

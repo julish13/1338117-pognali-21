@@ -9,7 +9,8 @@
   color: $basic-blue;
 
   @media #{$min-desktop} {
-    background-color: inherit;
+    position: fixed;
+    background-color: transparent;
   }
 
   &--opened {
@@ -43,9 +44,7 @@
   }
 
   @media #{$min-desktop} {
-    left: 50%;
     align-items: center;
-    margin-left: -($desktop-width - 2 * $desktop-padding)/2;
     padding-top: 46px;
     padding-bottom: 0;
     min-height: 90px;
@@ -58,13 +57,16 @@
   }
 
   .main-nav--closed & {
-    @media #{$max-tablet} {
-      padding-bottom: 0;
+    padding-bottom: 0;
 
-      @media #{$min-tablet} {
-        min-height: auto;
-      }
+    @media #{$min-tablet} {
+      padding-bottom: 37px;
     }
+  }
+
+  .main-nav--scrolled & {
+    padding-top: 16px;
+    padding-bottom: 14px;
   }
 }
 
@@ -197,9 +199,14 @@
       align-self: unset;
       font-weight: 700;
     }
+
+    @media #{$min-desktop} {
+      margin: 0;
+      padding: 13px 29px 16px;
+    }
   }
 
-  .main-nav--open & {
+  .main-nav--opened & {
     @media #{$min-tablet} {
       letter-spacing: 0.03em;
     }
@@ -230,11 +237,28 @@
     width: 60px;
     height: 2px;
     background-color: $basic-white;
+
+    .main-nav--scrolled & {
+      @media #{$min-desktop} {
+        left: -88px;
+        width: 44px;
+        background-color: $blue-background-1;
+      }
+    }
   }
 
   .main-nav--closed & {
     @media #{$max-tablet} {
       display: none;
+    }
+  }
+
+  .main-nav--scrolled & {
+    // &::before {
+    //   background-color: $blue-background-1;
+    // }
+    @media #{$min-desktop} {
+      color: $blue-background-1;
     }
   }
 }

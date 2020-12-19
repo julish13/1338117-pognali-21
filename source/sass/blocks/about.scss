@@ -36,7 +36,7 @@
 
   @media #{$min-tablet} {
     background-image: url("../img/about-tablet.png");
-    background-position: 98% 90%;
+    background-position: 98% 88%;
   }
 
   @media #{$min-desktop} {
@@ -68,6 +68,10 @@
   margin-top: 0;
   margin-bottom: 23px;
 
+  @media #{$min-tablet} {
+    margin-bottom: 39px;
+  }
+
   @media #{$min-desktop} {
     margin-bottom: 60px;
   }
@@ -77,7 +81,7 @@
   margin-bottom: 20px;
 
   @media #{$min-tablet} {
-    margin-bottom: 35px;
+    margin-bottom: 33px;
   }
 
   @media #{$min-desktop} {

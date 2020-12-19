@@ -12,7 +12,6 @@
   }
 
   @media #{$min-desktop} {
-    margin-left: 70px;
     display: grid;
     grid-template: repeat(3, min-content) / 560px 1fr;
     grid-column-gap: 137px;
@@ -86,8 +85,9 @@
 
 .countries__button {
   @media #{$min-tablet} {
-    margin-left: 35px;
-    margin-right: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 618px;
   }
 }
 

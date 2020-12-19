@@ -18,6 +18,12 @@
   }
 }
 
+.location__text {
+  @media #{$min-tablet} {
+    margin-left: 25px;
+  }
+}
+
 .location__button {
   border: $blue-3 3px solid;
   padding: 18px 20px 20px;

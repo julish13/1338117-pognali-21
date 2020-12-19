@@ -64,23 +64,32 @@
     text-align: center;
 
     @media #{$min-tablet} {
+      top: -2px;
       right: unset;
       left: -90px;
       padding: 16px;
-      width: 66px;
-      height: 66px;
+      width: 68px;
+      height: 68px;
     }
   }
 
   &:nth-child(2) {
     &::after {
       background-color: $yellow-2;
+
+      @media #{$min-tablet} {
+        top: 1px;
+      }
     }
   }
 
   &:nth-child(3) {
     &::after {
       background-color: $yellow-1;
+
+      @media #{$min-tablet} {
+        top: 5px;
+      }
     }
   }
 

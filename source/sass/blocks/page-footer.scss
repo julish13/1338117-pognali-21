@@ -3,7 +3,7 @@
 
   @media #{$min-tablet} {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     padding-top: 48px;
   }
@@ -26,6 +26,8 @@
   justify-content: center;
 
   @media #{$min-tablet} {
+    margin-top: -3px;
+    margin-left: -5px;
     padding: 0;
   }
 }
@@ -33,11 +35,13 @@
 .page-footer__copyright {
   position: relative;
   margin-top: 35px;
-  padding-top: 12px;
+  padding-top: 14px;
   border-top: 1px solid $grey-4;
 
   @media #{$min-tablet} {
-    margin: 0;
+    margin-top: -4px;
+    margin-bottom: 0;
+    padding-top: 0;
     border: none;
   }
 }

@@ -122,7 +122,8 @@
 
 .users__button {
   @media #{$min-tablet} {
-    margin-left: 35px;
-    margin-right: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 618px;
   }
 }

@@ -48,9 +48,10 @@ $radius-tablet: 21px;
     color: $basic-white;
 
     @media #{$min-tablet} {
-      font-size: 30px;
-      top: 60%;
+      top: unset;
+      bottom: 22px;
       left: 33px;
+      font-size: 30px;
     }
 
     @media #{$min-desktop} {
