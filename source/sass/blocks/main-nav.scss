@@ -3,6 +3,7 @@
 }
 
 .main-nav {
+  z-index: 100;
   width: 100%;
   background-color: $basic-white;
   color: $basic-blue;
@@ -13,21 +14,23 @@
 
   &--opened {
     @media #{$max-tablet} {
-      position: absolute;
-      z-index: 30;
+      position: fixed;
     }
   }
 
   &--closed {
     @media #{$max-tablet} {
+      position: fixed;
       background-color: transparent;
-      position: absolute;
     }
+  }
+
+  &--scrolled {
+    background-color: $basic-white;
   }
 }
 
 .main-nav__inner {
-  position: relative;
   z-index: 2;
   padding: 27px 0 30px;
   display: flex;
@@ -40,7 +43,6 @@
   }
 
   @media #{$min-desktop} {
-    position: fixed;
     left: 50%;
     align-items: center;
     margin-left: -($desktop-width - 2 * $desktop-padding)/2;
@@ -58,7 +60,6 @@
   .main-nav--closed & {
     @media #{$max-tablet} {
       padding-bottom: 0;
-      // min-height: 495px;
 
       @media #{$min-tablet} {
         min-height: auto;
@@ -145,6 +146,13 @@
       align-self: center;
     }
   }
+
+  .main-nav--scrolled & {
+    &::before {
+      background-color: $grey-2;
+      box-shadow: 0 8px 0 0 $grey-2;
+    }
+  }
 }
 
 .main-nav__login {
@@ -179,15 +187,7 @@
 
   .main-nav--closed & {
     @media #{$max-mobile} {
-      position: absolute;
-      top: 457px;
-      left: 81px;
-      margin: 0;
-      padding: 10px 40px;
-      align-self: flex-end;
-      order: 1;
-      flex-basis: auto;
-      line-height: 1.18;
+      display: none;
     }
 
     @media #{$min-tablet} {
@@ -256,15 +256,7 @@
   }
 
   .main-nav--closed & {
-    position: absolute;
-    top: 457px;
-    display: flex;
-    flex-wrap: wrap;
-    align-self: flex-end;
-    margin: 0;
-    flex-basis: auto;
-
-    @media #{$min-tablet} {
+    @media #{$max-tablet} {
       display: none;
     }
   }

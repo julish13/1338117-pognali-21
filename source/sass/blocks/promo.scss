@@ -84,6 +84,26 @@
   }
 }
 
+.promo__buttons {
+  position: relative;
+  display: flex;
+  margin-top: -20px;
+  color: $basic-blue;
+}
+
+.promo__contacts {
+  display: flex;
+}
+
+.promo__contact {
+  color: inherit;
+}
+
+.promo__login {
+  padding: 10px 40px;
+  color: inherit;
+}
+
 .promo__review {
   margin: 0;
 

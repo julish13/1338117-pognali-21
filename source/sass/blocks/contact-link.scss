@@ -114,15 +114,13 @@
   display: flex;
   align-items: center;
 
-  &--mobile-closed {
-    @media #{$max-mobile} {
-      @include short-contact-link;
-    }
-  }
-
   &--nav {
     @media #{$min-desktop} {
       @include short-contact-link;
     }
+  }
+
+  &--promo {
+    @include short-contact-link;
   }
 }
