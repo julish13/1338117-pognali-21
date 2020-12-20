@@ -13,8 +13,11 @@
 
   @media #{$min-desktop} {
     display: grid;
-    grid-template: repeat(3, min-content) / 560px 1fr;
+    grid-template: repeat(3, min-content) / 630px 1fr;
     grid-column-gap: 137px;
+    padding-top: 76px;
+    padding-bottom: 50px;
+    background-position: 95% 3%;
   }
 
   &::before {
@@ -28,6 +31,11 @@
       width: 141px;
       height: 141px;
     }
+
+    @media #{$min-desktop} {
+      top: 18%;
+      left: 4%;
+    }
   }
 }
 
@@ -40,6 +48,10 @@
     margin-left: 33px;
     margin-bottom: 58px;
   }
+
+  @media #{$min-desktop} {
+    margin-bottom: 31px;
+  }
 }
 
 .countries__description {
@@ -51,6 +63,11 @@
     margin-left: 33px;
     margin-right: 315px;
     margin-bottom: 107px;
+  }
+
+  @media #{$min-desktop} {
+    margin-right: 168px;
+    margin-bottom: 94px;
   }
 }
 
@@ -67,10 +84,10 @@
   }
 
   @media #{$min-desktop} {
+    margin: 0 0 0 70px;
+    padding: 0;
     order: -1;
     width: auto;
-    padding: 0;
-    margin: 0;
     grid-row: span 3;
   }
 }
@@ -88,6 +105,11 @@
     margin-left: auto;
     margin-right: auto;
     width: 618px;
+  }
+
+  @media #{$min-desktop} {
+    margin-left: 36px;
+    width: 275px;
   }
 }
 

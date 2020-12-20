@@ -7,7 +7,7 @@ function initMap() {
   const LOCATION = {lat: 59.938891, lng: 30.323037};
 
   const mapElement = document.querySelector(`.map`);
-  mapElement.style.width = `100%`;
+  mapElement.classList.remove(`map--no-js`);
 
   const mapPinElement = mapElement.querySelector(`#pin`);
   mapPinElement.classList.add(`visually-hidden`);
