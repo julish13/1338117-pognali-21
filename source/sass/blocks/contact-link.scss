@@ -58,6 +58,11 @@
     width: 68px;
     height: 68px;
   }
+
+  @media #{$min-desktop} {
+    width: 90px;
+    height: 90px;
+  }
 }
 
 .contact-link__icon {
@@ -73,6 +78,12 @@
       width: 27.2px;
       height: 25.7px;
     }
+
+    @media #{$min-desktop} {
+      top: 35%;
+      width: 36px;
+      height: 34px;
+    }
   }
 
   &--mail-1 {
@@ -83,6 +94,11 @@
       width: 35.5px;
       height: 37.8px;
     }
+
+    @media #{$min-desktop} {
+      width: 47px;
+      height: 50px;
+    }
   }
 
   &--location {
@@ -92,6 +108,11 @@
     @media #{$min-tablet} {
       width: 31.7px;
       height: 31.7px;
+    }
+
+    @media #{$min-desktop} {
+      width: 42px;
+      height: 42px;
     }
   }
 
@@ -107,6 +128,10 @@
 
   @media #{$min-tablet} {
     margin-left: 22px;
+  }
+
+  @media #{$min-desktop} {
+    margin-left: 30px;
   }
 }
 

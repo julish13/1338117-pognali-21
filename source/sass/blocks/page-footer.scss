@@ -7,6 +7,10 @@
     justify-content: space-between;
     padding-top: 48px;
   }
+
+  @media #{$min-desktop} {
+    width: 100%
+  }
 }
 
 
@@ -29,6 +33,10 @@
     margin-top: -3px;
     margin-left: -5px;
     padding: 0;
+  }
+
+  @media #{$min-desktop} {
+    margin-left: -45px;
   }
 }
 

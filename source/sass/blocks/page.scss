@@ -30,4 +30,9 @@
     margin-top: -65px;
     padding-bottom: 30px;
   }
+
+  @media #{$min-desktop} {
+    margin-top: -136px;
+    padding-bottom: 46px;
+  }
 }

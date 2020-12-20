@@ -11,6 +11,10 @@
     background-image: url("../img/map-tablet.png");
   }
 
+  @media #{$min-desktop} {
+    height: 584px;
+  }
+
   &--no-js {
     width: $mobile-width;
 
