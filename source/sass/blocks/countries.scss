@@ -34,7 +34,7 @@
 
     @media #{$min-desktop} {
       top: 18%;
-      left: 4%;
+      left: calc(50% - 660px);
     }
   }
 }

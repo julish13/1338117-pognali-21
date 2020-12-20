@@ -11,6 +11,10 @@
     background-repeat: no-repeat, no-repeat;
   }
 
+  @media #{$min-desktop} {
+    background-position: left calc(50% - 390px) top 448px, left calc(50% - 100px) top 195px;
+  }
+
   &::before {
     position: absolute;
     left: 0;
@@ -27,6 +31,10 @@
       border-radius: 20px;
       width: 212px;
       height: 212px;
+    }
+
+    @media #{$min-desktop} {
+      left: calc(50% - 661px);
     }
   }
 }

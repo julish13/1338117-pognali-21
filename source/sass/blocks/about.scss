@@ -20,7 +20,7 @@
 
   @media #{$min-desktop} {
     top: 9%;
-    left: 4%;
+    left: calc(50% - 660px);
     width: 212px;
     height: 212px;
   }
