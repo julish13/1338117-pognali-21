@@ -9,6 +9,10 @@
   @media #{$min-tablet} {
     margin-bottom: 60px;
   }
+
+  @media #{$min-desktop} {
+    margin-bottom: 57px;
+  }
 }
 
 .feedback__description {
@@ -19,11 +23,19 @@
     width: auto;
   }
 
+  @media #{$min-desktop} {
+    margin-left: 20px;
+  }
+
   &:nth-of-type(2) {
     margin-left: 10px;
 
     @media #{$min-tablet} {
       margin-left: -22px;
+    }
+
+    @media #{$min-desktop} {
+      margin-left: 3px;
     }
   }
 
@@ -46,6 +58,10 @@
   @media #{$min-tablet} {
     margin-top: 67px;
   }
+
+  @media #{$min-desktop} {
+    margin-top: 60px;
+  }
 }
 
 .feedback__input {
@@ -64,6 +80,10 @@
     font-size: 24px;
   }
 
+  @media #{$min-desktop} {
+    padding-left: 35px;
+  }
+
   &::placeholder {
     color: $basic-grey-font;
     opacity: 0.3;
@@ -72,10 +92,14 @@
 
 .feedback__button {
   margin-left: -18px;
-  padding: 0;
   border: none;
   width: 60px;
   height: 62px;
+  font-size: 0;
+
+  @media #{$max-tablet} {
+    padding: 0;
+  }
 
   @media #{$min-tablet} {
     border-radius: 0 20px 20px 0;
@@ -84,7 +108,20 @@
   }
 
   &::after {
-    top: 42%;
-    right: 45%;
+    @media #{$max-tablet} {
+      top: 42%;
+      right: 45%;
+    }
+  }
+
+  @media #{$min-desktop} {
+    padding-top: 26px;
+    padding-left: 36px;
+    width: 322px;
+    height: auto;
+    min-height: 80px;
+    font: inherit;
+    font-size: 24px;
+    font-weight: bold;
   }
 }

@@ -11,5 +11,7 @@
 
   @media #{$min-desktop} {
     width: $desktop-width - 2 * $desktop-padding;
+    padding-left: 75px;
+    padding-right: 75px;
   }
 }

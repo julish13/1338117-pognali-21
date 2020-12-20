@@ -80,6 +80,10 @@
     margin-top: -60px;
     padding-top: 87px;
   }
+
+  @media #{$min-tablet} {
+    padding-top: 120px;
+  }
 }
 
 .main-index__contacts {
