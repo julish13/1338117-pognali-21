@@ -35,8 +35,9 @@
   position: relative;
 
   @media #{$min-desktop} {
-    // display: grid;
-    // grid-template: repeat(4, min-content) / repeat(2, 1fr);
+    display: grid;
+    grid-template: repeat(4, min-content) / repeat(2, 1fr);
+    grid-column-gap: 60px;
   }
 }
 
@@ -48,6 +49,12 @@
   @media #{$min-tablet} {
     margin-left: 33px;
     margin-bottom: 57px;
+  }
+
+  @media #{$min-desktop} {
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 68px;
   }
 }
 
@@ -62,12 +69,21 @@
     margin-bottom: 45px;
   }
 
+  @media #{$min-desktop} {
+    margin: 48px 80px 20px 70px;
+  }
+
   &--bold {
     font-weight: 700;
 
     @media #{$min-tablet} {
       font-size: 21px;
       line-height: 1.14;
+    }
+
+    @media #{$min-desktop} {
+      margin-top: 23px;
+      margin-bottom: 86px;
     }
 
     br {
@@ -109,6 +125,9 @@
     order: 1;
     grid-column: 2;
     grid-row: 1 / span 4;
+    margin: 0;
+    padding: 0;
+    width: auto;
   }
 }
 
@@ -118,6 +137,12 @@
   @media #{$min-tablet} {
     flex-basis: 46%;
   }
+
+  @media #{$min-desktop} {
+    flex-basis: auto;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
 }
 
 .users__button {
@@ -125,5 +150,10 @@
     margin-left: auto;
     margin-right: auto;
     width: 618px;
+  }
+
+  @media #{$min-desktop} {
+    margin-left: 70px;
+    width: 280px;
   }
 }
