@@ -19,6 +19,14 @@
       right: 11px;
       bottom: -121px;
     }
+
+    @media #{$min-desktop} {
+      right: -272px;
+      bottom: -3%;
+      width: 198px;
+      height: 198px;
+      background-image: url("../img/pricing-desktop.png");
+    }
   }
 
   &::after {
@@ -32,6 +40,13 @@
       border-radius: 20px;
       width: 198px;
       height: 285px;
+    }
+
+    @media #{$min-desktop} {
+      top: -48px;
+      right: calc(50% - 570px);
+      width: 446px;
+      height: 300px;
     }
   }
 }

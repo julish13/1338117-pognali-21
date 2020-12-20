@@ -64,6 +64,11 @@
     margin-top: -60px;
     padding-bottom: 62px;
   }
+
+  @media #{$min-desktop} {
+    padding-top: 93px;
+    padding-bottom: 165px;
+  }
 }
 
 .main-index__feedback {

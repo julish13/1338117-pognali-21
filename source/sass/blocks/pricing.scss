@@ -5,6 +5,10 @@
 
 .pricing__wrap {
   width: $mobile-width;
+
+  @media #{$min-desktop} {
+    width: 1300px;
+  }
 }
 
 .pricing__inner {
@@ -33,6 +37,11 @@
 
   @media #{$min-tablet} {
     margin: 75px 35px 38px 90px;
+  }
+
+  @media #{$min-desktop} {
+    margin-top: 135px;
+    margin-right: 275px;
   }
 }
 
