@@ -1,5 +1,4 @@
 .user-item {
-  overflow: hidden;
   position: relative;
   background-color: $basic-white;
   border-radius: 8px;
@@ -8,16 +7,41 @@
   @media #{$min-tablet} {
     border-radius: 20px;
   }
+
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0px 4px 9px rgba($basic-black, 0.16));
+
+    .user-item__photo {
+      transition: transform 0.3s;
+      transform: scale(1.05) translateY(-7px);
+    }
+  }
 }
 
 .user-item__level {
   position: absolute;
+  z-index: 20;
   top: 15px;
   left: 18px;
 
   @media #{$min-tablet} {
     top: 18px;
     left: 21px;
+  }
+}
+
+.user-item__photo-wrap {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+  width: 270px;
+  height: 270px;
+
+  @media #{$min-tablet} {
+    border-radius: 20px 20px 0 0;
+    width: 285px;
+    height: 285px;
   }
 }
 
@@ -68,6 +92,23 @@
     line-height: 0.92;
   }
 
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+
+    &::before {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
+
   &::before {
     @include user-status;
     position: absolute;
@@ -100,10 +141,39 @@
   }
 }
 
-.user-item__transport {
+.user-item__transports {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   padding-left: 10px;
   list-style: none;
+}
+
+.user-item__transport {
+  position: relative;
+
+  .user-item__tooltip {
+    position: absolute;
+    left: -60px;
+    top: 33px;
+    z-index: 25;
+    display: none;
+  }
+
+  &:hover {
+    .user-item__tooltip {
+      display: block;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 23px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 8px 10px 8px;
+      border-color: transparent transparent $blue-5 transparent;
+    }
+  }
 }

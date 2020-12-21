@@ -10,6 +10,16 @@
   font-weight: 700;
   text-transform: uppercase;
 
+  &:hover,
+  &:focus {
+    background-color: $yellow-2;
+  }
+
+  &:active {
+    background-color: $yellow-2;
+    color: rgba($basic-blue-light, 0.3);
+  }
+
   &--grey {
     background-color: $light-blue-background-2;
     color: $blue-background-1;
