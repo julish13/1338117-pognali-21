@@ -553,7 +553,7 @@
                 <p class="price-list__price">59 руб./мес</p>
               </li>
             </ol>
-            <a class="pricing__link">
+            <a class="pricing__link" href="#">
               <span class="pricing__icon">
                 <svg role="img" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 28 28" aria-hidden="true">
                   <path d="M23.38 23.24V19.9a5.85 5.85 0 00-2.81-5.09c-.94-.67-2.95-.8-3.9-.8l-2.13 2.28.8 1.74v4.02L14 23.5l-1.34-1.47v-4.02l.94-1.74L11.32 14c-1.07 0-3.08.13-4.02.8a5.53 5.53 0 00-2 2.28 5.15 5.15 0 00-.68 2.81v3.35s3.49 1.48 9.38 1.48c5.9 0 9.38-1.48 9.38-1.48zM14 3.42c-2.54 0-4.02 2.41-3.62 5.09.4 2.68 1.74 4.55 3.62 4.55 1.88 0 3.21-1.87 3.62-4.55.4-2.81-1.08-5.1-3.62-5.1z"/>
@@ -700,8 +700,33 @@
           </svg>
         </a>
     </footer>
+    <section class="modal modal-rates">
+      <div class="modal__container">
+        <h2 class="modal-rates__subheading modal__subheading index-subheading">Бизнес-тарифы</h2>
+        <dl class="modal-rates__price-list">
+          <div class="modal-rates__price-item">
+            <dt class="modal-rates__price-plan">Реклама у блоггера</dt>
+            <dd class="modal-rates__price">300 000 руб./пост</dd>
+          </div>
+          <div class="modal-rates__price-item">
+            <dt class="modal-rates__price-plan">Накрутка подписчиков</dt>
+            <dd class="modal-rates__price">от 1 руб./шт.</dd>
+          </div>
+          <div class="modal-rates__price-item">
+            <dt class="modal-rates__price-plan">Лайки от ботов</dt>
+            <dd class="modal-rates__price">от 20 коп./лайк</dd>
+          </div>
+          <div class="modal-rates__price-item">
+            <dt class="modal-rates__price-plan">Ваш продакт-плейсмент</dt>
+            <dd class="modal-rates__price">Индивидуально</dd>
+          </div>
+        </dl>
+      </div>
+      <button class="modal__close" type="button">Закрыть окно</button>
+    </section>
     <script src="js/menu-toggle.js"></script>
     <script src="js/menu-scroll.js"></script>
+    <script src="js/modal.js"></script>
     <script src="js/level.js"></script>
     <script src="js/map.js"></script>
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXmwjGqbP-jxTZ8QsfhLzsMq8csUyF2tk&callback=initMap"></script>

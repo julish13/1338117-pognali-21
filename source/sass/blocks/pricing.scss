@@ -59,8 +59,6 @@
 
   &:hover,
   &:focus {
-    cursor: pointer;
-
     .pricing__text,
     .pricing__icon svg {
       opacity: 0.7;
@@ -68,8 +66,6 @@
   }
 
   &:active {
-    cursor: pointer;
-
     .pricing__text,
     .pricing__icon svg {
       opacity: 0.3;
