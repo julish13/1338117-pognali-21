@@ -45,6 +45,17 @@
       }
     }
   }
+
+  &:hover,
+  &:focus {
+    .contact-link__wrap--phone {
+      background-color: $orange-5;
+    }
+
+    .contact-link__wrap--mail {
+      background-color: $orange-1;
+    }
+  }
 }
 
 .contact-link__wrap {
@@ -147,5 +158,11 @@
 
   &--promo {
     @include short-contact-link;
+  }
+
+  &:active {
+    .contact-link__icon {
+      opacity: 0.3;
+    }
   }
 }

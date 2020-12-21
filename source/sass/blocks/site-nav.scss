@@ -24,9 +24,38 @@
 .site-nav__item {
   @media #{$min-desktop} {
     margin-right: 34px;
+    overflow: hidden;
   }
 }
 
 .site-nav__link {
   color: inherit;
+
+  @media #{$min-desktop} {
+    position: relative;
+    transition: transform 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    @media #{$min-desktop} {
+      transform: translateY(-100%);
+    }
+  }
+
+  &:active {
+    @media #{$min-desktop} {
+      opacity: 0.3;
+    }
+  }
+
+  &::before {
+    @media #{$min-desktop} {
+      position: absolute;
+      top: 100%;
+      color: $yellow-1;
+      content: attr(data-hover);
+      transform: translate3d(0, 0, 0);
+    }
+  }
 }
