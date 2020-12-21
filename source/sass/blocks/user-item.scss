@@ -90,7 +90,10 @@
 .user-item__country {
   position: relative;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
     .user-item__tooltip {
       display: block;
       top: 38px;
@@ -185,7 +188,10 @@
 .user-item__transport {
   position: relative;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
     .user-item__tooltip {
       display: block;
       left: -60px;

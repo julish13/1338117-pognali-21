@@ -56,6 +56,25 @@
     font-size: 20px;
     line-height: 1;
   }
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
+    .pricing__text,
+    .pricing__icon svg {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    cursor: pointer;
+
+    .pricing__text,
+    .pricing__icon svg {
+      opacity: 0.3;
+    }
+  }
 }
 
 .pricing__icon {
@@ -75,6 +94,7 @@
       position: absolute;
       top: 28%;
       left: 29%;
+      fill: currentColor;
     }
   }
 }

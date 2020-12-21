@@ -38,7 +38,7 @@
 }
 
 .location__button {
-  border: $blue-3 3px solid;
+  border: $blue-background-1 3px solid;
   padding: 18px 20px 20px;
 
   @media #{$min-tablet} {
@@ -47,5 +47,24 @@
 
   @media #{$min-desktop} {
     min-width: 324px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $blue-background-1;
+    color: $basic-white;
+
+    &::after {
+      border-color: transparent transparent transparent  $basic-white;
+    }
+  }
+
+  &:active {
+    background-color: $blue-background-1;
+    color: rgba($basic-white, 0.3);
+
+    &::after {
+      border-color: transparent transparent transparent  rgba($basic-white, 0.3);
+    }
   }
 }

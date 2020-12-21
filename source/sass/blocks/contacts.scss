@@ -53,6 +53,11 @@
   font-weight: 700;
   text-transform: uppercase;
   font-style: normal;
+
+  &:hover,
+  &:focus {
+    color: $yellow-2;
+  }
 }
 
 .contacts__address {
