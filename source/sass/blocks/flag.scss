@@ -1,18 +1,6 @@
-.users-contries-list-index {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding-left: 0;
-  list-style: none;
-}
-
-.users-contries-list-index__country {
+.flag {
   width: 35px;
   height: 25px;
-
-  &:not(:last-child) {
-    margin-right: 20px;
-  }
 
   &--thailand {
     background-image: url("../img/thailand-35x25.png");
