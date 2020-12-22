@@ -4,7 +4,6 @@
 }
 
 .countries__wrap {
-
   @media #{$min-tablet} {
     background-image: url("../img/flags-back-tablet.png");
     background-position: 92% 3%;
@@ -112,4 +111,3 @@
     width: 275px;
   }
 }
-

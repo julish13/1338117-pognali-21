@@ -11,7 +11,7 @@
   &:hover,
   &:focus {
     z-index: 25;
-    filter: drop-shadow(0px 4px 9px rgba($basic-black, 0.16));
+    filter: drop-shadow(0 4px 9px rgba($basic-black, 0.16));
 
     .user-item__photo {
       transition: transform 0.3s;

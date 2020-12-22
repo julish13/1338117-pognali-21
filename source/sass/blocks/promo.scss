@@ -6,11 +6,11 @@
   }
 
   @media #{$min-desktop} {
-  background-image: url("../img/traveller-illustration-desktop.png"),
-    url("../img/globe-back-desktop.png");
-  background-position: calc(45% + 150px) bottom, center bottom;
-  background-size: auto, 100% 750px;
-  background-repeat: no-repeat;
+    background-image: url("../img/traveller-illustration-desktop.png"),
+      url("../img/globe-back-desktop.png");
+    background-position: calc(45% + 150px) bottom, center bottom;
+    background-size: auto, 100% 750px;
+    background-repeat: no-repeat;
   }
 }
 
