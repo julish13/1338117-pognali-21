@@ -30,6 +30,7 @@
 
 .site-nav__link {
   color: inherit;
+  display: inline-block;
 
   @media #{$min-desktop} {
     position: relative;

@@ -13,6 +13,7 @@
 
   @media #{$min-desktop} {
     height: 584px;
+    background-image: url("../img/map-desktop.png");
   }
 
   &--no-js {
@@ -20,6 +21,10 @@
 
     @media #{$min-tablet} {
       width: $tablet-width;
+    }
+
+    @media #{$min-desktop} {
+      width: $desktop-width;
     }
   }
 }
@@ -40,5 +45,9 @@
     border-width: 15px;
     width: 56px;
     height: 56px;
+  }
+
+  @media #{$min-tablet} {
+    left: 636px;
   }
 }

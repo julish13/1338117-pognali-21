@@ -101,6 +101,7 @@
 
   &:focus,
   &:active {
+    outline: none;
     background-color: inherit;
     color: $basic-white;
   }

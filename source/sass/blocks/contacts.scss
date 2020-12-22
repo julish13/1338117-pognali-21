@@ -6,7 +6,7 @@
   background-color: $blue-3;
 
   @media #{$min-tablet} {
-    padding-bottom: 31px;
+    padding-bottom: 35px;
   }
 
   @media #{$min-desktop} {
@@ -94,4 +94,8 @@
   position: relative;
   z-index: -1;
   margin: -53px auto 0;
+
+  @media #{$min-desktop} {
+    margin-top: -122px;
+  }
 }

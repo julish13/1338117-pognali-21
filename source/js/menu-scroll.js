@@ -6,6 +6,8 @@
   const tabletLogoElement = mainNavElement.querySelector(`#logo-tablet`);
   const desktopLogoElement = mainNavElement.querySelector(`#logo-desktop`);
 
+  desktopLogoElement.srcset = `img/logo-desktop-white.png 1x`;
+
   window.onscroll = () => {
       if (window.scrollY >= mainNavElement.offsetHeight) {
           mainNavElement.classList.add(`main-nav--scrolled`);
