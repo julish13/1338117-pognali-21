@@ -198,7 +198,7 @@
         <h1 class="main-heading container">Направления</h1>
       </div>
       <section class="profile">
-        <div class="container">
+        <div class="container-fix container-fix--form">
           <h2 class="visually-hidden">Редактирование профиля</h2>
           <form
             class="profile__form"
@@ -209,23 +209,25 @@
               <p class="level__value level__value--profile">80</p>
               <p class="level__text">level</p>
             </div>
-            <img
+            <div class="profile__avatar">
+              <img
               class="profile__avatar"
               src="https://via.placeholder.com/150x150"
               alt="Фото профиля"
-            />
-            <p class="profile__item profile__item--file">
-              <input
-                class="visually-hidden"
-                type="file"
-                name="avatar"
-                id="avatar"
-                accept="image/*"
               />
-              <label class="profile__file-label" for="avatar"
-                >Сменить фото</label
-              >
-            </p>
+              <p class="profile__item profile__item--file">
+                <input
+                  class="visually-hidden"
+                  type="file"
+                  name="avatar"
+                  id="avatar"
+                  accept="image/*"
+                />
+                <label class="profile__file-label" for="avatar"
+                  >Сменить фото</label
+                >
+              </p>
+            </div>
             <p class="profile__item profile__item--tags">
               <label class="profile__subheading profile__subheading--label"
                 >Тэги</label
@@ -299,7 +301,7 @@
         </div>
       </section>
       <section class="plans">
-        <div class="container">
+        <div class="container-fix container-fix--form">
           <h2 class="plans__heading form-heading">Мои планы:</h2>
           <ol class="plans__list">
             <li class="plans__item">
@@ -318,7 +320,7 @@
         </div>
       </section>
       <section class="planning">
-        <div class="container">
+        <div class="container-fix container-fix--form">
           <h2 class="planning__heading form-heading">Добавить план:</h2>
           <ul class="planning__states planning-states planning-states--no-text">
             <li class="planning-states__state planning-states__state--active">

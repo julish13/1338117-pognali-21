@@ -14,4 +14,12 @@
     padding-left: 75px;
     padding-right: 75px;
   }
+
+  &--form {
+    @media #{$min-desktop} {
+      width: $desktop-width;
+      padding-left: $desktop-padding;
+      padding-right: $desktop-padding;
+    }
+  }
 }
