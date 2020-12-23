@@ -1,3 +1,10 @@
+.level {
+  &--form {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 .level__wrap {
   position: relative;
   display: flex;
@@ -6,21 +13,32 @@
   align-items: center;
   line-height: 1;
 
+  &::before {
+    position: absolute;
+    top: 60%;
+    left: 23%;
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: $basic-white;
+    opacity: 0.3;
+  }
+
   .level--index & {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     background-color: rgba($basic-black, 0.6);
+  }
+
+  .level--form & {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     &::before {
-      position: absolute;
-      top: 60%;
-      left: 23%;
-      content: "";
-      width: 30px;
-      height: 1px;
-      background-color: $basic-white;
-      opacity: 0.3;
+      width: 51px;
+      background-color: $basic-grey-font;
     }
   }
 }
@@ -36,7 +54,9 @@
     color: $basic-white;
   }
 
-  &--profile {
+  .level--form & {
+    margin-top: -5px;
+    margin-bottom: 9px;
     color: $basic-blue;
     font-size: 38px;
   }
@@ -76,4 +96,8 @@
   transition: 0.35s stroke-dashoffset;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
+
+  .level--form & {
+    stroke-width: 3;
+  }
 }

@@ -1,9 +1,22 @@
 .main-form {
-  background-color: $grey-background-1;
+  background-color: $light-blue-background-3;
   color: $basic-blue-light;
 }
 
-.main-form__heading {
-  margin-top: 95px;
+.main-form__header {
+  margin-top: 92px;
   background-color: $blue-background-2;
+}
+
+.main-form__heading {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+  width: min-content;
+  margin-right: auto;
+
+  &::after {
+    @include heading-decoration;
+  }
 }

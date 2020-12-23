@@ -2,40 +2,39 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  padding-top: 25px;
 
   @media #{$min-desktop} {
     justify-content: flex-end;
   }
 }
 
-.profile__item {
-  @include border;
+.profile__level {
+  margin-left: 17px;
+}
 
-  &--file {
-    border: none;
-    flex-basis: 100%;
+.profile__avatar {
+  display: block;
+  margin-right: 18px;
+  border-radius: 50%;
+}
 
-    @media #{$min-desktop} {
-      text-align: right;
-    }
-  }
+.profile__file {
+  border: none;
+  border-radius: 20px;
+  flex-basis: 100%;
+  margin-top: 18px;
+  padding: 10px;
+  background-color: $light-blue-background-1;
+  color: $basic-blue;
+  font-size: 20px;
+  line-height: 0.9;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
 
-  &--transport {
-    @media #{$min-tablet} and #{$max-tablet} {
-      order: -1;
-    }
-
-    @media #{$min-desktop} {
-      flex-basis: 49%;
-    }
-  }
-
-  &--tags {
-    flex-basis: 100%;
-
-    @media #{$min-desktop} {
-      flex-basis: 50%;
-    }
+  @media #{$min-desktop} {
+    text-align: right;
   }
 }
 
@@ -45,27 +44,66 @@
   }
 }
 
-.profile__file-label {
-  background-color: $light-blue-background-1;
-  color: $basic-blue;
-  font-size: 20px;
-  line-height: 0.9;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
 .profile__subheading {
+  display: block;
+  padding: 0 18px;
+  width: min-content;
   line-height: 1.12;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
 
   &--label {
-    display: block;
+    margin: -9px auto 0;
+    background-color: $light-blue-background-3;
   }
 }
 
+.profile__transports {
+  @include border;
+  border-radius: 10px;
+  flex-basis: 100%;
+
+  @media #{$min-tablet} and #{$max-tablet} {
+    order: -1;
+  }
+
+  @media #{$min-desktop} {
+    flex-basis: 49%;
+  }
+}
+
+.profile__transport-list {
+  display: flex;
+  justify-content: center;
+  margin-top: 2px;
+  padding-left: 0;
+  list-style: none;
+}
+
 .profile__tags {
+  @include border;
+  border-radius: 10px;
+  flex-basis: 100%;
+  margin-top: 14px;
+
+  @media #{$min-desktop} {
+    flex-basis: 50%;
+  }
+}
+
+.profile__tag-list {
+  resize: none;
+  border: none;
+  padding: 15px 23px 10px;
+  width: 100%;
+  min-height: 73px;
+  background-color: transparent;
   color: rgba($basic-grey-font, 0.6);
   font-family: inherit;
   line-height: 1.12;
+
+  &:focus {
+    outline: none;
+  }
 }

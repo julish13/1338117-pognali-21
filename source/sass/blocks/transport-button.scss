@@ -1,5 +1,6 @@
 .transport-button {
   position: relative;
+  display: block;
   width: 33px;
   height: 33px;
 
@@ -9,6 +10,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
     content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
     opacity: 0.15;
   }
 
@@ -45,6 +48,22 @@
   }
 
   &--checked {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &--background {
+    border-radius: 50%;
+    background-color: $basic-white;
+    &::before {
+      width: 17px;
+      height: 17px;
+      opacity: 1;
+    }
+  }
+
+  input:checked + & {
     &::before {
       opacity: 1;
     }
