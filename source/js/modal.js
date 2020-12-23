@@ -19,7 +19,7 @@
   const onPopupEscPress = (evt) => {
     if (evt.key === EVENT_KEYS.ESC) {
       evt.preventDefault();
-      onClickonClickClosePopup();
+      onClickClosePopup();
     }
   };
 
