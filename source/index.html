@@ -5,6 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+      HTML {
+        background-repeat: no-repeat;
+        background-position:  50% 0;
+        /* Mobile layout by default */
+        background-image: url( "img/maket/Mobile (menu).jpg" );
+        /* background-image: url( "img/maket/Mobile.jpg" ); */
+        /* background-image: url( "img/maket/Mobile (scroll).jpg" ); */
+      }
+      /* Tablet */
+      @media ( min-width: 768px ) {
+        HTML {
+          /* Tablet layout */
+          /* background-image: url( "img/maket/Tablet.jpg" ); */
+          /* background-image: url( "img/maket/Tablet-menu.jpg" ); */
+          background-image: url( "img/maket/Tablet scroll.png" );
+        }
+      }
+      /* Desktop */
+      @media ( min-width: 1440px ) {
+        HTML {
+          /* Desktop layout */
+          background-image: url( "img/maket/Desktop.jpg" );
+          /* background-image: url( "img/maket/Desktop scroll.png" ); */
+        }
+      }
+    </style>
+    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+    <script src="../node_modules/pixel-glass/script.js"></script>
   </head>
   <body class="page__body">
     <svg style="display: none">
