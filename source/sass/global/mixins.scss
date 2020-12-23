@@ -1,3 +1,48 @@
+@mixin section-bottom-border-radius {
+  border-radius: 0 0 27px 27px;
+
+  @media #{$min-tablet} {
+    border-radius: 0 0 57px 57px;
+  }
+}
+
+@mixin section-top-border-radius {
+  border-radius: 27px 27px 0 0;
+
+  @media #{$min-tablet} {
+    border-radius: 57px 57px 0 0;
+  }
+}
+
 @mixin border {
   border: 1px solid $grey-1;
+}
+
+@mixin user-status {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+
+  @media #{$min-tablet} {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@mixin user-status-online {
+  background-color: $green-1;
+}
+
+@mixin user-status-offline {
+  background-color: $red-1;
+}
+
+@mixin tooltip-tail {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 10px 8px;
+  border-color: transparent transparent $blue-5 transparent;
 }

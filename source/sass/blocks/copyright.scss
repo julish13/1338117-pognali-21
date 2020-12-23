@@ -1,5 +1,32 @@
 .copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: $basic-grey-font;
   line-height: 1;
   font-weight: 400;
+
+  @media #{$min-tablet} {
+    font-size: 20px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__text {
+  @media #{$min-tablet} {
+    margin-right: 25px;
+  }
+}
+
+.copyright__icon {
+  margin-bottom: -7px;
+  fill: $blue-background-1;
 }

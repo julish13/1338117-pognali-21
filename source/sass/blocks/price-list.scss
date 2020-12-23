@@ -1,10 +1,124 @@
 .price-list {
+  position: relative;
+  padding-left: 0;
   line-height: 1;
+  counter-reset: myCounter;
+
+  &::before {
+    position: absolute;
+    top: -130px;
+    right: -46px;
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-image: url("../img/pricing-mobile.png");
+    background-repeat: no-repeat;
+
+    @media #{$min-tablet} {
+      top: unset;
+      right: 11px;
+      bottom: -121px;
+    }
+
+    @media #{$min-desktop} {
+      right: -272px;
+      bottom: -3%;
+      width: 198px;
+      height: 198px;
+      background-image: url("../img/pricing-desktop.png");
+    }
+  }
+
+  &::after {
+    @media #{$min-tablet} {
+      position: absolute;
+      z-index: -1;
+      top: -40px;
+      right: -35px;
+      content: "";
+      background-color: $grey-background-4;
+      border-radius: 20px;
+      width: 198px;
+      height: 285px;
+    }
+
+    @media #{$min-desktop} {
+      top: -48px;
+      right: calc(50% - 570px);
+      width: 446px;
+      height: 300px;
+    }
+  }
 }
 
 .price-list__item {
+  position: relative;
+  border-top: 1px solid $grey-3;
+  padding-top: 6px;
+  padding-bottom: 11px;
+  list-style: none;
+
   @media #{$min-tablet} {
     display: flex;
     justify-content: space-between;
+    padding-top: 14px;
   }
+
+  &::after {
+    position: absolute;
+    top: 3px;
+    right: -45px;
+    padding: 7px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: $orange-1;
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    color: $basic-white;
+    text-align: center;
+
+    @media #{$min-tablet} {
+      top: -2px;
+      right: unset;
+      left: -90px;
+      padding: 16px;
+      width: 68px;
+      height: 68px;
+    }
+  }
+
+  &:nth-child(2) {
+    &::after {
+      background-color: $yellow-2;
+
+      @media #{$min-tablet} {
+        top: 1px;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    &::after {
+      background-color: $yellow-1;
+
+      @media #{$min-tablet} {
+        top: 5px;
+      }
+    }
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $grey-3;
+  }
+}
+
+.price-list__option {
+  margin-top: 5px;
+  margin-bottom: 6px;
+}
+
+.price-list__price {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }

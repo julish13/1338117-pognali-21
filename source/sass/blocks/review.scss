@@ -1,0 +1,74 @@
+@mixin review {
+  display: block;
+  margin-left: 25px;
+  width: 63%;
+
+  @media #{$min-tablet} {
+    margin-left: 33px;
+    width: 38%;
+  }
+
+  @media #{$min-desktop} {
+    margin-left: 0;
+    margin-right: 0;
+    width: auto;
+  }
+}
+
+.review {
+  width: 100%;
+  background-color: $basic-blue;
+
+  @media #{$min-tablet} {
+    background-color: transparent;
+  }
+
+  @media #{$min-desktop} {
+    width: 265px;
+    min-height: 183px;
+  }
+}
+
+.review__wrap {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 112px;
+
+  @media #{$min-tablet} {
+    padding-top: 10px;
+  }
+
+  @media #{$min-desktop} {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: auto;
+    min-width: auto;
+  }
+}
+
+.review__quote {
+  @include review;
+  margin-bottom: 20px;
+
+  @media #{$min-tablet} {
+    margin-bottom: 45px;
+  }
+
+  @media #{$min-desktop} {
+    margin-top: 0;
+    margin-bottom: 44px;
+  }
+}
+
+.review__author {
+  @include review;
+  font-style: normal;
+  font-weight: 700;
+
+  @media #{$min-tablet} {
+    font-size: 21px;
+    line-height: 1.19;
+  }
+}

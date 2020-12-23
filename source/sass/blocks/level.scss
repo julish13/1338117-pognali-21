@@ -1,16 +1,38 @@
-.level {
+.level__wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   line-height: 1;
 
-  &--dark {
+  .level--index & {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     background-color: rgba($basic-black, 0.6);
+
+    &::before {
+      position: absolute;
+      top: 60%;
+      left: 23%;
+      content: "";
+      width: 30px;
+      height: 1px;
+      background-color: $basic-white;
+      opacity: 0.3;
+    }
   }
 }
 
 .level__value {
+  margin: 0;
   font-size: 24px;
   font-weight: 700;
 
-  &--promo {
+  .level--index & {
+    margin-top: 7px;
+    margin-left: -3px;
     color: $basic-white;
   }
 
@@ -25,11 +47,13 @@
 }
 
 .level__text {
+  margin: 0;
   color: $basic-grey-font;
   font-size: 18px;
   font-weight: 400;
 
-  &--promo {
+  .level--index & {
+    margin-left: -3px;
     color: $basic-white;
     font-size: 14px;
   }
@@ -37,4 +61,19 @@
   &--inherit {
     font: inherit;
   }
+}
+
+.level__progress-ring {
+  position: absolute;
+}
+
+.level__circle {
+  stroke: $orange-1;
+  stroke-width: 4;
+  stroke-linecap: round;
+  fill: transparent;
+
+  transition: 0.35s stroke-dashoffset;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
 }

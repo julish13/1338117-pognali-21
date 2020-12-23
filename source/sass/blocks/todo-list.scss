@@ -1,22 +1,66 @@
+$radius-mobile: 7px;
+$radius-tablet: 21px;
+
 .todo-list {
-  padding: 0;
+  border-radius: 5px;
   color: $basic-blue;
   font-size: 18px;
   line-height: 1;
   font-weight: 700;
+  counter-reset: myCounter;
+
+  @media #{$max-tablet} {
+    width: 100%;
+  }
 
   @media #{$min-tablet} {
     display: grid;
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    font-size: 24px;
   }
 
   @media #{$min-desktop} {
-    grid-template: auto / repeat(4, 1fr);
+    grid-template: auto / repeat(3, 345px) 1fr;
   }
 }
 
 .todo-list__item {
-  padding: 22px 24px;
+  position: relative;
+  list-style: none;
+  margin-bottom: -4px;
+  padding: 22px 24px 26px;
+  border-radius: $radius-mobile $radius-mobile 0 0;
+
+  @media #{$min-tablet} {
+    padding: 30px 35px 62px 32px;
+  }
+
+  @media #{$min-desktop} {
+    padding: 30px 45px 30px 32px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 25%;
+    right: 8%;
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    color: $basic-white;
+
+    @media #{$min-tablet} {
+      top: unset;
+      bottom: 22px;
+      left: 33px;
+      font-size: 30px;
+    }
+
+    @media #{$min-desktop} {
+      top: 25%;
+      right: 60px;
+      left: unset;
+      font-size: inherit;
+    }
+  }
 
   &--choose {
     background-color: $orange-1;
@@ -33,4 +77,67 @@
   &--travel {
     background-color: $yellow-1;
   }
+
+  &:first-child {
+    @media #{$min-tablet} {
+      border-radius: $radius-tablet 0 0 0;
+    }
+  }
+
+  &:nth-child(2) {
+    @media #{$min-tablet} {
+      border-radius: $radius-tablet $radius-tablet 0 0;
+    }
+  }
+
+  &:last-child {
+    border-radius: $radius-mobile $radius-mobile $radius-mobile $radius-mobile;
+    padding-bottom: 22px;
+
+    @media #{$min-tablet} {
+      border-radius: 0 0 $radius-tablet $radius-tablet;
+    }
+  }
+
+  &:nth-last-child(2) {
+    @media #{$min-tablet} {
+      border-radius: 0 0 0 $radius-tablet;
+    }
+  }
+
+  &:nth-child(odd) {
+    @media #{$min-tablet} and #{$max-tablet} {
+      margin-right: -20px;
+    }
+  }
+
+  &:not(:nth-child(4n)) {
+    @media #{$min-desktop} {
+      border-radius: $radius-tablet 0 0 $radius-tablet;
+    }
+  }
+
+  &:nth-child(4n) {
+    @media #{$min-desktop} {
+      border-radius: $radius-tablet $radius-tablet $radius-tablet $radius-tablet;
+    }
+
+    &::after {
+      @media #{$min-desktop} {
+        right: 33px;
+      }
+    }
+  }
+
+  &:not(:first-child) {
+    @media #{$min-desktop} {
+      margin-left: -30px;
+    }
+  }
+}
+
+.todo-list__text {
+  padding: 0;
+  margin: 0;
+  width: 64%;
 }

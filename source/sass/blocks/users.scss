@@ -1,34 +1,167 @@
-.users__inner {
+.users {
+  background-color: $blue-3;
+  position: relative;
+  background-image: url("../img/rogovaya-back-mobile.png"), url("../img/smolov-back-mobile.png");
+  background-position: left top 335px, right 25px top 65px;
+  background-repeat: no-repeat, no-repeat;
+
+  @media #{$min-tablet} {
+    background-image: url("../img/rogovaya-back-tablet.png"), url("../img/smolov-back-tablet.png");
+    background-position: right 73px top 140px, left 40px top 487px;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  @media #{$min-desktop} {
+    background-position: left calc(50% - 390px) top 448px, left calc(50% - 100px) top 195px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 63px;
+    content: "";
+    border-radius: 0 20px 20px 0;
+    width: 113px;
+    height: 132px;
+    background-color: $blue-4;
+
+    @media #{$min-tablet} {
+      left: 40px;
+      top: 130px;
+      border-radius: 20px;
+      width: 212px;
+      height: 212px;
+    }
+
+    @media #{$min-desktop} {
+      left: calc(50% - 661px);
+    }
+  }
+}
+
+.users__wrap {
+  position: relative;
+
   @media #{$min-desktop} {
     display: grid;
     grid-template: repeat(4, min-content) / repeat(2, 1fr);
+    grid-column-gap: 60px;
+  }
+}
+
+.users__subheading {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 22px;
+
+  @media #{$min-tablet} {
+    margin-left: 33px;
+    margin-bottom: 57px;
+  }
+
+  @media #{$min-desktop} {
+    margin-top: 0;
+    margin-bottom: 10px;
+    margin-left: 68px;
   }
 }
 
 .users__description {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 22px;
+
+  @media #{$min-tablet} {
+    margin-left: 33px;
+    margin-right: 190px;
+    margin-bottom: 45px;
+  }
+
+  @media #{$min-desktop} {
+    margin: 48px 80px 20px 70px;
+  }
+
   &--bold {
     font-weight: 700;
+
+    @media #{$min-tablet} {
+      font-size: 21px;
+      line-height: 1.14;
+    }
+
+    @media #{$min-desktop} {
+      margin-top: 23px;
+      margin-bottom: 86px;
+    }
+
+    br {
+      display: none;
+
+      @media #{$min-tablet} {
+        display: inline;
+      }
+    }
+  }
+
+  &--normal {
+    br {
+      @media #{$min-tablet} {
+        display: none;
+      }
+    }
   }
 }
 
 .users__list {
+  margin-top: 55px;
+  margin-bottom: 21px;
   list-style: none;
+
+  @media #{$max-mobile} {
+    padding-left: 0;
+  }
 
   @media #{$min-tablet} {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 61px;
+    margin-bottom: 71px;
   }
 
   @media #{$min-desktop} {
     order: 1;
     grid-column: 2;
     grid-row: 1 / span 4;
+    margin: 0;
+    padding: 0;
+    width: auto;
   }
 }
 
 .users__item {
+  margin-bottom: 10px;
+
   @media #{$min-tablet} {
-    flex-basis: 50%;
+    flex-basis: 46%;
+  }
+
+  @media #{$min-desktop} {
+    flex-basis: auto;
+    margin-top: 8px;
+    margin-bottom: 0;
+  }
+}
+
+.users__button {
+  @media #{$min-tablet} {
+    margin-left: auto;
+    margin-right: auto;
+    width: 618px;
+  }
+
+  @media #{$min-desktop} {
+    margin-left: 70px;
+    width: 280px;
   }
 }

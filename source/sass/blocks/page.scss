@@ -4,12 +4,35 @@
   font-size: 16px;
   line-height: 1.37;
   font-weight: 300;
+
+  @media #{$min-tablet} {
+    font-size: 28px;
+    line-height: 1.18;
+  }
 }
 
 .page__body {
-  min-width: 320px;
   min-height: 100vh;
+  min-width: $mobile-width;
   margin: 0;
   background-color: $blue-background-1;
   color: $basic-white;
+}
+
+.page__footer {
+  @include section-top-border-radius;
+  position: relative;
+  margin-top: -110px;
+  padding-top: 39px;
+  padding-bottom: 25px;
+
+  @media #{$min-tablet} {
+    margin-top: -65px;
+    padding-bottom: 32px;
+  }
+
+  @media #{$min-desktop} {
+    margin-top: -62px;
+    padding-bottom: 46px;
+  }
 }

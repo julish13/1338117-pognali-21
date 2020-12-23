@@ -1,12 +1,24 @@
 .button-round {
+  display: block;
   background-color: $yellow-1;
   border: none;
+  border-radius: 25px;
   font-family: inherit;
   color: $basic-blue-light;
   font-size: 17px;
   line-height: 1;
   font-weight: 700;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: $yellow-2;
+  }
+
+  &:active {
+    background-color: $yellow-2;
+    color: rgba($basic-blue-light, 0.3);
+  }
 
   &--grey {
     background-color: $light-blue-background-2;

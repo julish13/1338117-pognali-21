@@ -1,0 +1,17 @@
+.container-fix {
+  margin-left: auto;
+  margin-right: auto;
+  width: $mobile-width - 2 * $mobile-padding;
+
+  @media #{$min-tablet} {
+    width: $tablet-width - 2 * $tablet-padding;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  @media #{$min-desktop} {
+    width: $desktop-width - 2 * $desktop-padding;
+    padding-left: 75px;
+    padding-right: 75px;
+  }
+}

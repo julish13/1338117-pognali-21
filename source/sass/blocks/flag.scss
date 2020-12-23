@@ -1,0 +1,24 @@
+.flag {
+  width: 35px;
+  height: 25px;
+
+  &--thailand {
+    background-image: url("../img/thailand-35x25.png");
+  }
+
+  &--czech {
+    background-image: url("../img/czech-35x25.png");
+  }
+
+  &--belgium {
+    background-image: url("../img/belgium-35x25.png");
+  }
+
+  &--sri-lanka {
+    background-image: url("../img/sri-lanka-35x25.png");
+  }
+
+  &--seychelles {
+    background-image: url("../img/seychelles-35x25.png");
+  }
+}

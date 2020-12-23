@@ -1,11 +1,128 @@
+.about {
+  width: 100%;
+  background-color: $blue-3;
+}
+
+.about::before {
+  position: absolute;
+  content: "";
+  width: 113px;
+  height: 132px;
+  background-color: $blue-4;
+  border-radius: 20px;
+
+  @media #{$min-tablet} {
+    top: 26%;
+    left: 5%;
+    width: 688px;
+    height: 212px;
+  }
+
+  @media #{$min-desktop} {
+    top: 9%;
+    left: calc(50% - 660px);
+    width: 212px;
+    height: 212px;
+  }
+}
+
+.about__wrap {
+  position: relative;
+  z-index: 11;
+  min-height: 356px;
+  background-image: url("../img/about-mobile.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  @media #{$min-tablet} {
+    background-image: url("../img/about-tablet.png");
+    background-position: 98% 88%;
+  }
+
+  @media #{$min-desktop} {
+    min-height: 750px;
+    background-image: url("../img/about-desktop.png");
+    background-position: calc(50% + 348px) bottom;
+  }
+}
+
+.about__inner {
+  margin-left: 25px;
+  margin-right: 34px;
+  padding-top: 32px;
+  padding-bottom: 35px;
+
+  @media #{$min-tablet} {
+    margin-left: 33px;
+    padding-top: 276px;
+    padding-right: 315px;
+  }
+
+  @media #{$min-desktop} {
+    margin-left: 70px;
+    padding-top: 128px;
+  }
+}
+
+.about__subheading {
+  margin-top: 0;
+  margin-bottom: 23px;
+
+  @media #{$min-tablet} {
+    margin-bottom: 39px;
+  }
+
+  @media #{$min-desktop} {
+    margin-bottom: 60px;
+  }
+}
+
 .about__description {
+  margin-bottom: 20px;
+
+  @media #{$min-tablet} {
+    margin-bottom: 33px;
+  }
+
+  @media #{$min-desktop} {
+    margin-bottom: 42px;
+    width: 645px;
+  }
+
   &--bold {
     font-weight: 700;
+
+    @media #{$min-tablet} {
+      font-size: 21px;
+      line-height: 25px;
+    }
+
+    @media #{$min-desktop} {
+      width: 475px;
+      line-height: 1.14;
+    }
+  }
+
+  br {
+    @media #{$min-tablet} {
+      display: none;
+    }
   }
 }
 
 .about__button {
   @media #{$max-mobile} {
     display: none;
+  }
+
+  @media #{$min-tablet} {
+    margin-top: 54px;
+    margin-right: 27px;
+    max-width: 400px;
+  }
+
+  @media #{$min-desktop} {
+    margin-top: 85px;
+    width: 275px;
   }
 }

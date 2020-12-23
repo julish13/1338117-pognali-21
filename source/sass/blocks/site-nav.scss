@@ -8,15 +8,55 @@
   text-align: center;
 
   @media #{$min-tablet} {
+    font-size: 60px;
+    line-height: 1.18;
     text-align: left;
   }
 
   @media #{$min-desktop} {
     display: flex;
     flex-wrap: wrap;
+    font-size: 20px;
+    color: $basic-white;
+  }
+}
+
+.site-nav__item {
+  @media #{$min-desktop} {
+    margin-right: 34px;
+    overflow: hidden;
   }
 }
 
 .site-nav__link {
   color: inherit;
+  display: inline-block;
+
+  @media #{$min-desktop} {
+    position: relative;
+    transition: transform 0.3s;
+  }
+
+  &:hover,
+  &:focus {
+    @media #{$min-desktop} {
+      transform: translateY(-100%);
+    }
+  }
+
+  &:active {
+    @media #{$min-desktop} {
+      opacity: 0.3;
+    }
+  }
+
+  &::before {
+    @media #{$min-desktop} {
+      position: absolute;
+      top: 100%;
+      color: $yellow-1;
+      content: attr(data-hover);
+      transform: translate3d(0, 0, 0);
+    }
+  }
 }
