@@ -32,30 +32,30 @@
 
   &--thailand {
     &::before {
-      background-image: url("../img/thailand-35x24.png");
+      background-image: url("../img/thailand-small.png");
 
       @media #{$min-tablet} {
-        background-image: url("../img/thailand-70x47.png");
+        background-image: url("../img/thailand-big.png");
       }
     }
   }
 
   &--france {
     &::before {
-      background-image: url("../img/france-35x24.png");
+      background-image: url("../img/france-small.png");
 
       @media #{$min-tablet} {
-        background-image: url("../img/france-70x47.png");
+        background-image: url("../img/france-big.png");
       }
     }
   }
 
   &--czech {
     &::before {
-      background-image: url("../img/czech-35x24.png");
+      background-image: url("../img/czech-small.png");
 
       @media #{$min-tablet} {
-        background-image: url("../img/czech-70x47.png");
+        background-image: url("../img/czech-big.png");
       }
     }
 
