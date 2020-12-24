@@ -26,3 +26,9 @@
   margin-top: -40px;
   padding-top: 40px;
 }
+
+.main-form__plans {
+  @include index-top-border-radius;
+  margin-top: 33px;
+  padding-top: 5px;
+}

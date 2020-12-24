@@ -3,6 +3,7 @@
 }
 
 .plans__item {
+  padding: 23px 24px;
   background-color: $basic-white;
   font-size: 14px;
   line-height: 1;
@@ -26,6 +27,42 @@
   }
 }
 
+.plans__list {
+  margin-top: 33px;
+  padding-left: 0;
+}
+
+.plans__item {
+  list-style: none;
+  margin-bottom: 10px;
+  border-radius: 10px;
+
+  &::before {
+    display: inline;
+    counter-increment: myCounter;
+    content: counter(myCounter)". ";
+    font-size: 16px;
+  }
+}
+
+.plans__title {
+  display: inline;
+  font-size: 16px;
+}
+
+.plans__companion {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  letter-spacing: 0.07em;
+}
+
+.plans__dates {
+  margin-top: 5px;
+  margin-bottom: 24px;
+  letter-spacing: 0.07em;
+}
+
 .plans__edit {
   color: rgba($basic-black, 0.3);
+  letter-spacing: 0.04em;
 }
