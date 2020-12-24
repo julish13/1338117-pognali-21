@@ -10,6 +10,42 @@
     opacity: 1;
   }
 
+  &--plane {
+    @media #{$min-tablet} {
+      top: 53%;
+      left: 43%;
+    }
+  }
+
+  &--bike {
+    top: 57%;
+    left: 57%;
+
+    @media #{$min-tablet} {
+      top: 60%;
+      left: 55%;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &--bus {
+    top: 55%;
+    left: 55%;
+
+    @media #{$min-tablet} {
+      left: 50%;
+      width: 18px;
+      height: 21px;
+    }
+  }
+
+  &--walk {
+    @media #{$min-tablet} {
+      top: 60%;
+    }
+  }
+
   &--background {
     border-radius: 50%;
     background-color: $basic-white;

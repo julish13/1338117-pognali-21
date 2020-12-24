@@ -23,7 +23,7 @@
     min-height: 995px;
     background-image: url("../img/traveller-illustration-tablet.png"),
       url("../img/globe-back-tablet.png");
-    background-position: right 28% bottom 25%, center bottom;
+    background-position: right 28% bottom 26%, center bottom;
     background-repeat: no-repeat;
   }
 
@@ -126,6 +126,7 @@
 
   @media #{$min-tablet} {
     margin-top: auto;
+    padding-bottom: 36px;
     background-color: transparent;
   }
 

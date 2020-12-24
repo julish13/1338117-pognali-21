@@ -175,6 +175,7 @@
     width: 14px;
     height: 14px;
     background-image: url("../img/user.svg");
+    background-repeat: no-repeat;
 
     @media #{$min-tablet} {
       left: -10%;
