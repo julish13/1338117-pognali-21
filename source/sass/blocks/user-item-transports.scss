@@ -1,4 +1,33 @@
-.transport-button {
+.user-item__transports {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.user-item-transports__transport {
+  position: relative;
+  width: 33px;
+  height: 33px;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
+    .user-item__tooltip {
+      display: block;
+      left: -60px;
+      top: 33px;
+    }
+
+    &::after {
+      @include tooltip-tail;
+      top: 23px;
+    }
+  }
+}
+
+.user-item-transports__icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -43,22 +72,6 @@
   &--walk {
     @media #{$min-tablet} {
       top: 60%;
-    }
-  }
-
-  &--background {
-    border-radius: 50%;
-    background-color: $basic-white;
-    &::before {
-      width: 17px;
-      height: 17px;
-      opacity: 1;
-    }
-  }
-
-  input:checked + & {
-    &::before {
-      opacity: 1;
     }
   }
 }

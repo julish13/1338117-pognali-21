@@ -4,6 +4,7 @@
 }
 
 .main-form__header {
+  @include section-bottom-border-radius;
   margin-top: 92px;
   background-color: $blue-background-2;
 }
@@ -19,4 +20,9 @@
   &::after {
     @include heading-decoration;
   }
+}
+
+.main-form__profile {
+  margin-top: -40px;
+  padding-top: 40px;
 }

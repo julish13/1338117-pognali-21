@@ -187,31 +187,5 @@
 }
 
 .user-item__transports {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
   padding-left: 0;
-  list-style: none;
-}
-
-.user-item__transport {
-  position: relative;
-  width: 33px;
-  height: 33px;
-
-  &:hover,
-  &:focus {
-    cursor: pointer;
-
-    .user-item__tooltip {
-      display: block;
-      left: -60px;
-      top: 33px;
-    }
-
-    &::after {
-      @include tooltip-tail;
-      top: 23px;
-    }
-  }
 }
