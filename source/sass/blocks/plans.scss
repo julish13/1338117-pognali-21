@@ -34,12 +34,12 @@
 
 .plans__item {
   list-style: none;
+  counter-increment: myCounter;
   margin-bottom: 10px;
   border-radius: 10px;
 
   &::before {
     display: inline;
-    counter-increment: myCounter;
     content: counter(myCounter)". ";
     font-size: 16px;
   }

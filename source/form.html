@@ -411,19 +411,19 @@
             <li class="plans__item">
               <h3 class="plans__title">Франция, Италия</h3>
               <p class="plans__companion">3 попутчика</p>
-              <p class="plans__dates">26 мар — 29 мар</p>
+              <p class="plans__dates">26 мар &mdash; 29 мар</p>
               <a class="plans__edit">Изменить</a>
             </li>
             <li class="plans__item">
               <h3 class="plans__title">Таиланд, Индонезия</h3>
               <p class="plans__companion">1 попутчик</p>
-              <p class="plans__dates">1 июл — 15 июл</p>
+              <p class="plans__dates">1 июл &mdash; 15 июл</p>
               <a class="plans__edit">Изменить</a>
             </li>
           </ol>
         </div>
       </section>
-      <section class="planning">
+      <section class="main-form__planning planning">
         <div class="container-fix container-fix--form">
           <h2 class="planning__heading form-heading">Добавить план:</h2>
           <ul class="planning__states planning-states planning-states--no-text">
@@ -473,11 +473,10 @@
                   <p class="planning-dates-option__unit">Чел.</p>
                   <p class="planning-dates-option__input">
                     <button
-                      class="planning-dates-option__minus"
+                      class="planning-dates-option__button planning-dates-option__button--minus"
                       type="button"
                       aria-label="минус"
                     >
-                      -
                     </button>
                     <input
                       class="planning-dates-option__value"
@@ -488,11 +487,10 @@
                       value="2"
                     />
                     <button
-                      class="planning-dates-option__plus"
+                      class="planning-dates-option__button planning-dates-option__button--plus"
                       type="button"
                       aria-label="плюс"
                     >
-                      +
                     </button>
                   </p>
                 </div>
@@ -503,11 +501,10 @@
                   <p class="planning-dates-option__unit">Дн.</p>
                   <p class="planning-dates-option__input">
                     <button
-                      class="planning-dates-option__minus"
+                      class="planning-dates-option__button planning-dates-option__button--minus"
                       type="button"
                       aria-label="минус"
                     >
-                      -
                     </button>
                     <input
                       class="planning-dates-option__value"
@@ -515,14 +512,13 @@
                       min="1"
                       max="100"
                       step="1"
-                      value="2"
+                      value="3"
                     />
                     <button
-                      class="planning-dates-option__plus"
+                      class="planning-dates-option__button planning-dates-option__button--plus"
                       type="button"
                       aria-label="плюс"
                     >
-                      +
                     </button>
                   </p>
                 </div>
@@ -1384,7 +1380,7 @@
               </div>
               <div class="planning__buttons">
                 <a
-                  class="button-round button-round--yellow planning__button"
+                  class="button-round planning__button"
                   href="#step_3"
                   >Следующий шаг</a
                 >

@@ -1,19 +1,60 @@
 .calendar__header {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 10px 0 12px;
+  border-top: 1px solid $light-blue-background-4;
+  border-bottom: 1px solid $light-blue-background-4;
+}
+
+.calendar__title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.calendar__swipe {
+  display: block;
+  padding: 0;
+  margin-top: 2px;
+  border: none;
+  width: 10px;
+  height: 18px;
+  background-color: transparent;
+  background-image: url("../../img/arrow-left.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.3;
+
+  &--left {
+    transform: scaleX(-1);
+  }
 }
 
 .calendar__table {
+  width: 100%;
+  border-collapse: collapse;
   font-size: 14px;
   line-height: 1.29;
   font-weight: 400;
 }
 
 .calendar__day {
+  padding-bottom: 8px;
   font-weight: inherit;
 
   &--weekend {
     color: $orange-3;
   }
+}
+
+.calendar__figure {
+  @include border;
+  width: 30px;
+  height: 31px;
+  text-align: center;
 }
 
 .calendar__label {

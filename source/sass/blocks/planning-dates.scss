@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  margin-top: 20px;
 
   @media #{$min-desktop} {
     flex-direction: row;
@@ -23,6 +24,8 @@
 }
 
 .planning-dates__children {
+  margin-bottom: 27px;
+
   @media #{$min-tablet} {
     order: -1;
   }
@@ -34,5 +37,6 @@
 }
 
 .planning-dates__calendar {
+  margin-bottom: 23px;
   flex-basis: 100%;
 }

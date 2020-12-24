@@ -1,16 +1,117 @@
 .planning-dates-option {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   line-height: 1;
   font-weight: 500;
   text-transform: uppercase;
 }
 
+.planning-dates-option__title {
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+
 .planning-dates-option__unit {
+  margin: 0;
   opacity: 0.3;
+  letter-spacing: 0.1em;
+}
+
+.planning-dates-option__input {
+  position: relative;
+  margin-top: 11px;
+  width: 100%;
 }
 
 .planning-dates-option__value {
+  @include border;
+  padding: 13px 38px;
+  border-radius: 4px;
+  width: 100%;
+  display: block;
   font-family: inherit;
   color: inherit;
   font-size: 14.86px;
   line-height: 1.06;
+  text-align: center;
+  font-weight: 500;
+}
+
+.planning-dates-option__button {
+  position: absolute;
+  padding: 0;
+  border: none;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+
+  &--minus {
+    top: 30%;
+    left: 7%;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      content: "";
+      width: 14px;
+      height: 2px;
+      background-color: $grey-2;
+    }
+  }
+
+  &--plus {
+    top: 30%;
+    right: 7%;
+
+    &::before {
+      position: absolute;
+      left: 1.5px;
+      content: "";
+      width: 14px;
+      height: 2px;
+      background-color: $grey-2;
+    }
+
+    &::after {
+      position: absolute;
+      top: 1px;
+      content: "";
+      width: 2px;
+      height: 14px;
+      background-color: $grey-2;
+    }
+  }
+}
+
+.planning-dates__children {
+  margin-top: 10px;
+  font-weight: 400;
+}
+
+.planning-dates__checkbox-label {
+  position: relative;
+  display: block;
+  margin-left: 40px;
+
+  &::before {
+    @include border;
+    position: absolute;
+    top: -7px;
+    left: -39px;
+    width: 26px;
+    height: 26px;
+    background-color: transparent;
+    border-radius: 4px;
+    content: "";
+  }
+}
+
+input:checked + .planning-dates__checkbox-label {
+  &::before {
+    background-image: url("../img/yes.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px 8px;
+  }
 }
