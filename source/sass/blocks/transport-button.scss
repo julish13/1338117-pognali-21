@@ -1,56 +1,13 @@
 .transport-button {
-  position: relative;
-  display: block;
-  width: 33px;
-  height: 33px;
-
-  &::before {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    content: "";
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0.15;
-  }
-
-  &--plane {
-    &::before {
-      width: 18px;
-      height: 20px;
-      background-image: url("../img/plane.svg");
-    }
-  }
-
-  &--bus {
-    &::before {
-      width: 18px;
-      height: 21px;
-      background-image: url("../img/bus.svg");
-    }
-  }
-
-  &--bike {
-    &::before {
-      width: 25px;
-      height: 24px;
-      background-image: url("../img/bicycle.svg");
-    }
-  }
-
-  &--walk {
-    &::before {
-      width: 21px;
-      height: 24px;
-      background-image: url("../img/walk.svg");
-    }
-  }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: $basic-blue-light;
+  opacity: 0.15;
 
   &--checked {
-    &::before {
-      opacity: 1;
-    }
+    opacity: 1;
   }
 
   &--background {
