@@ -7,6 +7,10 @@
   @include section-bottom-border-radius;
   margin-top: 92px;
   background-color: $blue-background-2;
+
+  @media #{$min-tablet} {
+    margin-top: 219px;
+  }
 }
 
 .main-form__heading {
@@ -16,6 +20,10 @@
   padding-bottom: 15px;
   width: min-content;
   margin-right: auto;
+
+  @media #{$min-tablet} {
+    padding-bottom: 71px;
+  }
 
   &::after {
     @include heading-decoration;
