@@ -3,7 +3,11 @@
 }
 
 .plans__item {
+  list-style: none;
+  counter-increment: myCounter;
   padding: 23px 24px;
+  margin-bottom: 10px;
+  border-radius: 10px;
   background-color: $basic-white;
   font-size: 14px;
   line-height: 1;
@@ -16,10 +20,17 @@
     justify-content: space-between;
     font-size: 20px;
   }
+
+  &::before {
+    display: inline;
+    content: counter(myCounter) ". ";
+    font-size: 16px;
+  }
 }
 
 .plans__title {
-  font-size: 14px;
+  display: inline;
+  font-size: 16px;
   text-transform: none;
   font-weight: 700;
 
@@ -35,24 +46,6 @@
 .plans__list {
   margin-top: 33px;
   padding-left: 0;
-}
-
-.plans__item {
-  list-style: none;
-  counter-increment: myCounter;
-  margin-bottom: 10px;
-  border-radius: 10px;
-
-  &::before {
-    display: inline;
-    content: counter(myCounter)". ";
-    font-size: 16px;
-  }
-}
-
-.plans__title {
-  display: inline;
-  font-size: 16px;
 }
 
 .plans__companion {

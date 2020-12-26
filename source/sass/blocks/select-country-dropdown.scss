@@ -1,5 +1,6 @@
 .select-country-dropdown__wrap {
   background-color: $basic-white;
+
   @media #{$min-tablet} {
     display: flex;
   }

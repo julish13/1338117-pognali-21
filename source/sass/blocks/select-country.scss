@@ -45,7 +45,7 @@
   .select-country--country & {
     &::before {
       position: absolute;
-      top: 0px;
+      top: 0;
       right: -0.5px;
       border-radius: 4px;
       content: "";
