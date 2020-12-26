@@ -1,6 +1,10 @@
 .planning-states {
+  padding-left: 0;
   &--no-text {
-    font-size: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 43px;
+    height: 5px;
 
     @media #{$min-desktop} {
       display: none;
@@ -13,5 +17,13 @@
     @media #{$min-desktop} {
       display: block;
     }
+  }
+}
+
+.planning-states__state {
+  opacity: 0.3;
+
+  &--active {
+    opacity: 1;
   }
 }

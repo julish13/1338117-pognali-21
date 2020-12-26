@@ -261,7 +261,7 @@
     </header>
     <main class="main-form">
       <div class="main-form__header">
-        <div class="container">
+        <div class="container-fix">
           <h1 class="main-form__heading main-heading">Направления</h1>
         </div>
       </div>
@@ -429,10 +429,14 @@
           <h2 class="planning__heading form-heading">Добавить план:</h2>
           <ul class="planning__states planning-states planning-states--no-text">
             <li class="planning-states__state planning-states__state--active">
-              Даты
+              <span class="visually-hidden">Даты</span>
             </li>
-            <li class="planning-states__state">Маршрут</li>
-            <li class="planning-states__state">Развлечения</li>
+            <li class="planning-states__state">
+              <span class="visually-hidden">Маршрут</span>
+            </li>
+            <li class="planning-states__state">
+              <span class="visually-hidden">Развлечения</span>
+            </li>
           </ul>
           <form
             class="planning__form slider"
