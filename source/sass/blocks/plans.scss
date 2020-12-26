@@ -15,9 +15,11 @@
   text-transform: uppercase;
 
   @media #{$min-tablet} {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding: 23px 40px 15px;
     font-size: 20px;
   }
 
@@ -25,6 +27,13 @@
     display: inline;
     content: counter(myCounter) ". ";
     font-size: 16px;
+
+    @media #{$min-tablet} {
+      position: absolute;
+      right: 33px;
+      top: 40px;
+      font-size: 20px;
+    }
   }
 }
 
@@ -35,6 +44,8 @@
   font-weight: 700;
 
   @media #{$min-tablet} {
+    margin-top: 15px;
+    margin-bottom: 55px;
     font-size: 24px;
   }
 
@@ -46,21 +57,46 @@
 .plans__list {
   margin-top: 33px;
   padding-left: 0;
+
+  @media #{$min-tablet} {
+    margin-top: 50px;
+  }
 }
 
 .plans__companion {
   margin-top: 20px;
   margin-bottom: 5px;
   letter-spacing: 0.07em;
+
+  @media #{$min-tablet} {
+    margin: 0;
+    letter-spacing: 0.1em;
+  }
 }
 
 .plans__dates {
   margin-top: 5px;
   margin-bottom: 24px;
   letter-spacing: 0.07em;
+
+  span {
+    display: inline-block;
+    transform: scaleX(1.7) translateX(0.2em);
+    letter-spacing: 0.5em;
+  }
+
+  @media #{$min-tablet} {
+    margin: 0 0 0 auto;
+    letter-spacing: 0.06em;
+  }
 }
 
 .plans__edit {
   color: rgba($basic-black, 0.3);
   letter-spacing: 0.04em;
+
+  @media #{$min-tablet} {
+    margin-left: 77px;
+    letter-spacing: 0.1em;
+  }
 }
