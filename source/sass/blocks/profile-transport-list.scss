@@ -11,6 +11,11 @@
   width: 32px;
   height: 32px;
   background-color: $basic-white;
+
+  @media #{$min-tablet} {
+    width: 44px;
+    height: 44px;
+  }
 }
 
 .profile-transport-list__icon {
@@ -19,6 +24,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
   fill: $grey-5;
+
+  @media #{$min-tablet} {
+    width: 23px;
+    height: 22px;
+  }
 
   input:checked + .profile-transport-list__wrap & {
     fill: $basic-blue-light;

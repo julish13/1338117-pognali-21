@@ -64,4 +64,8 @@
   height: 5px;
   border-radius: 2px;
   background-color: $orange-1;
+
+  @media #{$min-tablet} {
+    height: 7px;
+  }
 }

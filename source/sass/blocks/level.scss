@@ -8,7 +8,7 @@
 
   &::before {
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 23%;
     content: "";
     width: 30px;
@@ -30,6 +30,11 @@
     transform: translate(-50%, -50%);
     width: 100px;
     height: 100px;
+
+    @media #{$min-tablet} {
+      width: 94px;
+      height: 94px;
+    }
 
     &::before {
       width: 51px;
@@ -54,6 +59,10 @@
     margin-bottom: 9px;
     color: $basic-blue;
     font-size: 38px;
+
+    @media #{$min-tablet} {
+      margin-bottom: 6px;
+    }
   }
 
   &--catalog {
@@ -71,10 +80,6 @@
     margin-left: -3px;
     color: $basic-white;
     font-size: 14px;
-  }
-
-  &--inherit {
-    font: inherit;
   }
 }
 
@@ -94,5 +99,10 @@
 
   .level--form & {
     stroke-width: 3;
+    transform: rotate(-90deg) scale(1.05);
+
+    @media #{$min-tablet} {
+      transform: rotate(-90deg) scale(0.99) translateX(3px);
+    }
   }
 }

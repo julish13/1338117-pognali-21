@@ -277,11 +277,11 @@
               <div class="level__wrap">
                 <svg
                   class="level__progress-ring"
-                  viewBox="0 0 94 94"
+                  viewBox="0 0 100 100"
                   width="100"
                   height="100"
                 >
-                  <circle class="level__circle" r="46" cx="47" cy="47" />
+                  <circle class="level__circle" r="46" cx="50" cy="50" />
                 </svg>
                 <p class="level__value">80</p>
                 <p class="level__text">level</p>
@@ -292,6 +292,10 @@
                 media="(min-width: 1440px)"
                 srcset="img/avatar-demin-desktop.jpg 1x"
               />
+              <source
+              media="(min-width: 768px)"
+              srcset="img/avatar-demin-tablet.jpg 1x"
+            />
               <img
                 class="profile__avatar"
                 src="img/avatar-demin-mobile.jpg"
@@ -300,7 +304,7 @@
                 height="100"
               />
             </picture>
-            <p class="profile__file">
+            <label class="profile__file">
               <input
                 class="visually-hidden"
                 type="file"
@@ -308,8 +312,8 @@
                 id="avatar"
                 accept="image/*"
               />
-              <label for="avatar">Сменить фото</label>
-            </p>
+Сменить фото
+            </label>
             <p class="profile__tags">
               <label class="profile__subheading profile__subheading--label"
                 >Тэги</label
@@ -319,7 +323,7 @@
               >
             </p>
             <fieldset class="profile__transports">
-              <legend class="profile__subheading">Транспорт</legend>
+              <legend class="profile__subheading profile__subheading--legend">Транспорт</legend>
               <ul class="profile__transport-list profile-transport-list">
                 <li class="profile-transport-list__item">
                   <input
