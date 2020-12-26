@@ -9,11 +9,12 @@
   desktopLogoElement.srcset = `img/logo-desktop-white.png 1x`;
 
   window.onscroll = () => {
+    if (!mainNavElement.classList.contains(`main-nav--opened`)) {
       if (window.scrollY >= mainNavElement.offsetHeight) {
-          mainNavElement.classList.add(`main-nav--scrolled`);
-          mobileLogoElement.src = `img/logo-mobile-dark.png`;
-          tabletLogoElement.srcset = `img/logo-tablet-dark.png 1x`;
-          desktopLogoElement.srcset = `img/logo-desktop-dark.png 1x`;
+        mainNavElement.classList.add(`main-nav--scrolled`);
+        mobileLogoElement.src = `img/logo-mobile-dark.png`;
+        tabletLogoElement.srcset = `img/logo-tablet-dark.png 1x`;
+        desktopLogoElement.srcset = `img/logo-desktop-dark.png 1x`;
 
       }
       else {
@@ -22,5 +23,6 @@
           tabletLogoElement.srcset = `img/logo-tablet-white.png 1x`;
           desktopLogoElement.srcset = `img/logo-desktop-white.png 1x`;
       }
+    }
   };
 })();

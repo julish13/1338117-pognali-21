@@ -12,7 +12,7 @@
 
   &--opened {
     @media #{$max-tablet} {
-      position: fixed;
+      position: absolute;
       top: 0;
     }
   }
