@@ -11,6 +11,7 @@
         background-position: 50% 0;
         /* Mobile layout by default */
         background-image: url("img/maket/FORM Mobile.jpg");
+        /* background-image: url("img/maket/FORM-Mobile-alphabet.png"); */
       }
       /* Tablet */
       @media (min-width: 768px) {
@@ -465,7 +466,7 @@
                 вы&nbsp;хотели&nbsp;бы позвать в&nbsp;поездку,
                 и&nbsp;ее&nbsp;предполагаемую длительность.
               </p>
-              <div class="planning-dates__options planning__body">
+              <div class="planning-dates__options">
                 <div
                   class="planning-dates__option planning-dates__option--companions planning-dates-option"
                 >
@@ -1065,317 +1066,328 @@
                 Укажите страны, которые вы хотели бы посетить. Это может быть
                 одна или сразу несколько.
               </p>
-              <div class="planning__body">
-                <p class="route__country select-country">
-                  <input
-                    class="select-country__input"
-                    type="button"
-                    value="Босния и Герцеговина"
-                    id="bosnia_and_herzegovina_select"
-                  />
-                  <label for="bosnia_and_herzegovina_select"></label>
-                </p>
-                <p class="route__country select-country">
-                  <input
-                    class="select-country__input"
-                    type="button"
-                    value="Чехия"
-                    id="czech_select"
-                  />
-                  <label for="czech_select"></label>
-                </p>
-                <p class="route__country select-country">
-                  <input
-                    class="select-country__input"
-                    type="button"
-                    value="Выберите страну"
-                    id="any_country_select"
-                  />
-                </p>
-                <p class="route__country select-country">
-                  <input
-                    class="select-country__input select-country__input--add"
-                    type="button"
-                    value="Добавить страну"
-                    id="add_country_select"
-                  />
-                </p>
-                <div class="route__dropdown route-dropdown">
-                  <header class="route-dropdown__header">
-                    <p class="route-dropdown__title">Выберите страну</p>
-                    <button
-                      class="route-dropdown__close-button"
+              <div class="planning__route">
+                <div class="planning__select-country select-country select-country--country select-country--bosnia-and-herzegovina">
+                  <div class="select-country__wrap">
+                    <input
+                      class="select-country__input"
                       type="button"
-                      aria-label="Закрыть окно"
-                    ></button>
-                  </header>
-                  <div class="route-dropdown__body">
-                    <table
-                      class="route-dropdown__alphabet alphabet"
-                      aria-label="алфавит"
-                    >
-                      <tr class="alphabet__row">
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="a"
-                          />
-                          <label class="alphabet__label" for="a">А</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="b"
-                          />
-                          <label class="alphabet__label" for="b">Б</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="v"
-                          />
-                          <label class="alphabet__label" for="v">В</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="g"
-                          />
-                          <label class="alphabet__label" for="g">Г</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="d"
-                          />
-                          <label class="alphabet__label" for="d">Д</label>
-                        </td>
-                      </tr>
-                      <tr class="alphabet__row">
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="e"
-                          />
-                          <label class="alphabet__label" for="e">Е</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="z"
-                          />
-                          <label class="alphabet__label" for="z">З</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="i"
-                          />
-                          <label class="alphabet__label" for="i">И</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="k"
-                          />
-                          <label class="alphabet__label" for="k">К</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="l"
-                          />
-                          <label class="alphabet__label" for="l">Л</label>
-                        </td>
-                      </tr>
-                      <tr class="alphabet__row">
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="m"
-                          />
-                          <label class="alphabet__label" for="m">М</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="n"
-                          />
-                          <label class="alphabet__label" for="n">Н</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="o"
-                          />
-                          <label class="alphabet__label" for="o">О</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="p"
-                          />
-                          <label class="alphabet__label" for="p">П</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="r"
-                          />
-                          <label class="alphabet__label" for="r">Р</label>
-                        </td>
-                      </tr>
-                      <tr class="alphabet__row">
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="s"
-                          />
-                          <label class="alphabet__label" for="s">С</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="t"
-                          />
-                          <label class="alphabet__label" for="t">Т</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="u"
-                          />
-                          <label class="alphabet__label" for="u">У</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="f"
-                          />
-                          <label class="alphabet__label" for="f">Ф</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="h"
-                          />
-                          <label class="alphabet__label" for="h">Х</label>
-                        </td>
-                      </tr>
-                      <tr class="alphabet__row">
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="ch"
-                          />
-                          <label class="alphabet__label" for="ch">Ч</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="sh"
-                          />
-                          <label class="alphabet__label" for="sh">Ш</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="shch"
-                          />
-                          <label class="alphabet__label" for="shch">Щ</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="eh"
-                          />
-                          <label class="alphabet__label" for="eh">Э</label>
-                        </td>
-                        <td class="alphabet__letter">
-                          <input
-                            class="alphabet__checkbox visually-hidden"
-                            type="radio"
-                            name="letter"
-                            id="yu"
-                          />
-                          <label class="alphabet__label" for="yu">Ю</label>
-                        </td>
-                      </tr>
-                    </table>
-                    <ul
-                      class="route-dropdown__countries-list dropdown-countries-list"
-                    >
-                      <li class="dropdown-countries-list__country">
-                        Австралия
-                      </li>
-                      <li class="dropdown-countries-list__country">Австрия</li>
-                      <li class="dropdown-countries-list__country">
-                        Азербайджан
-                      </li>
-                      <li class="dropdown-countries-list__country">Албания</li>
-                      <li class="dropdown-countries-list__country">Алжир</li>
-                      <li class="dropdown-countries-list__country">Ангола</li>
-                      <li class="dropdown-countries-list__country">Андорра</li>
-                      <li class="dropdown-countries-list__country">
-                        Антигуа и Барбуда
-                      </li>
-                      <li class="dropdown-countries-list__country">
-                        Аргентина
-                      </li>
-                      <li class="dropdown-countries-list__country">Армения</li>
-                      <li class="dropdown-countries-list__country">
-                        Афганистан
-                      </li>
-                    </ul>
+                      value="Босния и Герцеговина"
+                      id="bosnia_and_herzegovina_select"
+                    />
+                    <button class="select-country__toggle"></button>
                   </div>
+                  <label class="select-country__label" for="bosnia_and_herzegovina_select">
+                    <span class="select-country__flag flag flag--bosnia-and-herzegovina"></span>
+                  </label>
+                  <button class="select-country__delete"></button>
+                </div>
+                <div class="planning__select-country select-country select-country--country select-country--czech">
+                  <div class="select-country__wrap">
+                    <input
+                      class="select-country__input"
+                      type="button"
+                      value="Чехия"
+                      id="czech_select"
+                    />
+                    <button class="select-country__toggle"></button>
+                  </div>
+                  <label class="select-country__label" for="czech_select">
+                    <span class="select-country__flag flag flag--czech"></span>
+                  </label>
+                  <button class="select-country__delete"></button>
+                </div>
+                <div class="planning__select-country select-country select-country--choose">
+                  <div class="select-country__wrap">
+                    <input
+                      class="select-country__input"
+                      type="button"
+                      value="Выберите страну"
+                      id="any_country_select"
+                    />
+                    <button class="select-country__toggle"></button>
+                    <div class="select-country__dropdown select-country-dropdown">
+                      <div class="select-country-dropdown__wrap">
+                        <table
+                          class="select-country-dropdown__alphabet alphabet"
+                          aria-label="алфавит"
+                        >
+                          <tr class="alphabet__row">
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="a"
+                              />
+                              <label class="alphabet__label" for="a">А</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="b"
+                              />
+                              <label class="alphabet__label" for="b">Б</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="v"
+                              />
+                              <label class="alphabet__label" for="v">В</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="g"
+                              />
+                              <label class="alphabet__label" for="g">Г</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="d"
+                              />
+                              <label class="alphabet__label" for="d">Д</label>
+                            </td>
+                          </tr>
+                          <tr class="alphabet__row">
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="e"
+                              />
+                              <label class="alphabet__label" for="e">Е</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="z"
+                              />
+                              <label class="alphabet__label" for="z">З</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="i"
+                              />
+                              <label class="alphabet__label" for="i">И</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="k"
+                              />
+                              <label class="alphabet__label" for="k">К</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="l"
+                              />
+                              <label class="alphabet__label" for="l">Л</label>
+                            </td>
+                          </tr>
+                          <tr class="alphabet__row">
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="m"
+                              />
+                              <label class="alphabet__label" for="m">М</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="n"
+                              />
+                              <label class="alphabet__label" for="n">Н</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="o"
+                              />
+                              <label class="alphabet__label" for="o">О</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="p"
+                              />
+                              <label class="alphabet__label" for="p">П</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="r"
+                              />
+                              <label class="alphabet__label" for="r">Р</label>
+                            </td>
+                          </tr>
+                          <tr class="alphabet__row">
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="s"
+                              />
+                              <label class="alphabet__label" for="s">С</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="t"
+                              />
+                              <label class="alphabet__label" for="t">Т</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="u"
+                              />
+                              <label class="alphabet__label" for="u">У</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="f"
+                              />
+                              <label class="alphabet__label" for="f">Ф</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="h"
+                              />
+                              <label class="alphabet__label" for="h">Х</label>
+                            </td>
+                          </tr>
+                          <tr class="alphabet__row">
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="ch"
+                              />
+                              <label class="alphabet__label" for="ch">Ч</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="sh"
+                              />
+                              <label class="alphabet__label" for="sh">Ш</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="eh"
+                              />
+                              <label class="alphabet__label" for="eh">Э</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="yu"
+                              />
+                              <label class="alphabet__label" for="yu">Ю</label>
+                            </td>
+                            <td class="alphabet__letter">
+                              <input
+                                class="alphabet__checkbox visually-hidden"
+                                type="radio"
+                                name="letter"
+                                id="shch"
+                              />
+                              <label class="alphabet__label" for="ya">Я</label>
+                            </td>
+                          </tr>
+                        </table>
+                        <ul
+                          class="select-country-dropdown__countries-list select-country-dropdown__countries-list--active"
+                        >
+                          <li class="select-country-dropdown__country">
+                            Австралия
+                          </li>
+                          <li class="select-country-dropdown__country">Австрия</li>
+                          <li class="select-country-dropdown__country">
+                            Азербайджан
+                          </li>
+                          <li class="select-country-dropdown__country">Албания</li>
+                          <li class="select-country-dropdown__country">Алжир</li>
+                          <li class="select-country-dropdown__country">Ангола</li>
+                          <li class="select-country-dropdown__country">Андорра</li>
+                          <li class="select-country-dropdown__country">
+                            Антигуа и Барбуда
+                          </li>
+                          <li class="select-country-dropdown__country">
+                            Аргентина
+                          </li>
+                          <li class="select-country-dropdown__country">Армения</li>
+                          <li class="select-country-dropdown__country">
+                            Афганистан
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="select-country__delete"></button>
+                </div>
+                <div class="planning__select-country select-country select-country--add">
+                  <div class="select-country__wrap">
+                    <input
+                      class="select-country__input"
+                      type="button"
+                      value="Добавить страну"
+                      id="add_country_select"
+                    />
+                  </div>
+                  <button class="select-country__add"></button>
                 </div>
               </div>
               <div class="planning__buttons">
@@ -1391,7 +1403,7 @@
                 >
               </div>
             </fieldset>
-            <fieldset class="planning__step planning__step fun slider__slide">
+            <fieldset class="planning__step slider__slide">
               <legend class="planning__subheading planning-subheading">
                 <a id="step_3">
                   <span class="planning-subheading__step">Шаг 3.</span>
@@ -1413,10 +1425,10 @@
                 Наконец, расскажите о&nbsp;своих планах времяпровождения. Можно
                 писать в&nbsp;свободной форме и&nbsp;ставить тэги.
               </p>
-              <div class="planning__body">
+              <div class="planning__fun fun">
                 <p class="fun__country">
                   <label
-                    class="fun__title"
+                    class="fun__title fun__title--bosnia-and-herzegovina"
                     for="bosnia_and_herzegovina_textarea"
                     >Босния и Герцеговина</label
                   >
@@ -1427,15 +1439,15 @@
                   ></textarea>
                 </p>
                 <p class="fun__country">
-                  <label class="fun__title" for="czech">Чехия</label>
+                  <label class="fun__title fun__title--czech" for="czech">Чехия</label>
                   <textarea class="fun__textarea" id="czech">
-                  Пить пиво и&nbsp;лазить по&nbsp;старым замкам, наслаждаться архитектурой и&nbsp;вот это все.
+Пить пиво и&nbsp;лазить по&nbsp;старым замкам, наслаждаться архитектурой и&nbsp;вот это все.
                 </textarea
                   >
                 </p>
               </div>
               <div class="planning__buttons">
-                <button class="button-round planning__button" type="submit">
+                <button class="button-round planning__button planning__button--submit" type="submit">
                   Отправить
                 </button>
                 <a

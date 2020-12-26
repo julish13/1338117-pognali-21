@@ -10,7 +10,7 @@
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 10px;
-  padding: 22px 24px;
+  padding: 22px 24px 13px;
   border: none;
   border-radius: 10px;
   background-color: $basic-white;
@@ -44,19 +44,45 @@
   }
 }
 
-.planning__body {
-  @media #{$min-desktop} {
-    grid-area: 3 / 1 / span 1 / span 4;
-  }
+.planning__route {
+  margin-top: 21px;
+  margin-bottom: 26px;
+}
+
+.planning__select-country {
+  margin-bottom: 22px;
 }
 
 .planning__button {
+  margin-bottom: 10px;
   padding: 5px 10px;
+  width: 100%;
   line-height: 1.76;
   text-transform: uppercase;
 
   @media #{$min-desktop} {
     grid-area: 4 / 1 / span 1 / span 1;
+  }
+
+  &--previous {
+    display: block;
+    margin-top: 13px;
+    margin-bottom: 0;
+    padding-bottom: 3px;
+    font-family: inherit;
+    color: $basic-blue-light;
+    font-size: 17px;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+
+  &--submit {
+    margin-right: -5px;
+    margin-left: -5px;
+    width: 230px;
   }
 }
 
@@ -68,4 +94,8 @@
   @media #{$min-desktop} {
     grid-area: 4 / 1 / span 1 / span 4;
   }
+}
+
+.planning__fun {
+  margin-top: 23px;
 }

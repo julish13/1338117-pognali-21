@@ -1,7 +1,15 @@
 .alphabet {
+  border-collapse: collapse;
   color: $basic-blue-light;
   font-size: 14px;
   line-height: 1.29;
   font-weight: 500;
   text-transform: uppercase;
+}
+
+.alphabet__letter {
+  @include border;
+  width: 43px;
+  height: 41px;
+  text-align: center;
 }

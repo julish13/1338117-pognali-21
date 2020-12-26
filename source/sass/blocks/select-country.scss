@@ -1,5 +1,82 @@
-.select-country__input {
+.select-country {
+  position: relative;
+  display: flex;
+
+  &--choose,
+  &--country {
+    &::after {
+      position: absolute;
+      bottom: -16px;
+      right: 50px;
+      content: "";
+      width: 8px;
+      height: 11px;
+      background-image: url("../../img/arrow-down.svg");
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: center;
+    }
+  }
+}
+
+.select-country__wrap {
   @include border;
+  border-radius: 4px;
+  position: relative;
+  width: min-content;
+  flex-grow: 1;
+
+  .select-country--choose &,
+  .select-country--add &,
+  .select-country--country & {
+    &::after {
+      position: absolute;
+      top: 16px;
+      right: -5px;
+      border-radius: 4px;
+      border: 1px solid $basic-blue-light;
+      content: "";
+      width: 8px;
+      height: 8px;
+      background-color: $basic-blue-light;
+    }
+  }
+
+  .select-country--country & {
+    &::before {
+      position: absolute;
+      top: 0px;
+      right: -0.5px;
+      border-radius: 4px;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(to right, transparent 60%, $basic-white 78%);
+    }
+  }
+
+  .select-country--add & {
+    overflow: hidden;
+  }
+
+  .select-country--choose &,
+  .select-country--add & {
+    &::after {
+      right: 49px;
+      border-color: $grey-1;
+      background-color: transparent;
+    }
+  }
+
+  .select-country--open & {
+    border: none;
+  }
+}
+
+.select-country__input {
+  border: none;
+  padding: 11px 9px;
+  width: 165px;
   background-color: inherit;
   font-family: inherit;
   color: inherit;
@@ -7,9 +84,160 @@
   line-height: 1.29;
   font-weight: 500;
   text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 0.1em;
 
-  &--add {
+  .select-country--add & {
+    padding: 11px;
+    width: 100%;
     background-color: $grey-background-1;
     border: none;
+  }
+
+  .select-country--choose & {
+    padding: 11px;
+    width: 100%;
+  }
+
+  .select-country--open & {
+    padding: 13px 18px 11px;
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+    background-color: $basic-blue-light;
+    color: $basic-white;
+    letter-spacing: 0.02em;
+  }
+}
+
+.select-country__label {
+  @include border;
+  display: block;
+  border-radius: 4px;
+  width: 53px;
+  height: 42px;
+
+  .select-country--open & {
+    display: none;
+  }
+}
+
+.select-country__flag {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.select-country__delete {
+  position: absolute;
+  right: -9px;
+  top: -9px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  width: 21px;
+  height: 21px;
+  background-color: $grey-background-1;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    right: 25%;
+    width: 11px;
+    height: 1px;
+    background-color: $grey-8;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  .select-country--open & {
+    display: none;
+  }
+}
+
+.select-country__toggle {
+  position: absolute;
+  right: 12px;
+  top: 20px;
+  transform: rotate(90deg);
+  padding: 0;
+  border: none;
+  width: 16px;
+  height: 12px;
+  opacity: 0.3;
+  background-color: transparent;
+  background-image: url("../../img/arrow-left.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .select-country--open & {
+    right: 15px;
+    top: 17px;
+    background-image: none;
+    opacity: 1;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 45%;
+      right: 25%;
+      width: 11px;
+      height: 1px;
+      background-color: $basic-white;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+.select-country__add {
+  position: absolute;
+  right: 15px;
+  top: 14px;
+  border: none;
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: 0;
+    width: 14px;
+    height: 2px;
+    background-color: $grey-2;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+}
+
+.select-country__dropdown {
+  display: none;
+
+  .select-country--open & {
+    position: absolute;
+    z-index: 20;
+    display: block;
+    width: 100%;
   }
 }

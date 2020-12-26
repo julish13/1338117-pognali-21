@@ -1,6 +1,11 @@
 .flag {
+  display: block;
   width: 35px;
   height: 25px;
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  border-radius: 3px;
 
   &--thailand {
     background-image: url("../img/thailand-small.png");
@@ -20,5 +25,9 @@
 
   &--seychelles {
     background-image: url("../img/seychelles-small.png");
+  }
+
+  &--bosnia-and-herzegovina {
+    background-image: url("../img/bosnia-and-herzegovina-small.png")
   }
 }
