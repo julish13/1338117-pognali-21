@@ -69,3 +69,78 @@
     height: 7px;
   }
 }
+
+@mixin button-square {
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  padding: 21px 22px 23px;
+  background-color: $yellow-1;
+  color: $basic-blue-light;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  text-align: left;
+
+  @media #{$min-tablet} {
+    border-radius: 20px;
+    padding: 28px 32px;
+    font-size: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $yellow-2;
+  }
+
+  &:active {
+    background-color: $yellow-2;
+    color: rgba($basic-blue-light, 0.3);
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 40%;
+    right: 8.5%;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6.5px 0 6.5px 10.22px;
+    border-color: transparent transparent transparent $basic-blue-light;
+
+    @media #{$min-tablet} {
+      border-width: 7px 0 7px 10.22px;
+      right: 34px;
+      top: 42%;
+    }
+  }
+}
+
+@mixin button-round {
+  display: block;
+  background-color: $yellow-1;
+  border: none;
+  border-radius: 25px;
+  font-family: inherit;
+  color: $basic-blue-light;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: $yellow-2;
+  }
+
+  &:active {
+    background-color: $yellow-2;
+    color: rgba($basic-blue-light, 0.3);
+  }
+}

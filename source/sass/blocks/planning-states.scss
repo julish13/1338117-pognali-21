@@ -7,6 +7,13 @@
     width: 43px;
     height: 5px;
 
+    @media #{$min-tablet} {
+      top: 37px;
+      right: 65px;
+      width: 70px;
+      font-size: 19px;
+    }
+
     @media #{$min-desktop} {
       display: none;
     }

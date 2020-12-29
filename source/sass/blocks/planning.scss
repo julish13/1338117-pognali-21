@@ -5,6 +5,11 @@
 
 .planning__heading {
   margin-bottom: 30px;
+
+  @media #{$min-tablet} {
+    margin-top: 40px;
+    margin-bottom: 59px;
+  }
 }
 
 .planning__step {
@@ -16,6 +21,11 @@
   border-radius: 10px;
   background-color: $basic-white;
 
+  @media #{$min-tablet} {
+    border-radius: 30px;
+    padding: 45px 40px;
+  }
+
   @media #{$min-desktop} {
     display: grid;
     grid-template: repeat(4, min-content) / 20% 50% 30%;
@@ -25,6 +35,10 @@
 .planning__subheading {
   margin-bottom: 16px;
 
+  @media #{$min-tablet} {
+    margin-bottom: 35px;
+  }
+
   @media #{$min-desktop} {
     grid-area: 1 / 1 / span 1 / span 2;
   }
@@ -33,6 +47,11 @@
 .planning__description {
   color: $basic-grey-font;
   font-weight: 400;
+
+  @media #{$min-tablet} {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 
   @media #{$min-desktop} {
     grid-area: 2 / 1 / span 1 / span 2;
@@ -60,20 +79,42 @@
 
 .planning__button {
   margin-bottom: 10px;
-  padding: 5px 10px;
   width: 100%;
   line-height: 1.76;
   text-transform: uppercase;
 
+  @media #{$min-tablet} {
+    width: 286px;
+  }
+
   @media #{$min-desktop} {
     grid-area: 4 / 1 / span 1 / span 1;
+  }
+
+  &--next,
+  &--submit {
+    @media #{$max-mobile} {
+      @include button-round;
+      padding: 11px 10px;
+    }
+
+    @media #{$min-tablet} {
+      @include button-square;
+      text-transform: none;
+    }
+
+    &::after {
+      @media #{$min-tablet} {
+        right: 39px;
+      }
+    }
   }
 
   &--previous {
     display: block;
     margin-top: 13px;
     margin-bottom: 0;
-    padding-bottom: 3px;
+    padding: 5px 10px 3px;
     font-family: inherit;
     color: $basic-blue-light;
     font-size: 17px;
@@ -103,4 +144,5 @@
 
 .planning__fun {
   margin-top: 23px;
+  margin-bottom: 18px;
 }

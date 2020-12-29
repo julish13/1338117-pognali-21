@@ -4,6 +4,10 @@
   font-size: 20px;
   line-height: 1;
   font-weight: 700;
+
+  @media #{$min-tablet} {
+    font-size: 36px;
+  }
 }
 
 .planning-subheading__step,

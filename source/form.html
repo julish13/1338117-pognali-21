@@ -504,10 +504,10 @@
                   </p>
                 </div>
                 <div
-                  class="planning-dates__option--duration planning-dates-option"
+                  class="planning-dates__option planning-dates__option--duration planning-dates-option"
                 >
                   <p class="planning-dates-option__title">Длительность:</p>
-                  <p class="planning-dates-option__unit">Дн.</p>
+                  <p class="planning-dates-option__unit planning-dates-option__unit--duration">Дн.</p>
                   <p class="planning-dates-option__input">
                     <button
                       class="planning-dates-option__button planning-dates-option__button--minus"
@@ -550,7 +550,7 @@
                       type="button"
                       aria-label="предыдущий месяц"
                     ></button>
-                    <p class="calendar__title planning__subheading">
+                    <p class="calendar__title">
                       Март 2019
                     </p>
                     <button
@@ -561,13 +561,27 @@
                   </header>
                   <table class="calendar__table">
                     <tr class="calendar__row calendar__row--names">
-                      <th class="calendar__day calendar__day--weekday">П</th>
-                      <th class="calendar__day calendar__day--weekday">В</th>
-                      <th class="calendar__day calendar__day--weekday">С</th>
-                      <th class="calendar__day calendar__day--weekday">Ч</th>
-                      <th class="calendar__day calendar__day--weekday">П</th>
-                      <th class="calendar__day calendar__day--weekend">С</th>
-                      <th class="calendar__day calendar__day--weekend">В</th>
+                      <th class="calendar__day calendar__day--weekday">
+                        П<span>н</span>
+                      </th>
+                      <th class="calendar__day calendar__day--weekday">
+                        В<span>т</span>
+                      </th>
+                      <th class="calendar__day calendar__day--weekday">
+                        С<span>р</span>
+                      </th>
+                      <th class="calendar__day calendar__day--weekday">
+                        Ч<span>т</span>
+                      </th>
+                      <th class="calendar__day calendar__day--weekday">
+                        П<span>т</span>
+                      </th>
+                      <th class="calendar__day calendar__day--weekend">
+                        С<span>б</span>
+                      </th>
+                      <th class="calendar__day calendar__day--weekend">
+                        В<span>с</span>
+                      </th>
                     </tr>
                     <tr class="calendar__row calendar__row--figures">
                       <td class="calendar__figure">
@@ -1047,7 +1061,7 @@
                 </div>
               </div>
               <a
-                class="button-round planning__button planning__button--next"
+                class="planning__button planning__button--next"
                 href="#step_2"
                 >Следующий шаг</a
               >
@@ -1400,7 +1414,7 @@
               </div>
               <div class="planning__buttons">
                 <a
-                  class="button-round planning__button"
+                  class="planning__button planning__button--next"
                   href="#step_3"
                   >Следующий шаг</a
                 >
@@ -1455,7 +1469,7 @@
                 </p>
               </div>
               <div class="planning__buttons">
-                <button class="button-round planning__button planning__button--submit" type="submit">
+                <button class="planning__button planning__button--submit" type="submit">
                   Отправить
                 </button>
                 <a

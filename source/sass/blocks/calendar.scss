@@ -5,14 +5,23 @@
   padding: 10px 0 12px;
   border-top: 1px solid $light-blue-background-4;
   border-bottom: 1px solid $light-blue-background-4;
+
+  @media #{$min-tablet} {
+    margin-bottom: 33px;
+    padding: 23px 17px 26px;
+  }
 }
 
 .calendar__title {
   margin: 0;
   font-size: 20px;
-  line-height: 20px;
+  line-height: 1;
   font-weight: 700;
   text-align: center;
+
+  @media #{$min-tablet} {
+    font-size: 36px;
+  }
 }
 
 .calendar__swipe {
@@ -28,6 +37,11 @@
   background-size: contain;
   opacity: 0.3;
 
+  @media #{$min-tablet} {
+    width: 19px;
+    height: 34px;
+  }
+
   &--left {
     transform: scaleX(-1);
   }
@@ -39,6 +53,10 @@
   font-size: 14px;
   line-height: 1.29;
   font-weight: 400;
+
+  @media #{$min-tablet} {
+    font-size: 18px;
+  }
 }
 
 .calendar__day {
@@ -48,13 +66,24 @@
   &--weekend {
     color: $orange-3;
   }
+
+  span {
+    display: none;
+
+    @media #{$min-tablet} {
+      display: inline;
+    }
+  }
 }
 
 .calendar__figure {
   @include border;
-  width: 30px;
   height: 31px;
   text-align: center;
+
+  @media #{$min-tablet} {
+    height: 69px;
+  }
 }
 
 .calendar__label {
