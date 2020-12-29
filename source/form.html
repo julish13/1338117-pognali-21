@@ -18,6 +18,7 @@
         HTML {
           /* Tablet layout */
           background-image: url("img/maket/FORM-Tablet.png");
+          /* background-image: url("img/maket/FORM-Tablet-alphabet.png"); */
         }
       }
       /* Desktop */
@@ -1085,12 +1086,12 @@
                 <li class="planning-states__state">Развлечения</li>
               </ul>
               <p class="planning__description">
-                Укажите страны, которые вы хотели бы посетить. Это может быть
+                Укажите страны, которые вы хотели бы посетить. <br>Это может быть
                 одна или сразу несколько.
               </p>
               <div class="planning__route">
                 <div class="planning__select-country select-country select-country--country select-country--bosnia-and-herzegovina">
-                  <div class="select-country__wrap">
+                  <div class="select-country__wrap select-country__wrap--country">
                     <input
                       class="select-country__input"
                       type="button"
@@ -1099,13 +1100,12 @@
                     />
                     <button class="select-country__toggle"></button>
                   </div>
-                  <label class="select-country__label" for="bosnia_and_herzegovina_select">
-                    <span class="select-country__flag flag flag--bosnia-and-herzegovina"></span>
+                  <label class="select-country__label select-country__label--bosnia-and-herzegovina" for="bosnia_and_herzegovina_select">
                   </label>
                   <button class="select-country__delete"></button>
                 </div>
                 <div class="planning__select-country select-country select-country--country select-country--czech">
-                  <div class="select-country__wrap">
+                  <div class="select-country__wrap select-country__wrap--country">
                     <input
                       class="select-country__input"
                       type="button"
@@ -1114,15 +1114,14 @@
                     />
                     <button class="select-country__toggle"></button>
                   </div>
-                  <label class="select-country__label" for="czech_select">
-                    <span class="select-country__flag flag flag--czech"></span>
+                  <label class="select-country__label select-country__label--czech" for="czech_select">
                   </label>
                   <button class="select-country__delete"></button>
                 </div>
                 <div class="planning__select-country select-country select-country--choose">
-                  <div class="select-country__wrap">
+                  <div class="select-country__wrap select-country__wrap--choose">
                     <input
-                      class="select-country__input"
+                      class="select-country__input select-country__input--choose"
                       type="button"
                       value="Выберите страну"
                       id="any_country_select"
@@ -1401,9 +1400,9 @@
                   <button class="select-country__delete"></button>
                 </div>
                 <div class="planning__select-country select-country select-country--add">
-                  <div class="select-country__wrap">
+                  <div class="select-country__wrap select-country__wrap--add">
                     <input
-                      class="select-country__input"
+                      class="select-country__input select-country__input--add"
                       type="button"
                       value="Добавить страну"
                       id="add_country_select"

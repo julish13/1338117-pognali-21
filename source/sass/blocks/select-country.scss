@@ -2,19 +2,38 @@
   position: relative;
   display: flex;
 
+  @media #{$min-tablet} {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &--country {
+    @media #{$min-tablet} {
+      justify-content: flex-end;
+    }
+  }
+
+  &--add {
+    @media #{$min-tablet} {
+      justify-content: flex-start;
+    }
+  }
+
   &--choose,
   &--country {
-    &::after {
-      position: absolute;
-      bottom: -16px;
-      right: 50px;
-      content: "";
-      width: 8px;
-      height: 11px;
-      background-image: url("../../img/arrow-down.svg");
-      background-repeat: no-repeat;
-      background-size: auto;
-      background-position: center;
+    @media #{$max-mobile} {
+      &::after {
+        position: absolute;
+        bottom: -16px;
+        right: 50px;
+        content: "";
+        width: 8px;
+        height: 11px;
+        background-image: url("../../img/arrow-down.svg");
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+      }
     }
   }
 }
@@ -26,45 +45,64 @@
   width: min-content;
   flex-grow: 1;
 
-  .select-country--choose &,
-  .select-country--add &,
-  .select-country--country & {
+  @media #{$min-tablet} {
+    flex-grow: 0;
+  }
+
+  &--choose,
+  &--add,
+  &--country {
     &::after {
       position: absolute;
       top: 16px;
       right: -5px;
-      border-radius: 4px;
+      border-radius: 50%;
       border: 1px solid $basic-blue-light;
       content: "";
       width: 8px;
       height: 8px;
       background-color: $basic-blue-light;
+
+      @media #{$min-tablet} {
+        top: 24px;
+        right: -34px;
+        width: 14px;
+        height: 14px;
+      }
     }
   }
 
-  .select-country--country & {
-    &::before {
-      position: absolute;
-      top: 0;
-      right: -0.5px;
-      border-radius: 4px;
-      content: "";
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(to right, transparent 60%, $basic-white 78%);
+  &--country {
+    @media #{$max-mobile} {
+      &::before {
+        position: absolute;
+        top: 0;
+        right: -0.5px;
+        border-radius: 4px;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to right, transparent 60%, $basic-white 78%);
+      }
     }
   }
 
-  .select-country--add & {
-    overflow: hidden;
+  &--add {
+    @media #{$max-mobile} {
+      overflow: hidden;
+    }
   }
 
-  .select-country--choose &,
-  .select-country--add & {
+  &--choose,
+  &--add {
     &::after {
       right: 49px;
       border-color: $grey-1;
       background-color: transparent;
+
+      @media #{$min-tablet} {
+        right: -34px;
+      }
     }
   }
 
@@ -87,16 +125,24 @@
   text-align: left;
   letter-spacing: 0.1em;
 
-  .select-country--add & {
-    padding: 11px;
-    width: 100%;
+  @media #{$min-tablet} {
+    padding: 24px 50px 24px 24px;
+    width: 367px;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  &--add {
     background-color: $grey-background-1;
     border: none;
   }
 
-  .select-country--choose & {
-    padding: 11px;
-    width: 100%;
+  &--choose,
+  &--add {
+    @media #{$max-mobile} {
+      padding: 11px;
+      width: 100%;
+    }
   }
 
   .select-country--open & {
@@ -115,17 +161,35 @@
   border-radius: 4px;
   width: 53px;
   height: 42px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media #{$min-tablet} {
+    margin-left: auto;
+    border-radius: 6px;
+    width: 70px;
+    height: 47px;
+  }
+
+  &--bosnia-and-herzegovina {
+    background-image: url("../img/bosnia-and-herzegovina-small.png");
+
+    @media #{$min-tablet} {
+      background-image: url("../img/bosnia-and-herzegovina-big.png");
+    }
+  }
+
+  &--czech {
+    background-image: url("../img/czech-small.png");
+
+    @media #{$min-tablet} {
+      background-image: url("../img/czech-big.png");
+    }
+  }
 
   .select-country--open & {
     display: none;
   }
-}
-
-.select-country__flag {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .select-country__delete {
@@ -139,6 +203,14 @@
   height: 21px;
   background-color: $grey-background-1;
 
+  @media #{$min-tablet} {
+    position: relative;
+    right: 0;
+    top: 0;
+    margin-left: 23px;
+    background-color: transparent;
+  }
+
   &::before,
   &::after {
     content: "";
@@ -148,6 +220,12 @@
     width: 11px;
     height: 1px;
     background-color: $grey-8;
+
+    @media #{$min-tablet} {
+      right: 0;
+      width: 24.5px;
+      height: 1.7px;
+    }
   }
 
   &::before {
@@ -177,6 +255,13 @@
   background-image: url("../../img/arrow-left.svg");
   background-repeat: no-repeat;
   background-size: contain;
+
+  @media #{$min-tablet} {
+    right: 25px;
+    top: 30px;
+    width: 20px;
+    height: 17px;
+  }
 
   .select-country--open & {
     right: 15px;
@@ -224,10 +309,22 @@
     width: 14px;
     height: 2px;
     background-color: $grey-2;
+
+    @media #{$min-tablet} {
+      width: 21px;
+    }
   }
 
   &::after {
     transform: rotate(90deg);
+  }
+
+  @media #{$min-tablet} {
+    position: relative;
+    top: 0;
+    right: 46px;
+    width: 21px;
+    height: 21px;
   }
 }
 

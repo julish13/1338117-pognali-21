@@ -22,8 +22,9 @@
   background-color: $basic-white;
 
   @media #{$min-tablet} {
-    border-radius: 30px;
+    margin-bottom: 40px;
     padding: 45px 40px;
+    border-radius: 30px;
   }
 
   @media #{$min-desktop} {
@@ -56,6 +57,14 @@
   @media #{$min-desktop} {
     grid-area: 2 / 1 / span 1 / span 2;
   }
+
+  br {
+    display: none;
+
+    @media #{$min-tablet} {
+      display: inline;
+    }
+  }
 }
 
 .planning__states {
@@ -71,10 +80,36 @@
 .planning__route {
   margin-top: 21px;
   margin-bottom: 26px;
+
+  @media #{$min-tablet} {
+    position: relative;
+    margin-top: 34px;
+    margin-bottom: 0;
+    border-top: 1px solid $grey-1;
+    padding-top: 42px;
+    padding-bottom: 34px;
+    padding-left: 3px;
+  }
+
+  &::after {
+    @media #{$min-tablet} {
+      position: absolute;
+      top: 0;
+      left: 398px;
+      content: "";
+      width: 1px;
+      height: 100%;
+      background-image: linear-gradient(to bottom, $grey-1 330px, transparent);
+    }
+  }
 }
 
 .planning__select-country {
   margin-bottom: 22px;
+
+  @media #{$min-tablet} {
+    margin-bottom: 15px;
+  }
 }
 
 .planning__button {
@@ -82,10 +117,6 @@
   width: 100%;
   line-height: 1.76;
   text-transform: uppercase;
-
-  @media #{$min-tablet} {
-    width: 286px;
-  }
 
   @media #{$min-desktop} {
     grid-area: 4 / 1 / span 1 / span 1;
@@ -101,6 +132,7 @@
     @media #{$min-tablet} {
       @include button-square;
       text-transform: none;
+      width: 286px;
     }
 
     &::after {
@@ -123,6 +155,27 @@
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.01em;
+
+    @media #{$min-tablet} {
+      @include button-after;
+      position: relative;
+      margin-top: 0;
+      padding: 29px 0;
+      width: auto;
+      font-size: 24px;
+      line-height: 0.92;
+      text-transform: none;
+      text-align: right;
+    }
+
+    &::after {
+      @media #{$min-tablet} {
+        transform: scaleX(-1);
+        top: 36%;
+        left: -33px;
+        right: 0;
+      }
+    }
   }
 
   &--submit {
@@ -135,6 +188,8 @@
 .planning__buttons {
   @media #{$min-tablet} {
     display: flex;
+    justify-content: space-between;
+    padding-left: 3px;
   }
 
   @media #{$min-desktop} {
