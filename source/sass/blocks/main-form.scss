@@ -53,7 +53,9 @@
 
   @media #{$min-desktop} {
     margin-top: 65px;
+    border-radius: 55px 55px 0 0;
     padding-top: 21px;
+    padding-bottom: 72px;
   }
 }
 
@@ -65,5 +67,9 @@
 
   @media #{$min-tablet} {
     padding-bottom: 87px;
+  }
+
+  @media #{$min-desktop} {
+    border-radius: 55px 55px 0 0;
   }
 }

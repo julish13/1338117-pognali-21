@@ -10,6 +10,10 @@
     margin-top: 40px;
     margin-bottom: 59px;
   }
+
+  @media #{$min-desktop} {
+    margin-left: 69px;
+  }
 }
 
 .planning__step {
