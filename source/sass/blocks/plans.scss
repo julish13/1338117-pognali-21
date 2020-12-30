@@ -2,8 +2,28 @@
   background-color: $light-blue-background-1;
 }
 
+.plans__heading {
+  @media #{$min-desktop} {
+    padding-left: 72px;
+  }
+}
+
+.plans__list {
+  margin-top: 33px;
+  padding-left: 0;
+
+  @media #{$min-tablet} {
+    margin-top: 50px;
+  }
+
+  @media #{$min-desktop} {
+    margin-top: 52px;
+    padding-left: 64px;
+  }
+}
+
 .plans__item {
-  list-style: none;
+  // list-style-type: none;
   counter-increment: myCounter;
   padding: 23px 24px;
   margin-bottom: 10px;
@@ -23,6 +43,10 @@
     font-size: 20px;
   }
 
+  @media #{$min-desktop} {
+    list-style-type: decimal;
+  }
+
   &::before {
     display: inline;
     content: counter(myCounter) ". ";
@@ -33,6 +57,10 @@
       right: 33px;
       top: 40px;
       font-size: 20px;
+    }
+
+    @media #{$min-desktop} {
+      display: none;
     }
   }
 }
@@ -51,15 +79,6 @@
 
   @media #{$min-tablet} and #{$max-tablet} {
     flex-basis: 100%;
-  }
-}
-
-.plans__list {
-  margin-top: 33px;
-  padding-left: 0;
-
-  @media #{$min-tablet} {
-    margin-top: 50px;
   }
 }
 
