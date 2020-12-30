@@ -2,12 +2,31 @@
   background-color: $basic-white;
 
   @media #{$min-tablet} {
+    position: relative;
     display: flex;
+    justify-content: space-between;
+    padding: 35px 27px 27px;
+  }
+
+  &::after {
+    @media #{$min-tablet} {
+      position: absolute;
+      left: 368px;
+      top: 0;
+      content: "";
+      width: 1px;
+      height: 100%;
+      background-color: $grey-2;
+    }
   }
 }
 
 .select-country-dropdown__alphabet {
   width: 100%;
+
+  @media #{$min-tablet} {
+    width: 262px;
+  }
 }
 
 .select-country-dropdown__title {
@@ -32,6 +51,13 @@
   font-weight: 400;
   text-transform: none;
 
+  @media #{$min-tablet} {
+    border: none;
+    padding: 0;
+    font-size: 20px;
+    line-height: 1;
+  }
+
   &--active {
     display: block;
   }
@@ -39,4 +65,9 @@
 
 .select-country-dropdown__country {
   margin-bottom: 4px;
+
+  @media #{$min-tablet} {
+    margin-top: 2px;
+    margin-bottom: 10px;
+  }
 }

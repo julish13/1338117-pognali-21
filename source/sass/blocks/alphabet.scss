@@ -5,6 +5,11 @@
   line-height: 1.29;
   font-weight: 500;
   text-transform: uppercase;
+
+  @media #{$min-tablet} {
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .alphabet__letter {
@@ -12,4 +17,8 @@
   width: 43px;
   height: 41px;
   text-align: center;
+
+  @media #{$min-tablet} {
+    height: 69px;
+  }
 }

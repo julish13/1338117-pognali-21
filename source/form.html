@@ -1067,7 +1067,7 @@
                 >Следующий шаг</a
               >
             </fieldset>
-            <fieldset class="planning__step route slider__slide">
+            <fieldset class="planning__step planning__step--route slider__slide">
               <legend class="planning__subheading planning-subheading">
                 <a id="step_2">
                   <span class="planning-subheading__step">Шаг 2.</span>
@@ -1424,7 +1424,7 @@
                 >
               </div>
             </fieldset>
-            <fieldset class="planning__step slider__slide">
+            <fieldset class="planning__step planning__step--fun slider__slide">
               <legend class="planning__subheading planning-subheading">
                 <a id="step_3">
                   <span class="planning-subheading__step">Шаг 3.</span>
@@ -1443,11 +1443,10 @@
                 <li class="planning-states__state">Развлечения</li>
               </ul>
               <p class="planning__description">
-                Наконец, расскажите о&nbsp;своих планах времяпровождения. Можно
-                писать в&nbsp;свободной форме и&nbsp;ставить тэги.
+                Наконец, расскажите о&nbsp;своих планах времяпровождения.<br> Можно писать в&nbsp;свободной форме и&nbsp;ставить тэги.
               </p>
-              <div class="planning__fun fun">
-                <p class="fun__country">
+              <ul class="planning__fun fun">
+                <li class="fun__country">
                   <label
                     class="fun__title fun__title--bosnia-and-herzegovina"
                     for="bosnia_and_herzegovina_textarea"
@@ -1458,15 +1457,15 @@
                     id="bosnia_and_herzegovina_textarea"
                     placeholder="План действий"
                   ></textarea>
-                </p>
-                <p class="fun__country">
+                </li>
+                <li class="fun__country">
                   <label class="fun__title fun__title--czech" for="czech">Чехия</label>
                   <textarea class="fun__textarea" id="czech">
 Пить пиво и&nbsp;лазить по&nbsp;старым замкам, наслаждаться архитектурой и&nbsp;вот это все.
                 </textarea
                   >
-                </p>
-              </div>
+                </li>
+              </ul>
               <div class="planning__buttons">
                 <button class="planning__button planning__button--submit" type="submit">
                   Отправить

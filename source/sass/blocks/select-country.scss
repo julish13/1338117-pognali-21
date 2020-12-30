@@ -66,6 +66,7 @@
       @media #{$min-tablet} {
         top: 24px;
         right: -34px;
+        z-index: 5;
         width: 14px;
         height: 14px;
       }
@@ -102,12 +103,19 @@
 
       @media #{$min-tablet} {
         right: -34px;
+        background-color: $basic-white;
       }
     }
   }
 
   .select-country--open & {
     border: none;
+
+    &::after {
+      @media #{$max-mobile} {
+        display: none;
+      }
+    }
   }
 }
 
@@ -146,12 +154,20 @@
   }
 
   .select-country--open & {
-    padding: 13px 18px 11px;
     width: 100%;
     border-radius: 4px 4px 0 0;
     background-color: $basic-blue-light;
     color: $basic-white;
-    letter-spacing: 0.02em;
+
+    @media #{$max-mobile} {
+      padding: 13px 18px 11px;
+      letter-spacing: 0.02em;
+    }
+
+    @media #{$min-tablet} {
+      padding-bottom: 25px;
+      width: 369px;
+    }
   }
 }
 
@@ -269,15 +285,28 @@
     background-image: none;
     opacity: 1;
 
+    @media #{$min-tablet} {
+      right: 22px;
+      opacity: 0.3;
+    }
+
     &::before,
     &::after {
       content: "";
       position: absolute;
-      top: 45%;
-      right: 25%;
       width: 11px;
       height: 1px;
       background-color: $basic-white;
+
+      @media #{$max-mobile} {
+        top: 45%;
+        right: 25%;
+      }
+
+      @media #{$min-tablet} {
+        width: 24.5px;
+        height: 1.7px;
+      }
     }
 
     &::before {
@@ -336,5 +365,10 @@
     z-index: 20;
     display: block;
     width: 100%;
+
+    @media #{$min-tablet} {
+      width: 575px;
+      box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
+    }
   }
 }
