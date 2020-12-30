@@ -17,14 +17,14 @@
     opacity: 0.3;
   }
 
-  .level--index & {
+  &--index {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     background-color: rgba($basic-black, 0.6);
   }
 
-  .level--form & {
+  &--form {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -39,6 +39,11 @@
     &::before {
       width: 51px;
       background-color: $basic-grey-font;
+
+      @media #{$min-desktop} {
+        background-color: $basic-white;
+        opacity: 0.3;
+      }
     }
   }
 }
@@ -48,13 +53,13 @@
   font-size: 24px;
   font-weight: 700;
 
-  .level--index & {
+  &--index {
     margin-top: 6px;
     margin-left: -3px;
     color: $basic-white;
   }
 
-  .level--form & {
+  &--form {
     margin-top: -5px;
     margin-bottom: 9px;
     color: $basic-blue;
@@ -62,6 +67,10 @@
 
     @media #{$min-tablet} {
       margin-bottom: 6px;
+    }
+
+    @media #{$min-desktop} {
+      color: $basic-white;
     }
   }
 
@@ -76,15 +85,27 @@
   font-size: 18px;
   font-weight: 400;
 
-  .level--index & {
+  &--index {
     margin-left: -3px;
     color: $basic-white;
     font-size: 14px;
+  }
+
+  &--form {
+    @media #{$min-desktop} {
+      color: $basic-white;
+    }
   }
 }
 
 .level__progress-ring {
   position: absolute;
+
+  &--form {
+    @media #{$min-desktop} {
+      top: -7px;
+    }
+  }
 }
 
 .level__circle {
@@ -97,7 +118,7 @@
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
 
-  .level--form & {
+  &--form {
     stroke-width: 3;
     transform: rotate(-90deg) scale(1.05);
 

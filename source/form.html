@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>HTML Academy: Погнали</title>
     <link rel="stylesheet" href="css/style.css" />
-    <style>
+    <!-- <style>
       HTML {
         background-repeat: no-repeat;
         background-position: 50% 0;
@@ -25,12 +25,12 @@
       @media (min-width: 1440px) {
         HTML {
           /* Desktop layout */
-          background-image: url("img/960.png");
+          background-image: url("img/maket/FORM-Desktop.png");
         }
       }
     </style>
     <link href="pixel-glass/styles.css" rel="stylesheet" />
-    <script src="pixel-glass/script.js"></script>
+    <script src="pixel-glass/script.js"></script> -->
   </head>
 
   <body class="page__body">
@@ -262,7 +262,7 @@
     </header>
     <main class="main-form">
       <div class="main-form__header">
-        <div class="container-fix">
+        <div class="container-fix  container-fix--form">
           <h1 class="main-form__heading main-heading">Направления</h1>
         </div>
       </div>
@@ -274,18 +274,18 @@
             action="https://echo.htmlacademy.ru"
             method="post"
           >
-            <div class="profile__level level level--form">
-              <div class="level__wrap">
+            <div class="profile__level level">
+              <div class="level__wrap level__wrap--form">
                 <svg
-                  class="level__progress-ring"
+                  class="level__progress-ring level__progress-ring--form"
                   viewBox="0 0 100 100"
                   width="100"
                   height="100"
                 >
-                  <circle class="level__circle" r="46" cx="50" cy="50" />
+                  <circle class="level__circle level__circle--form" r="46" cx="50" cy="50" />
                 </svg>
-                <p class="level__value">80</p>
-                <p class="level__text">level</p>
+                <p class="level__value level__value--form">80</p>
+                <p class="level__text level__text--form">level</p>
               </div>
             </div>
             <picture>
@@ -305,18 +305,20 @@
                 height="100"
               />
             </picture>
-            <label class="profile__file">
-              <input
-                class="visually-hidden"
-                type="file"
-                name="avatar"
-                id="avatar"
-                accept="image/*"
-              />
-Сменить фото
-            </label>
+            <div class="profile__wrap">
+              <label class="profile__file">
+                <input
+                  class="visually-hidden"
+                  type="file"
+                  name="avatar"
+                  id="avatar"
+                  accept="image/*"
+                />
+  <span>Сменить </span>фото
+              </label>
+            </div>
             <p class="profile__tags">
-              <label class="profile__subheading profile__subheading--label"
+              <label class="profile__subheading profile__subheading--tags"
                 >Тэги</label
               >
               <textarea class="profile__tag-list">
@@ -324,7 +326,7 @@
               >
             </p>
             <fieldset class="profile__transports">
-              <legend class="profile__subheading profile__subheading--legend">Транспорт</legend>
+              <legend class="profile__subheading profile__subheading--transports">Транспорт</legend>
               <ul class="profile__transport-list profile-transport-list">
                 <li class="profile-transport-list__item">
                   <input

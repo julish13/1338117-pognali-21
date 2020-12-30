@@ -9,7 +9,9 @@
   }
 
   @media #{$min-desktop} {
-    justify-content: flex-end;
+    justify-content: flex-start;
+    margin-top: -255px;
+    padding-left: 65px;
   }
 }
 
@@ -20,6 +22,10 @@
     order: -2;
     margin-top: 3px;
     margin-left: 0;
+  }
+
+  @media #{$min-desktop} {
+    margin-left: auto;
   }
 }
 
@@ -34,11 +40,17 @@
     width: 94px;
     height: 94px;
   }
+
+  @media #{$min-desktop} {
+    border-radius: 7px 7px 0 0;
+    margin-right: 95px;
+    margin-left: 45px;
+    width: 190px;
+    height: 190px;
+  }
 }
 
-.profile__file {
-  display: block;
-  border: none;
+.profile__wrap {
   border-radius: 20px;
   flex-basis: 100%;
   margin-top: 18px;
@@ -61,7 +73,31 @@
   }
 
   @media #{$min-desktop} {
+    margin-top: 0;
+    margin-bottom: 27px;
+    padding: 0;
+    background-color: transparent;
     text-align: right;
+  }
+}
+
+.profile__file {
+  cursor: pointer;
+
+  @media #{$min-desktop} {
+    display: block;
+    margin-left: auto;
+    margin-right: 95px;
+    border-radius: 0 0 7px 7px;
+    padding: 14px;
+    width: 190px;
+    background-color: $light-blue-background-1;
+    text-align: center;
+    letter-spacing: normal;
+
+    span {
+      display: none;
+    }
   }
 }
 
@@ -82,16 +118,20 @@
     letter-spacing: 0.08em;
   }
 
-  &--label {
+  &--tags {
     margin: -9px auto 0;
 
     @media #{$min-tablet} {
       order: 1;
       margin: 0 auto -9px;
     }
+
+    @media #{$min-desktop} {
+      margin: 0 auto -9px 19px;
+    }
   }
 
-  &--legend {
+  &--transports {
     @media #{$min-tablet} {
       position: absolute;
       bottom: 3px;
@@ -109,7 +149,7 @@
   border-radius: 10px;
   flex-basis: 100%;
 
-  @media #{$min-tablet} and #{$max-tablet} {
+  @media #{$min-tablet} {
     position: relative;
     order: -1;
     flex-basis: 308px;
@@ -117,7 +157,9 @@
   }
 
   @media #{$min-desktop} {
-    flex-basis: 49%;
+    flex-basis: 384px;
+    order: unset;
+    margin-left: auto;
   }
 }
 
@@ -131,6 +173,10 @@
 
   @media #{$min-tablet} {
     margin-left: -4px;
+  }
+
+  @media #{$min-desktop} {
+    padding-left: 8px;
   }
 }
 
@@ -147,7 +193,8 @@
   }
 
   @media #{$min-desktop} {
-    flex-basis: 50%;
+    flex-basis: 732px;
+    margin: 0;
   }
 }
 
@@ -167,6 +214,10 @@
     height: 82px;
     font-size: 20px;
     line-height: 1.1;
+  }
+
+  @media #{$min-desktop} {
+    padding: 32px 37px 10px;
   }
 
   &:focus {
