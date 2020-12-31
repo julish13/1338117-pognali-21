@@ -196,6 +196,10 @@
     flex-basis: 732px;
     margin: 0;
   }
+
+  &:hover {
+    border-color: $grey-9;
+  }
 }
 
 .profile__tag-list {
@@ -220,7 +224,9 @@
     padding: 32px 37px 10px;
   }
 
+  &:active,
   &:focus {
     outline: none;
+    color: $basic-grey-font;
   }
 }
