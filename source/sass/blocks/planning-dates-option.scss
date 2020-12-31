@@ -10,17 +10,34 @@
     font-size: 20px;
     line-height: 0.9;
   }
+
+  @media #{$min-desktop} {
+    justify-content: flex-start;
+    align-items: center;
+  }
 }
 
 .planning-dates-option__title {
   margin: 0;
   letter-spacing: 0.1em;
+
+  @media #{$min-desktop} {
+    margin-right: 57px;
+    min-width: 165px;
+    letter-spacing: normal;
+  }
 }
 
 .planning-dates-option__unit {
   margin: 0;
   opacity: 0.3;
   letter-spacing: 0.1em;
+
+  @media #{$min-desktop} {
+    order: 1;
+    opacity: 1;
+    letter-spacing: normal;
+  }
 
   &--duration {
     @media #{$min-tablet} {
@@ -36,6 +53,11 @@
 
   @media #{$min-tablet} {
     margin-top: 25px;
+  }
+
+  @media #{$min-desktop} {
+    margin: 0 35px 0 0;
+    width: 180px;
   }
 }
 

@@ -1,15 +1,11 @@
-.planning-dates__options {
+.planning-dates {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-top: 20px;
-
-  @media #{$min-tablet} {
-    margin-top: 40px;
-  }
 
   @media #{$min-desktop} {
-    flex-direction: row;
+    display: grid;
+    grid-template: repeat(3, min-content) / 1fr 244px;
   }
 }
 
@@ -19,15 +15,29 @@
     padding-top: 25px;
   }
 
+  @media #{$min-desktop} {
+    border-top: none;
+    padding-top: 0;
+  }
+
   &--companions {
     @media #{$min-tablet} {
       order: -2;
+    }
+
+    @media #{$min-desktop} {
+      grid-area: 1 / 1 / span 1 / span 1;
+      margin-bottom: 15px;
     }
   }
 
   &--duration {
     @media #{$min-desktop} {
       flex-basis: 100%;
+    }
+
+    @media #{$min-desktop} {
+      grid-area: 2 / 1 / span 1 / span 1;
     }
   }
 }
@@ -41,6 +51,11 @@
     order: -1;
     margin-top: 13px;
     margin-bottom: 36px;
+  }
+
+  @media #{$min-desktop} {
+    grid-area: 1 / 2 / span 1 / span 1;
+    margin-top: 26px;
   }
 }
 
@@ -99,5 +114,10 @@ input:checked + .planning-dates__checkbox-label {
   @media #{$min-tablet} {
     margin-top: 39px;
     margin-bottom: 47px;
+  }
+
+  @media #{$min-desktop} {
+    grid-area: 3 / 1 / span 1 / span 2;
+    margin-top: 31px;
   }
 }

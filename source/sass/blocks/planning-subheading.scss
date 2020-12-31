@@ -13,4 +13,8 @@
 .planning-subheading__step,
 .planning-subheading__title {
   display: block;
+
+  @media #{$min-desktop} {
+    display: inline;
+  }
 }

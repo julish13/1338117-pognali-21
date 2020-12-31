@@ -1,35 +1,49 @@
 .planning-states {
   padding-left: 0;
+}
 
-  &--no-text {
-    display: flex;
-    justify-content: space-between;
-    width: 43px;
-    height: 5px;
+.planning-states--no-text {
+  display: flex;
+  justify-content: space-between;
+  width: 43px;
+  height: 5px;
 
-    @media #{$min-tablet} {
-      top: 37px;
-      right: 65px;
-      width: 70px;
-      font-size: 19px;
-    }
-
-    @media #{$min-desktop} {
-      display: none;
-    }
+  @media #{$min-tablet} {
+    top: 37px;
+    right: 65px;
+    width: 70px;
+    font-size: 19px;
   }
 
-  &--desktop {
+  @media #{$min-desktop} {
     display: none;
+  }
+}
 
-    @media #{$min-desktop} {
-      display: block;
-    }
+.planning-states--desktop {
+  display: none;
+
+  @media #{$min-desktop} {
+    display: block;
+    color: $basic-black;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
   }
 }
 
 .planning-states__state {
   opacity: 0.3;
+
+  @media #{$min-desktop} {
+    padding-left: 27px;
+    opacity: 0.6;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
 
   &--active {
     opacity: 1;
