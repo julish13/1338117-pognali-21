@@ -73,15 +73,33 @@
   line-height: 1.06;
   text-align: center;
   font-weight: 500;
+  // -moz-appearance: textfield;
 
   @media #{$min-tablet} {
     padding: 22px 52px 22px 45px;
     font-size: 20px;
     line-height: 1;
   }
+
+  // &::-webkit-outer-spin-button,
+  // &::-webkit-inner-spin-button {
+  //   -webkit-appearance: none;
+  //   margin: 0;
+  // }
+
+  &:hover {
+    border-color: $grey-12;
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    border-color: $basic-blue;
+  }
 }
 
 .planning-dates-option__button {
+  cursor: pointer;
   position: absolute;
   padding: 0;
   border: none;
@@ -89,67 +107,84 @@
   height: 15px;
   background-color: transparent;
 
-  &--minus {
-    top: 30%;
-    left: 7%;
-
-    @media #{$min-tablet} {
-      top: 24px;
-      left: 23px;
-    }
-
-    &::before {
-      position: absolute;
-      left: 0;
-      content: "";
-      width: 14px;
-      height: 2px;
-      background-color: $grey-2;
-
-      @media #{$min-tablet} {
-        width: 20px;
-      }
-    }
-  }
-
-  &--plus {
-    top: 30%;
-    right: 7%;
-
-    @media #{$min-tablet} {
-      top: 24px;
-      right: 23px;
-    }
-
-    &::before {
-      position: absolute;
-      left: 1.5px;
-      content: "";
-      width: 14px;
-      height: 2px;
-      background-color: $grey-2;
-
-      @media #{$min-tablet} {
-        width: 20px;
-      }
-    }
-
-    &::after {
-      position: absolute;
-      top: 1px;
-      content: "";
-      width: 2px;
-      height: 14px;
-      background-color: $grey-2;
-
-      @media #{$min-tablet} {
-        height: 20px;
-      }
-    }
-  }
-
   @media #{$min-tablet} {
     width: 20px;
     height: 20px;
+  }
+
+  &:hover {
+    &::before,
+    &::after {
+      background-color: $grey-12;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+
+    &::before,
+    &::after {
+      background-color: $basic-blue;
+    }
+  }
+}
+
+.planning-dates-option__button--minus {
+  top: 30%;
+  left: 7%;
+
+  @media #{$min-tablet} {
+    top: 24px;
+    left: 23px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 14px;
+    height: 2px;
+    background-color: $grey-2;
+
+    @media #{$min-tablet} {
+      width: 20px;
+    }
+  }
+}
+
+.planning-dates-option__button--plus {
+  top: 30%;
+  right: 7%;
+
+  @media #{$min-tablet} {
+    top: 24px;
+    right: 23px;
+  }
+
+  &::before {
+    position: absolute;
+    left: 1.5px;
+    content: "";
+    width: 14px;
+    height: 2px;
+    background-color: $grey-2;
+
+    @media #{$min-tablet} {
+      width: 20px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 1px;
+    content: "";
+    width: 2px;
+    height: 14px;
+    background-color: $grey-2;
+
+    @media #{$min-tablet} {
+      height: 20px;
+    }
   }
 }

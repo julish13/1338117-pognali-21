@@ -1,11 +1,16 @@
 .select-country-dropdown__wrap {
   background-color: $basic-white;
+  border-radius: 0 0 4px 4px;
 
   @media #{$min-tablet} {
     position: relative;
     display: flex;
     justify-content: space-between;
     padding: 35px 27px 27px;
+  }
+
+  @media #{$min-desktop} {
+    padding: 20px 60px 23px 12px;
   }
 
   &::after {
@@ -18,6 +23,10 @@
       height: 100%;
       background-color: $grey-2;
     }
+
+    @media #{$min-desktop} {
+      left: 490px;
+    }
   }
 }
 
@@ -26,6 +35,10 @@
 
   @media #{$min-tablet} {
     width: 262px;
+  }
+
+  @media #{$min-desktop} {
+    width: 391px;
   }
 }
 
@@ -58,16 +71,32 @@
     line-height: 1;
   }
 
+  @media #{$min-desktop} {
+    padding-top: 12px;
+  }
+
   &--active {
     display: block;
   }
 }
 
 .select-country-dropdown__country {
+  cursor: pointer;
+  outline: none;
   margin-bottom: 4px;
 
   @media #{$min-tablet} {
     margin-top: 2px;
     margin-bottom: 10px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $basic-blue-light;
+  }
+
+  &:active {
+    color: $basic-blue-light;
+    opacity: 0.3;
   }
 }

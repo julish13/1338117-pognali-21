@@ -31,6 +31,7 @@
 }
 
 .calendar__swipe {
+  cursor: pointer;
   display: block;
   padding: 0;
   margin-top: 2px;
@@ -52,6 +53,17 @@
     margin-top: 7px;
     width: 15.5px;
     height: 28px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 0.1;
   }
 
   &--left {
@@ -102,6 +114,7 @@
 .calendar__figure {
   @include border;
   height: 31px;
+  background-color: $grey-background-1;
   text-align: center;
 
   @media #{$min-tablet} {
@@ -110,14 +123,50 @@
 
   @media #{$min-desktop} {
     padding-left: 16px;
-    padding-bottom: 25px;
+    padding-top: 10px;
     height: 71px;
     text-align: left;
+    vertical-align: top;
+  }
+
+  &--disabled {
+    background-color: transparent;
+  }
+
+  &--chosen {
+    background-color: $basic-blue-light;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    position: relative;
+    box-shadow: 0 0 0 4px $orange-3;
   }
 }
 
 .calendar__label {
-  color: rgba($basic-grey-font, 0.3);
+  color: $basic-grey-font;
+
+  &--disabled {
+    opacity: 0.3;
+  }
+
+  &--chosen {
+    color: $basic-white;
+  }
+
+  &--text {
+    span {
+      display: none;
+    }
+
+    @media #{$min-desktop} {
+      span {
+        display: inline;
+      }
+    }
+  }
 }
 
 .calendar__month {

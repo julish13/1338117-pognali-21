@@ -170,86 +170,6 @@
   }
 }
 
-.planning__button {
-  margin-bottom: 10px;
-  width: 100%;
-  line-height: 1.76;
-  text-transform: uppercase;
-
-  @media #{$min-desktop} {
-    grid-area: 4 / 1 / span 1 / span 1;
-  }
-
-  &--next,
-  &--submit {
-    @media #{$max-mobile} {
-      @include button-round;
-      padding: 11px 10px;
-    }
-
-    @media #{$min-tablet} {
-      @include button-square;
-      border: none;
-      text-transform: none;
-      width: 286px;
-    }
-
-    &::after {
-      @media #{$min-tablet} {
-        right: 39px;
-      }
-    }
-  }
-
-  &--previous {
-    display: block;
-    margin-top: 13px;
-    margin-bottom: 0;
-    padding: 5px 10px 3px;
-    font-family: inherit;
-    color: $basic-blue-light;
-    font-size: 17px;
-    line-height: 1;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.01em;
-
-    @media #{$min-tablet} {
-      @include button-after;
-      position: relative;
-      margin-top: 0;
-      padding: 29px 0;
-      width: auto;
-      font-size: 24px;
-      line-height: 0.92;
-      text-transform: none;
-      text-align: right;
-    }
-
-    &::after {
-      @media #{$min-tablet} {
-        transform: scaleX(-1);
-        top: 36%;
-        left: -33px;
-        right: 0;
-      }
-    }
-  }
-
-  &--submit {
-    @media #{$max-mobile} {
-      margin-right: -5px;
-      margin-left: -5px;
-      width: 230px;
-    }
-
-    @media #{$min-tablet} {
-      font-family: inherit;
-    }
-  }
-}
-
 .planning__buttons {
   @media #{$min-tablet} {
     display: flex;
@@ -261,8 +181,99 @@
   }
 }
 
+.planning__button {
+  margin-bottom: 10px;
+  width: 100%;
+  line-height: 1.76;
+  text-transform: uppercase;
+
+  @media #{$min-desktop} {
+    grid-area: 4 / 1 / span 1 / span 1;
+  }
+}
+
+.planning__button--next,
+.planning__button--submit {
+  @media #{$max-mobile} {
+    @include button-round;
+    padding: 11px 10px;
+  }
+
+  @media #{$min-tablet} {
+    @include button-square;
+    border: none;
+    text-transform: none;
+    width: 286px;
+  }
+
+  &::after {
+    @media #{$min-tablet} {
+      right: 39px;
+    }
+  }
+}
+
+.planning__button--previous {
+  display: block;
+  margin-top: 13px;
+  margin-bottom: 0;
+  padding: 5px 10px 3px;
+  font-family: inherit;
+  color: $basic-blue-light;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.01em;
+
+  @media #{$min-tablet} {
+    @include button-after;
+    position: relative;
+    margin-top: 0;
+    padding: 29px 0;
+    width: auto;
+    font-size: 24px;
+    line-height: 0.92;
+    text-transform: none;
+    text-align: right;
+  }
+
+  &::after {
+    @media #{$min-tablet} {
+      transform: scaleX(-1);
+      top: 36%;
+      left: -33px;
+      right: 0;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.planning__button--submit {
+  cursor: pointer;
+
+  @media #{$max-mobile} {
+    margin-right: -5px;
+    margin-left: -5px;
+    width: 230px;
+  }
+
+  @media #{$min-tablet} {
+    font-family: inherit;
+  }
+}
+
 .planning__fun {
-  margin-top: 23px;
+  margin-top: 20px;
   margin-bottom: 18px;
   padding: 0;
 

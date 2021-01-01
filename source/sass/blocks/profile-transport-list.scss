@@ -5,6 +5,7 @@
 }
 
 .profile-transport-list__wrap {
+  outline: none;
   cursor: pointer;
   position: relative;
   display: block;
@@ -30,8 +31,45 @@
     width: 23px;
     height: 22px;
   }
+}
 
-  input:checked + .profile-transport-list__wrap & {
+input:checked + .profile-transport-list__wrap {
+  .profile-transport-list__icon {
     fill: $basic-blue-light;
+  }
+}
+
+input:hover + .profile-transport-list__wrap,
+input:focus + .profile-transport-list__wrap {
+  filter: drop-shadow(0 2px 6px rgba($basic-blue, 0.17));
+
+  .profile-transport-list__icon {
+    fill: $grey-13;
+  }
+}
+
+input:active + .profile-transport-list__wrap {
+  background-color: $light-blue-background-5;
+
+  .profile-transport-list__icon {
+    fill: $basic-blue-light;
+    opacity: 0.1;
+  }
+}
+
+input:checked:hover + .profile-transport-list__wrap,
+input:checked:focus + .profile-transport-list__wrap {
+  .profile-transport-list__icon {
+    fill: $basic-blue-light;
+    opacity: 0.7;
+  }
+}
+
+input:checked:active + .profile-transport-list__wrap {
+  background-color: $light-blue-background-5;
+
+  .profile-transport-list__icon {
+    fill: $basic-blue-light;
+    opacity: 0.3;
   }
 }

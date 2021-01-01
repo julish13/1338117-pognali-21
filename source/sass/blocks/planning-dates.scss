@@ -77,6 +77,7 @@
 
   &::before {
     @include border;
+    cursor: pointer;
     position: absolute;
     top: -7px;
     left: -39px;
@@ -104,6 +105,25 @@ input:checked + .planning-dates__checkbox-label {
     @media #{$min-tablet} {
       background-size: 12px 12px;
     }
+  }
+}
+
+input:hover + .planning-dates__checkbox-label,
+input:focus + .planning-dates__checkbox-label {
+  &::before {
+    border-color: $grey-12;
+  }
+}
+
+input:active + .planning-dates__checkbox-label {
+  &::before {
+    background-color: $light-blue-background-5;
+  }
+}
+
+input:checked:active + .planning-dates__checkbox-label {
+  &::before {
+    opacity: 0.3;
   }
 }
 

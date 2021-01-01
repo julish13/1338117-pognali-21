@@ -51,11 +51,32 @@
 }
 
 .profile__wrap {
-  border-radius: 20px;
+  overflow: hidden;
+  border-radius: 18px;
   flex-basis: 100%;
   margin-top: 18px;
   margin-bottom: 20px;
+
+  @media #{$min-tablet} {
+    margin-top: 48px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+
+  @media #{$min-desktop} {
+    margin-top: 0;
+    margin-bottom: 27px;
+    padding: 0;
+    background-color: transparent;
+  }
+}
+
+.profile__file {
+  display: block;
+  cursor: pointer;
   padding: 10px;
+  width: 100%;
+  height: 100%;
   background-color: $light-blue-background-1;
   color: $basic-blue;
   font-size: 20px;
@@ -65,24 +86,9 @@
   text-transform: uppercase;
 
   @media #{$min-tablet} {
-    margin-top: 48px;
-    margin-bottom: 20px;
     padding: 21px;
-    border-radius: 10px;
     letter-spacing: 0.09em;
   }
-
-  @media #{$min-desktop} {
-    margin-top: 0;
-    margin-bottom: 27px;
-    padding: 0;
-    background-color: transparent;
-    text-align: right;
-  }
-}
-
-.profile__file {
-  cursor: pointer;
 
   @media #{$min-desktop} {
     display: block;
@@ -98,6 +104,16 @@
     span {
       display: none;
     }
+  }
+
+  &:hover {
+    background-color: $grey-10;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $light-blue-background-1;
+    color: rgba($basic-blue, 0.3);
   }
 }
 
@@ -119,15 +135,17 @@
   }
 
   &--tags {
-    margin: -9px auto 0;
+    position: relative;
+    z-index: 10;
+    margin: 0 auto -10px;
 
     @media #{$min-tablet} {
       order: 1;
-      margin: 0 auto -9px;
+      margin: -10px auto 0;
     }
 
     @media #{$min-desktop} {
-      margin: 0 auto -9px 19px;
+      margin: -9px auto 0 19px;
     }
   }
 
@@ -160,6 +178,7 @@
     flex-basis: 384px;
     order: unset;
     margin-left: auto;
+    margin-bottom: 10px;
   }
 }
 
@@ -181,33 +200,29 @@
 }
 
 .profile__tags {
-  @include border;
-  border-radius: 10px;
   flex-basis: 100%;
-  margin-top: 14px;
+  margin-top: 6px;
+  margin-bottom: 12px;
 
   @media #{$min-tablet} {
     display: flex;
     flex-direction: column;
-    margin-top: 32px;
+    margin-top: 0;
   }
 
   @media #{$min-desktop} {
     flex-basis: 732px;
     margin: 0;
   }
-
-  &:hover {
-    border-color: $grey-9;
-  }
 }
 
 .profile__tag-list {
+  @include border;
   resize: none;
-  border: none;
-  padding: 15px 23px 10px;
+  border-radius: 10px;
+  padding: 25px 23px 11px;
   width: 100%;
-  height: 73px;
+  height: 90px;
   background-color: transparent;
   color: rgba($basic-grey-font, 0.6);
   font-family: inherit;
@@ -215,18 +230,25 @@
 
   @media #{$min-tablet} {
     padding: 32px 41px 10px;
-    height: 82px;
+    margin-top: 32px;
+    height: 94px;
     font-size: 20px;
     line-height: 1.1;
   }
 
   @media #{$min-desktop} {
+    margin-top: 0;
     padding: 32px 37px 10px;
+  }
+
+  &:hover {
+    border-color: $grey-9;
   }
 
   &:active,
   &:focus {
     outline: none;
+    border-color: $basic-blue;
     color: $basic-grey-font;
   }
 }
