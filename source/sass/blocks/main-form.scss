@@ -62,10 +62,11 @@
 .main-form__planning {
   border-radius: 30px 30px 0 0;
   margin-top: -35px;
-  padding-bottom: 141px;
+  padding-bottom: 142px;
   padding-top: 9px;
 
   @media #{$min-tablet} {
+    margin-top: -38px;
     padding-bottom: 87px;
   }
 

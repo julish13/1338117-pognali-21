@@ -4,7 +4,8 @@
 }
 
 .planning__heading {
-  margin-bottom: 30px;
+  margin-top: 17px;
+  margin-bottom: 31px;
 
   @media #{$min-tablet} {
     margin-top: 40px;
@@ -12,6 +13,7 @@
   }
 
   @media #{$min-desktop} {
+    margin-top: 44px;
     margin-left: 69px;
   }
 }
@@ -35,7 +37,7 @@
     display: grid;
     grid-template: repeat(4, min-content) / 581px 1fr;
     margin-bottom: 45px;
-    padding: 100px 159px 95px;
+    padding: 97px 159px 96px;
     border-radius: 60px;
   }
 
@@ -91,8 +93,8 @@
 
 .planning__states {
   position: absolute;
-  top: 14px;
-  right: 36px;
+  top: 13px;
+  right: 35px;
 
   @media #{$min-desktop} {
     position: static;
@@ -138,6 +140,7 @@
   }
 
   @media #{$min-desktop} {
+    margin-top: 37px;
     padding-top: 62px;
     padding-bottom: 41px;
   }
@@ -273,8 +276,8 @@
 }
 
 .planning__fun {
-  margin-top: 20px;
-  margin-bottom: 18px;
+  margin-top: 23px;
+  margin-bottom: 16px;
   padding: 0;
 
   @media #{$min-tablet} {
@@ -286,7 +289,8 @@
   }
 
   @media #{$min-desktop} {
-    margin-bottom: 49px;
+    margin-top: 35px;
+    margin-bottom: 50px;
     padding-top: 78px;
   }
 }
