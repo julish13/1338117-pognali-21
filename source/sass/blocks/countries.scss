@@ -12,7 +12,7 @@
 
   @media #{$min-desktop} {
     display: grid;
-    grid-template: repeat(3, min-content) / 630px 1fr;
+    grid-template: repeat(2, min-content) max-content / 630px 1fr;
     grid-column-gap: 137px;
     padding-top: 76px;
     padding-bottom: 50px;

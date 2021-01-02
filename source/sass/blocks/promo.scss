@@ -89,6 +89,7 @@
 .promo__buttons {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   margin-top: -20px;
   color: $basic-blue;
 
@@ -99,6 +100,7 @@
 
 .promo__contacts {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .promo__contact {
