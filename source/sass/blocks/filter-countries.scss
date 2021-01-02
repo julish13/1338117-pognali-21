@@ -1,15 +1,9 @@
 .filter-countries {
   background-color: $grey-background-2;
   color: $blue-background-1;
-  line-height: 1.12;
-  font-weight: 700;
-  text-transform: uppercase;
 }
 
 .filter-countries__inner {
-  display: grid;
-  grid-template: repeat(3, min-content) / 80% 20%;
-
   @media #{$min-tablet} {
     grid-template: repeat(2, min-content) / 2fr 1fr;
   }
@@ -19,7 +13,21 @@
   }
 }
 
+.filter-countries__header {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  line-height: 1.12;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
 .filter-countries__heading {
+  position: relative;
+  margin: 0;
+  padding-left: 27px;
+  font: inherit;
+
   @media #{$min-tablet} and #{$max-tablet} {
     font-size: 0;
   }
@@ -27,19 +35,60 @@
   @media #{$min-desktop} {
     grid-area: 1 / 1 / 2 / 2;
   }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    content: "";
+    width: 15px;
+    height: 10px;
+    background-image: url("../img/filter-icon.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
 .filter-countries__toggle {
+  margin-left: auto;
+  background-color: transparent;
+  border: none;
+  width: 16px;
+  height: 16px;
   font-size: 0;
-  grid-area: 1 / 2 / 2 / 3;
 
   @media #{$min-desktop} {
     grid-area: 1 / 3 / 2 / 4;
   }
+
+  .filter-countries--nojs & {
+    display: none;
+  }
+
+  .filter-countries--opened & {
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      right: 0;
+      width: 14px;
+      height: 2px;
+      background-color: $basic-black;
+      opacity: 0.2;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
 }
 
 .filter-countries__lands-list {
-  grid-column: span 2;
+  flex-basis: 100%;
+  margin-top: 34px;
+  margin-bottom: 0;
+  padding-left: 25px;
   list-style: none;
 
   @media #{$min-tablet} {
@@ -52,14 +101,54 @@
   }
 }
 
+.filter-countries__land {
+  margin-bottom: 9px;
+}
+
 .filter-countries__label {
   opacity: 0.3;
 }
 
 .filter-countries__dropdown {
-  grid-column: span 2;
+  margin-top: 14px;
 
   @media #{$min-desktop} {
     grid-area: 2 / 1 / span 1 / span 3;
+  }
+}
+
+.filter-countries__alphabet {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.filter-countries__button {
+  position: relative;
+  display: block;
+  padding: 10px;
+  width: 100%;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: 85px;
+    width: 14px;
+    height: 2px;
+    background-color: $basic-black;
+    opacity: 0.2;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  span {
+    margin-left: 24px;
   }
 }

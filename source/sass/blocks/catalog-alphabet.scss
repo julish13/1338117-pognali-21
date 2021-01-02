@@ -1,0 +1,101 @@
+.catalog-alphabet {
+  @media #{$min-tablet} {
+    display: grid;
+    grid-template: repeat(5, min-content) / 75% 25%;
+  }
+
+  @media #{$min-desktop} {
+    grid-template: repeat(10, min-content) / repeat(5, 20%);
+  }
+}
+
+.catalog-alphabet__alphabet-row {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+
+  @media #{$min-desktop} {
+    grid-column: span 5;
+  }
+
+  &:nth-child(2) {
+    @media #{$min-desktop} {
+      grid-row: 3;
+    }
+  }
+
+  &:nth-child(3) {
+    @media #{$min-desktop} {
+      grid-row: 5;
+    }
+  }
+
+  &:nth-child(4) {
+    @media #{$min-desktop} {
+      grid-row: 7;
+    }
+  }
+
+  &:nth-child(5) {
+    @media #{$min-desktop} {
+      grid-row: 9;
+    }
+  }
+}
+
+.catalog-alphabet__letter {
+  box-sizing: content-box;
+  border-style: solid;
+  border-color: $grey-2;
+  border-width: 0 1px 1px 0;
+  width: 43px;
+  height: 40px;
+  background-color: $basic-white;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+
+  &:first-child {
+    border-width: 0 1px 1px 1px;
+  }
+
+  .catalog-alphabet__alphabet-row:first-child & {
+    border-top-width: 1px;
+  }
+}
+
+.catalog-alphabet__label {
+  position: relative;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.catalog-alphabet__countries-list {
+  display: none;
+  margin-top: 11px;
+  margin-bottom: 30px;
+  padding-left: 0;
+  list-style: none;
+
+  @media #{$min-tablet} {
+    grid-area: 1 / 2 / span 5 / span 1;
+  }
+
+  @media #{$min-desktop} {
+    display: block;
+    grid-area: auto;
+  }
+
+  &--active {
+    display: block;
+  }
+}
+
+.catalog-alphabet__link {
+  color: $basic-grey-font;
+}

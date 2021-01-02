@@ -4,6 +4,7 @@
 }
 
 .main-catalog__header {
+  padding-top: 93px;
   background-color: $blue-background-2;
   color: $basic-white;
 
@@ -16,6 +17,10 @@
   @media #{$max-mobile} {
     display: none;
   }
+}
+
+.main-catalog__filter-countries {
+  padding-top: 21px;
 }
 
 .main-catalog__inner {
