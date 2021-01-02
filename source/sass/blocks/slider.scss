@@ -1,3 +1,8 @@
-.no-empty {
-  margin: 0;
+.slider__slide {
+  display: none;
+}
+
+.slider__slide--nojs,
+.slider__slide--active {
+  display: block;
 }
