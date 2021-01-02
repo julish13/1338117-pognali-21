@@ -215,6 +215,7 @@
 
   @media #{$min-tablet} {
     margin-left: auto;
+    border: none;
     border-radius: 6px;
     width: 70px;
     height: 47px;
@@ -265,16 +266,39 @@
     margin-left: 95px;
   }
 
+  &:hover,
+  &:focus {
+    .select-country__delete-icon {
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+    .select-country__delete-icon {
+      opacity: 0.05;
+    }
+  }
+
+  .select-country--open & {
+    @media #{$max-mobile} {
+      display: none;
+    }
+  }
+}
+
+.select-country__delete-icon {
+  opacity: 0.1;
+
   &::before,
   &::after {
     content: "";
     position: absolute;
     top: 45%;
     right: 25%;
+    border-radius: 1px;
     width: 11px;
     height: 1px;
     background-color: $basic-black;
-    opacity: 0.1;
 
     @media #{$min-tablet} {
       right: 0;
@@ -289,27 +313,6 @@
 
   &::after {
     transform: rotate(-45deg);
-  }
-
-  &:hover,
-  &:focus {
-    &::before,
-    &::after {
-      opacity: 0.3;
-    }
-  }
-
-  &:active {
-    &::before,
-    &::after {
-      opacity: 0.05;
-    }
-  }
-
-  .select-country--open & {
-    @media #{$max-mobile} {
-      display: none;
-    }
   }
 }
 
@@ -353,6 +356,7 @@
       position: absolute;
       width: 11px;
       height: 1px;
+      border-radius: 1px;
       background-color: $basic-white;
 
       @media #{$max-mobile} {
@@ -399,6 +403,7 @@
   width: 14px;
   height: 14px;
   background-color: transparent;
+  opacity: 0.2;
 
   @media #{$min-tablet} {
     position: relative;
@@ -417,7 +422,6 @@
     width: 14px;
     height: 2px;
     background-color: $basic-black;
-    opacity: 0.2;
 
     @media #{$min-tablet} {
       width: 21px;
@@ -429,17 +433,11 @@
   }
 
   .select-country--add:hover & {
-    &::before,
-    &::after {
-      opacity: 0.3;
-    }
+    opacity: 0.3;
   }
 
   .select-country--add:active & {
-    &::before,
-    &::after {
-      opacity: 0.1;
-    }
+    opacity: 0.1;
   }
 }
 

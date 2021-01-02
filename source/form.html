@@ -1096,11 +1096,15 @@
                         value="Босния и Герцеговина"
                         id="bosnia_and_herzegovina_select"
                       />
-                      <button type="button" class="select-country__toggle"></button>
+                      <button type="button" class="select-country__toggle" aria-label="выбрать страну">
+                      </button>
                     </div>
                     <label class="select-country__label select-country__label--bosnia-and-herzegovina" for="bosnia_and_herzegovina_select">
                     </label>
-                    <button type="button" class="select-country__delete"></button>
+                    <button type="button" class="select-country__delete">
+                      <span class="visually-hidden">удалить страну</span>
+                      <span class="select-country__delete-icon"></span>
+                    </button>
                   </div>
                   <div class="planning__select-country select-country select-country--country select-country--czech">
                     <div class="select-country__wrap select-country__wrap--country">
@@ -1110,11 +1114,15 @@
                         value="Чехия"
                         id="czech_select"
                       />
-                      <button type="button" class="select-country__toggle"></button>
+                      <button type="button" class="select-country__toggle" aria-label="выбрать страну">
+                      </button>
                     </div>
                     <label class="select-country__label select-country__label--czech" for="czech_select">
                     </label>
-                    <button type="button" class="select-country__delete"></button>
+                    <button type="button" class="select-country__delete">
+                      <span class="visually-hidden">удалить страну</span>
+                      <span class="select-country__delete-icon"></span>
+                    </button>
                   </div>
                   <div class="planning__select-country select-country select-country--choose">
                     <div class="select-country__wrap select-country__wrap--choose">
@@ -1124,7 +1132,8 @@
                         value="Выберите страну"
                         id="any_country_select"
                       />
-                      <button type="button" class="select-country__toggle"></button>
+                      <button type="button" class="select-country__toggle" aria-label="выбрать страну">
+                      </button>
                       <div class="select-country__dropdown select-country-dropdown">
                         <div class="select-country-dropdown__wrap">
                           <table
@@ -1395,7 +1404,10 @@
                         </div>
                       </div>
                     </div>
-                    <button type="button" class="select-country__delete"></button>
+                    <button type="button" class="select-country__delete">
+                      <span class="visually-hidden">удалить страну</span>
+                      <span class="select-country__delete-icon"></span>
+                    </button>
                   </div>
                   <div class="planning__select-country select-country select-country--add">
                     <div class="select-country__wrap select-country__wrap--add">
@@ -1406,7 +1418,9 @@
                         id="add_country_select"
                       />
                     </div>
-                    <button type="button" class="select-country__add"></button>
+                    <button type="button" class="select-country__add">
+                      <span class="visually-hidden">добавить страну</span>
+                    </button>
                   </div>
                 </div>
                 <div class="planning__buttons">

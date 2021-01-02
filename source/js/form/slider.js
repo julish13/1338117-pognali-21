@@ -1,8 +1,9 @@
 'use strict';
 
 (() => {
-  const slidesCollection = document.querySelectorAll(`.slider__slide`);
-  const indicatorsElement = document.querySelector(`.planning-states--no-text`);
+  const planningElement = document.querySelector(`.planning`);
+  const slidesCollection = planningElement.querySelectorAll(`.slider__slide`);
+  const indicatorsElement = planningElement.querySelector(`.planning-states--no-text`);
   const indicatorsCollection = indicatorsElement.querySelectorAll(`.planning-states__state`);
 
   for (let i = 0; i < slidesCollection.length; i++) {
@@ -20,6 +21,7 @@
         indicatorsCollection[i].classList.remove(`planning-states__state--active`);
         slidesCollection[i+1].classList.add(`slider__slide--active`);
         indicatorsCollection[i+1].classList.add(`planning-states__state--active`);
+        planningElement.scrollIntoView();
       })
     }
 
@@ -30,6 +32,7 @@
         indicatorsCollection[i].classList.remove(`planning-states__state--active`);
         slidesCollection[i-1].classList.add(`slider__slide--active`);
         indicatorsCollection[i-1].classList.add(`planning-states__state--active`);
+        planningElement.scrollIntoView();
       })
     }
   };
