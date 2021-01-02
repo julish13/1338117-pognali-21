@@ -1,6 +1,6 @@
 'use strict';
 
-(function () {
+(() => {
   const slidesCollection = document.querySelectorAll(`.slider__slide`);
   const indicatorsElement = document.querySelector(`.planning-states--no-text`);
   const indicatorsCollection = indicatorsElement.querySelectorAll(`.planning-states__state`);

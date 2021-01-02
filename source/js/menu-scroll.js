@@ -1,6 +1,6 @@
 'use strict';
 
-(function () {
+(() => {
   const mainNavElement = document.querySelector(`.main-nav`);
   const mobileLogoElement = mainNavElement.querySelector(`#logo-mobile`);
   const tabletLogoElement = mainNavElement.querySelector(`#logo-tablet`);

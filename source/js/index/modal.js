@@ -1,6 +1,6 @@
 'use strict';
 
-(function () {
+(() => {
   const EVENT_KEYS = {
     ESC: `Escape`,
     ENTER: `Enter`

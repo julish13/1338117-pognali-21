@@ -307,7 +307,9 @@
   }
 
   .select-country--open & {
-    display: none;
+    @media #{$max-mobile} {
+      display: none;
+    }
   }
 }
 

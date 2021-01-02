@@ -1,6 +1,6 @@
 'use strict';
 
-(function () {
+(() => {
   const optionsCollection = document.querySelectorAll(`.planning-dates-option__wrap`);
 
   for (const option of optionsCollection) {
