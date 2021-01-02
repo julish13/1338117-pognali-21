@@ -46,7 +46,7 @@
   }
 }
 
-.planning-dates-option__input {
+.planning-dates-option__wrap {
   position: relative;
   margin-top: 11px;
   width: 100%;
@@ -61,7 +61,7 @@
   }
 }
 
-.planning-dates-option__value {
+.planning-dates-option__input {
   @include border;
   padding: 13px 38px;
   border-radius: 4px;
@@ -73,19 +73,12 @@
   line-height: 1.06;
   text-align: center;
   font-weight: 500;
-  // -moz-appearance: textfield;
 
   @media #{$min-tablet} {
     padding: 22px 52px 22px 45px;
     font-size: 20px;
     line-height: 1;
   }
-
-  // &::-webkit-outer-spin-button,
-  // &::-webkit-inner-spin-button {
-  //   -webkit-appearance: none;
-  //   margin: 0;
-  // }
 
   &:hover {
     border-color: $grey-12;
@@ -95,6 +88,16 @@
   &:focus {
     outline: none;
     border-color: $basic-blue;
+  }
+}
+
+.planning-dates-option__input--js {
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 }
 
