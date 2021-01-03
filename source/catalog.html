@@ -1310,7 +1310,7 @@
                 Подберите идеального попутчика
               </legend>
               <div class="filter-personality__inner">
-                <div class="filter-personality__field filter-personality-field">
+                <div class="filter-personality__field filter-personality-field filter-personality-field--nojs">
                   <p class="filter-personality-field__header">
                     <span class="filter-personality-field__title">Хобби</span>
                     <button
@@ -1358,7 +1358,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="filter-personality__field filter-personality-field">
+                <div class="filter-personality__field filter-personality-field filter-personality-field--nojs">
                   <p class="filter-personality-field__header">
                     <span class="filter-personality-field__title">Музыка</span>
                     <button
@@ -1410,7 +1410,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="filter-personality__field filter-personality-field">
+                <div class="filter-personality__field filter-personality-field filter-personality-field--nojs">
                   <p class="filter-personality-field__header">
                     <span class="filter-personality-field__title">Еда</span>
                     <button
@@ -1460,7 +1460,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="filter-personality__field filter-personality-field">
+                <div class="filter-personality__field filter-personality-field filter-personality-field--nojs">
                   <p class="filter-personality-field__header">
                     <span class="filter-personality-field__title"
                       >Транспорт</span
@@ -1471,66 +1471,89 @@
                       aria-label="Открыть меню"
                     ></button>
                   </p>
-                  <ul class="filter-personality-field__list transport">
-                    <li class="filter-personality-field__item">
+                  <ul class="filter-personality-field__list filter-personality-field__list--transport">
+                    <li class="filter-personality-field__transport transport-button">
                       <input
-                        class="visually-hidden transport__input"
+                        class="visually-hidden"
                         type="checkbox"
                         name="plane"
-                        id="plane"
+                        id="planeInput"
                         checked
                         aria-label="На самолете"
                       />
-                      <label
-                        class="filter-personality-field__label transport__button transport__button--plane"
-                        for="plane"
-                      ></label>
+                      <label class="transport-button__wrap" for="planeInput" tabindex="0">
+                        <svg
+                          class="transport-button__icon"
+                          role="img"
+                          width="15px"
+                          height="16px"
+                        >
+                          <use xlink:href="#plane"></use>
+                        </svg>
+                      </label>
                     </li>
-                    <li class="filter-personality-field__item">
+                    <li class="filter-personality-field__transport transport-button">
                       <input
-                        class="visually-hidden transport__input"
+                        class="visually-hidden"
                         type="checkbox"
                         name="bus"
-                        id="bus"
+                        id="busInput"
                         checked
                         aria-label="На автобусе"
                       />
-                      <label
-                        class="filter-personality-field__label transport__button transport__button--bus"
-                        for="bus"
-                      ></label>
+                      <label class="transport-button__wrap" for="busInput" tabindex="0">
+                        <svg
+                          class="transport-button__icon"
+                          role="img"
+                          width="17px"
+                          height="16px"
+                        >
+                          <use xlink:href="#bus"></use>
+                        </svg>
+                      </label>
                     </li>
-                    <li class="filter-personality-field__item">
+                    <li class="filter-personality-field__transport transport-button">
                       <input
-                        class="visually-hidden transport__input"
+                        class="visually-hidden"
                         type="checkbox"
                         name="bike"
-                        id="bike"
-                        checked
+                        id="bikeInput"
                         aria-label="На велосипеде"
                       />
-                      <label
-                        class="filter-personality-field__label transport__button transport__button--bike"
-                        for="bike"
-                      ></label>
+                      <label class="transport-button__wrap" for="bikeInput" tabindex="0">
+                        <svg
+                          class="transport-button__icon"
+                          role="img"
+                          width="17px"
+                          height="16px"
+                        >
+                          <use xlink:href="#bike"></use>
+                        </svg>
+                      </label>
                     </li>
-                    <li class="filter-personality-field__item">
+                    <li class="filter-personality-field__transport transport-button">
                       <input
-                        class="visually-hidden transport__input"
+                        class="visually-hidden"
                         type="checkbox"
                         name="walk"
-                        id="walk"
+                        id="walkInput"
                         checked
                         aria-label="Пешком"
                       />
-                      <label
-                        class="filter-personality-field__label transport__button transport__button--walk"
-                        for="walk"
-                      ></label>
+                      <label class="transport-button__wrap" for="walkInput" tabindex="0">
+                        <svg
+                          class="transport-button__icon"
+                          role="img"
+                          width="17px"
+                          height="16px"
+                        >
+                          <use xlink:href="#walk"></use>
+                        </svg>
+                      </label>
                     </li>
                   </ul>
                 </div>
-                <div class="filter-personality__field filter-personality-field">
+                <div class="filter-personality__field filter-personality-field filter-personality-field--nojs">
                   <p class="filter-personality-field__header">
                     <span class="filter-personality-field__title">Левел</span>
                     <button
@@ -1542,45 +1565,44 @@
                   <div
                     class="filter-personality-field__level-filter level-filter"
                   >
-                    <div class="level-filter__range-controls">
-                      <div class="level-filter__scale">
-                        <div class="level-filter__bar"></div>
-                      </div>
-                      <div
-                        class="level-filter__toggle level-filter__toggle--min"
-                        tabindex="0"
-                      ></div>
-                      <div
-                        class="level-filter__toggle level-filter__toggle--max"
-                        tabindex="0"
-                      ></div>
-                    </div>
                     <div class="level-filter__values">
                       <input
-                        class="level-filter__value"
+                        class="level-filter__input"
                         type="number"
                         aria-label="Минимальный уровень"
                         name="min-level"
                         value="30"
                       />
-                      <label class="visually-hidden">—</label>
                       <input
-                        class="level-filter__value"
+                        class="level-filter__input"
                         type="number"
                         aria-label="Максимальный уровень"
                         name="max-level"
                         value="100"
                       />
                     </div>
+                    <div class="level-filter__range-controls range-controls">
+                      <div class="range-controls__scale">
+                        <div class="range-controls__bar"></div>
+                      </div>
+                      <div
+                        class="range-controls__toggle range-controls__toggle--min"
+                        tabindex="0"
+                      ></div>
+                      <div
+                        class="range-controls__toggle range-controls__toggle--max"
+                        tabindex="0"
+                      ></div>
+                    </div>
                   </div>
                 </div>
-                <button
+              </div>
+              <button
                   class="filter-personality__button button-round button-round--white"
                   type="submit"
                 >
                   Показать
                 </button>
-              </div>
             </fieldset>
           </form>
         </section>
@@ -2034,7 +2056,8 @@
     </footer>
     <script src="js/menu-toggle.js"></script>
     <script src="js/menu-scroll.js"></script>
-    <script src="js/catalog/dropdown.js"></script>
+    <script src="js/catalog/countries-dropdown.js"></script>
+    <script src="js/catalog/personality-dropdown.js"></script>
     <script src="js/level.js"></script>
   </body>
 </html>

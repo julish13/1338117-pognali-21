@@ -1,10 +1,4 @@
-.profile-transport-list {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-}
-
-.profile-transport-list__wrap {
+.transport-button__wrap {
   outline: none;
   cursor: pointer;
   position: relative;
@@ -20,7 +14,7 @@
   }
 }
 
-.profile-transport-list__icon {
+.transport-button__icon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -33,42 +27,42 @@
   }
 }
 
-input:checked + .profile-transport-list__wrap {
-  .profile-transport-list__icon {
+input:checked + .transport-button__wrap {
+  .transport-button__icon {
     fill: $basic-blue-light;
   }
 }
 
-input:hover + .profile-transport-list__wrap,
-input:focus + .profile-transport-list__wrap {
+input:hover + .transport-button__wrap,
+input:focus + .transport-button__wrap {
   filter: drop-shadow(0 2px 6px rgba($basic-blue, 0.17));
 
-  .profile-transport-list__icon {
+  .transport-button__icon {
     fill: $grey-13;
   }
 }
 
-input:active + .profile-transport-list__wrap {
+input:active + .transport-button__wrap {
   background-color: $light-blue-background-5;
 
-  .profile-transport-list__icon {
+  .transport-button__icon {
     fill: $basic-blue-light;
     opacity: 0.1;
   }
 }
 
-input:checked:hover + .profile-transport-list__wrap,
-input:checked:focus + .profile-transport-list__wrap {
-  .profile-transport-list__icon {
+input:checked:hover + .transport-button__wrap,
+input:checked:focus + .transport-button__wrap {
+  .transport-button__icon {
     fill: $basic-blue-light;
     opacity: 0.7;
   }
 }
 
-input:checked:active + .profile-transport-list__wrap {
+input:checked:active + .transport-button__wrap {
   background-color: $light-blue-background-5;
 
-  .profile-transport-list__icon {
+  .transport-button__icon {
     fill: $basic-blue-light;
     opacity: 0.3;
   }
