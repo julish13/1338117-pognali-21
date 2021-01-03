@@ -4,6 +4,7 @@
 }
 
 .main-catalog__header {
+  position: relative;
   padding-top: 93px;
   background-color: $blue-background-2;
   color: $basic-white;
@@ -20,10 +21,13 @@
 }
 
 .main-catalog__filter-countries {
-  padding-top: 21px;
+  margin-top: -20px;
+  padding-top: 41px;
 }
 
 .main-catalog__inner {
+  padding-top: 22px;
+
   @media #{$min-desktop} {
     display: grid;
     grid-template-columns: 70% 30%;
