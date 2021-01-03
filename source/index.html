@@ -10,8 +10,8 @@
         background-repeat: no-repeat;
         background-position: 50% 0;
         /* Mobile layout by default */
-        background-image: url( "img/maket/Mobile (menu).jpg" );
-        /* background-image: url("img/maket/Mobile.jpg"); */
+        /* background-image: url( "img/maket/Mobile (menu).jpg" ); */
+        background-image: url("img/maket/Mobile.jpg");
         /* background-image: url( "img/maket/Mobile (scroll).jpg" ); */
       }
       /* Tablet */
@@ -472,7 +472,7 @@
             Теперь можно легко <br />найти единомышленников!
           </p>
           <ul class="users__list container-fix">
-            <li class="users__item user-item user-item--offline">
+            <li class="users__item user-item">
               <div class="user-item__level level">
                 <div class="level__wrap level__wrap--index">
                   <svg class="level__progress-ring" width="60" height="60">
@@ -498,93 +498,104 @@
                 </picture>
               </a>
               <div class="user-item__info">
-                <ul class="user-item__countries-list">
-                  <li class="user-item__country flag flag--sri-lanka">
-                    <span class="user-item__tooltip tooltip">Шри-Ланка</span>
-                  </li>
-                  <li class="user-item__country flag flag--thailand">
-                    <span class="user-item__tooltip tooltip">Тайланд</span>
-                  </li>
-                  <li class="user-item__country flag flag--seychelles">
-                    <span class="user-item__tooltip tooltip">Сейшелы</span>
-                  </li>
-                </ul>
-                <a class="user-item__name" href="#">Таня Фирсова</a>
-                <ul class="user-item__tag-list tag-list tag-list--index">
-                  <li class="tag-list__item">
-                    <a class="tag-list__link" href="#">#ЗОЖ</a>
-                  </li>
-                  <li class="tag-list__item">
-                    <a class="tag-list__link" href="#">#ПП</a>
-                  </li>
-                  <li class="tag-list__item">
-                    <a class="tag-list__link" href="#">#Фитнес</a>
-                  </li>
-                  <li class="tag-list__item">
-                    <a class="tag-list__link" href="#">#пляж</a>
-                  </li>
-                  <li class="tag-list__item">
-                    <a class="tag-list__link" href="#">#авокадо</a>
-                  </li>
-                  <li class="tag-list__item">
-                    <a class="tag-list__link" href="#">#смузи</a>
-                  </li>
-                </ul>
-                <ul class="user-item__transports user-item-transports">
-                  <li class="user-item-transports__transport">
-                    <svg
-                      class="user-item-transports__icon user-item-transports__icon--plane user-item-transports__icon--checked"
-                      role="img"
-                      width="18px"
-                      height="20px"
-                      aria-label="активно"
-                    >
-                      <use xlink:href="#plane"></use>
-                    </svg>
-                    <span class="user-item__tooltip tooltip">Авиаперелет</span>
-                  </li>
-                  <li class="user-item-transports__transport">
-                    <svg
-                      class="user-item-transports__icon user-item-transports__icon--bus"
-                      role="img"
-                      width="17px"
-                      height="19px"
-                      aria-label="неактивно"
-                    >
-                      <use xlink:href="#bus"></use>
-                    </svg>
-                    <span class="user-item__tooltip tooltip"
-                      >Автотранспорт</span
-                    >
-                  </li>
-                  <li class="user-item-transports__transport">
-                    <svg
-                      class="user-item-transports__icon user-item-transports__icon--bike"
-                      role="img"
-                      width="24px"
-                      height="24px"
-                      aria-label="неактивно"
-                    >
-                      <use xlink:href="#bicycle"></use>
-                    </svg>
-                    <span class="user-item__tooltip tooltip">Велосипед</span>
-                  </li>
-                  <li class="user-item-transports__transport">
-                    <svg
-                      class="user-item-transports__icon user-item-transports__icon--walk"
-                      role="img"
-                      width="21px"
-                      height="23px"
-                      aria-label="неактивно"
-                    >
-                      <use xlink:href="#walk"></use>
-                    </svg>
-                    <span class="user-item__tooltip tooltip">Пешком</span>
-                  </li>
-                </ul>
+                <h3 class="user-item__name user-item__name--offline">
+                  <a class="user-item__link" href="#">Таня Фирсова</a>
+                </h3>
+                <div class="user-item__countries">
+                  <h4 class="visually-hidden">Страны</h4>
+                  <ul class="user-item__countries-list">
+                    <li class="user-item__country flag flag--sri-lanka">
+                      <span class="user-item__tooltip tooltip">Шри-Ланка</span>
+                    </li>
+                    <li class="user-item__country flag flag--thailand">
+                      <span class="user-item__tooltip tooltip">Тайланд</span>
+                    </li>
+                    <li class="user-item__country flag flag--seychelles">
+                      <span class="user-item__tooltip tooltip">Сейшелы</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="user-item__tags">
+                  <h4 class="visually-hidden">Тэги</h4>
+                  <ul class="tag-list tag-list--index">
+                    <li class="tag-list__item">
+                      <a class="tag-list__link" href="#">#ЗОЖ</a>
+                    </li>
+                    <li class="tag-list__item">
+                      <a class="tag-list__link" href="#">#ПП</a>
+                    </li>
+                    <li class="tag-list__item">
+                      <a class="tag-list__link" href="#">#Фитнес</a>
+                    </li>
+                    <li class="tag-list__item">
+                      <a class="tag-list__link" href="#">#пляж</a>
+                    </li>
+                    <li class="tag-list__item">
+                      <a class="tag-list__link" href="#">#авокадо</a>
+                    </li>
+                    <li class="tag-list__item">
+                      <a class="tag-list__link" href="#">#смузи</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="user-item__transports">
+                  <h4 class="visually-hidden">Транспорт</h4>
+                  <ul class="user-item-transports">
+                    <li class="user-item-transports__transport">
+                      <svg
+                        class="user-item-transports__icon user-item-transports__icon--plane user-item-transports__icon--checked"
+                        role="img"
+                        width="18px"
+                        height="20px"
+                        aria-label="активно"
+                      >
+                        <use xlink:href="#plane"></use>
+                      </svg>
+                      <span class="user-item__tooltip tooltip">Авиаперелет</span>
+                    </li>
+                    <li class="user-item-transports__transport">
+                      <svg
+                        class="user-item-transports__icon user-item-transports__icon--bus"
+                        role="img"
+                        width="17px"
+                        height="19px"
+                        aria-label="неактивно"
+                      >
+                        <use xlink:href="#bus"></use>
+                      </svg>
+                      <span class="user-item__tooltip tooltip"
+                        >Автотранспорт</span
+                      >
+                    </li>
+                    <li class="user-item-transports__transport">
+                      <svg
+                        class="user-item-transports__icon user-item-transports__icon--bike"
+                        role="img"
+                        width="24px"
+                        height="24px"
+                        aria-label="неактивно"
+                      >
+                        <use xlink:href="#bicycle"></use>
+                      </svg>
+                      <span class="user-item__tooltip tooltip">Велосипед</span>
+                    </li>
+                    <li class="user-item-transports__transport">
+                      <svg
+                        class="user-item-transports__icon user-item-transports__icon--walk"
+                        role="img"
+                        width="21px"
+                        height="23px"
+                        aria-label="неактивно"
+                      >
+                        <use xlink:href="#walk"></use>
+                      </svg>
+                      <span class="user-item__tooltip tooltip">Пешком</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
-            <li class="users__item user-item user-item--online">
+            <li class="users__item user-item">
               <div class="user-item__level level level--index">
                 <div class="level__wrap level__wrap--index">
                   <svg class="level__progress-ring" width="60" height="60">
@@ -610,84 +621,95 @@
                 </picture>
               </a>
               <div class="user-item__info">
-                <ul class="user-item__countries-list users-contries-list-index">
-                  <li class="user-item__country flag flag--belgium">
-                    <span class="user-item__tooltip tooltip">Бельгия</span>
-                  </li>
-                  <li class="user-item__country flag flag--czech">
-                    <span class="user-item__tooltip tooltip">Чехия</span>
-                  </li>
-                </ul>
-                <a class="user-item__name" href="#">Петя Демин</a>
-                <ul class="user-item__tag-list tag-list tag-list--index">
-                  <li class="tag-list__item">
-                    <a class="tag-list__link" href="#">#бургер</a>
-                  </li>
-                  <li class="tag-list__item">
-                    <a class="tag-list__link" href="#">#бар</a>
-                  </li>
-                  <li class="tag-list__item">
-                    <a class="tag-list__link" href="#">#футбол</a>
-                  </li>
-                  <li class="tag-list__item">
-                    <a class="tag-list__link" href="#">#концерт</a>
-                  </li>
-                  <li class="tag-list__item">
-                    <a class="tag-list__link" href="#">#крафт</a>
-                  </li>
-                </ul>
-                <ul class="user-item__transports user-item-transports">
-                  <li class="user-item-transports__transport">
-                    <svg
-                      class="user-item-transports__icon user-item-transports__icon--plane user-item-transports__icon--checked"
-                      role="img"
-                      width="18px"
-                      height="20px"
-                      aria-label="активно"
-                    >
-                      <use xlink:href="#plane"></use>
-                    </svg>
-                    <span class="user-item__tooltip tooltip">Авиаперелет</span>
-                  </li>
-                  <li class="user-item-transports__transport">
-                    <svg
-                      class="user-item-transports__icon user-item-transports__icon--bus user-item-transports__icon--checked"
-                      role="img"
-                      width="17px"
-                      height="19px"
-                      aria-label="активно"
-                    >
-                      <use xlink:href="#bus"></use>
-                    </svg>
-                    <span class="user-item__tooltip tooltip"
-                      >Автотранспорт</span
-                    >
-                  </li>
-                  <li class="user-item-transports__transport">
-                    <svg
-                      class="user-item-transports__icon user-item-transports__icon--bike"
-                      role="img"
-                      width="24px"
-                      height="24px"
-                      aria-label="неактивно"
-                    >
-                      <use xlink:href="#bicycle"></use>
-                    </svg>
-                    <span class="user-item__tooltip tooltip">Велосипед</span>
-                  </li>
-                  <li class="user-item-transports__transport">
-                    <svg
-                      class="user-item-transports__icon user-item-transports__icon--walk user-item-transports__icon--checked"
-                      role="img"
-                      width="21px"
-                      height="23px"
-                      aria-label="активно"
-                    >
-                      <use xlink:href="#walk"></use>
-                    </svg>
-                    <span class="user-item__tooltip tooltip">Пешком</span>
-                  </li>
-                </ul>
+                <h3 class="user-item__name user-item__name--online">
+                  <a class="user-item__link" href="#">Петя Демин</a>
+                </h3>
+                <div class="user-item__countries">
+                  <h4 class="visually-hidden">Страны</h4>
+                  <ul class="user-item__countries-list">
+                    <li class="user-item__country flag flag--belgium">
+                      <span class="user-item__tooltip tooltip">Бельгия</span>
+                    </li>
+                    <li class="user-item__country flag flag--czech">
+                      <span class="user-item__tooltip tooltip">Чехия</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="user-item__tags">
+                  <h4 class="visually-hidden">Тэги</h4>
+                  <ul class="tag-list tag-list--index">
+                    <li class="tag-list__item">
+                      <a class="tag-list__link" href="#">#бургер</a>
+                    </li>
+                    <li class="tag-list__item">
+                      <a class="tag-list__link" href="#">#бар</a>
+                    </li>
+                    <li class="tag-list__item">
+                      <a class="tag-list__link" href="#">#футбол</a>
+                    </li>
+                    <li class="tag-list__item">
+                      <a class="tag-list__link" href="#">#концерт</a>
+                    </li>
+                    <li class="tag-list__item">
+                      <a class="tag-list__link" href="#">#крафт</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="user-item__transports">
+                  <h4 class="visually-hidden">Транспорт</h4>
+                  <ul class="user-item-transports">
+                    <li class="user-item-transports__transport">
+                      <svg
+                        class="user-item-transports__icon user-item-transports__icon--plane user-item-transports__icon--checked"
+                        role="img"
+                        width="18px"
+                        height="20px"
+                        aria-label="активно"
+                      >
+                        <use xlink:href="#plane"></use>
+                      </svg>
+                      <span class="user-item__tooltip tooltip">Авиаперелет</span>
+                    </li>
+                    <li class="user-item-transports__transport">
+                      <svg
+                        class="user-item-transports__icon user-item-transports__icon--bus user-item-transports__icon--checked"
+                        role="img"
+                        width="17px"
+                        height="19px"
+                        aria-label="активно"
+                      >
+                        <use xlink:href="#bus"></use>
+                      </svg>
+                      <span class="user-item__tooltip tooltip"
+                        >Автотранспорт</span
+                      >
+                    </li>
+                    <li class="user-item-transports__transport">
+                      <svg
+                        class="user-item-transports__icon user-item-transports__icon--bike"
+                        role="img"
+                        width="24px"
+                        height="24px"
+                        aria-label="неактивно"
+                      >
+                        <use xlink:href="#bicycle"></use>
+                      </svg>
+                      <span class="user-item__tooltip tooltip">Велосипед</span>
+                    </li>
+                    <li class="user-item-transports__transport">
+                      <svg
+                        class="user-item-transports__icon user-item-transports__icon--walk user-item-transports__icon--checked"
+                        role="img"
+                        width="21px"
+                        height="23px"
+                        aria-label="активно"
+                      >
+                        <use xlink:href="#walk"></use>
+                      </svg>
+                      <span class="user-item__tooltip tooltip">Пешком</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </li>
           </ul>

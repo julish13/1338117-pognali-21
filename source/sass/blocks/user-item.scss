@@ -77,19 +77,22 @@
   display: none;
 }
 
-.user-item__countries-list {
+.user-item__countries {
   position: absolute;
   top: -10px;
   width: 100%;
+
+  @media #{$min-tablet} {
+    top: -13px;
+  }
+}
+
+.user-item__countries-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-left: 0;
   list-style: none;
-
-  @media #{$min-tablet} {
-    top: -13px;
-  }
 }
 
 .user-item__country {
@@ -119,6 +122,7 @@
 
 .user-item__name {
   position: relative;
+  margin-top: 0;
   margin-bottom: 15px;
   color: $basic-blue-light;
   font-size: 21px;
@@ -158,23 +162,26 @@
     content: "";
   }
 
-  .user-item--offline & {
+  &--offline {
     &::before {
       @include user-status-offline;
     }
   }
 
-  .user-item--online & {
+  &--online {
     &::before {
       @include user-status-online;
     }
   }
 }
 
-.user-item__tag-list {
+.user-item__link {
+  color: inherit;
+}
+
+.user-item__tags {
   margin-bottom: 11px;
   width: 180px;
-  text-align: center;
 
   @media #{$min-tablet} {
     margin-bottom: 20px;
@@ -184,8 +191,4 @@
   @media #{$min-desktop} {
     margin-bottom: 22px;
   }
-}
-
-.user-item__transports {
-  padding-left: 0;
 }
