@@ -6,21 +6,50 @@
   align-items: center;
   line-height: 1;
 
-  .level--index & {
+  &::before {
+    position: absolute;
+    top: 55%;
+    left: 23%;
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: $basic-white;
+    opacity: 0.3;
+  }
+
+  &--index {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     background-color: rgba($basic-black, 0.6);
+  }
+
+  &--form {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+
+    @media #{$min-tablet} {
+      width: 94px;
+      height: 94px;
+    }
 
     &::before {
-      position: absolute;
-      top: 60%;
-      left: 23%;
-      content: "";
-      width: 30px;
-      height: 1px;
-      background-color: $basic-white;
-      opacity: 0.3;
+      width: 51px;
+      background-color: $basic-grey-font;
+
+      @media #{$min-desktop} {
+        background-color: $basic-white;
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &--catalog {
+    &::before {
+      display: none;
     }
   }
 }
@@ -30,15 +59,25 @@
   font-size: 24px;
   font-weight: 700;
 
-  .level--index & {
-    margin-top: 7px;
+  &--index {
+    margin-top: 6px;
     margin-left: -3px;
     color: $basic-white;
   }
 
-  &--profile {
+  &--form {
+    margin-top: -5px;
+    margin-bottom: 9px;
     color: $basic-blue;
     font-size: 38px;
+
+    @media #{$min-tablet} {
+      margin-bottom: 6px;
+    }
+
+    @media #{$min-desktop} {
+      color: $basic-white;
+    }
   }
 
   &--catalog {
@@ -52,19 +91,27 @@
   font-size: 18px;
   font-weight: 400;
 
-  .level--index & {
+  &--index {
     margin-left: -3px;
     color: $basic-white;
     font-size: 14px;
   }
 
-  &--inherit {
-    font: inherit;
+  &--form {
+    @media #{$min-desktop} {
+      color: $basic-white;
+    }
   }
 }
 
 .level__progress-ring {
   position: absolute;
+
+  &--form {
+    @media #{$min-desktop} {
+      top: -7px;
+    }
+  }
 }
 
 .level__circle {
@@ -76,4 +123,17 @@
   transition: 0.35s stroke-dashoffset;
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
+
+  &--form {
+    stroke-width: 3;
+    transform: rotate(-90deg) scale(1.05);
+
+    @media #{$min-tablet} {
+      transform: rotate(-90deg) scale(0.99) translateX(3px);
+    }
+  }
+
+  &--catalog {
+    stroke-width: 3;
+  }
 }

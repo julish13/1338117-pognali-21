@@ -1,8 +1,77 @@
 .main-form {
-  background-color: $grey-background-1;
+  background-color: $light-blue-background-3;
   color: $basic-blue-light;
 }
 
-.main-form__heading {
+.main-form__header {
+  @include section-bottom-border-radius;
+  margin-top: 92px;
   background-color: $blue-background-2;
+
+  @media #{$min-tablet} {
+    margin-top: 219px;
+  }
+}
+
+.main-form__heading {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+  width: min-content;
+  margin-right: auto;
+
+  @media #{$min-tablet} {
+    padding-bottom: 71px;
+  }
+
+  @media #{$min-desktop} {
+    margin-left: 65px;
+  }
+
+  &::after {
+    @include heading-decoration;
+  }
+}
+
+.main-form__profile {
+  margin-top: -40px;
+  padding-top: 40px;
+}
+
+.main-form__plans {
+  border-radius: 30px 30px 0 0;
+  margin-top: 33px;
+  padding-top: 5px;
+  padding-bottom: 50px;
+
+  @media #{$min-tablet} {
+    margin-top: 36px;
+    padding-top: 26px;
+    padding-bottom: 85px;
+  }
+
+  @media #{$min-desktop} {
+    margin-top: 56px;
+    border-radius: 55px 55px 0 0;
+    padding-top: 21px;
+    padding-bottom: 72px;
+  }
+}
+
+.main-form__planning {
+  border-radius: 30px 30px 0 0;
+  margin-top: -35px;
+  padding-bottom: 142px;
+  padding-top: 9px;
+
+  @media #{$min-tablet} {
+    margin-top: -38px;
+    padding-bottom: 87px;
+  }
+
+  @media #{$min-desktop} {
+    border-radius: 55px 55px 0 0;
+    padding-bottom: 94px;
+  }
 }

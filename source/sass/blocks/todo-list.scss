@@ -28,15 +28,15 @@ $radius-tablet: 21px;
   position: relative;
   list-style: none;
   margin-bottom: -4px;
-  padding: 22px 24px 26px;
+  padding: 20px 24px 28px;
   border-radius: $radius-mobile $radius-mobile 0 0;
 
   @media #{$min-tablet} {
-    padding: 30px 35px 62px 32px;
+    padding: 32px 35px 63px 32px;
   }
 
   @media #{$min-desktop} {
-    padding: 30px 45px 30px 32px;
+    padding: 26px 45px 32px 32px;
   }
 
   &::after {
@@ -56,7 +56,7 @@ $radius-tablet: 21px;
 
     @media #{$min-desktop} {
       top: 25%;
-      right: 60px;
+      right: 63px;
       left: unset;
       font-size: inherit;
     }

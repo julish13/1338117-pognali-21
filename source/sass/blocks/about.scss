@@ -31,7 +31,7 @@
   z-index: 11;
   min-height: 356px;
   background-image: url("../img/about-mobile.png");
-  background-position: center top;
+  background-position: calc(50% + 7px) top;
   background-repeat: no-repeat;
 
   @media #{$min-tablet} {
@@ -49,12 +49,12 @@
 .about__inner {
   margin-left: 25px;
   margin-right: 34px;
-  padding-top: 32px;
+  padding-top: 34px;
   padding-bottom: 35px;
 
   @media #{$min-tablet} {
     margin-left: 33px;
-    padding-top: 276px;
+    padding-top: 274px;
     padding-right: 315px;
   }
 
@@ -66,10 +66,10 @@
 
 .about__subheading {
   margin-top: 0;
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 
   @media #{$min-tablet} {
-    margin-bottom: 39px;
+    margin-bottom: 40px;
   }
 
   @media #{$min-desktop} {
@@ -116,7 +116,7 @@
   }
 
   @media #{$min-tablet} {
-    margin-top: 54px;
+    margin-top: 52px;
     margin-right: 27px;
     max-width: 400px;
   }

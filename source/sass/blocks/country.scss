@@ -32,30 +32,30 @@
 
   &--thailand {
     &::before {
-      background-image: url("../img/thailand-35x24.png");
+      background-image: url("../img/thailand-small.png");
 
       @media #{$min-tablet} {
-        background-image: url("../img/thailand-70x47.png");
+        background-image: url("../img/thailand-big.png");
       }
     }
   }
 
   &--france {
     &::before {
-      background-image: url("../img/france-35x24.png");
+      background-image: url("../img/france-small.png");
 
       @media #{$min-tablet} {
-        background-image: url("../img/france-70x47.png");
+        background-image: url("../img/france-big.png");
       }
     }
   }
 
   &--czech {
     &::before {
-      background-image: url("../img/czech-35x24.png");
+      background-image: url("../img/czech-small.png");
 
       @media #{$min-tablet} {
-        background-image: url("../img/czech-70x47.png");
+        background-image: url("../img/czech-big.png");
       }
     }
 
@@ -174,7 +174,8 @@
     content: "";
     width: 14px;
     height: 14px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' viewBox='0 0 14 14'%3E%3Cpath fill='%23192144' d='M4.38 3.93A2.7 2.7 0 007 6.69a2.7 2.7 0 002.63-2.76A2.7 2.7 0 007 1.17a2.7 2.7 0 00-2.63 2.76zm7.29 8.9h.58v-.61a4.2 4.2 0 00-4.08-4.3H5.83a4.2 4.2 0 00-4.08 4.3v.61h9.92z' opacity='.1'/%3E%3C/svg%3E");
+    background-image: url("../img/user.svg");
+    background-repeat: no-repeat;
 
     @media #{$min-tablet} {
       left: -10%;

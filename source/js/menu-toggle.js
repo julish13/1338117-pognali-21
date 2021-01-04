@@ -1,6 +1,6 @@
 'use strict';
 
-(function () {
+(() => {
   const mainNavElement = document.querySelector(`.main-nav`);
   const mainNavInnerElement = mainNavElement.querySelector(`.main-nav__inner`);
   const mobileLogoElement = mainNavInnerElement.querySelector(`#logo-mobile`);
@@ -23,7 +23,7 @@
   mainNavElement.classList.remove(`main-nav--nojs`);
   setClosedMenuState();
 
-  toggleElement.addEventListener(`click`, function () {
+  toggleElement.addEventListener(`click`, () => {
     if (mainNavElement.classList.contains(`main-nav--closed`)) {
       mainNavElement.classList.remove(`main-nav--closed`);
       setOpenedMenuState();

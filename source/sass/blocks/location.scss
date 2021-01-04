@@ -35,6 +35,10 @@
   @media #{$min-tablet} {
     margin-left: 25px;
   }
+
+  @media #{$min-desktop} {
+    margin-left: 32px;
+  }
 }
 
 .location__button {

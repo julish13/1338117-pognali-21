@@ -1,12 +1,12 @@
 .contacts__wrap {
-  @include section-bottom-border-radius;
+  @include index-bottom-border-radius;
   position: relative;
   z-index: 5;
   padding-bottom: 12px;
   background-color: $blue-3;
 
   @media #{$min-tablet} {
-    padding-bottom: 35px;
+    padding-bottom: 30px;
   }
 
   @media #{$min-desktop} {
@@ -34,7 +34,7 @@
 }
 
 .contacts__links {
-  margin-top: 20px;
+  margin-top: 18px;
 
   @media #{$min-tablet} {
     margin-top: 41px;
@@ -66,12 +66,12 @@
 }
 
 .contacts__location {
-  @include section-bottom-border-radius;
+  @include index-bottom-border-radius;
   position: relative;
   z-index: 4;
   margin-top: -30px;
   padding-top: 45px;
-  padding-bottom: 34px;
+  padding-bottom: 36px;
 
   @media #{$min-tablet} {
     margin-top: -60px;

@@ -1,19 +1,70 @@
 .planning {
+  position: relative;
   background-color: $grey-background-3;
 }
 
+.planning__heading {
+  margin-top: 17px;
+  margin-bottom: 31px;
+
+  @media #{$min-tablet} {
+    margin-top: 40px;
+    margin-bottom: 59px;
+  }
+
+  @media #{$min-desktop} {
+    margin-top: 44px;
+    margin-left: 69px;
+  }
+}
+
 .planning__step {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 10px;
+  padding: 22px 24px 13px;
+  border: none;
+  border-radius: 10px;
   background-color: $basic-white;
+
+  @media #{$min-tablet} {
+    margin-bottom: 40px;
+    padding: 45px 40px;
+    border-radius: 30px;
+  }
 
   @media #{$min-desktop} {
     display: grid;
-    grid-template: repeat(4, min-content) / 20% 50% 30%;
+    grid-template: repeat(4, min-content) / 581px 1fr;
+    margin-bottom: 45px;
+    padding: 97px 159px 96px;
+    border-radius: 60px;
+  }
+
+  &--route {
+    @media #{$min-tablet} and #{$max-tablet} {
+      padding-left: 43px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &--fun {
+    @media #{$min-tablet} and #{$max-tablet} {
+      padding-left: 43px;
+    }
   }
 }
 
 .planning__subheading {
+  margin-bottom: 16px;
+
+  @media #{$min-tablet} {
+    margin-bottom: 35px;
+  }
+
   @media #{$min-desktop} {
-    grid-area: 1 / 1 / span 1 / span 2;
+    grid-area: 1 / 1 / span 1 / span 1;
+    margin-bottom: 0;
   }
 }
 
@@ -21,24 +72,121 @@
   color: $basic-grey-font;
   font-weight: 400;
 
+  @media #{$min-tablet} {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
   @media #{$min-desktop} {
-    grid-area: 2 / 1 / span 1 / span 2;
+    grid-area: 2 / 1 / span 1 / span 1;
+    margin-top: 33px;
+  }
+
+  br {
+    display: none;
+
+    @media #{$min-tablet} {
+      display: inline;
+    }
   }
 }
 
 .planning__states {
+  position: absolute;
+  top: 13px;
+  right: 35px;
+
   @media #{$min-desktop} {
-    grid-area: 1 / 3 / span 2 / span 1;
+    position: static;
+    grid-area: 1 / 2 / span 2 / span 1;
+    margin: 4px 44px 0 auto;
   }
 }
 
-.planning__body {
+.planning__dates,
+.planning__route,
+.planning__fun {
   @media #{$min-desktop} {
-    grid-area: 3 / 1 / span 1 / span 4;
+    grid-area: 3 / 1 / span 1 / span 2;
+  }
+}
+
+.planning__dates {
+  margin-top: 20px;
+
+  @media #{$min-tablet} {
+    margin-top: 40px;
+  }
+
+  @media #{$min-desktop} {
+    margin-top: 36px;
+    border-top: 1px solid $grey-1;
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+}
+
+.planning__route {
+  margin-top: 21px;
+  margin-bottom: 26px;
+
+  @media #{$min-tablet} {
+    position: relative;
+    margin-top: 34px;
+    margin-bottom: 0;
+    border-top: 1px solid $grey-1;
+    padding-top: 42px;
+    padding-bottom: 34px;
+  }
+
+  @media #{$min-desktop} {
+    margin-top: 37px;
+    padding-top: 62px;
+    padding-bottom: 41px;
+  }
+
+  &::after {
+    @media #{$min-tablet} {
+      position: absolute;
+      top: 0;
+      left: 398px;
+      content: "";
+      width: 1px;
+      height: 100%;
+      background-image: linear-gradient(to bottom, $grey-1 330px, transparent);
+    }
+
+    @media #{$min-desktop} {
+      left: 775px;
+      height: 120%;
+      background-image: none;
+      background-color: $grey-1;
+    }
+  }
+}
+
+.planning__select-country {
+  margin-bottom: 22px;
+
+  @media #{$min-tablet} {
+    margin-bottom: 15px;
+  }
+}
+
+.planning__buttons {
+  @media #{$min-tablet} {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media #{$min-desktop} {
+    grid-area: 4 / 1 / span 1 / span 2;
   }
 }
 
 .planning__button {
+  margin-bottom: 10px;
+  width: 100%;
   line-height: 1.76;
   text-transform: uppercase;
 
@@ -47,12 +195,102 @@
   }
 }
 
-.planning__buttons {
+.planning__button--next,
+.planning__button--submit {
+  @media #{$max-mobile} {
+    @include button-round;
+    padding: 11px 10px;
+  }
+
   @media #{$min-tablet} {
-    display: flex;
+    @include button-square;
+    border: none;
+    text-transform: none;
+    width: 286px;
+  }
+
+  &::after {
+    @media #{$min-tablet} {
+      right: 39px;
+    }
+  }
+}
+
+.planning__button--previous {
+  display: block;
+  margin-top: 13px;
+  margin-bottom: 0;
+  padding: 5px 10px 3px;
+  font-family: inherit;
+  color: $basic-blue-light;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.01em;
+
+  @media #{$min-tablet} {
+    @include button-after;
+    position: relative;
+    margin-top: 0;
+    padding: 29px 0;
+    width: auto;
+    font-size: 24px;
+    line-height: 0.92;
+    text-transform: none;
+    text-align: right;
+  }
+
+  &::after {
+    @media #{$min-tablet} {
+      transform: scaleX(-1);
+      top: 36%;
+      left: -33px;
+      right: 0;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.planning__button--submit {
+  cursor: pointer;
+
+  @media #{$max-mobile} {
+    margin-right: -5px;
+    margin-left: -5px;
+    width: 230px;
+  }
+
+  @media #{$min-tablet} {
+    font-family: inherit;
+  }
+}
+
+.planning__fun {
+  margin-top: 23px;
+  margin-bottom: 16px;
+  padding: 0;
+
+  @media #{$min-tablet} {
+    margin-top: 33px;
+    margin-bottom: 40px;
+    border-top: 1px solid $grey-1;
+    padding-top: 33px;
+    padding-right: 33px;
   }
 
   @media #{$min-desktop} {
-    grid-area: 4 / 1 / span 1 / span 4;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    padding-top: 78px;
   }
 }

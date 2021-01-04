@@ -1,6 +1,6 @@
 'use strict';
 
-(function () {
+(() => {
   const DESIGN_ADJUSTMENT = 5;
 
   const levelElementsCollection = document.querySelectorAll(`.level`);

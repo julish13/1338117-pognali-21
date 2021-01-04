@@ -2,7 +2,31 @@
   background-color: $light-blue-background-1;
 }
 
+.plans__heading {
+  @media #{$min-desktop} {
+    padding-left: 72px;
+  }
+}
+
+.plans__list {
+  margin-top: 33px;
+  padding-left: 0;
+
+  @media #{$min-tablet} {
+    margin-top: 52px;
+  }
+
+  @media #{$min-desktop} {
+    margin-top: 52px;
+    padding-left: 64px;
+  }
+}
+
 .plans__item {
+  list-style-position: inside;
+  padding: 22px 25px 25px;
+  margin-bottom: 10px;
+  border-radius: 10px;
   background-color: $basic-white;
   font-size: 14px;
   line-height: 1;
@@ -10,22 +34,124 @@
   text-transform: uppercase;
 
   @media #{$min-tablet} {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding: 21px 40px 18px;
+    counter-increment: myCounter;
+    font-size: 20px;
+  }
+
+  @media #{$min-desktop} {
+    align-items: baseline;
+    margin-bottom: 15px;
+    padding: 35px 39px 38px 94px;
+  }
+
+  &::marker {
+    font-size: 15px;
+  }
+
+  &::before {
+    @media #{$min-tablet} {
+      position: absolute;
+      right: 33px;
+      top: 40px;
+      display: inline;
+      content: counter(myCounter) ". ";
+      font-size: 20px;
+    }
+
+    @media #{$min-desktop} {
+      top: unset;
+      left: 43px;
+      font-weight: 500;
+    }
   }
 }
 
 .plans__title {
-  font-size: 14px;
+  display: inline;
+  font-size: 16px;
   text-transform: none;
   font-weight: 700;
+
+  @media #{$min-tablet} {
+    margin-top: 15px;
+    margin-bottom: 55px;
+    font-size: 24px;
+  }
 
   @media #{$min-tablet} and #{$max-tablet} {
     flex-basis: 100%;
   }
+
+  @media #{$min-desktop} {
+    margin: 0;
+  }
+}
+
+.plans__companion {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  letter-spacing: 0.07em;
+
+  @media #{$min-tablet} {
+    margin: 0;
+    letter-spacing: 0.1em;
+  }
+
+  @media #{$min-desktop} {
+    display: block;
+    margin-left: auto;
+    min-width: 145px;
+  }
+}
+
+.plans__dates {
+  margin-top: 5px;
+  margin-bottom: 24px;
+  letter-spacing: 0.07em;
+
+  @media #{$min-tablet} {
+    margin: 0 0 0 auto;
+    letter-spacing: 0.06em;
+  }
+
+  @media #{$min-desktop} {
+    display: block;
+    margin-left: 32px;
+    min-width: 190px;
+  }
+
+  span {
+    display: inline-block;
+    transform: scaleX(1.7) translateX(0.2em);
+    letter-spacing: 0.5em;
+  }
 }
 
 .plans__edit {
+  position: relative;
   color: rgba($basic-black, 0.3);
+  letter-spacing: 0.04em;
+
+  @media #{$min-tablet} {
+    margin-left: 77px;
+    letter-spacing: 0.1em;
+  }
+
+  @media #{$min-desktop} {
+    margin-left: 116px;
+  }
+
+  &:hover,
+  &:focus {
+    color: rgba($basic-black, 0.6);
+  }
+
+  &:active {
+    color: rgba($basic-black, 0.1);
+  }
 }

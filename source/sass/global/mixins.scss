@@ -1,16 +1,24 @@
-@mixin section-bottom-border-radius {
-  border-radius: 0 0 27px 27px;
+@mixin index-bottom-border-radius {
+  border-radius: 0 0 30px 30px;
 
   @media #{$min-tablet} {
     border-radius: 0 0 57px 57px;
   }
 }
 
-@mixin section-top-border-radius {
-  border-radius: 27px 27px 0 0;
+@mixin index-top-border-radius {
+  border-radius: 30px 30px 0 0;
 
   @media #{$min-tablet} {
     border-radius: 57px 57px 0 0;
+  }
+}
+
+@mixin section-bottom-border-radius {
+  border-radius: 0 0 20px 20px;
+
+  @media #{$min-tablet} {
+    border-radius: 0 0 57px 57px;
   }
 }
 
@@ -45,4 +53,98 @@
   border-style: solid;
   border-width: 0 8px 10px 8px;
   border-color: transparent transparent $blue-5 transparent;
+}
+
+@mixin heading-decoration {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 5px;
+  border-radius: 2px;
+  background-color: $orange-1;
+
+  @media #{$min-tablet} {
+    height: 7px;
+  }
+}
+
+@mixin button-after {
+  &::after {
+    position: absolute;
+    top: 40%;
+    right: 8.5%;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6.5px 0 6.5px 10.22px;
+    border-color: transparent transparent transparent $basic-blue-light;
+
+    @media #{$min-tablet} {
+      border-width: 7px 0 7px 10.22px;
+      right: 34px;
+      top: 42%;
+    }
+  }
+}
+
+@mixin button-square {
+  @include button-after;
+
+  position: relative;
+  display: block;
+  border-radius: 10px;
+  padding: 21px 22px 23px;
+  background-color: $yellow-1;
+  color: $basic-blue-light;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 700;
+  text-align: left;
+
+  @media #{$min-tablet} {
+    border-radius: 20px;
+    padding: 28px 32px;
+    font-size: 24px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $yellow-2;
+  }
+
+  &:active {
+    background-color: $yellow-2;
+    color: rgba($basic-blue-light, 0.3);
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+
+@mixin button-round {
+  display: block;
+  background-color: $yellow-1;
+  border: none;
+  border-radius: 25px;
+  font-family: inherit;
+  color: $basic-blue-light;
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+
+  &:hover,
+  &:focus {
+    background-color: $yellow-2;
+  }
+
+  &:active {
+    background-color: $yellow-2;
+    color: rgba($basic-blue-light, 0.3);
+  }
 }

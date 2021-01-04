@@ -1,21 +1,178 @@
 .calendar__header {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 0 12px;
+  border-top: 1px solid $light-blue-background-4;
+  border-bottom: 1px solid $light-blue-background-4;
+
+  @media #{$min-tablet} {
+    margin-bottom: 33px;
+    padding: 23px 17px 26px;
+  }
+
+  @media #{$min-desktop} {
+    margin-bottom: 0;
+    padding: 23px 2px 26px;
+  }
+}
+
+.calendar__title {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 700;
+  text-align: center;
+
+  @media #{$min-tablet} {
+    font-size: 36px;
+  }
+}
+
+.calendar__swipe {
+  cursor: pointer;
+  display: block;
+  padding: 0;
+  margin-top: 2px;
+  border: none;
+  width: 10px;
+  height: 18px;
+  background-color: transparent;
+  background-image: url("../../img/arrow-left.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.3;
+
+  @media #{$min-tablet} {
+    width: 19px;
+    height: 34px;
+  }
+
+  @media #{$min-desktop} {
+    margin-top: 7px;
+    width: 15.5px;
+    height: 28px;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.5;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 0.1;
+  }
+
+  &--left {
+    transform: scaleX(-1);
+  }
 }
 
 .calendar__table {
+  width: 100%;
+  border-collapse: collapse;
   font-size: 14px;
   line-height: 1.29;
   font-weight: 400;
+
+  @media #{$min-tablet} {
+    font-size: 18px;
+  }
+
+  @media #{$min-desktop} {
+    margin-top: 14px;
+    table-layout: fixed;
+  }
 }
 
 .calendar__day {
+  padding-bottom: 8px;
   font-weight: inherit;
+
+  @media #{$min-desktop} {
+    padding-left: 17px;
+    padding-bottom: 18px;
+    text-align: left;
+  }
 
   &--weekend {
     color: $orange-3;
   }
+
+  span {
+    display: none;
+
+    @media #{$min-tablet} {
+      display: inline;
+    }
+  }
+}
+
+.calendar__figure {
+  @include border;
+  height: 31px;
+  background-color: $grey-background-1;
+  text-align: center;
+
+  @media #{$min-tablet} {
+    height: 69px;
+  }
+
+  @media #{$min-desktop} {
+    padding-left: 16px;
+    padding-top: 10px;
+    height: 71px;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  &--disabled {
+    background-color: transparent;
+  }
+
+  &--chosen {
+    background-color: $basic-blue-light;
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    position: relative;
+    box-shadow: 0 0 0 4px $orange-3;
+  }
 }
 
 .calendar__label {
-  color: rgba($basic-grey-font, 0.3);
+  color: $basic-grey-font;
+
+  &--disabled {
+    opacity: 0.3;
+  }
+
+  &--chosen {
+    color: $basic-white;
+  }
+
+  &--text {
+    span {
+      display: none;
+    }
+
+    @media #{$min-desktop} {
+      span {
+        display: inline;
+      }
+    }
+  }
+}
+
+.calendar__month {
+  display: none;
+
+  @media #{$min-desktop} {
+    display: inline;
+  }
 }

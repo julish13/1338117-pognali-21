@@ -12,7 +12,7 @@
 
   @media #{$min-desktop} {
     display: grid;
-    grid-template: repeat(3, min-content) / 630px 1fr;
+    grid-template: repeat(2, min-content) max-content / 630px 1fr;
     grid-column-gap: 137px;
     padding-top: 76px;
     padding-bottom: 50px;
@@ -49,14 +49,14 @@
   }
 
   @media #{$min-desktop} {
-    margin-bottom: 31px;
+    margin-bottom: 26px;
   }
 }
 
 .countries__description {
   margin-left: 25px;
   margin-right: 50px;
-  margin-bottom: 63px;
+  margin-bottom: 61px;
 
   @media #{$min-tablet} {
     margin-left: 33px;

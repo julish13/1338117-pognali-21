@@ -22,6 +22,17 @@ $mobile-padding: 25px;
 $tablet-padding: 40px;
 $desktop-padding: 60px;
 
+$countries : sri-lanka,
+  thailand,
+  seychelles,
+  belgium,
+  czech,
+  usa,
+  australia,
+  dominica,
+  uk,
+  germany;
+
 $basic-white: hsl(0, 0, 100%);
 $basic-black: hsl(0, 100%, 0%);
 $basic-grey-font: hsl(0, 0, 27%);
@@ -42,12 +53,24 @@ $grey-background-3: hsl(227, 37%, 88%);
 $grey-background-4: hsl(229, 38%, 92%);
 $light-blue-background-1: hsl(226, 36%, 91%);
 $light-blue-background-2: hsl(230, 39%, 88%);
+$light-blue-background-3: hsl(233, 33%, 95%);
+$light-blue-background-4: hsl(229, 24%, 87%);
+$light-blue-background-5: hsl(228, 35%, 92%);
+
 $grey-1: hsl(227, 16%, 82%);
 $grey-2: hsl(0, 0%, 80%);
 $grey-3: hsl(225, 15%, 90%);
 $grey-4: hsl(0, 0%, 95%);
 $grey-5: hsl(220, 16%, 89%);
 $grey-6: hsl(228, 26%, 96%);
+$grey-7: hsl(0, 0%, 85%);
+$grey-8: hsl(230, 4%, 70%);
+$grey-8: hsl(223, 6%, 77%);
+$grey-9: hsl(228, 22%, 74%);
+$grey-10: hsl(225, 35%, 87%);
+$grey-11: hsl(0, 0%, 30%);
+$grey-12: hsl(228, 16%, 64%);
+$grey-13: hsl(0, 0%, 70%);
 
 $orange-1: hsl(27, 100%, 59%);
 $orange-2: hsl(34, 100%, 59%);
@@ -56,8 +79,12 @@ $orange-5: hsl(20, 89%, 55%);
 
 $yellow-1: hsl(47, 100%, 65%);
 $yellow-2: hsl(41, 100%, 59%);
+$yellow-3: hsl(47, 89%, 56%);
 
 $green-1: hsl(90, 78%, 50%);
 
 $red-1: hsl(0, 92%, 72%);
 $red-2: hsl(0, 100%, 50%);
+$red-3: hsl(0, 100%, 97%);
+$red-4: hsl(0, 56%, 95%);
+$red-5: hsl(0, 87%, 54%);

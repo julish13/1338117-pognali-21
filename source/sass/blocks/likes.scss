@@ -5,3 +5,43 @@
   font-weight: 700;
   text-transform: uppercase;
 }
+
+.likes__label {
+  display: flex;
+  align-items: center;
+}
+
+.likes__wrap {
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 50%;
+  width: 31px;
+  height: 31px;
+  background-color: $grey-background-4;
+}
+
+.likes__icon {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: $blue-background-1;
+  opacity: 0.5;
+}
+
+// input:not(:checked) + .likes__label {
+//   .likes__icon {
+//     fill-rule: evenodd;
+//   }
+// }
+
+input:checked + .likes__label {
+  .likes__wrap {
+    background-color: $red-4;
+  }
+
+  .likes__icon {
+    fill: $red-5;
+    // opacity: 1;
+  }
+}

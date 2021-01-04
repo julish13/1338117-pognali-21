@@ -23,12 +23,12 @@
 .user-item__level {
   position: absolute;
   z-index: 20;
-  top: 15px;
+  top: 18px;
   left: 18px;
 
   @media #{$min-tablet} {
-    top: 18px;
-    left: 21px;
+    top: 20px;
+    left: 22px;
   }
 }
 
@@ -60,10 +60,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 25px 20px 12px;
+  padding: 25px 20px 16px;
 
   @media #{$min-tablet} {
-    padding: 28px 20px 16px;
+    padding: 28px 20px 25px;
+  }
+
+  @media #{$min-desktop} {
+    padding-bottom: 22px;
   }
 }
 
@@ -73,19 +77,22 @@
   display: none;
 }
 
-.user-item__countries-list {
+.user-item__countries {
   position: absolute;
   top: -10px;
   width: 100%;
+
+  @media #{$min-tablet} {
+    top: -13px;
+  }
+}
+
+.user-item__countries-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-left: 0;
   list-style: none;
-
-  @media #{$min-tablet} {
-    top: -13px;
-  }
 }
 
 .user-item__country {
@@ -115,6 +122,7 @@
 
 .user-item__name {
   position: relative;
+  margin-top: 0;
   margin-bottom: 15px;
   color: $basic-blue-light;
   font-size: 21px;
@@ -154,54 +162,39 @@
     content: "";
   }
 
-  .user-item--offline & {
+  &--offline {
     &::before {
       @include user-status-offline;
     }
   }
 
-  .user-item--online & {
+  &--online {
     &::before {
       @include user-status-online;
     }
   }
 }
 
-.user-item__tag-list {
-  margin-bottom: 15px;
+.user-item__link {
+  color: inherit;
+}
+
+.user-item__tags {
+  margin-bottom: 11px;
   width: 180px;
+  line-height: 1.15;
   text-align: center;
 
   @media #{$min-tablet} {
-    margin-bottom: 29px;
+    margin-bottom: 20px;
     width: 225px;
   }
-}
 
-.user-item__transports {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-left: 0;
-  list-style: none;
-}
-
-.user-item__transport {
-  position: relative;
-
-  &:hover,
-  &:focus {
-    cursor: pointer;
-
-    .user-item__tooltip {
-      display: block;
-      left: -60px;
-      top: 33px;
-    }
-
-    &::after {
-      @include tooltip-tail;
-      top: 23px;
-    }
+  @media #{$min-desktop} {
+    margin-bottom: 22px;
   }
+}
+
+.user-item__transport-list {
+  padding-left: 0;
 }

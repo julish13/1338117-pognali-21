@@ -23,7 +23,7 @@
     min-height: 995px;
     background-image: url("../img/traveller-illustration-tablet.png"),
       url("../img/globe-back-tablet.png");
-    background-position: right 28% bottom 25%, center bottom;
+    background-position: right 28% bottom 26%, center bottom;
     background-repeat: no-repeat;
   }
 
@@ -89,6 +89,7 @@
 .promo__buttons {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   margin-top: -20px;
   color: $basic-blue;
 
@@ -99,6 +100,7 @@
 
 .promo__contacts {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .promo__contact {
@@ -106,7 +108,7 @@
 }
 
 .promo__login {
-  padding: 10px 40px;
+  padding: 10px 39px 10px 40px;
   color: inherit;
 }
 
@@ -126,6 +128,7 @@
 
   @media #{$min-tablet} {
     margin-top: auto;
+    padding-bottom: 36px;
     background-color: transparent;
   }
 

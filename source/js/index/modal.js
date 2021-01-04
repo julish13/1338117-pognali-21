@@ -1,6 +1,6 @@
 'use strict';
 
-(function () {
+(() => {
   const EVENT_KEYS = {
     ESC: `Escape`,
     ENTER: `Enter`
@@ -19,7 +19,7 @@
   const onPopupEscPress = (evt) => {
     if (evt.key === EVENT_KEYS.ESC) {
       evt.preventDefault();
-      onClickonClickClosePopup();
+      onClickClosePopup();
     }
   };
 

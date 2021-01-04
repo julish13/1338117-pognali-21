@@ -50,7 +50,7 @@
 
 .review__quote {
   @include review;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
   @media #{$min-tablet} {
     margin-bottom: 45px;

@@ -1,12 +1,44 @@
 .level-filter__values {
+  position: relative;
   display: flex;
+  margin-bottom: 24px;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    border-top: 5px solid $basic-white;
+    border-bottom: 5px solid $basic-white;
+    width: 16px;
+    height: 11px;
+    background-color: $grey-1;
+  }
 }
 
-.level-filter__value {
+.level-filter__input {
+  @include border;
+  padding: 8px;
   width: 50%;
   font-family: inherit;
   color: inherit;
   font-size: 14px;
   line-height: 0.93;
   font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  &:first-child {
+    border-radius: 4px 0 0 4px;
+    border-right: none;
+  }
+
+  &:last-child {
+    border-radius: 0 4px 4px 0;
+  }
+}
+
+.level-filter__range-controls {
+  margin-bottom: 25px;
 }

@@ -7,6 +7,9 @@
 .filter-personality-field__header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 11px;
 }
 
 .filter-personality-field__title {
@@ -17,22 +20,140 @@
 }
 
 .filter-personality-field__toggle {
+  padding: 0;
+  border-style: solid;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+
   @media #{$min-tablet} and #{$max-tablet} {
     display: none;
+  }
+
+  .filter-personality-field--nojs & {
+    display: none;
+  }
+
+  .filter-personality-field--opened & {
+    display: inline-block;
+    margin-top: 0;
+    border-width: 0 4px 5px 4px;
+    border-color: transparent transparent $blue-background-1 transparent;
+  }
+
+  .filter-personality-field--closed & {
+    display: inline-block;
+    margin-top: 4px;
+    border-width: 5px 4px 0 4px;
+    border-color: $blue-background-1 transparent transparent transparent;
   }
 }
 
 .filter-personality-field__list {
+  margin-top: 14px;
+  margin-bottom: 18px;
+  padding-left: 27px;
   list-style: none;
 
   @media #{$min-tablet} and #{$max-tablet} {
     display: flex;
   }
+
+  &--transport {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 17px;
+    margin-bottom: 19px;
+    padding-left: 0;
+  }
+
+  .filter-personality-field--closed & {
+    @media #{$max-mobile} {
+      display: none;
+    }
+
+    @media #{$min-desktop} {
+      display: none;
+    }
+  }
+}
+
+.filter-personality-field__item {
+  margin-bottom: 8px;
 }
 
 .filter-personality-field__label {
+  position: relative;
   color: $basic-black;
   font-size: 15px;
   line-height: 1.33;
   font-weight: 400;
+
+  &::before {
+    cursor: pointer;
+    position: absolute;
+    top: -1px;
+    left: -27px;
+    width: 18px;
+    height: 18px;
+    background-color: $basic-white;
+    border-radius: 4px;
+    content: "";
+
+    @media #{$min-tablet} {
+      left: -57px;
+      width: 36px;
+      height: 36px;
+    }
+  }
+}
+
+input:checked + .filter-personality-field__label {
+  &::before {
+    background-image: url("../img/yes.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 8px 8px;
+
+    @media #{$min-tablet} {
+      background-size: 12px 12px;
+    }
+  }
+}
+
+input:hover + .filter-personality-field__label,
+input:focus + .filter-personality-field__label {
+  &::before {
+    border-color: $grey-12;
+  }
+}
+
+input:active + .filter-personality-field__label {
+  &::before {
+    background-color: $light-blue-background-5;
+  }
+}
+
+input:checked:active + .filter-personality-field__label {
+  &::before {
+    opacity: 0.3;
+  }
+}
+
+.filter-personality-field__transport {
+  margin-right: 1px;
+}
+
+.filter-personality-field__level-filter {
+  margin-top: 14px;
+
+  .filter-personality-field--closed & {
+    @media #{$max-mobile} {
+      display: none;
+    }
+
+    @media #{$min-desktop} {
+      display: none;
+    }
+  }
 }
