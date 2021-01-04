@@ -7,6 +7,9 @@
 .catalog-header__inner {
   @media #{$min-tablet} {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -15,6 +18,10 @@
   margin: 0;
   padding-bottom: 14px;
   width: min-content;
+
+  @media #{$min-tablet} {
+    padding-bottom: 72px;
+  }
 
   &::after {
     @include heading-decoration;
@@ -25,4 +32,18 @@
   @media #{$max-mobile} {
     display: none;
   }
+
+  @media #{$min-tablet} {
+    padding-bottom: 60px;
+    color: $basic-white;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
+
+.catalog-header__icon {
+  margin-left: 21px;
+  fill: currentColor;
 }

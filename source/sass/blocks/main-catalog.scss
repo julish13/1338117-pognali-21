@@ -11,6 +11,7 @@
 
   @media #{$min-tablet} {
     display: flex;
+    padding-top: 218px;
   }
 }
 
@@ -23,6 +24,11 @@
 .main-catalog__filter-countries {
   margin-top: -20px;
   padding-top: 41px;
+
+  @media #{$min-tablet} {
+    margin-top: -50px;
+    padding-top: 112px;
+  }
 }
 
 .main-catalog__inner {

@@ -264,13 +264,23 @@
       <header class="main-catalog__header catalog-header">
         <div class="catalog-header__inner container-fix">
           <h1 class="main-heading catalog-header__heading">Попутчики</h1>
-          <a class="catalog-header__home">На главную</a>
+          <a class="catalog-header__home" href="index.html">
+            На главную
+            <svg
+              class="catalog-header__icon"
+              role="img"
+              width="32px"
+              height="16px"
+            >
+              <use xlink:href="#arrow-bend"></use>
+            </svg>
+          </a>
         </div>
       </header>
       <section class="filter-countries filter-countries--nojs main-catalog__filter-countries">
         <div class="filter-countries__wrapper">
           <div class="filter-countries__underlay">
-            <div class="filter-countries__inner container-fix">
+            <div class="filter-countries__inner container-fix container-fix--catalog">
               <div class="filter-countries__header">
                 <h2 class="filter-countries__heading">Фильтрация по странам:</h2>
                 <button
@@ -1297,7 +1307,7 @@
           </div>
         </div>
       </section>
-      <div class="main-catalog__inner container-fix">
+      <div class="main-catalog__inner container-fix container-fix--catalog">
         <section class="filter-personality main-catalog__filter-personality">
           <h2 class="visually-hidden">Фильтрация по профилю</h2>
           <form
