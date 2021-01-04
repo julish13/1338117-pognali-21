@@ -26,14 +26,9 @@
   left: 50%;
   transform: translate(-50%, -50%);
   fill: $blue-background-1;
+  fill-rule: evenodd;
   opacity: 0.5;
 }
-
-// input:not(:checked) + .likes__label {
-//   .likes__icon {
-//     fill-rule: evenodd;
-//   }
-// }
 
 input:checked + .likes__label {
   .likes__wrap {
@@ -42,6 +37,7 @@ input:checked + .likes__label {
 
   .likes__icon {
     fill: $red-5;
-    // opacity: 1;
+    fill-rule: unset;
+    opacity: 1;
   }
 }
