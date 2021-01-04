@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  padding-left: 0;
   list-style: none;
 }
 
@@ -26,6 +25,14 @@
       top: 23px;
     }
   }
+}
+
+.user-item-transports__transport--catalog {
+  margin-right: 1px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-color: $grey-background-1;
 }
 
 .user-item-transports__icon {
@@ -71,6 +78,39 @@
   }
 
   &--walk {
+    @media #{$min-tablet} {
+      top: 60%;
+    }
+  }
+
+  &--plane-catalog {
+    top: 47%;
+    left: 46%;
+
+    @media #{$min-tablet} {
+      top: 53%;
+      left: 43%;
+    }
+  }
+
+  &--bike-catalog {
+    @media #{$min-tablet} {
+      top: 60%;
+      left: 55%;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &--bus-catalog {
+    @media #{$min-tablet} {
+      left: 50%;
+      width: 18px;
+      height: 21px;
+    }
+  }
+
+  &--walk-catalog {
     @media #{$min-tablet} {
       top: 60%;
     }

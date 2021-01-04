@@ -1358,7 +1358,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="filter-personality__field filter-personality-field filter-personality-field--nojs">
+                <div class="filter-personality__field filter-personality-fields filter-personality-field--nojs">
                   <p class="filter-personality-field__header">
                     <span class="filter-personality-field__title">Музыка</span>
                     <button
@@ -1460,7 +1460,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="filter-personality__field filter-personality-field filter-personality-field--nojs">
+                <div class="filter-personality__field filter-personality-fields filter-personality-field--nojs">
                   <p class="filter-personality-field__header">
                     <span class="filter-personality-field__title"
                       >Транспорт</span
@@ -1472,7 +1472,7 @@
                     ></button>
                   </p>
                   <ul class="filter-personality-field__list filter-personality-field__list--transport">
-                    <li class="filter-personality-field__transport transport-button">
+                    <li class="filter-personality-field__transport transport-checkbox">
                       <input
                         class="visually-hidden"
                         type="checkbox"
@@ -1481,9 +1481,9 @@
                         checked
                         aria-label="На самолете"
                       />
-                      <label class="transport-button__wrap" for="planeInput" tabindex="0">
+                      <label class="transport-checkbox__wrap" for="planeInput" tabindex="0">
                         <svg
-                          class="transport-button__icon"
+                          class="transport-checkbox__icon"
                           role="img"
                           width="15px"
                           height="16px"
@@ -1492,7 +1492,7 @@
                         </svg>
                       </label>
                     </li>
-                    <li class="filter-personality-field__transport transport-button">
+                    <li class="filter-personality-field__transport transport-checkbox">
                       <input
                         class="visually-hidden"
                         type="checkbox"
@@ -1501,9 +1501,9 @@
                         checked
                         aria-label="На автобусе"
                       />
-                      <label class="transport-button__wrap" for="busInput" tabindex="0">
+                      <label class="transport-checkbox__wrap" for="busInput" tabindex="0">
                         <svg
-                          class="transport-button__icon"
+                          class="transport-checkbox__icon"
                           role="img"
                           width="17px"
                           height="16px"
@@ -1512,7 +1512,7 @@
                         </svg>
                       </label>
                     </li>
-                    <li class="filter-personality-field__transport transport-button">
+                    <li class="filter-personality-field__transport transport-checkbox">
                       <input
                         class="visually-hidden"
                         type="checkbox"
@@ -1520,9 +1520,9 @@
                         id="bikeInput"
                         aria-label="На велосипеде"
                       />
-                      <label class="transport-button__wrap" for="bikeInput" tabindex="0">
+                      <label class="transport-checkbox__wrap" for="bikeInput" tabindex="0">
                         <svg
-                          class="transport-button__icon"
+                          class="transport-checkbox__icon"
                           role="img"
                           width="17px"
                           height="16px"
@@ -1531,7 +1531,7 @@
                         </svg>
                       </label>
                     </li>
-                    <li class="filter-personality-field__transport transport-button">
+                    <li class="filter-personality-field__transport transport-checkbox">
                       <input
                         class="visually-hidden"
                         type="checkbox"
@@ -1540,9 +1540,9 @@
                         checked
                         aria-label="Пешком"
                       />
-                      <label class="transport-button__wrap" for="walkInput" tabindex="0">
+                      <label class="transport-checkbox__wrap" for="walkInput" tabindex="0">
                         <svg
-                          class="transport-button__icon"
+                          class="transport-checkbox__icon"
                           role="img"
                           width="17px"
                           height="16px"
@@ -1553,7 +1553,7 @@
                     </li>
                   </ul>
                 </div>
-                <div class="filter-personality__field filter-personality-field filter-personality-field--nojs">
+                <div class="filter-personality__field filter-personality-fields filter-personality-field--nojs">
                   <p class="filter-personality-field__header">
                     <span class="filter-personality-field__title">Левел</span>
                     <button
@@ -1610,355 +1610,650 @@
           <h2 class="visually-hidden">Список пользователей</h2>
           <ul class="user-catalog__list">
             <li class="user-catalog__item user-catalog-item">
-              <a class="user-catalog-item__photo" href="#">
-                <img
-                  src="https://via.placeholder.com/150x150"
-                  alt="Фото пользователя"
-                />
+              <a class="user-catalog-item__photo-wrap" href="#">
+                <picture>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="img/firsova-285.jpg 1x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/firsova-190.jpg 1x"
+                  />
+                  <img
+                    class="user-catalog-item__photo"
+                    width="70"
+                    height="70"
+                    src="img/firsova-70.jpg"
+                    alt="Фото пользователя"
+                  />
+                </picture>
               </a>
-              <a class="user-catalog-item__name status status--offline" href="#"
-                >Таня Фирсова</a
-              >
+              <h3 class="user-catalog-item__name user-catalog-item__name--offline">
+                <a class="user-catalog-item__link" href="#">Таня <br>Фирсова</a>
+              </h3>
               <div class="user-catalog-item__likes likes">
-                <label class="likes__amount">
-                  <input
-                    class="likes__button visually-hidden"
-                    type="checkbox"
-                    aria-label="лайк"
-                  />1,5 М
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  aria-label="лайк"
+                  id="firsova-likes"
+                  checked
+                />
+                <label class="likes__label" for="firsova-likes">
+                  <span class="likes__wrap">
+                    <svg
+                      class="likes__icon"
+                      role="img"
+                      width="12px"
+                      height="12px"
+                    >
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </span>
+                  <span>1,5 М</span>
                 </label>
               </div>
-              <ul class="user-catalog-item__tag-list tag-list">
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#ЗОЖ</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#ПП</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#Фитнес</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#пляж</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#авокадо</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#смузи</a>
-                </li>
-              </ul>
-              <div class="user-catalog-item__country">
-                <p class="user-catalog-item__subheading">хочет посетить:</p>
+              <div class="user-catalog-item__tags">
+                <h4 class="visually-hidden">Тэги</h4>
+                <ul class="tag-list">
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#ЗОЖ</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#ПП</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#Фитнес</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#пляж</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#авокадо</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#смузи</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="user-catalog-item__countries">
+                <h4 class="user-catalog-item__subheading">
+                  <span class="user-catalog-item__subheading-text">хочет посетить:</span>
+                </h4>
                 <ul
-                  class="user-catalog-item__countries-list users-contries-list"
+                  class="user-catalog-item__countries-list users-catalog-contries-list"
                 >
                   <li
-                    class="users-contries-list__country users-contries-list__country--sri-lanka"
+                    class="users-catalog-contries-list__country users-catalog-contries-list__country--sri-lanka"
                   >
-                    Шри Ланка
+                    Шри-Ланка
                   </li>
                   <li
-                    class="users-contries-list__country users-contries-list__country--thailand"
+                    class="users-catalog-contries-list__country users-catalog-contries-list__country--thailand"
                   >
                     Тайланд
                   </li>
                   <li
-                    class="users-contries-list__country users-contries-list__country--seychelles"
+                    class="users-catalog-contries-list__country users-catalog-contries-list__country--seychelles"
                   >
                     Сейшелы
                   </li>
                 </ul>
               </div>
-              <div class="user-catalog-item__transport">
-                <p class="user-catalog-item__subheading">транспорт:</p>
-                <ul class="user-catalog-item__transport-list transport">
-                  <li
-                    class="transport__button transport__button--plane transport__button--checked"
-                  >
-                    <span class="visually-hidden">На самолете, активно</span>
+              <div class="user-catalog-item__transports">
+                <h4 class="user-catalog-item__subheading">
+                  <span class="user-catalog-item__subheading-text">транспорт:</span>
+                </h4>
+                <ul class="user-catalog-item__transport-list user-item-transports">
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--plane-catalog user-item-transports__icon--checked"
+                      role="img"
+                      width="14px"
+                      height="16px"
+                      aria-label="активно"
+                    >
+                      <use xlink:href="#plane"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip">Авиаперелет</span>
                   </li>
-                  <li class="transport__button transport__button--bus">
-                    <span class="visually-hidden">На автобусе, неактивно</span>
-                  </li>
-                  <li class="transport__button transport__button--bike">
-                    <span class="visually-hidden"
-                      >На велосипеде, неактивно</span
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--bus-catalog"
+                      role="img"
+                      width="13px"
+                      height="16px"
+                      aria-label="неактивно"
+                    >
+                      <use xlink:href="#bus"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip"
+                      >Автотранспорт</span
                     >
                   </li>
-                  <li class="transport__button transport__button--walk">
-                    <span class="visually-hidden">Пешком, неактивно</span>
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--bike-catalog"
+                      role="img"
+                      width="15px"
+                      height="17px"
+                      aria-label="неактивно"
+                    >
+                      <use xlink:href="#bike"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip">Велосипед</span>
+                  </li>
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--walk-catalog"
+                      role="img"
+                      width="13px"
+                      height="17px"
+                      aria-label="неактивно"
+                    >
+                      <use xlink:href="#walk"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip">Пешком</span>
                   </li>
                 </ul>
               </div>
-              <div class="user-catalog-item__level level">
-                <p class="level__text level__text--inherit">левел:</p>
-                <p class="level__value level__value--catalog">99</p>
+              <div class="user-catalog-item__level">
+                <h4 class="user-catalog-item__subheading">
+                  <span class="user-catalog-item__subheading-text">левел:</span>
+                </h4>
+                <div class="user-catalog-item__level-body level">
+                  <div class="level__wrap level__wrap--catalog">
+                    <svg class="level__progress-ring" width="45" height=45>
+                      <circle class="level__circle level__circle--catalog" r="20.5" cx="22.5" cy="22.5" />
+                    </svg>
+                    <p class="level__value level__value--catalog">99</p>
+                  </div>
+                </div>
               </div>
               <a
                 class="user-catalog-item__button button-round button-round--darker-font"
                 href="#"
-                >Позвать</a
+                >Позвать!</a
               >
             </li>
             <li class="user-catalog__item user-catalog-item">
-              <a class="user-catalog-item__photo" href="#">
-                <img
-                  src="https://via.placeholder.com/150x150"
-                  alt="Фото пользователя"
-                />
+              <a class="user-catalog-item__photo-wrap" href="#">
+                <picture>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="img/demin-285.jpg 1x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/demin-190.jpg 1x"
+                  />
+                  <img
+                    class="user-catalog-item__photo"
+                    width="70"
+                    height="70"
+                    src="img/demin-70.jpg"
+                    alt="Фото пользователя"
+                  />
+                </picture>
               </a>
-              <a class="user-catalog-item__name status status--offline" href="#"
-                >Петя Демин</a
-              >
+              <h3 class="user-catalog-item__name user-catalog-item__name--offline">
+                <a class="user-catalog-item__link" href="#">Петя <br>Демин</a>
+              </h3>
               <div class="user-catalog-item__likes likes">
-                <label class="likes__amount">
-                  <input
-                    class="likes__button visually-hidden"
-                    type="checkbox"
-                    aria-label="лайк"
-                  />1500
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  aria-label="лайк"
+                  id="firsova-likes"
+                />
+                <label class="likes__label" for="firsova-likes">
+                  <span class="likes__wrap">
+                    <svg
+                      class="likes__icon"
+                      role="img"
+                      width="12px"
+                      height="12px"
+                    >
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </span>
+                  <span>1500</span>
                 </label>
               </div>
-              <ul class="user-catalog-item__tag-list tag-list">
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#бургер</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#бар</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#футбол</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#концерт</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#крафт</a>
-                </li>
-              </ul>
-              <div class="user-catalog-item__country">
-                <p class="user-catalog-item__subheading">хочет посетить:</p>
+              <div class="user-catalog-item__tags">
+                <h4 class="visually-hidden">Тэги</h4>
+                <ul class="tag-list">
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#бургер</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#бар</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#футбол</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#концерт</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#крафт</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="user-catalog-item__countries">
+                <h4 class="user-catalog-item__subheading">
+                  <span class="user-catalog-item__subheading-text">хочет посетить:</span>
+                </h4>
                 <ul
-                  class="user-catalog-item__countries-list users-contries-list"
+                  class="user-catalog-item__countries-list users-catalog-contries-list"
                 >
                   <li
-                    class="users-contries-list__country users-contries-list__country--belgium"
+                    class="users-catalog-contries-list__country users-catalog-contries-list__country--belgium"
                   >
                     Бельгия
                   </li>
                   <li
-                    class="users-contries-list__country users-contries-list__country--czech"
+                    class="users-catalog-contries-list__country users-catalog-contries-list__country--czech"
                   >
                     Чехия
                   </li>
                 </ul>
               </div>
-              <div class="user-catalog-item__transport">
-                <p class="user-catalog-item__subheading">транспорт:</p>
-                <ul class="user-catalog-item__transport-list transport">
-                  <li
-                    class="transport__button transport__button--plane transport__button--checked"
-                  >
-                    <span class="visually-hidden">На самолете, активно</span>
+              <div class="user-catalog-item__transports">
+                <h4 class="user-catalog-item__subheading">
+                  <span class="user-catalog-item__subheading-text">транспорт:</span>
+                </h4>
+                <ul class="user-catalog-item__transport-list user-item-transports">
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--plane-catalog user-item-transports__icon--checked"
+                      role="img"
+                      width="14px"
+                      height="16px"
+                      aria-label="активно"
+                    >
+                      <use xlink:href="#plane"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip">Авиаперелет</span>
                   </li>
-                  <li
-                    class="transport__button transport__button--bus transport__button--checked"
-                  >
-                    <span class="visually-hidden">На автобусе, активно</span>
-                  </li>
-                  <li class="transport__button transport__button--bike">
-                    <span class="visually-hidden"
-                      >На велосипеде, неактивно</span
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--bus-catalog user-item-transports__icon--checked"
+                      role="img"
+                      width="13px"
+                      height="16px"
+                      aria-label="активно"
+                    >
+                      <use xlink:href="#bus"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip"
+                      >Автотранспорт</span
                     >
                   </li>
-                  <li
-                    class="transport__button transport__button--walk transport__button--checked"
-                  >
-                    <span class="visually-hidden">Пешком, активно</span>
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--bike-catalog"
+                      role="img"
+                      width="15px"
+                      height="17px"
+                      aria-label="неактивно"
+                    >
+                      <use xlink:href="#bike"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip">Велосипед</span>
+                  </li>
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--walk-catalog  user-item-transports__icon--checked"
+                      role="img"
+                      width="13px"
+                      height="17px"
+                      aria-label="активно"
+                    >
+                      <use xlink:href="#walk"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip">Пешком</span>
                   </li>
                 </ul>
               </div>
-              <div class="user-catalog-item__level level">
-                <p class="level__text level__text--inherit">левел:</p>
-                <p class="level__value level__value--catalog">80</p>
+              <div class="user-catalog-item__level">
+                <h4 class="user-catalog-item__subheading">
+                  <span class="user-catalog-item__subheading-text">левел:</span>
+                </h4>
+                <div class="user-catalog-item__level-body level">
+                  <div class="level__wrap level__wrap--catalog">
+                    <svg class="level__progress-ring" width="45" height=45>
+                      <circle class="level__circle level__circle--catalog" r="20.5" cx="22.5" cy="22.5" />
+                    </svg>
+                    <p class="level__value level__value--catalog">80</p>
+                  </div>
+                </div>
               </div>
               <a
                 class="user-catalog-item__button button-round button-round--darker-font"
                 href="#"
-                >Позвать</a
+                >Позвать!</a
               >
             </li>
             <li class="user-catalog__item user-catalog-item">
-              <a class="user-catalog-item__photo" href="#">
-                <img
-                  src="https://via.placeholder.com/150x150"
-                  alt="Фото пользователя"
-                />
+              <a class="user-catalog-item__photo-wrap" href="#">
+                <picture>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="img/smolov-285.jpg 1x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/smolov-190.jpg 1x"
+                  />
+                  <img
+                    class="user-catalog-item__photo"
+                    width="70"
+                    height="70"
+                    src="img/smolov-70.jpg"
+                    alt="Фото пользователя"
+                  />
+                </picture>
               </a>
-              <a class="user-catalog-item__name status status--offline" href="#"
-                >Марк Смолов</a
-              >
+              <h3 class="user-catalog-item__name user-catalog-item__name--offline">
+                <a class="user-catalog-item__link" href="#">Марк <br>Смолов</a>
+              </h3>
               <div class="user-catalog-item__likes likes">
-                <label class="likes__amount">
-                  <input
-                    class="likes__button visually-hidden"
-                    type="checkbox"
-                    aria-label="лайк"
-                  />170
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  aria-label="лайк"
+                  id="firsova-likes"
+                />
+                <label class="likes__label" for="firsova-likes">
+                  <span class="likes__wrap">
+                    <svg
+                      class="likes__icon"
+                      role="img"
+                      width="12px"
+                      height="12px"
+                    >
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </span>
+                  <span>170</span>
                 </label>
               </div>
-              <ul class="user-catalog-item__tag-list tag-list">
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#рэп</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#тату</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#хайпбист</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#кроссовки</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#суприм</a>
-                </li>
-              </ul>
-              <div class="user-catalog-item__country">
-                <p class="user-catalog-item__subheading">хочет посетить:</p>
+              <div class="user-catalog-item__tags">
+                <h4 class="visually-hidden">Тэги</h4>
+                <ul class="tag-list">
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#рэп</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#тату</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#хайпбист</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#кроссовки</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#суприм</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="user-catalog-item__countries">
+                <h4 class="user-catalog-item__subheading">
+                  <span class="user-catalog-item__subheading-text">хочет посетить:</span>
+                </h4>
                 <ul
-                  class="user-catalog-item__countries-list users-contries-list"
+                  class="user-catalog-item__countries-list users-catalog-contries-list"
                 >
                   <li
-                    class="users-contries-list__country users-contries-list__country--usa"
+                    class="users-catalog-contries-list__country users-catalog-contries-list__country--usa"
                   >
                     США
                   </li>
                   <li
-                    class="users-contries-list__country users-contries-list__country--australia"
+                    class="users-catalog-contries-list__country users-catalog-contries-list__country--australia"
                   >
                     Австралия
                   </li>
                   <li
-                    class="users-contries-list__country users-contries-list__country--dominica"
+                    class="users-catalog-contries-list__country users-catalog-contries-list__country--dominica"
                   >
                     Доминика
                   </li>
                 </ul>
               </div>
-              <div class="user-catalog-item__transport">
-                <p class="user-catalog-item__subheading">транспорт:</p>
-                <ul class="user-catalog-item__transport-list transport">
-                  <li
-                    class="transport__button transport__button--plane transport__button--checked"
-                  >
-                    <span class="visually-hidden">На самолете, активно</span>
+              <div class="user-catalog-item__transports">
+                <h4 class="user-catalog-item__subheading">
+                  <span class="user-catalog-item__subheading-text">транспорт:</span>
+                </h4>
+                <ul class="user-catalog-item__transport-list user-item-transports">
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--plane-catalog user-item-transports__icon--checked"
+                      role="img"
+                      width="14px"
+                      height="16px"
+                      aria-label="активно"
+                    >
+                      <use xlink:href="#plane"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip">Авиаперелет</span>
                   </li>
-                  <li class="transport__button transport__button--bus">
-                    <span class="visually-hidden">На автобусе, неактивно</span>
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--bus-catalog"
+                      role="img"
+                      width="13px"
+                      height="16px"
+                      aria-label="неактивно"
+                    >
+                      <use xlink:href="#bus"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip"
+                      >Автотранспорт</span
+                    >
                   </li>
-                  <li
-                    class="transport__button transport__button--bike transport__button--checked"
-                  >
-                    <span class="visually-hidden">На велосипеде, активно</span>
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--bike-catalog user-item-transports__icon--checked"
+                      role="img"
+                      width="15px"
+                      height="17px"
+                      aria-label="активно"
+                    >
+                      <use xlink:href="#bike"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip">Велосипед</span>
                   </li>
-                  <li class="transport__button transport__button--walk">
-                    <span class="visually-hidden">Пешком, неактивно</span>
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--walk-catalog"
+                      role="img"
+                      width="13px"
+                      height="17px"
+                      aria-label="неактивно"
+                    >
+                      <use xlink:href="#walk"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip">Пешком</span>
                   </li>
                 </ul>
               </div>
-              <div class="user-catalog-item__level level">
-                <p class="level__text level__text--inherit">левел:</p>
-                <p class="level__value level__value--catalog">25</p>
+              <div class="user-catalog-item__level">
+                <h4 class="user-catalog-item__subheading">
+                  <span class="user-catalog-item__subheading-text">левел:</span>
+                </h4>
+                <div class="user-catalog-item__level-body level">
+                  <div class="level__wrap level__wrap--catalog">
+                    <svg class="level__progress-ring" width="45" height=45>
+                      <circle class="level__circle level__circle--catalog" r="20.5" cx="22.5" cy="22.5" />
+                    </svg>
+                    <p class="level__value level__value--catalog">25</p>
+                  </div>
+                </div>
               </div>
               <a
                 class="user-catalog-item__button button-round button-round--darker-font"
                 href="#"
-                >Позвать</a
+                >Позвать!</a
               >
             </li>
             <li class="user-catalog__item user-catalog-item">
-              <a class="user-catalog-item__photo" href="#">
-                <img
-                  src="https://via.placeholder.com/150x150"
-                  alt="Фото пользователя"
-                />
+              <a class="user-catalog-item__photo-wrap" href="#">
+                <picture>
+                  <source
+                    media="(min-width: 1440px)"
+                    srcset="img/rogovaya-285.jpg 1x"
+                  />
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="img/rogovaya-190.jpg 1x"
+                  />
+                  <img
+                    class="user-catalog-item__photo"
+                    width="70"
+                    height="70"
+                    src="img/rogovaya-70.jpg"
+                    alt="Фото пользователя"
+                  />
+                </picture>
               </a>
-              <a class="user-catalog-item__name status status--online" href="#"
-                >Лариса Роговая</a
-              >
+              <h3 class="user-catalog-item__name user-catalog-item__name--online">
+                <a class="user-catalog-item__link" href="#">Лариса <br>Роговая</a>
+              </h3>
               <div class="user-catalog-item__likes likes">
-                <label class="likes__amount">
-                  <input
-                    class="likes__button visually-hidden"
-                    type="checkbox"
-                    aria-label="лайк"
-                  />23
+                <input
+                  class="visually-hidden"
+                  type="checkbox"
+                  aria-label="лайк"
+                  id="firsova-likes"
+                />
+                <label class="likes__label" for="firsova-likes">
+                  <span class="likes__wrap">
+                    <svg
+                      class="likes__icon"
+                      role="img"
+                      width="12px"
+                      height="12px"
+                    >
+                      <use xlink:href="#like"></use>
+                    </svg>
+                  </span>
+                  <span>23</span>
                 </label>
               </div>
-              <ul class="user-catalog-item__tag-list tag-list">
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#образование</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#карьера</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#учеба</a>
-                </li>
-                <li class="tag-list__item">
-                  <a class="tag-list__link" href="#">#линкедин</a>
-                </li>
-              </ul>
-              <div class="user-catalog-item__country">
-                <p class="user-catalog-item__subheading">хочет посетить:</p>
+              <div class="user-catalog-item__tags">
+                <h4 class="visually-hidden">Тэги</h4>
+                <ul class="tag-list">
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#образование</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#карьера</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#учеба</a>
+                  </li>
+                  <li class="tag-list__item">
+                    <a class="tag-list__link" href="#">#линкедин</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="user-catalog-item__countries">
+                <h4 class="user-catalog-item__subheading">
+                  <span class="user-catalog-item__subheading-text">хочет посетить:</span>
+                </h4>
                 <ul
-                  class="user-catalog-item__countries-list users-contries-list"
+                  class="user-catalog-item__countries-list users-catalog-contries-list"
                 >
                   <li
-                    class="users-contries-list__country users-contries-list__country--great-britain"
+                    class="users-catalog-contries-list__country users-catalog-contries-list__country--uk"
                   >
                     Великобритания
                   </li>
                   <li
-                    class="users-contries-list__country users-contries-list__country--germany"
+                    class="users-catalog-contries-list__country users-catalog-contries-list__country--germany"
                   >
                     Германия
                   </li>
                 </ul>
               </div>
-              <div class="user-catalog-item__transport">
-                <p class="user-catalog-item__subheading">транспорт:</p>
-                <ul class="user-catalog-item__transport-list transport">
-                  <li
-                    class="transport__button transport__button--plane transport__button--checked"
-                  >
-                    <span class="visually-hidden">На самолете, активно</span>
+              <div class="user-catalog-item__transports">
+                <h4 class="user-catalog-item__subheading">
+                  <span class="user-catalog-item__subheading-text">транспорт:</span>
+                </h4>
+                <ul class="user-catalog-item__transport-list user-item-transports">
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--plane-catalog user-item-transports__icon--checked"
+                      role="img"
+                      width="14px"
+                      height="16px"
+                      aria-label="активно"
+                    >
+                      <use xlink:href="#plane"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip">Авиаперелет</span>
                   </li>
-                  <li
-                    class="transport__button transport__button--bus transport__button--checked"
-                  >
-                    <span class="visually-hidden">На автобусе, активно</span>
-                  </li>
-                  <li class="transport__button transport__button--bike">
-                    <span class="visually-hidden"
-                      >На велосипеде, неактивно</span
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--bus-catalog user-item-transports__icon--checked"
+                      role="img"
+                      width="13px"
+                      height="16px"
+                      aria-label="активно"
+                    >
+                      <use xlink:href="#bus"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip"
+                      >Автотранспорт</span
                     >
                   </li>
-                  <li class="transport__button transport__button--walk">
-                    <span class="visually-hidden">Пешком, неактивно</span>
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--bike-catalog"
+                      role="img"
+                      width="15px"
+                      height="17px"
+                      aria-label="неактивно"
+                    >
+                      <use xlink:href="#bike"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip">Велосипед</span>
+                  </li>
+                  <li class="user-item-transports__transport user-item-transports__transport--catalog">
+                    <svg
+                      class="user-item-transports__icon user-item-transports__icon--walk-catalog"
+                      role="img"
+                      width="13px"
+                      height="17px"
+                      aria-label="неактивно"
+                    >
+                      <use xlink:href="#walk"></use>
+                    </svg>
+                    <span class="user-item__tooltip tooltip">Пешком</span>
                   </li>
                 </ul>
               </div>
-              <div class="user-catalog-item__level level">
-                <p class="level__text level__text--inherit">левел:</p>
-                <p class="level__value level__value--catalog">50</p>
+              <div class="user-catalog-item__level">
+                <h4 class="user-catalog-item__subheading">
+                  <span class="user-catalog-item__subheading-text">левел:</span>
+                </h4>
+                <div class="user-catalog-item__level-body level">
+                  <div class="level__wrap level__wrap--catalog">
+                    <svg class="level__progress-ring" width="45" height=45>
+                      <circle class="level__circle level__circle--catalog" r="20.5" cx="22.5" cy="22.5" />
+                    </svg>
+                    <p class="level__value level__value--catalog">50</p>
+                  </div>
+                </div>
               </div>
               <a
                 class="user-catalog-item__button button-round button-round--darker-font"
                 href="#"
-                >Позвать</a
+                >Позвать!</a
               >
             </li>
           </ul>
@@ -1970,13 +2265,13 @@
               <a class="pagination-item" href="#">3</a>
               <a class="pagination-item" href="#">4</a>
             </div>
-            <div class="user-catalog__swipe">
+            <div class="pagination__swipe">
               <a
-                class="user-catalog__arrow user-catalog__arrow--previous"
+                class="pagination__arrow pagination__arrow--left"
                 aria-label="Предыдущая страница"
               ></a>
               <a
-                class="user-catalog__arrow user-catalog__arrow--next"
+                class="pagination__arrow pagination__arrow--right"
                 aria-label="Следующая страница"
               ></a>
             </div>

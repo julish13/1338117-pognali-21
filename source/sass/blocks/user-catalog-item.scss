@@ -1,6 +1,7 @@
 .user-catalog-item {
+  overflow: hidden;
   display: grid;
-  grid-template: repeat(6, min-content) / 40% 45% 15%;
+  grid-template: repeat(4, min-content) 1fr min-content/39% 34% 27%;
   background-color: $basic-white;
   color: $basic-grey-font;
   font-size: 15px;
@@ -16,16 +17,26 @@
   }
 }
 
-.user-catalog-item__photo {
+.user-catalog-item__photo-wrap {
   grid-area: 1 / 1 / span 2 / span 1;
+  display: block;
+  margin-top: 2px;
+  margin-left: 18px;
 
   @media #{$min-tablet} {
     grid-area: 1 / 1 / span 3 / span 1;
   }
 }
 
+.user-catalog-item__photo {
+  display: block;
+  border-radius: 50%;
+}
+
 .user-catalog-item__name {
-  grid-area: 1 / 2 / span 1 / span 1;
+  position: relative;
+  grid-area: 1 / 2 / span 1 / span 2;
+  margin: 0;
   color: $basic-blue-light;
   font-size: 20px;
   line-height: 1;
@@ -34,10 +45,36 @@
   @media #{$min-desktop} {
     grid-area: 1 / 2 / span 1 / span 2;
   }
+
+  &::before {
+    @include user-status;
+    position: absolute;
+    top: 10px;
+    right: 22px;
+    content: "";
+  }
+
+  &--offline {
+    &::before {
+      @include user-status-offline;
+    }
+  }
+
+  &--online {
+    &::before {
+      @include user-status-online;
+    }
+  }
+}
+
+.user-catalog-item__link {
+  color: inherit;
 }
 
 .user-catalog-item__likes {
+  position: relative;
   grid-area: 2 / 2 / span 1 / span 1;
+  margin-left: -38px;
 
   @media #{$min-tablet} {
     grid-area: 3 / 3 / span 1 / span 1;
@@ -48,9 +85,11 @@
   }
 }
 
-.user-catalog-item__tag-list {
+.user-catalog-item__tags {
   grid-area: 3 / 1 / span 1 / span 3;
+  margin: 12px 51px 23px 26px;
   line-height: 1.2;
+  text-align: left;
 
   @media #{$min-tablet} {
     grid-area: 2 / 2 / span 1 / span 2;
@@ -61,8 +100,25 @@
   }
 }
 
-.user-catalog-item__country {
+.user-catalog-item__subheading {
+  margin-top: -10px;
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.user-catalog-item__subheading-text {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $basic-white;
+}
+
+.user-catalog-item__countries {
   grid-area: 4 / 1 / span 1 / span 3;
+  margin-bottom: 11px;
+  padding-left: 16px;
+  border-top: 1px solid $grey-background-1;
+  min-height: 86px;
 
   @media #{$min-tablet} {
     grid-area: 4 / 1 / span 1 / span 4;
@@ -74,6 +130,9 @@
 }
 
 .user-catalog-item__countries-list {
+  margin-top: 21px;
+  padding-left: 9px;
+
   @media #{$max-mobile} {
     display: block;
   }
@@ -83,8 +142,11 @@
   }
 }
 
-.user-catalog-item__transport {
+.user-catalog-item__transports {
   grid-area: 5 / 1 / span 1 / span 2;
+  margin-bottom: 20px;
+  padding-left: 16px;
+  border-top: 1px solid $grey-background-1;
 
   @media #{$min-tablet} {
     grid-area: 1 / 4 / span 2 / span 1;
@@ -96,6 +158,9 @@
 }
 
 .user-catalog-item__transport-list {
+  padding-top: 18px;
+  padding-left: 5px;
+
   @media #{$min-tablet} and #{$max-tablet} {
     display: block;
   }
@@ -103,6 +168,7 @@
 
 .user-catalog-item__level {
   grid-area: 5 / 3 / span 1 / span 1;
+  border-top: 1px solid $grey-background-1;
 
   @media #{$min-tablet} {
     grid-area: 3 / 4 / span 1 / span 1;
@@ -113,8 +179,16 @@
   }
 }
 
+.user-catalog-item__level-body {
+  padding-top: 22px;
+  padding-right: 14px;
+}
+
 .user-catalog-item__button {
   grid-area: 6 / 1 / span 1 / span 3;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 12px 15px 12px 12px;
 
   @media #{$min-tablet} {
     grid-area: 3 / 2 / span 1 / span 1;

@@ -3,3 +3,42 @@
     display: none;
   }
 }
+
+.pagination__swipe {
+  display: flex;
+}
+
+.pagination__arrow {
+  position: relative;
+  display: block;
+  flex-grow: 1;
+  height: 51px;
+  background-color: $basic-white;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 9px 11px 9px 0;
+    border-color: transparent $basic-blue-light transparent transparent;
+  }
+
+  &--left {
+    margin-right: 1px;
+    border-radius: 20px 0 0 20px;
+  }
+
+  &--right {
+    border-radius: 0 20px 20px 0;
+
+    &::before {
+      border-width: 9px 0 9px 11px;
+      border-color: transparent transparent transparent $basic-blue-light;
+    }
+  }
+}

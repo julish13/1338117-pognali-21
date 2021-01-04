@@ -146,4 +146,14 @@ input:checked:active + .filter-personality-field__label {
 
 .filter-personality-field__level-filter {
   margin-top: 14px;
+
+  .filter-personality-field--closed & {
+    @media #{$max-mobile} {
+      display: none;
+    }
+
+    @media #{$min-desktop} {
+      display: none;
+    }
+  }
 }

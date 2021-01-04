@@ -46,6 +46,12 @@
       }
     }
   }
+
+  &--catalog {
+    &::before {
+      display: none;
+    }
+  }
 }
 
 .level__value {
@@ -125,5 +131,9 @@
     @media #{$min-tablet} {
       transform: rotate(-90deg) scale(0.99) translateX(3px);
     }
+  }
+
+  &--catalog {
+    stroke-width: 3;
   }
 }

@@ -1,0 +1,34 @@
+.users-catalog-contries-list {
+  display: flex;
+  list-style: none;
+}
+
+.users-catalog-contries-list__country {
+  position: relative;
+  margin-bottom: 11px;
+  padding-left: 40px;
+  color: $basic-blue-light;
+  font-size: 15px;
+  line-height: 1.07;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.users-catalog-contries-list__country::before {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
+  border-radius: 2px;
+  width: 26px;
+  height: 18px;
+}
+
+@each $country in $countries {
+  .users-catalog-contries-list__country {
+    &--#{$country}::before {
+      background-image: url("../img/#{$country}-extra-small.png");
+    }
+  }
+}

@@ -1,17 +1,13 @@
 .tag-list {
   padding-left: 0;
   list-style: none;
-  line-height: 1;
+  line-height: inherit;
+  text-align: inherit;
   font-weight: 400;
 
   @media #{$min-tablet} {
     font-size: 20px;
     line-height: 1.15;
-  }
-
-  &--index {
-    line-height: 1.15;
-    text-align: center;
   }
 }
 
