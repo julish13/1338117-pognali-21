@@ -91,16 +91,6 @@
   }
 }
 
-.planning-dates-option__input--js {
-  -moz-appearance: textfield;
-
-  &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-}
-
 .planning-dates-option__button {
   cursor: pointer;
   position: absolute;

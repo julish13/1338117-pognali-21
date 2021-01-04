@@ -8,8 +8,6 @@
     const minus = option.querySelector(`.planning-dates-option__button--minus`);
     const plus = option.querySelector(`.planning-dates-option__button--plus`);
 
-    input.classList.add(`planning-dates-option__input--js`);
-
     minus.addEventListener(`click`, () => {
       if (input.value > 1 && input.value <= 100) {
         input.value = Math.floor(input.value) - 1;
