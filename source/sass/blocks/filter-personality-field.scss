@@ -1,6 +1,7 @@
 .filter-personality-field {
   @media #{$min-tablet} and #{$max-tablet} {
-    display: flex;
+    display: grid;
+    grid-template: 1fr / 120px 1fr;
   }
 }
 
@@ -10,6 +11,19 @@
   align-items: center;
   margin-top: 10px;
   margin-bottom: 11px;
+
+  @media #{$min-tablet} {
+    display: block;
+    margin: 0;
+    line-height: 1;
+  }
+
+  &--transport,
+  &--level {
+    @media #{$min-tablet} {
+      display: flex;
+    }
+  }
 }
 
 .filter-personality-field__title {
@@ -17,6 +31,21 @@
   line-height: 1.12;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media #{$min-tablet} {
+    font-size: 20px;
+    font-weight: 500;
+    overflow-wrap: break-word;
+    line-height: inherit;
+  }
+}
+
+.filter-personality-field__title-colon {
+  display: none;
+
+  @media #{$min-tablet} and #{$max-tablet} {
+    display: inline-block;
+  }
 }
 
 .filter-personality-field__toggle {
@@ -25,10 +54,6 @@
   width: 0;
   height: 0;
   background-color: transparent;
-
-  @media #{$min-tablet} and #{$max-tablet} {
-    display: none;
-  }
 
   .filter-personality-field--nojs & {
     display: none;
@@ -39,6 +64,10 @@
     margin-top: 0;
     border-width: 0 4px 5px 4px;
     border-color: transparent transparent $blue-background-1 transparent;
+
+    @media #{$min-tablet} and #{$max-tablet} {
+      display: none;
+    }
   }
 
   .filter-personality-field--closed & {
@@ -46,6 +75,10 @@
     margin-top: 4px;
     border-width: 5px 4px 0 4px;
     border-color: $blue-background-1 transparent transparent transparent;
+
+    @media #{$min-tablet} and #{$max-tablet} {
+      display: none;
+    }
   }
 }
 
@@ -56,7 +89,11 @@
   list-style: none;
 
   @media #{$min-tablet} and #{$max-tablet} {
-    display: flex;
+    display: grid;
+    grid-template: 1fr/ 169px 172px 1fr;
+    align-items: end;
+    margin: 0;
+    padding-left: 6px;
   }
 
   &--transport {
@@ -65,6 +102,10 @@
     margin-top: 17px;
     margin-bottom: 19px;
     padding-left: 0;
+
+    @media #{$min-tablet} {
+      margin: 0;
+    }
   }
 
   .filter-personality-field--closed & {
@@ -79,15 +120,28 @@
 }
 
 .filter-personality-field__item {
-  margin-bottom: 8px;
-}
-
-.filter-personality-field__label {
-  position: relative;
+  margin-bottom: 11px;
   color: $basic-black;
   font-size: 15px;
   line-height: 1.33;
   font-weight: 400;
+
+  @media #{$min-tablet} {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  @media #{$min-tablet} {
+    margin-bottom: 0;
+  }
+}
+
+.filter-personality-field__label {
+  position: relative;
+
+  @media #{$min-tablet} {
+    padding-left: 37px;
+  }
 
   &::before {
     cursor: pointer;
@@ -101,9 +155,9 @@
     content: "";
 
     @media #{$min-tablet} {
-      left: -57px;
-      width: 36px;
-      height: 36px;
+      left: 0;
+      width: 24px;
+      height: 24px;
     }
   }
 }
@@ -146,6 +200,10 @@ input:checked:active + .filter-personality-field__label {
 
 .filter-personality-field__level-filter {
   margin-top: 14px;
+
+  @media #{$min-tablet} {
+    margin-top: 0;
+  }
 
   .filter-personality-field--closed & {
     @media #{$max-mobile} {

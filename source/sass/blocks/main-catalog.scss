@@ -34,6 +34,10 @@
 .main-catalog__inner {
   padding-top: 22px;
 
+  @media #{$min-tablet} {
+    padding-top: 42px;
+  }
+
   @media #{$min-desktop} {
     display: grid;
     grid-template-columns: 70% 30%;

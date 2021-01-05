@@ -14,6 +14,11 @@
   width: 69%;
   height: 2px;
   background-color: $basic-blue-light;
+
+  @media #{$min-tablet} {
+    margin-left: 35%;
+    width: 65%;
+  }
 }
 
 .range-controls__toggle {
@@ -25,8 +30,17 @@
   height: 10px;
   background-color: $basic-blue-light;
 
+  @media #{$min-tablet} {
+    width: 14px;
+    height: 13px;
+  }
+
   &--min {
     left: 31%;
+
+    @media #{$min-tablet} {
+      left: 35%;
+    }
   }
 
   &--max {
