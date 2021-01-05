@@ -1,7 +1,7 @@
 .catalog-alphabet {
   @media #{$min-tablet} {
     display: grid;
-    grid-template: repeat(5, min-content) / 75% 25%;
+    grid-template: repeat(5, min-content)/71.5% 1fr;
   }
 
   @media #{$min-desktop} {
@@ -43,6 +43,12 @@
       grid-row: 9;
     }
   }
+
+  &:not(:last-child) {
+    @media #{$min-tablet} {
+      margin-bottom: 23px;
+    }
+  }
 }
 
 .catalog-alphabet__letter {
@@ -57,8 +63,24 @@
   font-size: 14px;
   line-height: 1;
 
+  @media #{$min-tablet} {
+    border: none;
+    width: 34px;
+    height: auto;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 60px;
+    opacity: 0.3;
+  }
+
   &:first-child {
     border-width: 0 1px 1px 1px;
+  }
+
+  &:not(:last-child) {
+    @media #{$min-tablet} {
+      margin-right: 43px;
+    }
   }
 
   .catalog-alphabet__alphabet-row:first-child & {
@@ -73,6 +95,12 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+
+  @media #{$min-tablet} {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .catalog-alphabet__countries-list {
@@ -84,6 +112,9 @@
 
   @media #{$min-tablet} {
     grid-area: 1 / 2 / span 5 / span 1;
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 1.5;
   }
 
   @media #{$min-desktop} {

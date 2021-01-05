@@ -22,8 +22,8 @@
 
 .filter-countries__inner {
   @media #{$min-tablet} {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 33px;
+    padding-right: 33px;
   }
 
   @media #{$min-desktop} {
@@ -112,6 +112,11 @@
   }
 
   .filter-countries--opened & {
+    @media #{$min-tablet} {
+      padding-right: 84px;
+      padding-bottom: 20px;
+    }
+
     &::before,
     &::after {
       content: "";
@@ -121,14 +126,28 @@
       width: 17px;
       height: 1.5px;
       background-color: $blue-background-1;
+
+      @media #{$min-tablet} {
+        top: 50%;
+        right: 0;
+        width: 26px;
+      }
     }
 
     &::before {
       transform: rotate(45deg);
+
+      @media #{$min-tablet} {
+        transform: translateY(-50%) rotate(45deg);
+      }
     }
 
     &::after {
       transform: rotate(-45deg);
+
+      @media #{$min-tablet} {
+        transform: translateY(-50%) rotate(-45deg);
+      }
     }
   }
 
@@ -190,7 +209,7 @@
 
   &:not(:last-child) {
     @media #{$min-tablet} {
-      margin-right: 30px;
+      margin-right: 28px;
     }
   }
 }
@@ -202,6 +221,11 @@
 .filter-countries__dropdown {
   margin-top: 14px;
   padding-bottom: 29px;
+
+  @media #{$min-tablet} {
+    margin-top: 0;
+    padding-top: 49px;
+  }
 
   @media #{$min-desktop} {
     grid-area: 2 / 1 / span 1 / span 3;
@@ -219,18 +243,34 @@
 .filter-countries__alphabet {
   padding-left: 25px;
   padding-right: 25px;
+
+  @media #{$min-tablet} {
+    margin-bottom: 47px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .filter-countries__button {
   display: block;
   padding: 11px 10px 10px;
   width: 100%;
+
+  @media #{$min-tablet} {
+    padding: 40px;
+    font-size: 20px;
+  }
 }
 
 .filter-countries__button-text {
   position: relative;
   transform: translateX(12px);
   display: inline-block;
+
+  @media #{$min-tablet} {
+    padding-left: 45px;
+    padding-right: 27px;
+  }
 
   &::before,
   &::after {
@@ -242,6 +282,13 @@
     width: 17px;
     height: 1.5px;
     background-color: $blue-background-1;
+
+    @media #{$min-tablet} {
+      left: 0;
+      border-radius: 2px;
+      width: 26px;
+      height: 2px;
+    }
   }
 
   &::before {
