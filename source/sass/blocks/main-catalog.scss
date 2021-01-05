@@ -45,6 +45,10 @@
 }
 
 .main-catalog__filter-personality {
+  @media #{$min-tablet} {
+    margin-bottom: 41px;
+  }
+
   @media #{$min-desktop} {
     grid-area: 1 / 2 / span 1 / span 1;
   }
@@ -53,6 +57,10 @@
 .main-catalog__user-catalog {
   margin-top: 28px;
   padding-bottom: 154px;
+
+  @media #{$min-tablet} {
+    margin-top: 0;
+  }
 
   @media #{$min-desktop} {
     grid-area: 1 / 1 / span 1 / span 1;

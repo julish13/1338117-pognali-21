@@ -9,7 +9,7 @@
   font-weight: 400;
 
   @media #{$min-tablet} {
-    grid-template: repeat(4, min-content) / 30% 25% 25% 20%;
+    grid-template: repeat(4, min-content) / max-content 25% 25% 20%;
   }
 
   @media #{$min-desktop} {
@@ -25,12 +25,20 @@
 
   @media #{$min-tablet} {
     grid-area: 1 / 1 / span 3 / span 1;
+    margin-top: 0;
+    margin-left: 35px;
   }
 }
 
 .user-catalog-item__photo {
   display: block;
   border-radius: 50%;
+
+  @media #{$min-tablet} {
+    border-radius: 20px;
+    width: 190px;
+    height: 190px;
+  }
 }
 
 .user-catalog-item__name {
@@ -41,6 +49,10 @@
   font-size: 20px;
   line-height: 1;
   font-weight: 700;
+
+  @media #{$min-tablet} {
+    font-size: 30px;
+  }
 
   @media #{$min-desktop} {
     grid-area: 1 / 2 / span 1 / span 2;
@@ -69,6 +81,12 @@
 
 .user-catalog-item__link {
   color: inherit;
+
+  br {
+    @media #{$min-tablet} {
+      display: none;
+    }
+  }
 }
 
 .user-catalog-item__likes {
@@ -104,6 +122,20 @@
   margin-top: -10px;
   margin-bottom: 0;
   font-weight: normal;
+
+  &--transport,
+  &--level {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }
 
 .user-catalog-item__subheading-text {
@@ -150,6 +182,7 @@
 
   @media #{$min-tablet} {
     grid-area: 1 / 4 / span 2 / span 1;
+    border: none;
   }
 
   @media #{$min-desktop} {
@@ -172,6 +205,7 @@
 
   @media #{$min-tablet} {
     grid-area: 3 / 4 / span 1 / span 1;
+    border: none;
   }
 
   @media #{$min-desktop} {
