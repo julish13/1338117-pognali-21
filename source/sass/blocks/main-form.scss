@@ -5,11 +5,11 @@
 
 .main-form__header {
   @include section-bottom-border-radius;
-  margin-top: 92px;
+  padding-top: 92px;
   background-color: $blue-background-2;
 
   @media #{$min-tablet} {
-    margin-top: 219px;
+    padding-top: 219px;
   }
 }
 
