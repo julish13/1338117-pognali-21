@@ -2,9 +2,9 @@
   background-color: $basic-white;
 
   @media #{$min-tablet} {
-    display: flex;
+    display: grid;
+    grid-template: 1fr / 34% 33% 1fr;
     align-items: center;
-    justify-content: space-between;
     padding-top: 48px;
   }
 
@@ -20,7 +20,7 @@
   text-align: center;
 
   @media #{$min-tablet} {
-    align-self: center;
+    justify-self: start;
     margin: 0;
   }
 }
@@ -31,6 +31,7 @@
   justify-content: center;
 
   @media #{$min-tablet} {
+    justify-self: center;
     margin-top: -3px;
     margin-left: -5px;
     padding: 0;
@@ -48,6 +49,7 @@
   border-top: 1px solid $grey-4;
 
   @media #{$min-tablet} {
+    justify-self: end;
     margin-top: -4px;
     margin-bottom: 0;
     padding-top: 0;
