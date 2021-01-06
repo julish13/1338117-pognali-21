@@ -37,12 +37,15 @@
   left: 50%;
   transform: translate(-50%, -50%);
   fill: $blue-background-1;
-  fill-rule: evenodd;
   opacity: 0.5;
 
   @media #{$min-tablet} {
     width: 20px;
     height: 20px;
+  }
+
+  &--yes {
+    display: none;
   }
 }
 
@@ -53,7 +56,14 @@ input:checked + .likes__label {
 
   .likes__icon {
     fill: $red-5;
-    fill-rule: unset;
     opacity: 1;
+
+    &--yes {
+      display: inline-block;
+    }
+
+    &--no {
+      display: none;
+    }
   }
 }
