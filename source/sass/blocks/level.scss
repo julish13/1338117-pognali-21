@@ -48,8 +48,21 @@
   }
 
   &--catalog {
+    @media #{$min-tablet} {
+      width: 65px;
+      height: 65px;
+    }
+
     &::before {
       display: none;
+
+      @media #{$min-tablet} {
+        top: 57%;
+        left: unset;
+        display: block;
+        background-color: $basic-black;
+        opacity: 0.1;
+      }
     }
   }
 }
@@ -102,6 +115,18 @@
       color: $basic-white;
     }
   }
+
+  &--catalog {
+    display: none;
+
+    @media #{$min-tablet} {
+      display: block;
+      color: $basic-black;
+      font-size: 14px;
+      line-height: 1;
+      opacity: 0.4;
+    }
+  }
 }
 
 .level__progress-ring {
@@ -110,6 +135,13 @@
   &--form {
     @media #{$min-desktop} {
       top: -7px;
+    }
+  }
+
+  &--catalog {
+    @media #{$min-tablet} {
+      width: 66px;
+      height: 66px;
     }
   }
 }
@@ -135,5 +167,10 @@
 
   &--catalog {
     stroke-width: 3;
+
+    @media #{$min-tablet} {
+      stroke-width: 2;
+      transform: rotate(-90deg) scale(1.5) translate(11px, 10px);
+    }
   }
 }

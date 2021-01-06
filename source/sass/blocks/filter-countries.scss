@@ -29,6 +29,12 @@
   @media #{$min-desktop} {
     grid-template: repeat(2, min-content) / 20% 50% 30%;
   }
+
+  .filter-countries--opened & {
+    @media #{$min-tablet} {
+      padding-bottom: 50px;
+    }
+  }
 }
 
 .filter-countries__header {
@@ -257,7 +263,7 @@
   width: 100%;
 
   @media #{$min-tablet} {
-    padding: 40px;
+    padding: 35px 40px 40px;
     font-size: 20px;
   }
 }
@@ -268,6 +274,7 @@
   display: inline-block;
 
   @media #{$min-tablet} {
+    padding-top: 5px;
     padding-left: 45px;
     padding-right: 27px;
   }
@@ -285,6 +292,7 @@
 
     @media #{$min-tablet} {
       left: 0;
+      top: 50%;
       border-radius: 2px;
       width: 26px;
       height: 2px;

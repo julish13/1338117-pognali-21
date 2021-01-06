@@ -3,6 +3,27 @@
   align-items: center;
   flex-wrap: wrap;
   list-style: none;
+
+  &--catalog {
+    @media #{$min-tablet} {
+      flex-direction: column;
+    }
+  }
+}
+
+.user-item-transports__tooltip {
+  display: none;
+  left: -60px;
+  top: 33px;
+
+  &--catalog {
+    left: -15px;
+
+    @media #{$min-tablet} {
+      left: unset;
+      right: -15px;
+    }
+  }
 }
 
 .user-item-transports__transport {
@@ -14,10 +35,8 @@
   &:focus {
     cursor: pointer;
 
-    .user-item__tooltip {
+    .user-item-transports__tooltip {
       display: block;
-      left: -60px;
-      top: 33px;
     }
 
     &::after {
@@ -33,6 +52,19 @@
   width: 32px;
   height: 32px;
   background-color: $grey-background-1;
+
+  @media #{$min-tablet} {
+    margin-bottom: 4px;
+    width: 28px;
+    height: 28px;
+    background-color: transparent;
+  }
+
+  &:last-child {
+    @media #{$min-tablet} {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .user-item-transports__icon {
@@ -88,31 +120,29 @@
     left: 46%;
 
     @media #{$min-tablet} {
-      top: 53%;
-      left: 43%;
+      width: 21px;
+      height: 22px;
     }
   }
 
   &--bike-catalog {
     @media #{$min-tablet} {
-      top: 60%;
-      left: 55%;
-      width: 25px;
+      width: 26px;
       height: 25px;
     }
   }
 
   &--bus-catalog {
     @media #{$min-tablet} {
-      left: 50%;
-      width: 18px;
-      height: 21px;
+      width: 19px;
+      height: 20px;
     }
   }
 
   &--walk-catalog {
     @media #{$min-tablet} {
-      top: 60%;
+      width: 23px;
+      height: 24px;
     }
   }
 }

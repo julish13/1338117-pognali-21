@@ -1,4 +1,5 @@
 .flag {
+  position: relative;
   display: block;
   width: 35px;
   height: 25px;
@@ -6,6 +7,23 @@
   background-size: auto;
   background-position: center;
   border-radius: 3px;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+
+    .flag__tooltip {
+      display: block;
+      top: 38px;
+      right: -40px;
+    }
+
+    &::after {
+      @include tooltip-tail;
+      top: 28px;
+      left: 25%;
+    }
+  }
 
   &--thailand {
     background-image: url("../img/thailand-small.png");
@@ -30,4 +48,8 @@
   &--bosnia-and-herzegovina {
     background-image: url("../img/bosnia-and-herzegovina-small.png");
   }
+}
+
+.flag__tooltip {
+  display: none;
 }

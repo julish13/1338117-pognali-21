@@ -4,6 +4,11 @@
   line-height: 1.14;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media #{$min-tablet} {
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .likes__label {
@@ -19,6 +24,11 @@
   width: 31px;
   height: 31px;
   background-color: $grey-background-4;
+
+  @media #{$min-tablet} {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .likes__icon {
@@ -29,6 +39,11 @@
   fill: $blue-background-1;
   fill-rule: evenodd;
   opacity: 0.5;
+
+  @media #{$min-tablet} {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 input:checked + .likes__label {
