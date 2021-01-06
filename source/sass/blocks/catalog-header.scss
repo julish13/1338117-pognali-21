@@ -11,6 +11,11 @@
     justify-content: space-between;
     align-items: center;
   }
+
+  @media #{$min-desktop} {
+    padding-left: 65px;
+    padding-right: 65px;
+  }
 }
 
 .catalog-header__heading {
