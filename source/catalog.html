@@ -1500,7 +1500,7 @@
                         checked
                         aria-label="На самолете"
                       />
-                      <label class="transport-checkbox__wrap" for="planeInput" tabindex="0">
+                      <label class="transport-checkbox__wrap transport-checkbox__wrap--catalog" for="planeInput" tabindex="0">
                         <svg
                           class="transport-checkbox__icon"
                           role="img"
@@ -1520,7 +1520,7 @@
                         checked
                         aria-label="На автобусе"
                       />
-                      <label class="transport-checkbox__wrap" for="busInput" tabindex="0">
+                      <label class="transport-checkbox__wrap transport-checkbox__wrap--catalog" for="busInput" tabindex="0">
                         <svg
                           class="transport-checkbox__icon"
                           role="img"
@@ -1539,7 +1539,7 @@
                         id="bikeInput"
                         aria-label="На велосипеде"
                       />
-                      <label class="transport-checkbox__wrap" for="bikeInput" tabindex="0">
+                      <label class="transport-checkbox__wrap transport-checkbox__wrap--catalog" for="bikeInput" tabindex="0">
                         <svg
                           class="transport-checkbox__icon"
                           role="img"
@@ -1559,7 +1559,7 @@
                         checked
                         aria-label="Пешком"
                       />
-                      <label class="transport-checkbox__wrap" for="walkInput" tabindex="0">
+                      <label class="transport-checkbox__wrap transport-checkbox__wrap--catalog" for="walkInput" tabindex="0">
                         <svg
                           class="transport-checkbox__icon"
                           role="img"
@@ -1589,17 +1589,21 @@
                     <div class="level-filter__values">
                       <input
                         class="level-filter__input"
-                        type="number"
                         aria-label="Минимальный уровень"
                         name="min-level"
                         value="30"
+                        type="text"
+                        inputmode="numeric"
+                        pattern="[0-9]*"
                       />
                       <input
                         class="level-filter__input"
-                        type="number"
                         aria-label="Максимальный уровень"
                         name="max-level"
                         value="100"
+                        type="text"
+                        inputmode="numeric"
+                        pattern="[0-9]*"
                       />
                     </div>
                     <div class="level-filter__range-controls range-controls">

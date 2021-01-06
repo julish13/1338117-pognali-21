@@ -18,6 +18,10 @@
     margin-bottom: 0;
   }
 
+  @media #{$min-desktop} {
+    margin-bottom: 35px;
+  }
+
   &::before {
     position: absolute;
     top: 50%;
@@ -75,5 +79,9 @@
     width: 281px;
     margin-bottom: 0;
     margin-left: 7px;
+  }
+
+  @media #{$min-desktop} {
+    margin-bottom: 0;
   }
 }

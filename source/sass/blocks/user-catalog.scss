@@ -7,6 +7,10 @@
     margin-top: 0;
     margin-bottom: 44px;
   }
+
+  @media #{$min-desktop} {
+    margin-bottom: 62px;
+  }
 }
 
 .user-catalog__item {
@@ -58,6 +62,11 @@
     line-height: 1;
   }
 
+  @media #{$min-desktop} {
+    margin-bottom: 70px;
+    width: 261px;
+  }
+
   &::before,
   &::after {
     content: "";
@@ -84,5 +93,9 @@
   @media #{$min-tablet} {
     border-radius: 20px;
     padding: 25px 20px 25px 29px;
+  }
+
+  @media #{$min-desktop} {
+    padding-right: 29px;
   }
 }

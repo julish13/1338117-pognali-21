@@ -6,6 +6,10 @@
   @media #{$min-tablet} {
     padding: 36px 35px 37px;
   }
+
+  @media #{$min-desktop} {
+    padding: 45px 46px 45px 48px;
+  }
 }
 
 .filter-personality__fieldset {
@@ -31,6 +35,10 @@
     font-size: 30px;
     letter-spacing: unset;
   }
+
+  @media #{$min-desktop} {
+    margin-bottom: 35px;
+  }
 }
 
 .filter-personality__inner {
@@ -48,6 +56,10 @@
   }
 
   @media #{$min-desktop} {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 42px;
+    border: none;
     width: 100%;
   }
 }
@@ -60,6 +72,10 @@
     border: none;
   }
 
+  @media #{$min-desktop} {
+    margin-bottom: 19px;
+  }
+
   &:last-child {
     @media #{$min-tablet} {
       margin-bottom: 0;
@@ -67,24 +83,29 @@
   }
 
   &--food {
-    @media #{$min-tablet} {
+    @media #{$min-tablet} and #{$max-tablet} {
       margin-bottom: 24px;
     }
   }
 
   &--transport {
-    @media #{$min-tablet} {
+    @media #{$min-tablet} and #{$max-tablet} {
       margin-bottom: 13px;
     }
   }
 }
 
 .filter-personality__button {
+  cursor: pointer;
   padding: 12px;
 
   @media #{$min-tablet} {
     padding: 15px;
     font-size: 20px;
     line-height: 20px;
+  }
+
+  @media #{$min-desktop} {
+    padding: 16px 15px 13px 20px;
   }
 }

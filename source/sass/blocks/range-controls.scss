@@ -6,6 +6,10 @@
   width: 100%;
   height: 2px;
   background-color: rgba($basic-blue-light, 0.2);
+
+  @media #{$min-desktop} {
+    height: 3px;
+  }
 }
 
 .range-controls__bar {
@@ -18,6 +22,12 @@
   @media #{$min-tablet} {
     margin-left: 35%;
     width: 65%;
+  }
+
+  @media #{$min-desktop} {
+    margin-left: 30%;
+    width: 70%;
+    height: 3px;
   }
 }
 
@@ -40,6 +50,10 @@
 
     @media #{$min-tablet} {
       left: 35%;
+    }
+
+    @media #{$min-desktop} {
+      left: 30%;
     }
   }
 
