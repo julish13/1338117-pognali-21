@@ -8,6 +8,10 @@
     @media #{$min-tablet} {
       flex-direction: column;
     }
+
+    @media #{$min-desktop} {
+      flex-direction: row;
+    }
   }
 }
 
@@ -60,9 +64,18 @@
     background-color: transparent;
   }
 
+  @media #{$min-desktop} {
+    margin-bottom: 0;
+    margin-right: 6px;
+  }
+
   &:last-child {
     @media #{$min-tablet} {
       margin-bottom: 0;
+    }
+
+    @media #{$min-desktop} {
+      margin-right: 0;
     }
   }
 }

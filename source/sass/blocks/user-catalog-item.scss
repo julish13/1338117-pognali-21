@@ -13,7 +13,7 @@
   }
 
   @media #{$min-desktop} {
-    grid-template: repeat(3, min-content) / 35% 20% 15% 20% 10%;
+    grid-template: repeat(2, min-content) 102px / max-content 205px 11% 1fr min-content;
   }
 }
 
@@ -28,6 +28,10 @@
     margin-top: 0;
     margin-left: 35px;
   }
+
+  @media #{$min-desktop} {
+    margin-left: 0;
+  }
 }
 
 .user-catalog-item__photo {
@@ -38,6 +42,12 @@
     border-radius: 20px;
     width: 190px;
     height: 190px;
+  }
+
+  @media #{$min-desktop} {
+    border-radius: 0;
+    width: 285px;
+    height: 285px;
   }
 }
 
@@ -58,6 +68,8 @@
 
   @media #{$min-desktop} {
     grid-area: 1 / 2 / span 1 / span 2;
+    margin-left: 32px;
+    padding-top: 50px;
   }
 }
 
@@ -71,6 +83,11 @@
     padding-right: 30px;
   }
 
+  @media #{$min-desktop} {
+    padding-left: 26px;
+    padding-right: 0;
+  }
+
   &::before {
     @include user-status;
     position: absolute;
@@ -81,6 +98,11 @@
     @media #{$min-tablet} {
       top: 50%;
       transform: translateY(-50%);
+    }
+
+    @media #{$min-desktop} {
+      right: unset;
+      left: 0;
     }
   }
 
@@ -116,6 +138,8 @@
 
   @media #{$min-desktop} {
     grid-area: 3 / 3 / span 1 / span 1;
+    align-self: start;
+    margin-top: 5px;
   }
 }
 
@@ -133,6 +157,7 @@
 
   @media #{$min-desktop} {
     grid-area: 2 / 2 / span 1 / span 2;
+    margin-left: 55px;
   }
 }
 
@@ -144,16 +169,7 @@
   &--transport,
   &--level {
     @media #{$min-tablet} {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      margin: -1px;
-      border: 0;
-      padding: 0;
-      white-space: nowrap;
-      clip-path: inset(100%);
-      clip: rect(0 0 0 0);
-      overflow: hidden;
+      @include visually-hidden;
     }
   }
 
@@ -161,6 +177,14 @@
     @media #{$min-tablet} {
       margin-left: 37px;
       margin-bottom: 22px;
+    }
+  }
+
+  &--transport,
+  &--level,
+  &--countries {
+    @media #{$min-desktop} {
+      @include visually-hidden;
     }
   }
 }
@@ -189,6 +213,11 @@
 
   @media #{$min-desktop} {
     grid-area: 1 / 4 / span 2 / span 2;
+    margin-top: 0;
+    margin-left: 80px;
+    padding-top: 55px;
+    padding-left: 0;
+    border-top: none;
   }
 }
 
@@ -227,6 +256,11 @@
 
   @media #{$min-desktop} {
     grid-area: 3 / 4 / span 1 / span 1;
+    justify-self: start;
+    align-self: start;
+    margin-top: 20px;
+    margin-left: 75px;
+    margin-right: 0;
   }
 }
 
@@ -253,6 +287,8 @@
 
   @media #{$min-desktop} {
     grid-area: 3 / 5 / span 1 / span 1;
+    margin-right: 44px;
+    align-self: start;
   }
 }
 
@@ -282,5 +318,9 @@
 
   @media #{$min-desktop} {
     grid-area: 3 / 2 / span 1 / span 1;
+    align-self: start;
+    margin-top: 5px;
+    margin-left: 54px;
+    padding: 17px 15px 14px;
   }
 }

@@ -21,9 +21,19 @@
     line-height: 1;
   }
 
+  @media #{$min-desktop} {
+    margin-right: 0;
+    margin-bottom: 16px;
+    padding-left: 52px;
+  }
+
   &:last-child {
     @media #{$min-tablet} {
       margin-right: 0;
+    }
+
+    @media #{$min-desktop} {
+      margin-bottom: 0;
     }
   }
 }

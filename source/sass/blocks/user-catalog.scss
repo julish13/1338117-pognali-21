@@ -21,6 +21,12 @@
     padding-bottom: 28px;
   }
 
+  @media #{$min-desktop} {
+    margin-bottom: 31px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   &:last-child {
     @media #{$min-tablet} {
       margin-bottom: 0;
