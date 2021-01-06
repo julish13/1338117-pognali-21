@@ -33,6 +33,7 @@
 }
 
 .filter-personality-field__title {
+  cursor: pointer;
   font-size: 16px;
   line-height: 1.12;
   font-weight: 700;
@@ -47,6 +48,15 @@
 
   @media #{$min-desktop} {
     display: inline-block;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

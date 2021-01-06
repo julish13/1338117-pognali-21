@@ -302,7 +302,7 @@
                       id="europe"
                       checked
                     />
-                    <label class="filter-countries__label" for="europe">Европа</label>
+                    <label class="filter-countries__label filter-countries__label--active" for="europe">Европа</label>
                   </li>
                   <li class="filter-countries__land">
                     <input
@@ -343,7 +343,7 @@
               <div class="filter-countries__dropdown">
                 <div class="filter-countries__alphabet catalog-alphabet">
                   <ul class="catalog-alphabet__alphabet-row">
-                    <li class="catalog-alphabet__letter">
+                    <li class="catalog-alphabet__letter catalog-alphabet__letter--active">
                       <input
                         class="catalog-alphabet__checkbox visually-hidden"
                         type="radio"
@@ -1324,16 +1324,9 @@
               </legend>
               <div class="filter-personality__inner">
                 <div class="filter-personality__field filter-personality-field filter-personality-field--nojs">
-                  <p class="filter-personality-field__header">
-                    <span class="filter-personality-field__title">
-                      Хобби<span class="filter-personality-field__title-colon">:</span>
-                    </span>
-                    <button
-                      class="filter-personality-field__toggle"
-                      type="button"
-                      aria-label="Открыть меню"
-                    ></button>
-                  </p>
+                  <h3 class="filter-personality-field__header">
+                    Хобби<span">:</span>
+                  </h3>
                   <ul class="filter-personality-field__list">
                     <li class="filter-personality-field__item">
                       <input
