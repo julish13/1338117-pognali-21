@@ -67,6 +67,21 @@
     width: 261px;
   }
 
+  &:hover,
+  &:focus {
+    &::before,
+    &::after {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::before,
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
   &::before,
   &::after {
     content: "";

@@ -4,7 +4,7 @@
   const fieldElementsCollection = document.querySelectorAll(`.filter-personality-field`);
 
   for (const fieldElement of fieldElementsCollection) {
-    const toggleElement = fieldElement.querySelector(`.filter-personality-field__toggle`);
+    const headerElement = fieldElement.querySelector(`.filter-personality-field__header`);
 
     fieldElement.classList.remove(`filter-personality-field--nojs`);
     fieldElement.classList.add(`filter-personality-field--closed`);
@@ -19,7 +19,7 @@
       }
     }
 
-    toggleElement.addEventListener(`click`, onClickDropdownFunction);
+    headerElement.addEventListener(`click`, onClickDropdownFunction);
   }
 
 })();

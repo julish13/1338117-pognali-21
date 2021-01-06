@@ -26,6 +26,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    z-index:10;
     transform: translate(-50%, -50%);
     content: "";
     border-top: 5px solid $basic-white;
@@ -45,6 +46,7 @@
 
 .level-filter__input {
   @include border;
+  outline: none;
   padding: 8px;
   width: 50%;
   font-family: inherit;
@@ -62,12 +64,23 @@
     letter-spacing: 0.04em;
   }
 
-  &:first-child {
-    border-radius: 4px 0 0 4px;
-    border-right: none;
+  &:hover {
+    position: relative;
+    border-color: $grey-12;
   }
 
-  &:last-child {
+  &:focus,
+  &:active {
+    position: relative;
+    border-color: $basic-blue;
+  }
+
+  &--min {
+    border-radius: 4px 0 0 4px;
+  }
+
+  &--max {
+    margin-left: -1px;
     border-radius: 0 4px 4px 0;
   }
 }

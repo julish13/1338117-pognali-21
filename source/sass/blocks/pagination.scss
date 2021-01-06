@@ -1,7 +1,6 @@
 .pagination {
-  background-color: $basic-white;
-
   @media #{$min-tablet} {
+    background-color: $basic-white;
     display: flex;
   }
 }
@@ -18,6 +17,7 @@
 }
 
 .pagination__item {
+  cursor: pointer;
   position: relative;
   display: block;
   border-radius: 50%;
@@ -29,6 +29,16 @@
   line-height: 1;
   text-transform: uppercase;
 
+  &--active {
+    background-color: $yellow-1;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active,
   &--active {
     background-color: $yellow-1;
   }
@@ -52,11 +62,21 @@
 }
 
 .pagination__arrow {
+  cursor: pointer;
   position: relative;
   display: block;
   flex-grow: 1;
   height: 51px;
   background-color: $basic-white;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::before {
     position: absolute;

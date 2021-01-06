@@ -46,6 +46,15 @@
     line-height: 1;
     text-transform: uppercase;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog-header__icon {

@@ -22,7 +22,7 @@
 
     .user-catalog-item__photo {
       transition: transform 0.3s;
-      transform: scale(1.05) translateY(-7px);
+      transform: scale(1.05);
     }
   }
 }
@@ -34,6 +34,8 @@
   border-radius: 50%;
   margin-top: 2px;
   margin-left: 18px;
+  width: 70px;
+  height: 70px;
 
   @media #{$min-tablet} {
     grid-area: 1 / 1 / span 3 / span 1;
@@ -46,6 +48,8 @@
 
   @media #{$min-desktop} {
     margin-left: 0;
+    width: 285px;
+    height: 285px;
   }
 }
 
@@ -95,9 +99,9 @@
   }
 }
 
-.user-catalog-item__link {
+.user-catalog-item__name-link {
   position: relative;
-  padding-right: 65px;;
+  display: block;
   color: inherit;
 
   @media #{$min-tablet} {
@@ -114,11 +118,12 @@
     @include user-status;
     position: absolute;
     top: 30%;
-    right: 0;
+    right: 22px;
     content: "";
 
     @media #{$min-tablet} {
       top: 50%;
+      right: 0;
       transform: translateY(-50%);
     }
 

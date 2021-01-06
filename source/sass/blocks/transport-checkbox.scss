@@ -14,7 +14,9 @@
   }
 
   &--catalog {
-    width: 43px;
+    @media #{$min-desktop} {
+      width: 43px;
+    }
   }
 }
 

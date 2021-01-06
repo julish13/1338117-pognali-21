@@ -6,48 +6,26 @@
 }
 
 .filter-personality-field__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  cursor: pointer;
+  position: relative;
   margin-top: 10px;
   margin-bottom: 11px;
-
-  @media #{$min-tablet} {
-    display: block;
-    margin: 0;
-    line-height: 1;
-  }
-
-  @media #{$min-desktop} {
-    display: flex;
-    font-size: 20px;
-    line-height: 1.1;
-  }
-
-  &--transport,
-  &--level {
-    @media #{$min-tablet} {
-      display: flex;
-    }
-  }
-}
-
-.filter-personality-field__title {
-  cursor: pointer;
   font-size: 16px;
   line-height: 1.12;
   font-weight: 700;
   text-transform: uppercase;
+  overflow-wrap: break-word;
 
   @media #{$min-tablet} {
+    margin: 0;
     font-size: 20px;
     font-weight: 500;
-    overflow-wrap: break-word;
-    line-height: inherit;
+    line-height: 1;
   }
 
   @media #{$min-desktop} {
-    display: inline-block;
+    font-size: 20px;
+    line-height: 1.1;
   }
 
   &:hover,
@@ -58,19 +36,31 @@
   &:active {
     opacity: 0.3;
   }
-}
 
-.filter-personality-field__title-colon {
-  display: none;
+  &--transport,
+  &--level {
+    @media #{$min-tablet} {
+      align-self: center;
+    }
+  }
 
-  @media #{$min-tablet} and #{$max-tablet} {
-    display: inline-block;
+  span {
+    display: none;
+
+    @media #{$min-tablet} and #{$max-tablet} {
+      display: inline-block;
+    }
   }
 }
 
-.filter-personality-field__toggle {
-  cursor: pointer;
-  padding: 0;
+
+
+.filter-personality-field__header::before {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "";
   border-style: solid;
   width: 0;
   height: 0;
@@ -181,11 +171,22 @@
 }
 
 .filter-personality-field__label {
+  cursor: pointer;
   position: relative;
 
   @media #{$min-tablet} {
     padding-left: 37px;
   }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
 
   &::before {
     cursor: pointer;
@@ -207,6 +208,12 @@
 }
 
 input:checked + .filter-personality-field__label {
+  &:hover,
+  &:focus {
+    opacity: 1;
+    color: rgba($basic-black, 0.6);
+  }
+
   &::before {
     background-image: url("../img/yes.svg");
     background-repeat: no-repeat;
