@@ -103,6 +103,7 @@
   line-height: 1;
   font-weight: 700;
   text-align: left;
+  overflow-wrap: break-word;
 
   @media #{$min-tablet} {
     border-radius: 20px;
@@ -137,6 +138,7 @@
   font-weight: 700;
   text-transform: uppercase;
   text-align: center;
+  overflow-wrap: break-word;
 
   &:hover,
   &:focus {

@@ -5,7 +5,7 @@
   }
 
   @media #{$min-desktop} {
-    grid-template: repeat(9, min-content) 160px / repeat(5, 20%);
+    grid-template: repeat(10, min-content) / repeat(5, 20%);
   }
 }
 
@@ -159,6 +159,16 @@
 
   &--active {
     display: block;
+  }
+
+  &:last-child,
+  &:nth-last-child(2),
+  &:nth-last-child(3),
+  &:nth-last-child(4),
+  &:nth-last-child(5) {
+    @media #{$min-desktop} {
+      min-height: 160px;
+    }
   }
 }
 

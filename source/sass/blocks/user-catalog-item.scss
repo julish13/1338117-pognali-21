@@ -75,6 +75,7 @@
   font-size: 20px;
   line-height: 1;
   font-weight: 700;
+  overflow-wrap: break-word;
 
   @media #{$min-tablet} {
     margin-bottom: 23px;
@@ -102,7 +103,10 @@
 .user-catalog-item__name-link {
   position: relative;
   display: block;
+  padding-right: 36px;
+  max-width: 100%;
   color: inherit;
+  overflow-wrap: break-word;
 
   @media #{$min-tablet} {
     display: inline-block;
@@ -203,7 +207,7 @@
   &--countries {
     @media #{$min-tablet} {
       margin-left: 37px;
-      margin-bottom: 22px;
+      margin-bottom: 19px;
     }
   }
 
@@ -249,14 +253,13 @@
 }
 
 .user-catalog-item__countries-list {
+  display: block;
   margin-top: 21px;
   padding-left: 9px;
 
-  @media #{$max-mobile} {
-    display: block;
-  }
-
   @media #{$min-tablet} {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 0;
     padding-left: 0;
   }

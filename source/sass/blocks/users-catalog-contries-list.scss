@@ -1,5 +1,4 @@
 .users-catalog-contries-list {
-  display: flex;
   list-style: none;
 }
 
@@ -18,13 +17,14 @@
     margin-right: 28px;
     padding-left: 45px;
     font-size: 20px;
-    line-height: 1;
+    line-height: 1.5;
   }
 
   @media #{$min-desktop} {
     margin-right: 0;
     margin-bottom: 16px;
     padding-left: 52px;
+    line-height: 1;
   }
 
   &:last-child {
