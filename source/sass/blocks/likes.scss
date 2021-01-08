@@ -14,21 +14,6 @@
 .likes__label {
   display: flex;
   align-items: center;
-}
-
-.likes__wrap {
-  cursor: pointer;
-  display: inline-block;
-  margin-right: 5px;
-  border-radius: 50%;
-  width: 31px;
-  height: 31px;
-  background-color: $grey-background-4;
-
-  @media #{$min-tablet} {
-    width: 50px;
-    height: 50px;
-  }
 
   &:hover,
   &:focus {
@@ -44,17 +29,36 @@
   }
 }
 
-input:checked + .likes__label .likes__wrap {
+.likes__wrap {
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 5px;
+  border-radius: 50%;
+  width: 31px;
+  height: 31px;
+  background-color: $grey-background-4;
+
+  @media #{$min-tablet} {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+input:checked + .likes__label {
   &:hover,
   &:focus {
-    background-color: $red-6;
+    .likes__wrap {
+      background-color: $red-6;
+    }
   }
 
   &:active {
-    background-color: $red-6;
+    .likes__wrap {
+      background-color: $red-6;
 
-    .likes__icon {
-      opacity: 0.3;
+      .likes__icon {
+        opacity: 0.3;
+      }
     }
   }
 }
