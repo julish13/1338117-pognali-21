@@ -53,8 +53,6 @@
   }
 }
 
-
-
 .filter-personality-field__header::before {
   position: absolute;
   right: 0;
@@ -217,11 +215,9 @@ input:checked + .filter-personality-field__label {
 
 input:checked:hover + .filter-personality-field__label,
 input:checked:focus + .filter-personality-field__label {
-    opacity: 1;
-    color: rgba($basic-black, 0.6);
+  opacity: 1;
+  color: rgba($basic-black, 0.6);
 }
-
-
 
 input:hover + .filter-personality-field__label,
 input:focus + .filter-personality-field__label {

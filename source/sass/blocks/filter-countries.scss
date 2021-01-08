@@ -91,7 +91,7 @@
     background-repeat: no-repeat;
     background-size: contain;
 
-    @media #{$min-tablet} and #{$max-tablet}{
+    @media #{$min-tablet} and #{$max-tablet} {
       display: none;
     }
 

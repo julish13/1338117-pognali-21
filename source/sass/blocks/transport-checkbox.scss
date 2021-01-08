@@ -57,7 +57,7 @@ input:active + .transport-checkbox__wrap {
   }
 }
 
-input:checked:hover + .transport-checkbox__wrap,h
+input:checked:hover + .transport-checkbox__wrap,
 input:checked:focus + .transport-checkbox__wrap {
   .transport-checkbox__icon {
     fill: $basic-blue-light;
