@@ -24,7 +24,7 @@
     }
 
     headerElement.addEventListener(`click`, onClickDropdownFunction);
-    headerElement.addEventListener(`keydown`, () => {
+    headerElement.addEventListener(`keydown`, (evt) => {
       if (evt.keyCode === EVENT_KEYS.SPACE) {
         evt.preventDefault();
         onClickDropdownFunction();
