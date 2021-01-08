@@ -182,15 +182,6 @@
     padding-left: 37px;
   }
 
-  &:hover,
-  &:focus {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
 
   &::before {
     cursor: pointer;
@@ -212,12 +203,6 @@
 }
 
 input:checked + .filter-personality-field__label {
-  &:hover,
-  &:focus {
-    opacity: 1;
-    color: rgba($basic-black, 0.6);
-  }
-
   &::before {
     background-image: url("../img/yes.svg");
     background-repeat: no-repeat;
@@ -230,14 +215,26 @@ input:checked + .filter-personality-field__label {
   }
 }
 
+input:checked:hover + .filter-personality-field__label,
+input:checked:focus + .filter-personality-field__label {
+    opacity: 1;
+    color: rgba($basic-black, 0.6);
+}
+
+
+
 input:hover + .filter-personality-field__label,
 input:focus + .filter-personality-field__label {
+  opacity: 0.6;
+
   &::before {
     border-color: $grey-12;
   }
 }
 
 input:active + .filter-personality-field__label {
+  opacity: 0.3;
+
   &::before {
     background-color: $light-blue-background-5;
   }

@@ -14,19 +14,6 @@
 .likes__label {
   display: flex;
   align-items: center;
-
-  &:hover,
-  &:focus {
-    .likes__icon {
-      opacity: 0.5;
-    }
-  }
-
-  &:active {
-    .likes__icon {
-      opacity: 0.1;
-    }
-  }
 }
 
 .likes__wrap {
@@ -41,25 +28,6 @@
   @media #{$min-tablet} {
     width: 50px;
     height: 50px;
-  }
-}
-
-input:checked + .likes__label {
-  &:hover,
-  &:focus {
-    .likes__wrap {
-      background-color: $red-6;
-    }
-  }
-
-  &:active {
-    .likes__wrap {
-      background-color: $red-6;
-
-      .likes__icon {
-        opacity: 0.3;
-      }
-    }
   }
 }
 
@@ -96,6 +64,36 @@ input:checked + .likes__label {
 
     &--no {
       display: none;
+    }
+  }
+}
+
+input:hover + .likes__label,
+input:focus + .likes__label {
+  .likes__icon {
+    opacity: 0.5;
+  }
+}
+
+input:active + .likes__label {
+  .likes__icon {
+    opacity: 0.1;
+  }
+}
+
+input:checked:hover + .likes__label,
+input:checked:focus + .likes__label {
+  .likes__wrap {
+    background-color: $red-6;
+  }
+}
+
+input:checked:active + .likes__label {
+  .likes__wrap {
+    background-color: $red-6;
+
+    .likes__icon {
+      opacity: 0.3;
     }
   }
 }
