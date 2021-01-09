@@ -132,7 +132,9 @@
   }
 
   @media #{$min-desktop} {
-    text-align: left;
+    position: static;
+    transform: none;
+    width: min-content;
   }
 }
 
