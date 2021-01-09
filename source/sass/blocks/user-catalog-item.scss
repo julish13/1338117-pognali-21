@@ -13,6 +13,7 @@
   }
 
   @media #{$min-desktop} {
+    overflow: visible;
     grid-template: repeat(2, min-content) 102px / max-content 205px 11% 1fr min-content;
   }
 
