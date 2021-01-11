@@ -1,5 +1,4 @@
 .user-catalog-item {
-  overflow: hidden;
   display: grid;
   grid-template: repeat(4, min-content) 1fr min-content/39% 34% 27%;
   background-color: $basic-white;
@@ -13,7 +12,6 @@
   }
 
   @media #{$min-desktop} {
-    overflow: visible;
     grid-template: repeat(2, min-content) 102px / max-content 205px 11% 1fr min-content;
   }
 
@@ -111,6 +109,7 @@
 
   @media #{$min-tablet} {
     display: inline-block;
+    vertical-align: baseline;
     padding-right: 30px;
   }
 
@@ -226,6 +225,7 @@
   padding-left: 10px;
   padding-right: 10px;
   background-color: $basic-white;
+  vertical-align: baseline;
 }
 
 .user-catalog-item__countries {
@@ -318,7 +318,7 @@
 
   @media #{$min-desktop} {
     grid-area: 3 / 5 / span 1 / span 1;
-    margin-right: 44px;
+    margin-right: 43px;
     align-self: start;
   }
 }

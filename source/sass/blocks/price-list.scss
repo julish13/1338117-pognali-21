@@ -66,9 +66,8 @@
 
   &::after {
     position: absolute;
-    top: 3px;
+    top: 4px;
     right: -45px;
-    padding: 7px;
     width: 34px;
     height: 34px;
     border-radius: 50%;
@@ -77,14 +76,15 @@
     content: counter(myCounter);
     color: $basic-white;
     text-align: center;
+    line-height: 34px;
 
     @media #{$min-tablet} {
       top: -2px;
       right: unset;
       left: -90px;
-      padding: 16px;
       width: 68px;
       height: 68px;
+      line-height: 68px;
     }
   }
 

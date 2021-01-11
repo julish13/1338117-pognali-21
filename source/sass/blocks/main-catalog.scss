@@ -57,15 +57,12 @@
 
 .main-catalog__user-catalog {
   margin-top: 28px;
-  padding-bottom: 154px;
 
   @media #{$min-tablet} {
     margin-top: 0;
-    padding-bottom: 127px;
   }
 
   @media #{$min-desktop} {
     grid-area: 1 / 1 / span 1 / span 1;
-    padding-bottom: 144px;
   }
 }

@@ -15,13 +15,6 @@
     .flag__tooltip {
       display: block;
       top: 38px;
-      right: -40px;
-    }
-
-    &::after {
-      @include tooltip-tail;
-      top: 28px;
-      left: 25%;
     }
   }
 

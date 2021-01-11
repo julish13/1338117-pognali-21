@@ -21,6 +21,18 @@
   color: $basic-white;
 }
 
+.page__main-catalog {
+  padding-bottom: 154px;
+
+  @media #{$min-tablet} {
+    padding-bottom: 127px;
+  }
+
+  @media #{$min-desktop} {
+    padding-bottom: 144px;
+  }
+}
+
 .page__footer {
   @include index-top-border-radius;
   position: relative;

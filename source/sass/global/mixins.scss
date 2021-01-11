@@ -45,16 +45,6 @@
   background-color: $red-1;
 }
 
-@mixin tooltip-tail {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 8px 10px 8px;
-  border-color: transparent transparent $blue-5 transparent;
-}
-
 @mixin heading-decoration {
   position: absolute;
   bottom: -2px;

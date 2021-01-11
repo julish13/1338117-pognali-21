@@ -31,6 +31,7 @@
 .site-nav__link {
   color: inherit;
   display: inline-block;
+  vertical-align: baseline;
 
   @media #{$min-desktop} {
     position: relative;

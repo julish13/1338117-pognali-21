@@ -8,8 +8,9 @@
 
   &::before {
     position: absolute;
-    top: 55%;
-    left: 23%;
+    left: 50%;
+    top: 61%;
+    transform: translateX(-50%);
     content: "";
     width: 30px;
     height: 1px;
@@ -37,6 +38,7 @@
     }
 
     &::before {
+      top: 55%;
       width: 51px;
       background-color: $basic-grey-font;
 
@@ -49,6 +51,7 @@
 
   &--catalog {
     @media #{$min-tablet} {
+      justify-content: start;
       width: 65px;
       height: 65px;
     }
@@ -57,8 +60,7 @@
       display: none;
 
       @media #{$min-tablet} {
-        top: 57%;
-        left: unset;
+        top: 59%;
         display: block;
         background-color: $basic-black;
         opacity: 0.1;
@@ -73,9 +75,12 @@
   font-weight: 700;
 
   &--index {
-    margin-top: 6px;
-    margin-left: -3px;
+    padding-top: 8px;
     color: $basic-white;
+
+    @media #{$min-tablet} {
+      padding-top: 4px;
+    }
   }
 
   &--form {
@@ -95,6 +100,11 @@
 
   &--catalog {
     color: $basic-blue-light;
+
+    @media #{$min-tablet} {
+      padding-top: 14px;
+      margin-bottom: 3px;
+    }
   }
 }
 
@@ -105,7 +115,6 @@
   font-weight: 400;
 
   &--index {
-    margin-left: -3px;
     color: $basic-white;
     font-size: 14px;
   }

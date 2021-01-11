@@ -24,6 +24,7 @@
   width: 31px;
   height: 31px;
   background-color: $grey-background-4;
+  vertical-align: baseline;
 
   @media #{$min-tablet} {
     width: 50px;
@@ -60,6 +61,7 @@ input:checked + .likes__label {
 
     &--yes {
       display: inline-block;
+      vertical-align: baseline;
     }
 
     &--no {
