@@ -1,5 +1,4 @@
 .user-catalog-item {
-  overflow: hidden;
   display: grid;
   grid-template: repeat(4, min-content) 1fr min-content/39% 34% 27%;
   background-color: $basic-white;
@@ -9,49 +8,133 @@
   font-weight: 400;
 
   @media #{$min-tablet} {
-    grid-template: repeat(4, min-content) / 30% 25% 25% 20%;
+    grid-template: min-content 1fr min-content min-content / 37% 22% 16% 1fr;
   }
 
   @media #{$min-desktop} {
-    grid-template: repeat(3, min-content) / 35% 20% 15% 20% 10%;
+    grid-template: repeat(2, min-content) 102px / max-content 205px 11% 1fr min-content;
+  }
+
+  &:hover,
+  &:focus {
+    filter: drop-shadow(0 4px 9px rgba($basic-black, 0.16));
+
+    .user-catalog-item__photo {
+      transition: transform 0.3s;
+      transform: scale(1.05);
+    }
   }
 }
 
 .user-catalog-item__photo-wrap {
+  overflow: hidden;
   grid-area: 1 / 1 / span 2 / span 1;
   display: block;
+  border-radius: 50%;
   margin-top: 2px;
   margin-left: 18px;
+  width: 70px;
+  height: 70px;
 
   @media #{$min-tablet} {
     grid-area: 1 / 1 / span 3 / span 1;
+    border-radius: 20px;
+    margin-top: 0;
+    margin-left: 35px;
+    width: 190px;
+    height: 190px;
+  }
+
+  @media #{$min-desktop} {
+    margin-left: 0;
+    width: 285px;
+    height: 285px;
   }
 }
 
 .user-catalog-item__photo {
   display: block;
-  border-radius: 50%;
+
+  @media #{$min-tablet} {
+    width: 190px;
+    height: 190px;
+  }
+
+  @media #{$min-desktop} {
+    border-radius: 0;
+    width: 285px;
+    height: 285px;
+  }
 }
 
 .user-catalog-item__name {
-  position: relative;
   grid-area: 1 / 2 / span 1 / span 2;
   margin: 0;
   color: $basic-blue-light;
   font-size: 20px;
   line-height: 1;
   font-weight: 700;
+  overflow-wrap: break-word;
+
+  @media #{$min-tablet} {
+    margin-bottom: 23px;
+    padding-left: 4px;
+    font-size: 30px;
+    line-height: 0.75;
+  }
 
   @media #{$min-desktop} {
     grid-area: 1 / 2 / span 1 / span 2;
+    margin-left: 32px;
+    padding-top: 50px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.user-catalog-item__name-link {
+  position: relative;
+  display: block;
+  padding-right: 36px;
+  max-width: 100%;
+  color: inherit;
+  overflow-wrap: break-word;
+
+  @media #{$min-tablet} {
+    display: inline-block;
+    vertical-align: baseline;
+    padding-right: 30px;
+  }
+
+  @media #{$min-desktop} {
+    padding-left: 26px;
+    padding-right: 0;
   }
 
   &::before {
     @include user-status;
     position: absolute;
-    top: 10px;
+    top: 30%;
     right: 22px;
     content: "";
+
+    @media #{$min-tablet} {
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+    }
+
+    @media #{$min-desktop} {
+      right: unset;
+      left: 0;
+    }
   }
 
   &--offline {
@@ -65,10 +148,12 @@
       @include user-status-online;
     }
   }
-}
 
-.user-catalog-item__link {
-  color: inherit;
+  br {
+    @media #{$min-tablet} {
+      display: none;
+    }
+  }
 }
 
 .user-catalog-item__likes {
@@ -78,10 +163,14 @@
 
   @media #{$min-tablet} {
     grid-area: 3 / 3 / span 1 / span 1;
+    align-self: center;
+    margin-left: 0;
   }
 
   @media #{$min-desktop} {
     grid-area: 3 / 3 / span 1 / span 1;
+    align-self: start;
+    margin-top: 5px;
   }
 }
 
@@ -93,10 +182,13 @@
 
   @media #{$min-tablet} {
     grid-area: 2 / 2 / span 1 / span 2;
+    margin: 0 0 41px;
+    padding-left: 7px;
   }
 
   @media #{$min-desktop} {
     grid-area: 2 / 2 / span 1 / span 2;
+    margin-left: 55px;
   }
 }
 
@@ -104,6 +196,28 @@
   margin-top: -10px;
   margin-bottom: 0;
   font-weight: normal;
+
+  &--transport,
+  &--level {
+    @media #{$min-tablet} {
+      @include visually-hidden;
+    }
+  }
+
+  &--countries {
+    @media #{$min-tablet} {
+      margin-left: 37px;
+      margin-bottom: 19px;
+    }
+  }
+
+  &--transport,
+  &--level,
+  &--countries {
+    @media #{$min-desktop} {
+      @include visually-hidden;
+    }
+  }
 }
 
 .user-catalog-item__subheading-text {
@@ -111,6 +225,7 @@
   padding-left: 10px;
   padding-right: 10px;
   background-color: $basic-white;
+  vertical-align: baseline;
 }
 
 .user-catalog-item__countries {
@@ -122,19 +237,32 @@
 
   @media #{$min-tablet} {
     grid-area: 4 / 1 / span 1 / span 4;
+    margin-top: 23px;
+    margin-bottom: 0;
+    padding-left: 37px;
+    min-height: auto;
   }
 
   @media #{$min-desktop} {
     grid-area: 1 / 4 / span 2 / span 2;
+    margin-top: 0;
+    margin-left: 80px;
+    padding-top: 55px;
+    padding-left: 0;
+    border-top: none;
   }
 }
 
 .user-catalog-item__countries-list {
+  display: block;
   margin-top: 21px;
   padding-left: 9px;
 
-  @media #{$max-mobile} {
-    display: block;
+  @media #{$min-tablet} {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    padding-left: 0;
   }
 
   @media #{$min-desktop} {
@@ -150,10 +278,20 @@
 
   @media #{$min-tablet} {
     grid-area: 1 / 4 / span 2 / span 1;
+    justify-self: end;
+    margin-right: 40px;
+    margin-bottom: 0;
+    padding: 0;
+    border: none;
   }
 
   @media #{$min-desktop} {
     grid-area: 3 / 4 / span 1 / span 1;
+    justify-self: start;
+    align-self: start;
+    margin-top: 20px;
+    margin-left: 75px;
+    margin-right: 0;
   }
 }
 
@@ -161,8 +299,8 @@
   padding-top: 18px;
   padding-left: 5px;
 
-  @media #{$min-tablet} and #{$max-tablet} {
-    display: block;
+  @media #{$min-tablet} {
+    padding: 0;
   }
 }
 
@@ -172,16 +310,26 @@
 
   @media #{$min-tablet} {
     grid-area: 3 / 4 / span 1 / span 1;
+    align-self: center;
+    justify-self: end;
+    margin-right: 22px;
+    border: none;
   }
 
   @media #{$min-desktop} {
     grid-area: 3 / 5 / span 1 / span 1;
+    margin-right: 43px;
+    align-self: start;
   }
 }
 
 .user-catalog-item__level-body {
   padding-top: 22px;
   padding-right: 14px;
+
+  @media #{$min-tablet} {
+    padding: 0;
+  }
 }
 
 .user-catalog-item__button {
@@ -192,9 +340,18 @@
 
   @media #{$min-tablet} {
     grid-area: 3 / 2 / span 1 / span 1;
+    align-self: center;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 15px;
+    font-size: 20px;
   }
 
   @media #{$min-desktop} {
     grid-area: 3 / 2 / span 1 / span 1;
+    align-self: start;
+    margin-top: 5px;
+    margin-left: 54px;
+    padding: 17px 15px 14px;
   }
 }

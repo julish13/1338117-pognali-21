@@ -111,6 +111,9 @@
       <symbol viewBox="0 0 20 20" id="like">
         <path d="M10 8.12l1.12-2.34a7.7 7.7 0 011.44-2.1A3.43 3.43 0 0115 2.56a3.8 3.8 0 013.75 3.84c0 1.59-.7 2.7-2.34 4.42-.42.44-.9.91-1.43 1.44A67.62 67.62 0 0010 17.59a67.62 67.62 0 00-4.98-5.33c-.53-.53-1.01-1-1.43-1.44C1.94 9.11 1.25 8 1.25 6.4A3.8 3.8 0 015 2.56c.97 0 1.77.46 2.44 1.12a7.7 7.7 0 011.44 2.1L10 8.12zm.49 10.9a.65.65 0 01-.49.23.62.62 0 01-.49-.24c-2-2.5-3.81-4.28-5.3-5.75C1.63 10.7 0 9.1 0 6.4a5.07 5.07 0 015-5.15c2 0 3.4 1.38 4.26 2.64.32.48.57.94.74 1.3.22-.45.47-.89.74-1.3C11.6 2.63 13 1.25 15 1.25c2.76 0 5 2.3 5 5.15 0 2.71-1.63 4.31-4.2 6.86-1.5 1.47-3.3 3.26-5.31 5.75z"/>
       </symbol>
+      <symbol viewBox="0 0 20 20" id="like-evenodd">
+        <path fill-rule="evenodd" d="M10.26 8.12l1.12-2.34a7.7 7.7 0 011.44-2.1 3.44 3.44 0 012.44-1.12 3.8 3.8 0 013.76 3.84c0 1.59-.7 2.7-2.34 4.42-.42.44-.9.91-1.43 1.44a67.67 67.67 0 00-5 5.33 67.65 67.65 0 00-4.98-5.33c-.54-.53-1.02-1-1.44-1.44C2.2 9.11 1.5 8 1.5 6.4a3.8 3.8 0 013.76-3.84c.97 0 1.77.46 2.44 1.12a7.7 7.7 0 011.45 2.1l1.12 2.34zm.49 10.9a.65.65 0 01-.5.23.62.62 0 01-.48-.24c-2-2.5-3.82-4.28-5.32-5.75C1.87 10.7.25 9.1.25 6.4a5.08 5.08 0 015-5.15c2 0 3.4 1.38 4.26 2.64.33.48.57.94.75 1.3.21-.45.46-.89.74-1.3.86-1.26 2.26-2.64 4.26-2.64 2.77 0 5.01 2.3 5.01 5.15 0 2.71-1.63 4.31-4.21 6.86-1.5 1.47-3.3 3.26-5.31 5.75z"/>
+      </symbol>
       <symbol viewBox="0 0 32 16" id="arrow-bend">
         <path fill-rule="evenodd" d="M4 16h24a4 4 0 004-4V7a4 4 0 00-4-4H4v2h24a2 2 0 012 2v5a2 2 0 01-2 2H4v2z" clip-rule="evenodd"/>
         <path d="M0 4L9 .54v6.92L0 4z"/>
@@ -260,17 +263,27 @@
         </div>
       </nav>
     </header>
-    <main class="main-catalog">
+    <main class="page__main-catalog main-catalog">
       <header class="main-catalog__header catalog-header">
         <div class="catalog-header__inner container-fix">
           <h1 class="main-heading catalog-header__heading">Попутчики</h1>
-          <a class="catalog-header__home">На главную</a>
+          <a class="catalog-header__home" href="index.html">
+            На главную
+            <svg
+              class="catalog-header__icon"
+              role="img"
+              width="32px"
+              height="16px"
+            >
+              <use xlink:href="#arrow-bend"></use>
+            </svg>
+          </a>
         </div>
       </header>
       <section class="filter-countries filter-countries--nojs main-catalog__filter-countries">
         <div class="filter-countries__wrapper">
           <div class="filter-countries__underlay">
-            <div class="filter-countries__inner container-fix">
+            <div class="filter-countries__inner container-fix container-fix--catalog">
               <div class="filter-countries__header">
                 <h2 class="filter-countries__heading">Фильтрация по странам:</h2>
                 <button
@@ -289,7 +302,7 @@
                       id="europe"
                       checked
                     />
-                    <label class="filter-countries__label" for="europe">Европа</label>
+                    <label tabindex="0" class="filter-countries__label filter-countries__label--active" for="europe">Европа</label>
                   </li>
                   <li class="filter-countries__land">
                     <input
@@ -299,7 +312,7 @@
                       id="asia"
                       checked
                     />
-                    <label class="filter-countries__label" for="asia">Азия</label>
+                    <label tabindex="0" class="filter-countries__label" for="asia">Азия</label>
                   </li>
                   <li class="filter-countries__land">
                     <input
@@ -309,7 +322,7 @@
                       id="america"
                       checked
                     />
-                    <label class="filter-countries__label" for="america"
+                    <label tabindex="0" class="filter-countries__label" for="america"
                       >Америка</label
                     >
                   </li>
@@ -321,7 +334,7 @@
                       id="islands"
                       checked
                     />
-                    <label class="filter-countries__label" for="islands"
+                    <label tabindex="0" class="filter-countries__label" for="islands"
                       >Острова</label
                     >
                   </li>
@@ -330,14 +343,14 @@
               <div class="filter-countries__dropdown">
                 <div class="filter-countries__alphabet catalog-alphabet">
                   <ul class="catalog-alphabet__alphabet-row">
-                    <li class="catalog-alphabet__letter">
+                    <li class="catalog-alphabet__letter catalog-alphabet__letter--active">
                       <input
                         class="catalog-alphabet__checkbox visually-hidden"
                         type="radio"
                         name="letter"
                         id="a"
                       />
-                      <label class="catalog-alphabet__label" for="a"
+                      <label class="catalog-alphabet__label" tabindex="0" for="a"
                         >А</label
                       >
                     </li>
@@ -348,7 +361,7 @@
                         name="letter"
                         id="b"
                       />
-                      <label class="catalog-alphabet__label" for="b"
+                      <label class="catalog-alphabet__label" tabindex="0" for="b"
                         >Б</label
                       >
                     </li>
@@ -359,7 +372,7 @@
                         name="letter"
                         id="v"
                       />
-                      <label class="catalog-alphabet__label" for="v"
+                      <label class="catalog-alphabet__label" tabindex="0" for="v"
                         >В</label
                       >
                     </li>
@@ -370,7 +383,7 @@
                         name="letter"
                         id="g"
                       />
-                      <label class="catalog-alphabet__label" for="g"
+                      <label class="catalog-alphabet__label" tabindex="0" for="g"
                         >Г</label
                       >
                     </li>
@@ -381,7 +394,7 @@
                         name="letter"
                         id="d"
                       />
-                      <label class="catalog-alphabet__label" for="d"
+                      <label class="catalog-alphabet__label" tabindex="0" for="d"
                         >Д</label
                       >
                     </li>
@@ -394,7 +407,7 @@
                         name="letter"
                         id="e"
                       />
-                      <label class="catalog-alphabet__label" for="e"
+                      <label class="catalog-alphabet__label" tabindex="0" for="e"
                         >Е</label
                       >
                     </li>
@@ -405,7 +418,7 @@
                         name="letter"
                         id="z"
                       />
-                      <label class="catalog-alphabet__label" for="z"
+                      <label class="catalog-alphabet__label" tabindex="0" for="z"
                         >З</label
                       >
                     </li>
@@ -416,7 +429,7 @@
                         name="letter"
                         id="i"
                       />
-                      <label class="catalog-alphabet__label" for="i"
+                      <label class="catalog-alphabet__label" tabindex="0" for="i"
                         >И</label
                       >
                     </li>
@@ -427,7 +440,7 @@
                         name="letter"
                         id="k"
                       />
-                      <label class="catalog-alphabet__label" for="k"
+                      <label class="catalog-alphabet__label" tabindex="0" for="k"
                         >К</label
                       >
                     </li>
@@ -438,7 +451,7 @@
                         name="letter"
                         id="l"
                       />
-                      <label class="catalog-alphabet__label" for="l"
+                      <label class="catalog-alphabet__label" tabindex="0" for="l"
                         >Л</label
                       >
                     </li>
@@ -451,7 +464,7 @@
                         name="letter"
                         id="m"
                       />
-                      <label class="catalog-alphabet__label" for="m"
+                      <label class="catalog-alphabet__label" tabindex="0" for="m"
                         >М</label
                       >
                     </li>
@@ -462,7 +475,7 @@
                         name="letter"
                         id="n"
                       />
-                      <label class="catalog-alphabet__label" for="n"
+                      <label class="catalog-alphabet__label" tabindex="0" for="n"
                         >Н</label
                       >
                     </li>
@@ -473,7 +486,7 @@
                         name="letter"
                         id="o"
                       />
-                      <label class="catalog-alphabet__label" for="o"
+                      <label class="catalog-alphabet__label" tabindex="0" for="o"
                         >О</label
                       >
                     </li>
@@ -484,7 +497,7 @@
                         name="letter"
                         id="p"
                       />
-                      <label class="catalog-alphabet__label" for="p"
+                      <label class="catalog-alphabet__label" tabindex="0" for="p"
                         >П</label
                       >
                     </li>
@@ -495,7 +508,7 @@
                         name="letter"
                         id="r"
                       />
-                      <label class="catalog-alphabet__label" for="r"
+                      <label class="catalog-alphabet__label" tabindex="0" for="r"
                         >Р</label
                       >
                     </li>
@@ -508,7 +521,7 @@
                         name="letter"
                         id="s"
                       />
-                      <label class="catalog-alphabet__label" for="s"
+                      <label class="catalog-alphabet__label" tabindex="0" for="s"
                         >С</label
                       >
                     </li>
@@ -519,7 +532,7 @@
                         name="letter"
                         id="t"
                       />
-                      <label class="catalog-alphabet__label" for="t"
+                      <label class="catalog-alphabet__label" tabindex="0" for="t"
                         >Т</label
                       >
                     </li>
@@ -530,7 +543,7 @@
                         name="letter"
                         id="u"
                       />
-                      <label class="catalog-alphabet__label" for="u"
+                      <label class="catalog-alphabet__label" tabindex="0" for="u"
                         >У</label
                       >
                     </li>
@@ -541,7 +554,7 @@
                         name="letter"
                         id="f"
                       />
-                      <label class="catalog-alphabet__label" for="f"
+                      <label class="catalog-alphabet__label" tabindex="0" for="f"
                         >Ф</label
                       >
                     </li>
@@ -552,7 +565,7 @@
                         name="letter"
                         id="h"
                       />
-                      <label class="catalog-alphabet__label" for="h"
+                      <label class="catalog-alphabet__label" tabindex="0" for="h"
                         >Х</label
                       >
                     </li>
@@ -565,7 +578,7 @@
                         name="letter"
                         id="ch"
                       />
-                      <label class="catalog-alphabet__label" for="ch"
+                      <label class="catalog-alphabet__label" tabindex="0" for="ch"
                         >Ч</label
                       >
                     </li>
@@ -576,7 +589,7 @@
                         name="letter"
                         id="sh"
                       />
-                      <label class="catalog-alphabet__label" for="sh"
+                      <label class="catalog-alphabet__label" tabindex="0" for="sh"
                         >Ш</label
                       >
                     </li>
@@ -587,7 +600,7 @@
                         name="letter"
                         id="eh"
                       />
-                      <label class="catalog-alphabet__label" for="eh"
+                      <label class="catalog-alphabet__label" tabindex="0" for="eh"
                         >Э</label
                       >
                     </li>
@@ -598,7 +611,7 @@
                         name="letter"
                         id="yu"
                       />
-                      <label class="catalog-alphabet__label" for="yu"
+                      <label class="catalog-alphabet__label" tabindex="0" for="yu"
                         >Ю</label
                       >
                     </li>
@@ -609,7 +622,7 @@
                         name="letter"
                         id="ya"
                       />
-                      <label class="catalog-alphabet__label" for="ya"
+                      <label class="catalog-alphabet__label" tabindex="0" for="ya"
                         >Я</label
                       >
                     </li>
@@ -1287,7 +1300,7 @@
                   </ul>
                 </div>
                 <button
-                  class="filter-countries__button button-round button-round--grey"
+                  class="filter-countries__button button-round"
                   type="button"
                 >
                   <span class="filter-countries__button-text">Свернуть</span>
@@ -1297,7 +1310,7 @@
           </div>
         </div>
       </section>
-      <div class="main-catalog__inner container-fix">
+      <div class="main-catalog__inner container-fix container-fix--catalog">
         <section class="filter-personality main-catalog__filter-personality">
           <h2 class="visually-hidden">Фильтрация по профилю</h2>
           <form
@@ -1311,14 +1324,9 @@
               </legend>
               <div class="filter-personality__inner">
                 <div class="filter-personality__field filter-personality-field filter-personality-field--nojs">
-                  <p class="filter-personality-field__header">
-                    <span class="filter-personality-field__title">Хобби</span>
-                    <button
-                      class="filter-personality-field__toggle"
-                      type="button"
-                      aria-label="Открыть меню"
-                    ></button>
-                  </p>
+                  <h3 tabindex="0" class="filter-personality-field__header">
+                    Хобби<span">:</span>
+                  </h3>
                   <ul class="filter-personality-field__list">
                     <li class="filter-personality-field__item">
                       <input
@@ -1328,7 +1336,7 @@
                         id="gym"
                         checked
                       />
-                      <label class="filter-personality-field__label" for="gym"
+                      <label tabindex="0" class="filter-personality-field__label" for="gym"
                         >Спортзал</label
                       >
                     </li>
@@ -1340,6 +1348,7 @@
                         id="hookah"
                       />
                       <label
+                        tabindex="0"
                         class="filter-personality-field__label"
                         for="hookah"
                         >Кальян</label
@@ -1352,21 +1361,16 @@
                         name="sofa"
                         id="sofa"
                       />
-                      <label class="filter-personality-field__label" for="sofa"
+                      <label tabindex="0" class="filter-personality-field__label" for="sofa"
                         >Диван</label
                       >
                     </li>
                   </ul>
                 </div>
-                <div class="filter-personality__field filter-personality-fields filter-personality-field--nojs">
-                  <p class="filter-personality-field__header">
-                    <span class="filter-personality-field__title">Музыка</span>
-                    <button
-                      class="filter-personality-field__toggle"
-                      type="button"
-                      aria-label="Открыть меню"
-                    ></button>
-                  </p>
+                <div class="filter-personality__field filter-personality-field filter-personality-field--nojs">
+                  <h3 tabindex="0" class="filter-personality-field__header">
+                    Музыка<span>:</span>
+                  </h3>
                   <ul class="filter-personality-field__list">
                     <li class="filter-personality-field__item">
                       <input
@@ -1377,6 +1381,7 @@
                         checked
                       />
                       <label
+                        tabindex="0"
                         class="filter-personality-field__label"
                         for="hardrock"
                         >Тяжелый рок</label
@@ -1390,6 +1395,7 @@
                         id="russian_rap"
                       />
                       <label
+                        tabindex="0"
                         class="filter-personality-field__label"
                         for="russian_rap"
                         >Русский рэп</label
@@ -1403,6 +1409,7 @@
                         id="eurodance"
                       />
                       <label
+                        tabindex="0"
                         class="filter-personality-field__label"
                         for="eurodance"
                         >Евроденс</label
@@ -1410,15 +1417,10 @@
                     </li>
                   </ul>
                 </div>
-                <div class="filter-personality__field filter-personality-field filter-personality-field--nojs">
-                  <p class="filter-personality-field__header">
-                    <span class="filter-personality-field__title">Еда</span>
-                    <button
-                      class="filter-personality-field__toggle"
-                      type="button"
-                      aria-label="Открыть меню"
-                    ></button>
-                  </p>
+                <div class="filter-personality__field filter-personality__field--food filter-personality-field filter-personality-field--nojs">
+                  <h3 tabindex="0" class="filter-personality-field__header">
+                    Еда<span>:</span>
+                  </h3>
                   <ul class="filter-personality-field__list">
                     <li class="filter-personality-field__item">
                       <input
@@ -1428,7 +1430,7 @@
                         id="meat"
                         checked
                       />
-                      <label class="filter-personality-field__label" for="meat"
+                      <label tabindex="0" class="filter-personality-field__label" for="meat"
                         >Мясоед</label
                       >
                     </li>
@@ -1440,6 +1442,7 @@
                         id="healthy_food"
                       />
                       <label
+                        tabindex="0"
                         class="filter-personality-field__label"
                         for="healthy_food"
                         >Сидит на ПП</label
@@ -1453,6 +1456,7 @@
                         id="raw_vegan"
                       />
                       <label
+                        tabindex="0"
                         class="filter-personality-field__label"
                         for="raw_vegan"
                         >Веган-сыроед</label
@@ -1460,17 +1464,10 @@
                     </li>
                   </ul>
                 </div>
-                <div class="filter-personality__field filter-personality-fields filter-personality-field--nojs">
-                  <p class="filter-personality-field__header">
-                    <span class="filter-personality-field__title"
-                      >Транспорт</span
-                    >
-                    <button
-                      class="filter-personality-field__toggle"
-                      type="button"
-                      aria-label="Открыть меню"
-                    ></button>
-                  </p>
+                <div class="filter-personality__field filter-personality__field--transport filter-personality-field filter-personality-field--nojs">
+                  <h3 tabindex="0" class="filter-personality-field__header filter-personality-field__header--transport">
+                    Транспорт<span>:</span>
+                  </h3>
                   <ul class="filter-personality-field__list filter-personality-field__list--transport">
                     <li class="filter-personality-field__transport transport-checkbox">
                       <input
@@ -1481,7 +1478,7 @@
                         checked
                         aria-label="На самолете"
                       />
-                      <label class="transport-checkbox__wrap" for="planeInput" tabindex="0">
+                      <label class="transport-checkbox__wrap transport-checkbox__wrap--catalog" for="planeInput" tabindex="0">
                         <svg
                           class="transport-checkbox__icon"
                           role="img"
@@ -1501,7 +1498,7 @@
                         checked
                         aria-label="На автобусе"
                       />
-                      <label class="transport-checkbox__wrap" for="busInput" tabindex="0">
+                      <label class="transport-checkbox__wrap transport-checkbox__wrap--catalog" for="busInput" tabindex="0">
                         <svg
                           class="transport-checkbox__icon"
                           role="img"
@@ -1520,7 +1517,7 @@
                         id="bikeInput"
                         aria-label="На велосипеде"
                       />
-                      <label class="transport-checkbox__wrap" for="bikeInput" tabindex="0">
+                      <label class="transport-checkbox__wrap transport-checkbox__wrap--catalog" for="bikeInput" tabindex="0">
                         <svg
                           class="transport-checkbox__icon"
                           role="img"
@@ -1540,7 +1537,7 @@
                         checked
                         aria-label="Пешком"
                       />
-                      <label class="transport-checkbox__wrap" for="walkInput" tabindex="0">
+                      <label class="transport-checkbox__wrap transport-checkbox__wrap--catalog" for="walkInput" tabindex="0">
                         <svg
                           class="transport-checkbox__icon"
                           role="img"
@@ -1553,32 +1550,31 @@
                     </li>
                   </ul>
                 </div>
-                <div class="filter-personality__field filter-personality-fields filter-personality-field--nojs">
-                  <p class="filter-personality-field__header">
-                    <span class="filter-personality-field__title">Левел</span>
-                    <button
-                      class="filter-personality-field__toggle"
-                      type="button"
-                      aria-label="Открыть меню"
-                    ></button>
-                  </p>
+                <div class="filter-personality__field filter-personality-field filter-personality-field--nojs">
+                  <h3 tabindex="0" class="filter-personality-field__header filter-personality-field__header--level">
+                    Левел<span>:</span>
+                  </h3>
                   <div
                     class="filter-personality-field__level-filter level-filter"
                   >
                     <div class="level-filter__values">
                       <input
-                        class="level-filter__input"
-                        type="number"
+                        class="level-filter__input level-filter__input--min"
                         aria-label="Минимальный уровень"
                         name="min-level"
                         value="30"
+                        type="text"
+                        inputmode="numeric"
+                        pattern="[0-9]*"
                       />
                       <input
-                        class="level-filter__input"
-                        type="number"
+                        class="level-filter__input level-filter__input--max"
                         aria-label="Максимальный уровень"
                         name="max-level"
                         value="100"
+                        type="text"
+                        inputmode="numeric"
+                        pattern="[0-9]*"
                       />
                     </div>
                     <div class="level-filter__range-controls range-controls">
@@ -1598,7 +1594,7 @@
                 </div>
               </div>
               <button
-                  class="filter-personality__button button-round button-round--white"
+                  class="filter-personality__button button-round"
                   type="submit"
                 >
                   Показать
@@ -1629,8 +1625,8 @@
                   />
                 </picture>
               </a>
-              <h3 class="user-catalog-item__name user-catalog-item__name--offline">
-                <a class="user-catalog-item__link" href="#">Таня <br>Фирсова</a>
+              <h3 class="user-catalog-item__name">
+                <a class="user-catalog-item__name-link user-catalog-item__name-link--offline" href="#">Таня <br>Фирсова</a>
               </h3>
               <div class="user-catalog-item__likes likes">
                 <input
@@ -1640,15 +1636,23 @@
                   id="firsova-likes"
                   checked
                 />
-                <label class="likes__label" for="firsova-likes">
+                <label tabindex="0" class="likes__label" for="firsova-likes">
                   <span class="likes__wrap">
                     <svg
-                      class="likes__icon"
+                      class="likes__icon likes__icon--yes"
                       role="img"
                       width="12px"
                       height="12px"
                     >
                       <use xlink:href="#like"></use>
+                    </svg>
+                    <svg
+                      class="likes__icon likes__icon--no"
+                      role="img"
+                      width="12px"
+                      height="12px"
+                    >
+                      <use xlink:href="#like-evenodd"></use>
                     </svg>
                   </span>
                   <span>1,5 М</span>
@@ -1678,7 +1682,7 @@
                 </ul>
               </div>
               <div class="user-catalog-item__countries">
-                <h4 class="user-catalog-item__subheading">
+                <h4 class="user-catalog-item__subheading user-catalog-item__subheading--countries">
                   <span class="user-catalog-item__subheading-text">хочет посетить:</span>
                 </h4>
                 <ul
@@ -1702,10 +1706,10 @@
                 </ul>
               </div>
               <div class="user-catalog-item__transports">
-                <h4 class="user-catalog-item__subheading">
+                <h4 class="user-catalog-item__subheading user-catalog-item__subheading--transport">
                   <span class="user-catalog-item__subheading-text">транспорт:</span>
                 </h4>
-                <ul class="user-catalog-item__transport-list user-item-transports">
+                <ul class="user-catalog-item__transport-list user-item-transports user-item-transports--catalog">
                   <li class="user-item-transports__transport user-item-transports__transport--catalog">
                     <svg
                       class="user-item-transports__icon user-item-transports__icon--plane-catalog user-item-transports__icon--checked"
@@ -1716,7 +1720,7 @@
                     >
                       <use xlink:href="#plane"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip">Авиаперелет</span>
+                    <span class="user-item-transports__tooltip tooltip">Авиаперелет</span>
                   </li>
                   <li class="user-item-transports__transport user-item-transports__transport--catalog">
                     <svg
@@ -1728,7 +1732,7 @@
                     >
                       <use xlink:href="#bus"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip"
+                    <span class="user-item-transports__tooltip tooltip"
                       >Автотранспорт</span
                     >
                   </li>
@@ -1742,7 +1746,7 @@
                     >
                       <use xlink:href="#bike"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip">Велосипед</span>
+                    <span class="user-item-transports__tooltip tooltip">Велосипед</span>
                   </li>
                   <li class="user-item-transports__transport user-item-transports__transport--catalog">
                     <svg
@@ -1754,20 +1758,21 @@
                     >
                       <use xlink:href="#walk"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip">Пешком</span>
+                    <span class="user-item-transports__tooltip tooltip">Пешком</span>
                   </li>
                 </ul>
               </div>
               <div class="user-catalog-item__level">
-                <h4 class="user-catalog-item__subheading">
+                <h4 class="user-catalog-item__subheading user-catalog-item__subheading--level">
                   <span class="user-catalog-item__subheading-text">левел:</span>
                 </h4>
                 <div class="user-catalog-item__level-body level">
                   <div class="level__wrap level__wrap--catalog">
-                    <svg class="level__progress-ring" width="45" height=45>
+                    <svg class="level__progress-ring level__progress-ring--catalog" width="45" height=45>
                       <circle class="level__circle level__circle--catalog" r="20.5" cx="22.5" cy="22.5" />
                     </svg>
                     <p class="level__value level__value--catalog">99</p>
+                    <p class="level__text level__text--catalog">level</p>
                   </div>
                 </div>
               </div>
@@ -1797,25 +1802,33 @@
                   />
                 </picture>
               </a>
-              <h3 class="user-catalog-item__name user-catalog-item__name--offline">
-                <a class="user-catalog-item__link" href="#">Петя <br>Демин</a>
+              <h3 class="user-catalog-item__name">
+                <a class="user-catalog-item__name-link user-catalog-item__name-link--offline" href="#">Петя <br>Демин</a>
               </h3>
               <div class="user-catalog-item__likes likes">
                 <input
                   class="visually-hidden"
                   type="checkbox"
                   aria-label="лайк"
-                  id="firsova-likes"
+                  id="demin-likes"
                 />
-                <label class="likes__label" for="firsova-likes">
+                <label tabindex="0" class="likes__label" for="demin-likes">
                   <span class="likes__wrap">
                     <svg
-                      class="likes__icon"
+                      class="likes__icon likes__icon--yes"
                       role="img"
                       width="12px"
                       height="12px"
                     >
                       <use xlink:href="#like"></use>
+                    </svg>
+                    <svg
+                      class="likes__icon likes__icon--no"
+                      role="img"
+                      width="12px"
+                      height="12px"
+                    >
+                      <use xlink:href="#like-evenodd"></use>
                     </svg>
                   </span>
                   <span>1500</span>
@@ -1842,7 +1855,7 @@
                 </ul>
               </div>
               <div class="user-catalog-item__countries">
-                <h4 class="user-catalog-item__subheading">
+                <h4 class="user-catalog-item__subheading user-catalog-item__subheading--countries">
                   <span class="user-catalog-item__subheading-text">хочет посетить:</span>
                 </h4>
                 <ul
@@ -1861,10 +1874,10 @@
                 </ul>
               </div>
               <div class="user-catalog-item__transports">
-                <h4 class="user-catalog-item__subheading">
+                <h4 class="user-catalog-item__subheading user-catalog-item__subheading--transport">
                   <span class="user-catalog-item__subheading-text">транспорт:</span>
                 </h4>
-                <ul class="user-catalog-item__transport-list user-item-transports">
+                <ul class="user-catalog-item__transport-list user-item-transports user-item-transports--catalog">
                   <li class="user-item-transports__transport user-item-transports__transport--catalog">
                     <svg
                       class="user-item-transports__icon user-item-transports__icon--plane-catalog user-item-transports__icon--checked"
@@ -1875,7 +1888,7 @@
                     >
                       <use xlink:href="#plane"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip">Авиаперелет</span>
+                    <span class="user-item-transports__tooltip tooltip">Авиаперелет</span>
                   </li>
                   <li class="user-item-transports__transport user-item-transports__transport--catalog">
                     <svg
@@ -1887,7 +1900,7 @@
                     >
                       <use xlink:href="#bus"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip"
+                    <span class="user-item-transports__tooltip tooltip"
                       >Автотранспорт</span
                     >
                   </li>
@@ -1901,7 +1914,7 @@
                     >
                       <use xlink:href="#bike"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip">Велосипед</span>
+                    <span class="user-item-transports__tooltip tooltip">Велосипед</span>
                   </li>
                   <li class="user-item-transports__transport user-item-transports__transport--catalog">
                     <svg
@@ -1913,20 +1926,21 @@
                     >
                       <use xlink:href="#walk"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip">Пешком</span>
+                    <span class="user-item-transports__tooltip tooltip">Пешком</span>
                   </li>
                 </ul>
               </div>
               <div class="user-catalog-item__level">
-                <h4 class="user-catalog-item__subheading">
+                <h4 class="user-catalog-item__subheading user-catalog-item__subheading--level">
                   <span class="user-catalog-item__subheading-text">левел:</span>
                 </h4>
                 <div class="user-catalog-item__level-body level">
                   <div class="level__wrap level__wrap--catalog">
-                    <svg class="level__progress-ring" width="45" height=45>
+                    <svg class="level__progress-ring level__progress-ring--catalog" width="45" height=45>
                       <circle class="level__circle level__circle--catalog" r="20.5" cx="22.5" cy="22.5" />
                     </svg>
                     <p class="level__value level__value--catalog">80</p>
+                    <p class="level__text level__text--catalog">level</p>
                   </div>
                 </div>
               </div>
@@ -1956,25 +1970,33 @@
                   />
                 </picture>
               </a>
-              <h3 class="user-catalog-item__name user-catalog-item__name--offline">
-                <a class="user-catalog-item__link" href="#">Марк <br>Смолов</a>
+              <h3 class="user-catalog-item__name">
+                <a class="user-catalog-item__name-link user-catalog-item__name-link--offline" href="#">Марк <br>Смолов</a>
               </h3>
               <div class="user-catalog-item__likes likes">
                 <input
                   class="visually-hidden"
                   type="checkbox"
                   aria-label="лайк"
-                  id="firsova-likes"
+                  id="smolov-likes"
                 />
-                <label class="likes__label" for="firsova-likes">
+                <label tabindex="0" class="likes__label" for="smolov-likes">
                   <span class="likes__wrap">
                     <svg
-                      class="likes__icon"
+                      class="likes__icon likes__icon--yes"
                       role="img"
                       width="12px"
                       height="12px"
                     >
                       <use xlink:href="#like"></use>
+                    </svg>
+                    <svg
+                      class="likes__icon likes__icon--no"
+                      role="img"
+                      width="12px"
+                      height="12px"
+                    >
+                      <use xlink:href="#like-evenodd"></use>
                     </svg>
                   </span>
                   <span>170</span>
@@ -2001,7 +2023,7 @@
                 </ul>
               </div>
               <div class="user-catalog-item__countries">
-                <h4 class="user-catalog-item__subheading">
+                <h4 class="user-catalog-item__subheading user-catalog-item__subheading--countries">
                   <span class="user-catalog-item__subheading-text">хочет посетить:</span>
                 </h4>
                 <ul
@@ -2025,10 +2047,10 @@
                 </ul>
               </div>
               <div class="user-catalog-item__transports">
-                <h4 class="user-catalog-item__subheading">
+                <h4 class="user-catalog-item__subheading user-catalog-item__subheading--transport">
                   <span class="user-catalog-item__subheading-text">транспорт:</span>
                 </h4>
-                <ul class="user-catalog-item__transport-list user-item-transports">
+                <ul class="user-catalog-item__transport-list user-item-transports user-item-transports--catalog">
                   <li class="user-item-transports__transport user-item-transports__transport--catalog">
                     <svg
                       class="user-item-transports__icon user-item-transports__icon--plane-catalog user-item-transports__icon--checked"
@@ -2039,7 +2061,7 @@
                     >
                       <use xlink:href="#plane"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip">Авиаперелет</span>
+                    <span class="user-item-transports__tooltip tooltip">Авиаперелет</span>
                   </li>
                   <li class="user-item-transports__transport user-item-transports__transport--catalog">
                     <svg
@@ -2051,7 +2073,7 @@
                     >
                       <use xlink:href="#bus"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip"
+                    <span class="user-item-transports__tooltip tooltip"
                       >Автотранспорт</span
                     >
                   </li>
@@ -2065,7 +2087,7 @@
                     >
                       <use xlink:href="#bike"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip">Велосипед</span>
+                    <span class="user-item-transports__tooltip tooltip">Велосипед</span>
                   </li>
                   <li class="user-item-transports__transport user-item-transports__transport--catalog">
                     <svg
@@ -2077,20 +2099,21 @@
                     >
                       <use xlink:href="#walk"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip">Пешком</span>
+                    <span class="user-item-transports__tooltip tooltip">Пешком</span>
                   </li>
                 </ul>
               </div>
               <div class="user-catalog-item__level">
-                <h4 class="user-catalog-item__subheading">
+                <h4 class="user-catalog-item__subheading user-catalog-item__subheading--level">
                   <span class="user-catalog-item__subheading-text">левел:</span>
                 </h4>
                 <div class="user-catalog-item__level-body level">
                   <div class="level__wrap level__wrap--catalog">
-                    <svg class="level__progress-ring" width="45" height=45>
+                    <svg class="level__progress-ring level__progress-ring--catalog" width="45" height=45>
                       <circle class="level__circle level__circle--catalog" r="20.5" cx="22.5" cy="22.5" />
                     </svg>
                     <p class="level__value level__value--catalog">25</p>
+                    <p class="level__text level__text--catalog">level</p>
                   </div>
                 </div>
               </div>
@@ -2120,25 +2143,33 @@
                   />
                 </picture>
               </a>
-              <h3 class="user-catalog-item__name user-catalog-item__name--online">
-                <a class="user-catalog-item__link" href="#">Лариса <br>Роговая</a>
+              <h3 class="user-catalog-item__name">
+                <a class="user-catalog-item__name-link user-catalog-item__name-link--online" href="#">Лариса <br>Роговая</a>
               </h3>
               <div class="user-catalog-item__likes likes">
                 <input
                   class="visually-hidden"
                   type="checkbox"
                   aria-label="лайк"
-                  id="firsova-likes"
+                  id="rogovaya-likes"
                 />
-                <label class="likes__label" for="firsova-likes">
+                <label tabindex="0" class="likes__label" for="rogovaya-likes">
                   <span class="likes__wrap">
                     <svg
-                      class="likes__icon"
+                      class="likes__icon likes__icon--yes"
                       role="img"
                       width="12px"
                       height="12px"
                     >
                       <use xlink:href="#like"></use>
+                    </svg>
+                    <svg
+                      class="likes__icon likes__icon--no"
+                      role="img"
+                      width="12px"
+                      height="12px"
+                    >
+                      <use xlink:href="#like-evenodd"></use>
                     </svg>
                   </span>
                   <span>23</span>
@@ -2162,7 +2193,7 @@
                 </ul>
               </div>
               <div class="user-catalog-item__countries">
-                <h4 class="user-catalog-item__subheading">
+                <h4 class="user-catalog-item__subheading user-catalog-item__subheading--countries">
                   <span class="user-catalog-item__subheading-text">хочет посетить:</span>
                 </h4>
                 <ul
@@ -2181,10 +2212,10 @@
                 </ul>
               </div>
               <div class="user-catalog-item__transports">
-                <h4 class="user-catalog-item__subheading">
+                <h4 class="user-catalog-item__subheading user-catalog-item__subheading--transport">
                   <span class="user-catalog-item__subheading-text">транспорт:</span>
                 </h4>
-                <ul class="user-catalog-item__transport-list user-item-transports">
+                <ul class="user-catalog-item__transport-list user-item-transports user-item-transports--catalog">
                   <li class="user-item-transports__transport user-item-transports__transport--catalog">
                     <svg
                       class="user-item-transports__icon user-item-transports__icon--plane-catalog user-item-transports__icon--checked"
@@ -2195,7 +2226,7 @@
                     >
                       <use xlink:href="#plane"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip">Авиаперелет</span>
+                    <span class="user-item-transports__tooltip tooltip">Авиаперелет</span>
                   </li>
                   <li class="user-item-transports__transport user-item-transports__transport--catalog">
                     <svg
@@ -2207,7 +2238,7 @@
                     >
                       <use xlink:href="#bus"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip"
+                    <span class="user-item-transports__tooltip tooltip"
                       >Автотранспорт</span
                     >
                   </li>
@@ -2221,7 +2252,7 @@
                     >
                       <use xlink:href="#bike"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip">Велосипед</span>
+                    <span class="user-item-transports__tooltip tooltip">Велосипед</span>
                   </li>
                   <li class="user-item-transports__transport user-item-transports__transport--catalog">
                     <svg
@@ -2233,20 +2264,21 @@
                     >
                       <use xlink:href="#walk"></use>
                     </svg>
-                    <span class="user-item__tooltip tooltip">Пешком</span>
+                    <span class="user-item-transports__tooltip tooltip">Пешком</span>
                   </li>
                 </ul>
               </div>
               <div class="user-catalog-item__level">
-                <h4 class="user-catalog-item__subheading">
+                <h4 class="user-catalog-item__subheading user-catalog-item__subheading--level">
                   <span class="user-catalog-item__subheading-text">левел:</span>
                 </h4>
                 <div class="user-catalog-item__level-body level">
                   <div class="level__wrap level__wrap--catalog">
-                    <svg class="level__progress-ring" width="45" height=45>
+                    <svg class="level__progress-ring level__progress-ring--catalog" width="45" height=45>
                       <circle class="level__circle level__circle--catalog" r="20.5" cx="22.5" cy="22.5" />
                     </svg>
                     <p class="level__value level__value--catalog">50</p>
+                    <p class="level__text level__text--catalog">level</p>
                   </div>
                 </div>
               </div>
@@ -2260,19 +2292,29 @@
           <a class="user-catalog__expand" href="#">Показать еще</a>
           <div class="user-catalog__pagination pagination">
             <div class="pagination__pages">
-              <a class="pagination-item active">1</a>
-              <a class="pagination-item" href="#">2</a>
-              <a class="pagination-item" href="#">3</a>
-              <a class="pagination-item" href="#">4</a>
+              <a class="pagination__item pagination__item--active">
+                <span class="pagination__number">1</span>
+              </a>
+              <a class="pagination__item" href="#">
+                <span class="pagination__number">2</span>
+              </a>
+              <a class="pagination__item" href="#">
+                <span class="pagination__number">3</span>
+              </a>
+              <a class="pagination__item" href="#">
+                <span class="pagination__number">4</span>
+              </a>
             </div>
             <div class="pagination__swipe">
               <a
                 class="pagination__arrow pagination__arrow--left"
                 aria-label="Предыдущая страница"
+                tabindex="0"
               ></a>
               <a
                 class="pagination__arrow pagination__arrow--right"
                 aria-label="Следующая страница"
+                tabindex="0"
               ></a>
             </div>
           </div>

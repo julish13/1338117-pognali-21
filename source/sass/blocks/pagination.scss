@@ -1,19 +1,83 @@
+.pagination {
+  @media #{$min-tablet} {
+    background-color: $basic-white;
+    display: flex;
+  }
+}
+
 .pagination__pages {
-  @media #{$max-tablet} {
+  @media #{$max-mobile} {
     display: none;
   }
+
+  @media #{$min-tablet} {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+  }
+}
+
+.pagination__item {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  color: $basic-blue-light;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+
+  &--active {
+    background-color: $yellow-1;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active,
+  &--active {
+    background-color: $yellow-1;
+  }
+}
+
+.pagination__number {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .pagination__swipe {
   display: flex;
+
+  @media #{$min-tablet} {
+    justify-content: space-between;
+    width: 83px;
+  }
 }
 
 .pagination__arrow {
+  cursor: pointer;
   position: relative;
   display: block;
   flex-grow: 1;
   height: 51px;
   background-color: $basic-white;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::before {
     position: absolute;

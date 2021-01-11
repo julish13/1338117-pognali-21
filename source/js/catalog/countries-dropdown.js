@@ -12,9 +12,11 @@
     if (!filterCountriesElement.classList.contains(`filter-countries--opened`)) {
       filterCountriesElement.classList.remove(`filter-countries--closed`);
       filterCountriesElement.classList.add(`filter-countries--opened`);
+      toggleElement.textContent = `Свернуть`;
     } else {
       filterCountriesElement.classList.remove(`filter-countries--opened`);
       filterCountriesElement.classList.add(`filter-countries--closed`);
+      toggleElement.textContent = `Показать все`;
     }
   }
 

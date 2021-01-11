@@ -1,3 +1,6 @@
+$desktop-avatar-width: 190px;
+$desktop-avatar-margin-right: 95px;
+
 .profile__form {
   display: flex;
   flex-wrap: wrap;
@@ -25,6 +28,7 @@
   }
 
   @media #{$min-desktop} {
+    margin-top: 0;
     margin-left: auto;
   }
 }
@@ -43,9 +47,9 @@
 
   @media #{$min-desktop} {
     border-radius: 7px 7px 0 0;
-    margin-right: 95px;
+    margin-right: $desktop-avatar-margin-right;
     margin-left: 45px;
-    width: 190px;
+    width: $desktop-avatar-width;
     height: 190px;
   }
 }
@@ -93,10 +97,10 @@
   @media #{$min-desktop} {
     display: block;
     margin-left: auto;
-    margin-right: 95px;
+    margin-right: $desktop-avatar-margin-right;
     border-radius: 0 0 7px 7px;
     padding: 14px;
-    width: 190px;
+    width: $desktop-avatar-width;
     background-color: $light-blue-background-1;
     text-align: center;
     letter-spacing: normal;

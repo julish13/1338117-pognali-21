@@ -2,6 +2,14 @@
   border-radius: 20px;
   padding: 24px 20px 22px;
   background-color: $yellow-1;
+
+  @media #{$min-tablet} {
+    padding: 36px 35px 37px;
+  }
+
+  @media #{$min-desktop} {
+    padding: 45px 46px 50px 48px;
+  }
 }
 
 .filter-personality__fieldset {
@@ -20,6 +28,17 @@
   line-height: 1;
   font-weight: 700;
   letter-spacing: 0.02em;
+
+  @media #{$min-tablet} {
+    margin-left: 0;
+    margin-bottom: 38px;
+    font-size: 30px;
+    letter-spacing: unset;
+  }
+
+  @media #{$min-desktop} {
+    margin-bottom: 35px;
+  }
 }
 
 .filter-personality__inner {
@@ -28,15 +47,78 @@
   margin-top: 24px;
   padding: 0 5px;
 
+  @media #{$min-tablet} {
+    margin-top: 0;
+    margin-bottom: 36px;
+    padding: 35px 0;
+    border-top: 1px solid $yellow-3;
+    border-bottom: 1px solid $yellow-3;
+  }
+
   @media #{$min-desktop} {
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 42px;
+    border: none;
     width: 100%;
   }
 }
 
 .filter-personality__field {
   border-top: 1px solid $yellow-3;
+
+  @media #{$min-tablet} {
+    margin-bottom: 31px;
+    border: none;
+  }
+
+  @media #{$min-desktop} {
+    margin-bottom: 19px;
+  }
+
+  &:last-child {
+    @media #{$min-tablet} {
+      margin-bottom: 0;
+    }
+  }
+
+  &--food {
+    @media #{$min-tablet} and #{$max-tablet} {
+      margin-bottom: 24px;
+    }
+  }
+
+  &--transport {
+    @media #{$min-tablet} and #{$max-tablet} {
+      margin-bottom: 13px;
+    }
+  }
 }
 
 .filter-personality__button {
+  outline: none;
+  cursor: pointer;
   padding: 12px;
+  background-color: $basic-white;
+  color: $basic-blue;
+
+  @media #{$min-tablet} {
+    padding: 15px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media #{$min-desktop} {
+    padding: 16px 15px 13px 20px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $basic-white;
+    filter: drop-shadow(0 3px 6px rgba($basic-black, 0.14));
+  }
+
+  &:active {
+    color: rgba($basic-blue, 0.3);
+  }
 }

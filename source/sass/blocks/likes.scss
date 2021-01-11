@@ -4,6 +4,11 @@
   line-height: 1.14;
   font-weight: 700;
   text-transform: uppercase;
+
+  @media #{$min-tablet} {
+    font-size: 20px;
+    line-height: 1;
+  }
 }
 
 .likes__label {
@@ -12,12 +17,19 @@
 }
 
 .likes__wrap {
+  cursor: pointer;
   display: inline-block;
   margin-right: 5px;
   border-radius: 50%;
   width: 31px;
   height: 31px;
   background-color: $grey-background-4;
+  vertical-align: baseline;
+
+  @media #{$min-tablet} {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .likes__icon {
@@ -26,14 +38,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
   fill: $blue-background-1;
-  opacity: 0.5;
-}
+  opacity: 0.3;
 
-// input:not(:checked) + .likes__label {
-//   .likes__icon {
-//     fill-rule: evenodd;
-//   }
-// }
+  @media #{$min-tablet} {
+    width: 20px;
+    height: 20px;
+  }
+
+  &--yes {
+    display: none;
+  }
+}
 
 input:checked + .likes__label {
   .likes__wrap {
@@ -42,6 +57,45 @@ input:checked + .likes__label {
 
   .likes__icon {
     fill: $red-5;
-    // opacity: 1;
+    opacity: 1;
+
+    &--yes {
+      display: inline-block;
+      vertical-align: baseline;
+    }
+
+    &--no {
+      display: none;
+    }
+  }
+}
+
+input:hover + .likes__label,
+input:focus + .likes__label {
+  .likes__icon {
+    opacity: 0.5;
+  }
+}
+
+input:active + .likes__label {
+  .likes__icon {
+    opacity: 0.1;
+  }
+}
+
+input:checked:hover + .likes__label,
+input:checked:focus + .likes__label {
+  .likes__wrap {
+    background-color: $red-6;
+  }
+}
+
+input:checked:active + .likes__label {
+  .likes__wrap {
+    background-color: $red-6;
+
+    .likes__icon {
+      opacity: 0.3;
+    }
   }
 }

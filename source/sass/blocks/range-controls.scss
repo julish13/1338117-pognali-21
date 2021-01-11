@@ -6,6 +6,10 @@
   width: 100%;
   height: 2px;
   background-color: rgba($basic-blue-light, 0.2);
+
+  @media #{$min-desktop} {
+    height: 3px;
+  }
 }
 
 .range-controls__bar {
@@ -14,9 +18,22 @@
   width: 69%;
   height: 2px;
   background-color: $basic-blue-light;
+
+  @media #{$min-tablet} {
+    margin-left: 35%;
+    width: 65%;
+  }
+
+  @media #{$min-desktop} {
+    margin-left: 30%;
+    width: 70%;
+    height: 3px;
+  }
 }
 
 .range-controls__toggle {
+  outline: none;
+  cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -25,8 +42,31 @@
   height: 10px;
   background-color: $basic-blue-light;
 
+  @media #{$min-tablet} {
+    width: 14px;
+    height: 13px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    transform: translateY(-50%) scale(1.45);
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px rgba($basic-black, 0.24);
+  }
+
   &--min {
     left: 31%;
+
+    @media #{$min-tablet} {
+      left: 35%;
+    }
+
+    @media #{$min-desktop} {
+      left: 30%;
+    }
   }
 
   &--max {

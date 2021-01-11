@@ -490,6 +490,7 @@
                         inputmode="numeric"
                         pattern="[0-9]*"
                         value="2"
+                        name="companions"
                       />
                       <button
                         class="planning-dates-option__button planning-dates-option__button--plus"
@@ -517,6 +518,7 @@
                         inputmode="numeric"
                         pattern="[0-9]*"
                         value="3"
+                        name="days"
                       />
                       <button
                         class="planning-dates-option__button planning-dates-option__button--plus"
@@ -1090,12 +1092,14 @@
                     <div class="select-country__wrap select-country__wrap--country">
                       <input
                         class="select-country__input"
-                        type="button"
+                        type="text"
+                        name="country_1"
                         value="Босния и Герцеговина"
                         id="bosnia_and_herzegovina_select"
+                        readonly="readonly"
                       />
-                      <button type="button" class="select-country__toggle" aria-label="выбрать страну">
-                      </button>
+                      <span type="button" class="select-country__toggle" aria-label="выбрать страну">
+                      </span>
                     </div>
                     <label class="select-country__label select-country__label--bosnia-and-herzegovina" for="bosnia_and_herzegovina_select">
                     </label>
@@ -1108,12 +1112,14 @@
                     <div class="select-country__wrap select-country__wrap--country">
                       <input
                         class="select-country__input"
-                        type="button"
+                        type="text"
+                        name="country_2"
                         value="Чехия"
                         id="czech_select"
+                        readonly="readonly"
                       />
-                      <button type="button" class="select-country__toggle" aria-label="выбрать страну">
-                      </button>
+                      <span type="button" class="select-country__toggle" aria-label="выбрать страну">
+                      </span>
                     </div>
                     <label class="select-country__label select-country__label--czech" for="czech_select">
                     </label>
@@ -1130,8 +1136,8 @@
                         value="Выберите страну"
                         id="any_country_select"
                       />
-                      <button type="button" class="select-country__toggle" aria-label="выбрать страну">
-                      </button>
+                      <span class="select-country__toggle" aria-label="выбрать страну">
+                      </span>
                       <div class="select-country__dropdown select-country-dropdown">
                         <div class="select-country-dropdown__wrap">
                           <table
@@ -1416,9 +1422,8 @@
                         id="add_country_select"
                       />
                     </div>
-                    <button type="button" class="select-country__add">
-                      <span class="visually-hidden">добавить страну</span>
-                    </button>
+                    <span class="select-country__add">
+                    </span>
                   </div>
                 </div>
                 <div class="planning__buttons">
@@ -1468,6 +1473,7 @@
                       class="fun__textarea"
                       id="bosnia_and_herzegovina_textarea"
                       placeholder="План действий"
+                      name="bosnia_and_herzegovina_plans"
                     ></textarea>
                     <p class="fun__warning">
                       Это поле должно быть заполнено
@@ -1475,7 +1481,7 @@
                   </li>
                   <li class="fun__country">
                     <label class="fun__title fun__title--czech" for="czech">Чехия</label>
-                    <textarea class="fun__textarea" id="czech">
+                    <textarea class="fun__textarea" id="czech" name="czech_plans">
   Пить пиво и&nbsp;лазить по&nbsp;старым замкам, наслаждаться архитектурой и&nbsp;вот это все.
                     </textarea>
                     <p class="fun__warning">
@@ -1572,7 +1578,7 @@
     <script src="js/menu-toggle.js"></script>
     <script src="js/menu-scroll.js"></script>
     <script src="js/level.js"></script>
-    <script src="js/form/slider.js"></script>
+    <!-- <script src="js/form/slider.js"></script> -->
     <script src="js/form/planning-dates-option.js"></script>
     <script src="js/form/dropdown.js"></script>
   </body>

@@ -1,7 +1,7 @@
 .catalog-alphabet {
   @media #{$min-tablet} {
     display: grid;
-    grid-template: repeat(5, min-content) / 75% 25%;
+    grid-template: repeat(5, min-content)/71.5% 1fr;
   }
 
   @media #{$min-desktop} {
@@ -16,8 +16,13 @@
   padding-left: 0;
   list-style: none;
 
+  @media #{$min-tablet} {
+    margin-bottom: 23px;
+  }
+
   @media #{$min-desktop} {
     grid-column: span 5;
+    margin-bottom: 32px;
   }
 
   &:nth-child(2) {
@@ -43,6 +48,16 @@
       grid-row: 9;
     }
   }
+
+  &:last-child {
+    @media #{$min-tablet} {
+      margin-bottom: 0;
+    }
+
+    @media #{$min-desktop} {
+      margin-bottom: 32px;
+    }
+  }
 }
 
 .catalog-alphabet__letter {
@@ -57,8 +72,43 @@
   font-size: 14px;
   line-height: 1;
 
+  @media #{$min-tablet} {
+    margin-right: 43px;
+    border: none;
+    width: 34px;
+    height: auto;
+    background-color: transparent;
+    font-weight: bold;
+    font-size: 60px;
+    opacity: 0.3;
+  }
+
+  @media #{$min-desktop} {
+    flex-grow: 1;
+    margin-right: 0;
+  }
+
+  &--active {
+    border-color: $basic-blue-light;
+    background-color: $basic-blue-light;
+    color: $basic-white;
+
+    @media #{$min-tablet} {
+      border: none;
+      background-color: transparent;
+      color: $basic-blue-light;
+      opacity: 1;
+    }
+  }
+
   &:first-child {
     border-width: 0 1px 1px 1px;
+  }
+
+  &:last-child {
+    @media #{$min-tablet} {
+      margin-right: 0;
+    }
   }
 
   .catalog-alphabet__alphabet-row:first-child & {
@@ -67,12 +117,25 @@
 }
 
 .catalog-alphabet__label {
+  cursor: pointer;
   position: relative;
   display: block;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+
+  @media #{$min-tablet} {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media #{$min-desktop} {
+    position: static;
+    transform: none;
+    width: min-content;
+  }
 }
 
 .catalog-alphabet__countries-list {
@@ -84,15 +147,30 @@
 
   @media #{$min-tablet} {
     grid-area: 1 / 2 / span 5 / span 1;
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 1.5;
   }
 
   @media #{$min-desktop} {
     display: block;
     grid-area: auto;
+    margin-bottom: 48px;
+    min-height: 308px;
   }
 
   &--active {
     display: block;
+  }
+
+  &:last-child,
+  &:nth-last-child(2),
+  &:nth-last-child(3),
+  &:nth-last-child(4),
+  &:nth-last-child(5) {
+    @media #{$min-desktop} {
+      min-height: 160px;
+    }
   }
 }
 

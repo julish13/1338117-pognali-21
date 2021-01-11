@@ -1,5 +1,4 @@
 .users-catalog-contries-list {
-  display: flex;
   list-style: none;
 }
 
@@ -12,23 +11,125 @@
   line-height: 1.07;
   font-weight: 500;
   text-transform: uppercase;
-}
 
-.users-catalog-contries-list__country::before {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  content: "";
-  border-radius: 2px;
-  width: 26px;
-  height: 18px;
-}
+  @media #{$min-tablet} {
+    margin-bottom: 0;
+    margin-right: 28px;
+    padding-left: 45px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
 
-@each $country in $countries {
-  .users-catalog-contries-list__country {
-    &--#{$country}::before {
-      background-image: url("../img/#{$country}-extra-small.png");
+  @media #{$min-desktop} {
+    margin-right: 0;
+    margin-bottom: 16px;
+    padding-left: 52px;
+    line-height: 1;
+  }
+
+  &:last-child {
+    @media #{$min-tablet} {
+      margin-right: 0;
+    }
+
+    @media #{$min-desktop} {
+      margin-bottom: 0;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "";
+    border-radius: 2px;
+    width: 26px;
+    height: 18px;
+
+    @media #{$min-tablet} {
+      width: 35px;
+      height: 24px;
+    }
+  }
+
+  &--sri-lanka::before {
+    background-image: url("../img/sri-lanka-extra-small.png");
+
+    @media #{$min-tablet} {
+      background-image: url("../img/sri-lanka-small.png");
+    }
+  }
+
+  &--thailand::before {
+    background-image: url("../img/thailand-extra-small.png");
+
+    @media #{$min-tablet} {
+      background-image: url("../img/thailand-small.png");
+    }
+  }
+
+  &--seychelles::before {
+    background-image: url("../img/seychelles-extra-small.png");
+
+    @media #{$min-tablet} {
+      background-image: url("../img/seychelles-small.png");
+    }
+  }
+
+  &--belgium::before {
+    background-image: url("../img/belgium-extra-small.png");
+
+    @media #{$min-tablet} {
+      background-image: url("../img/belgium-small.png");
+    }
+  }
+
+  &--czech::before {
+    background-image: url("../img/czech-extra-small.png");
+
+    @media #{$min-tablet} {
+      background-image: url("../img/czech-small.png");
+    }
+  }
+
+  &--usa::before {
+    background-image: url("../img/usa-extra-small.png");
+
+    @media #{$min-tablet} {
+      background-image: url("../img/usa-small.png");
+    }
+  }
+
+  &--australia::before {
+    background-image: url("../img/australia-extra-small.png");
+
+    @media #{$min-tablet} {
+      background-image: url("../img/australia-small.png");
+    }
+  }
+
+  &--dominica::before {
+    background-image: url("../img/dominica-extra-small.png");
+
+    @media #{$min-tablet} {
+      background-image: url("../img/dominica-small.png");
+    }
+  }
+
+  &--uk::before {
+    background-image: url("../img/uk-extra-small.png");
+
+    @media #{$min-tablet} {
+      background-image: url("../img/uk-small.png");
+    }
+  }
+
+  &--germany::before {
+    background-image: url("../img/germany-extra-small.png");
+
+    @media #{$min-tablet} {
+      background-image: url("../img/germany-small.png");
     }
   }
 }

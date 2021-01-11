@@ -1,16 +1,6 @@
 .button-round {
   @include button-round;
 
-  &--grey {
-    background-color: $light-blue-background-2;
-    color: $blue-background-1;
-  }
-
-  &--white {
-    background-color: $basic-white;
-    color: $basic-blue;
-  }
-
   &--darker-font {
     color: $basic-blue;
   }

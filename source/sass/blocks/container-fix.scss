@@ -22,4 +22,18 @@
       padding-right: $desktop-padding;
     }
   }
+
+  &--catalog {
+    @media #{$min-tablet} {
+      width: $tablet-width - 2 * $tablet-padding;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @media #{$min-desktop} {
+      width: $desktop-width;
+      padding-left: $desktop-padding;
+      padding-right: $desktop-padding;
+    }
+  }
 }
