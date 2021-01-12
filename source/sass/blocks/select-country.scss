@@ -212,7 +212,7 @@
   height: 42px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 35px 24px;
 
   @media #{$min-tablet} {
     margin-left: auto;
@@ -220,6 +220,7 @@
     border-radius: 6px;
     width: 70px;
     height: 47px;
+    background-size: cover;
   }
 
   &--bosnia-and-herzegovina {
