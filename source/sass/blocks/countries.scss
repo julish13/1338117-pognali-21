@@ -8,6 +8,11 @@
     background-image: url("../img/flags-back-tablet.png");
     background-position: 92% 3%;
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/flags-back-tablet-2x.png");
+      background-size: 288px 574px;
+    }
   }
 
   @media #{$min-desktop} {

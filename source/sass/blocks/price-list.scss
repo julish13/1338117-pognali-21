@@ -12,7 +12,12 @@
     width: 100px;
     height: 100px;
     background-image: url("../img/pricing-mobile.png");
+    background-size: cover;
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/pricing-mobile-2x.png");
+    }
 
     @media #{$min-tablet} {
       top: unset;
@@ -26,6 +31,10 @@
       width: 198px;
       height: 198px;
       background-image: url("../img/pricing-desktop.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/pricing-desktop-2x.png");
+      }
     }
   }
 
