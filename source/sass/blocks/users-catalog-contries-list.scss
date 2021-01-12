@@ -46,6 +46,7 @@
     border-radius: 2px;
     width: 26px;
     height: 18px;
+    background-size: cover;
 
     @media #{$min-tablet} {
       width: 35px;
@@ -56,80 +57,160 @@
   &--sri-lanka::before {
     background-image: url("../img/sri-lanka-extra-small.png");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/sri-lanka-extra-small-2x.png");
+    }
+
     @media #{$min-tablet} {
       background-image: url("../img/sri-lanka-small.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/sri-lanka-small-2x.png");
+      }
     }
   }
 
   &--thailand::before {
     background-image: url("../img/thailand-extra-small.png");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/thailand-extra-small-2x.png");
+    }
+
     @media #{$min-tablet} {
       background-image: url("../img/thailand-small.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/thailand-small-2x.png");
+      }
     }
   }
 
   &--seychelles::before {
     background-image: url("../img/seychelles-extra-small.png");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/seychelles-extra-small-2x.png");
+    }
+
     @media #{$min-tablet} {
       background-image: url("../img/seychelles-small.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/seychelles-small-2x.png");
+      }
     }
   }
 
   &--belgium::before {
     background-image: url("../img/belgium-extra-small.png");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/belgium-extra-small-2x.png");
+    }
+
     @media #{$min-tablet} {
       background-image: url("../img/belgium-small.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/belgium-small-2x.png");
+      }
     }
   }
 
   &--czech::before {
     background-image: url("../img/czech-extra-small.png");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/czech-extra-small-2x.png");
+    }
+
     @media #{$min-tablet} {
       background-image: url("../img/czech-small.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/czech-small-2x.png");
+      }
     }
   }
 
   &--usa::before {
     background-image: url("../img/usa-extra-small.png");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/usa-extra-small-2x.png");
+    }
+
     @media #{$min-tablet} {
       background-image: url("../img/usa-small.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/usa-small-2x.png");
+      }
     }
   }
 
   &--australia::before {
     background-image: url("../img/australia-extra-small.png");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/australia-extra-small-2x.png");
+    }
+
     @media #{$min-tablet} {
       background-image: url("../img/australia-small.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/australia-small-2x.png");
+      }
     }
   }
 
   &--dominica::before {
     background-image: url("../img/dominica-extra-small.png");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/dominica-extra-small-2x.png");
+    }
+
     @media #{$min-tablet} {
       background-image: url("../img/dominica-small.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/dominica-small-2x.png");
+      }
     }
   }
 
   &--uk::before {
     background-image: url("../img/uk-extra-small.png");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/uk-extra-small-2x.png");
+    }
+
     @media #{$min-tablet} {
       background-image: url("../img/uk-small.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/uk-small-2x.png");
+      }
     }
   }
 
   &--germany::before {
     background-image: url("../img/germany-extra-small.png");
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/germany-extra-small-2x.png");
+    }
+
     @media #{$min-tablet} {
       background-image: url("../img/germany-small.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/germany-small-2x.png");
+      }
     }
   }
 }
