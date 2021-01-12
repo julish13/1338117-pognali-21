@@ -4,7 +4,7 @@
   width: 35px;
   height: 25px;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   background-position: center;
   border-radius: 3px;
 
@@ -20,26 +20,50 @@
 
   &--thailand {
     background-image: url("../img/thailand-small.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/thailand-small-2x.png");
+    }
   }
 
   &--czech {
     background-image: url("../img/czech-small.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/czech-small-2x.png");
+    }
   }
 
   &--belgium {
     background-image: url("../img/belgium-small.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/belgium-small-2x.png");
+    }
   }
 
   &--sri-lanka {
     background-image: url("../img/sri-lanka-small.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/sri-lanka-small-2x.png");
+    }
   }
 
   &--seychelles {
     background-image: url("../img/seychelles-small.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/seychelles-small-2x.png");
+    }
   }
 
   &--bosnia-and-herzegovina {
     background-image: url("../img/bosnia-and-herzegovina-small.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bosnia-and-herzegovina-small-2x.png");
+    }
   }
 }
 
