@@ -30,19 +30,35 @@
   position: relative;
   z-index: 11;
   min-height: 356px;
+  background-color: transparent;
   background-image: url("../img/about-mobile.png");
   background-position: calc(50% + 7px) top;
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/about-mobile-2x.png");
+    background-size: 292px 353px;
+  }
+
   @media #{$min-tablet} {
     background-image: url("../img/about-tablet.png");
     background-position: 98% 90%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/about-tablet-2x.png");
+      background-size: 376px 548px;
+    }
   }
 
   @media #{$min-desktop} {
     min-height: 750px;
     background-image: url("../img/about-desktop.png");
     background-position: calc(50% + 348px) bottom;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/about-desktop-2x.png");
+      background-size: 630px 665px;
+    }
   }
 }
 

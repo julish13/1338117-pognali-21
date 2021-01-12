@@ -7,16 +7,30 @@
   const tabletLogoElement = mainNavInnerElement.querySelector(`#logo-tablet`);
   const toggleElement = mainNavElement.querySelector(`.main-nav__toggle`);
 
+  const setDarkColor = (element) => {
+    if (element.src) {
+      element.src = element.src.replaceAll(`white`, `dark`);
+    }
+    element.srcset = element.srcset.replaceAll(`white`, `dark`);
+  }
+
+  const setWhiteColor = (element) => {
+    if (element.src) {
+      element.src = element.src.replaceAll(`dark`, `white`);
+    }
+    element.srcset = element.srcset.replaceAll(`dark`, `white`);
+  }
+
   const setClosedMenuState = () => {
     mainNavElement.classList.add(`main-nav--closed`);
-    mobileLogoElement.src = `img/logo-mobile-white.png`;
-    tabletLogoElement.srcset = `img/logo-tablet-white.png 1x`;
+    setWhiteColor(mobileLogoElement);
+    setWhiteColor(tabletLogoElement);
   };
 
   const setOpenedMenuState = () => {
     mainNavElement.classList.add(`main-nav--opened`);
-    mobileLogoElement.src = `img/logo-mobile-dark.png`;
-    tabletLogoElement.srcset = `img/logo-tablet-dark.png 1x`;
+    setDarkColor(mobileLogoElement);
+    setDarkColor(tabletLogoElement);
   };
 
 
