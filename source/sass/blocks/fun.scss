@@ -48,9 +48,7 @@
     width: 35px;
     height: 25px;
     border-radius: 2px;
-    background-repeat: no-repeat;
-    background-size: auto;
-    background-position: center;
+    background-size: cover;
 
     @media #{$min-tablet} {
       top: -7px;
@@ -68,8 +66,16 @@
     &::after {
       background-image: url("../img/bosnia-and-herzegovina-small.png");
 
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/bosnia-and-herzegovina-small-2x.png");
+      }
+
       @media #{$min-tablet} {
         background-image: url("../img/bosnia-and-herzegovina-big.png");
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/bosnia-and-herzegovina-big-2x.png");
+        }
       }
     }
   }
@@ -78,8 +84,16 @@
     &::after {
       background-image: url("../img/czech-small.png");
 
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/czech-small-2x.png");
+      }
+
       @media #{$min-tablet} {
         background-image: url("../img/czech-big.png");
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/czech-big-2x.png");
+        }
       }
     }
   }
