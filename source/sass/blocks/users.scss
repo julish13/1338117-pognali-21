@@ -6,7 +6,7 @@
   background-repeat: no-repeat, no-repeat;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/rogovaya-back-mobile-2x.png"), url("../img/smolov-back-mobile-2x.png");
+    background-image: url("../img/rogovaya-back-mobile@2x.png"), url("../img/smolov-back-mobile@2x.png");
     background-size: 64px 71px, 143px 143px;
   }
 
@@ -16,7 +16,7 @@
     background-repeat: no-repeat, no-repeat;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/rogovaya-back-tablet-2x.png"), url("../img/smolov-back-mobile-2x.png");
+      background-image: url("../img/rogovaya-back-tablet@2x.png"), url("../img/smolov-back-mobile@2x.png");
       background-size: 285px 285px, 143px 143px;
     }
   }
