@@ -16,7 +16,7 @@
     background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/pricing-mobile-2x.png");
+      background-image: url("../img/pricing-mobile@2x.png");
     }
 
     @media #{$min-tablet} {
@@ -33,7 +33,7 @@
       background-image: url("../img/pricing-desktop.png");
 
       @media (min-resolution: 2dppx) {
-        background-image: url("../img/pricing-desktop-2x.png");
+        background-image: url("../img/pricing-desktop@2x.png");
       }
     }
   }

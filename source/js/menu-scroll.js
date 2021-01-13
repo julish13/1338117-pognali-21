@@ -5,6 +5,9 @@
   const mobileLogoElement = mainNavElement.querySelector(`#logo-mobile`);
   const tabletLogoElement = mainNavElement.querySelector(`#logo-tablet`);
   const desktopLogoElement = mainNavElement.querySelector(`#logo-desktop`);
+  const mobileLogoWebpElement = mainNavElement.querySelector(`#logo-mobile-webp`);
+  const tabletLogoWebpElement = mainNavElement.querySelector(`#logo-tablet-webp`);
+  const desktopLogoWebpElement = mainNavElement.querySelector(`#logo-desktop-webp`);
 
   const setDarkColor = (element) => {
     if (element.src) {
@@ -21,6 +24,7 @@
   }
 
   setWhiteColor(desktopLogoElement);
+  setWhiteColor(desktopLogoWebpElement);
 
   window.onscroll = () => {
     if (!mainNavElement.classList.contains(`main-nav--opened`)) {
@@ -29,12 +33,18 @@
         setDarkColor(mobileLogoElement);
         setDarkColor(tabletLogoElement);
         setDarkColor(desktopLogoElement);
+        setDarkColor(mobileLogoWebpElement);
+        setDarkColor(tabletLogoWebpElement);
+        setDarkColor(desktopLogoWebpElement);
       }
       else {
         mainNavElement.classList.remove(`main-nav--scrolled`);
         setWhiteColor(mobileLogoElement);
         setWhiteColor(tabletLogoElement);
         setWhiteColor(desktopLogoElement);
+        setWhiteColor(mobileLogoWebpElement);
+        setWhiteColor(tabletLogoWebpElement);
+        setWhiteColor(desktopLogoWebpElement);
       }
     }
   };
