@@ -35,7 +35,11 @@
       content: "";
       width: 100%;
       height: 100%;
-      background-image: linear-gradient(to right, transparent 60%, $basic-white 78%);
+      background-image: linear-gradient(
+        to right,
+        transparent 60%,
+        $basic-white 78%
+      );
     }
   }
 

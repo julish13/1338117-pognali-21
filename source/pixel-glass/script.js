@@ -1,79 +1,78 @@
 function pixelGlass() {
-
-  'use strict';
+  "use strict";
 
   var doc = document;
   var controlsPanel;
   var bodyContentWrapper;
-  var panelClass = 'controls-panel';
+  var panelClass = "controls-panel";
   var canBeDisabled = [];
 
-  var prefix = 'pg';
-  var filtersList = ['none', 'invert'];
-  var statesList = ['off', 'on'];
+  var prefix = "pg";
+  var filtersList = ["none", "invert"];
+  var statesList = ["off", "on"];
 
   var currents = {
-    state: getCurrent('state', statesList[1]),
-    filter: getCurrent('filter', filtersList[0]),
-    opacity: getCurrent('opacity', 0.5)
+    state: getCurrent("state", statesList[1]),
+    filter: getCurrent("filter", filtersList[0]),
+    opacity: getCurrent("opacity", 0.5),
   };
 
   var targets = {
     state: {
       elem: doc.documentElement,
-      attr: 'data'
+      attr: "data",
     },
     filter: {
       elem: doc.body,
-      attr: 'data'
+      attr: "data",
     },
     opacity: {
       elem: doc.body,
-      attr: 'style'
-    }
+      attr: "style",
+    },
   };
 
   // States switcher params
   var paramsStates = {
-    elemTag: 'button',
-    elemText: 'on',
-    listName: 'states',
-    itemName: 'state',
+    elemTag: "button",
+    elemText: "on",
+    listName: "states",
+    itemName: "state",
     target: targets.state,
-    type: 'button',
+    type: "button",
     list: statesList,
     canDisableAll: true,
     attrs: {
       tabindex: 1,
-    }
+    },
   };
 
   // Filters switcher params
   var paramsFilters = {
-    elemTag: 'button',
-    elemText: 'invert',
-    listName: 'filters',
-    itemName: 'filter',
+    elemTag: "button",
+    elemText: "invert",
+    listName: "filters",
+    itemName: "filter",
     target: targets.filter,
-    type: 'button',
+    type: "button",
     list: filtersList,
     attrs: {
       tabindex: 2,
-    }
+    },
   };
 
   // Opacity range params
   var paramsOpacity = {
-    itemName: 'opacity',
-    type: 'number',
+    itemName: "opacity",
+    type: "number",
     target: targets.opacity,
-    setAttr: 'style',
+    setAttr: "style",
     attrs: {
       min: 0,
       max: 1,
       step: 0.1,
       tabindex: 3,
-    }
+    },
   };
 
   //---------------------------------------------
@@ -86,7 +85,7 @@ function pixelGlass() {
     createContolsPanel();
     applyCurrentData();
 
-    if (currents.state === 'on'){
+    if (currents.state === "on") {
       applyCurrentStyles();
     }
   }
@@ -96,25 +95,25 @@ function pixelGlass() {
   function createContolsPanel() {
     var targetElem = doc.documentElement;
 
-    if ( hasData( doc.body, 'has-sticky-point' ) ) {
-      var stickyPoint = doc.querySelector('.sticky-point');
+    if (hasData(doc.body, "has-sticky-point")) {
+      var stickyPoint = doc.querySelector(".sticky-point");
 
-      if( stickyPoint && !localStorage['pg-released'] ) {
+      if (stickyPoint && !localStorage["pg-released"]) {
         targetElem = stickyPoint;
       }
       // Override defaults for demo page
-      currents.state = 'off';
+      currents.state = "off";
     }
 
-    controlsPanel = doc.createElement('div');
+    controlsPanel = doc.createElement("div");
     controlsPanel.classList.add(panelClass);
     targetElem.appendChild(controlsPanel);
-    var sides = ['top', 'right', 'bottom', 'left'];
+    var sides = ["top", "right", "bottom", "left"];
 
-    sides.forEach(function(item) {
-      var itemVal = getCurrent(item, '');
-      if ( itemVal ) {
-        controlsPanel.style[ item ] = itemVal;
+    sides.forEach(function (item) {
+      var itemVal = getCurrent(item, "");
+      if (itemVal) {
+        controlsPanel.style[item] = itemVal;
       }
     });
 
@@ -148,31 +147,31 @@ function pixelGlass() {
 
     var id = itemName;
     var input = doc.createElement(elemTag);
-    setClasses( input, [
-      panelClass + '__control',
-      panelClass + '__control--' + type
+    setClasses(input, [
+      panelClass + "__control",
+      panelClass + "__control--" + type,
     ]);
-    input.setAttribute('type', type);
-    input.setAttribute('id', id);
-    setData( input, 'state-num', currentNum );
+    input.setAttribute("type", type);
+    input.setAttribute("id", id);
+    setData(input, "state-num", currentNum);
 
-    if ( attrs ) {
+    if (attrs) {
       for (var attr in attrs) {
         input.setAttribute(attr, attrs[attr]);
       }
     }
 
-    if (elemTag === 'button') {
+    if (elemTag === "button") {
       input.innerHTML = elemText;
     }
 
-    if ( !canDisableAll ) {
+    if (!canDisableAll) {
       canBeDisabled.push(input);
     }
 
     controlsPanel.appendChild(input);
 
-    input.onclick = function() {
+    input.onclick = function () {
       if (!params.target) {
         return;
       }
@@ -180,17 +179,16 @@ function pixelGlass() {
       currentNum = +!currentNum;
       currentVal = list[currentNum];
 
-      setData( input, 'state-num', currentNum );
-      setData( params.target.elem, itemName, currentVal );
+      setData(input, "state-num", currentNum);
+      setData(params.target.elem, itemName, currentVal);
 
       saveLocalStorage(itemName, currentVal);
 
       if (canDisableAll && canDisableAll === true) {
-        if (currentVal === 'off'){
+        if (currentVal === "off") {
           removeCurrentStyles();
           disableInputs();
-        }
-        else {
+        } else {
           applyCurrentStyles();
           enableInputs();
         }
@@ -208,27 +206,27 @@ function pixelGlass() {
     var canDisableAll = params.canDisableAll;
 
     var id = itemName;
-    var input = doc.createElement('input');
-    setClasses( input, [
-      panelClass + '__control',
-      panelClass + '__control--' + type
+    var input = doc.createElement("input");
+    setClasses(input, [
+      panelClass + "__control",
+      panelClass + "__control--" + type,
     ]);
-    input.setAttribute('type', type);
-    input.setAttribute('id', id);
+    input.setAttribute("type", type);
+    input.setAttribute("id", id);
 
     for (var attr in attrs) {
       input.setAttribute(attr, attrs[attr]);
     }
-    input.setAttribute('value', currents[itemName]);
+    input.setAttribute("value", currents[itemName]);
 
-    if ( !canDisableAll ) {
+    if (!canDisableAll) {
       canBeDisabled.push(input);
     }
 
     controlsPanel.appendChild(input);
 
-    input.oninput = function() {
-      if (setAttr === 'style') {
+    input.oninput = function () {
+      if (setAttr === "style") {
         params.target.elem.style[itemName] = this.value;
         saveLocalStorage(itemName, this.value);
       }
@@ -238,13 +236,13 @@ function pixelGlass() {
   //---------------------------------------------
 
   function createDragButton() {
-    var input = doc.createElement('button');
-    setClasses( input, [
-      panelClass + '__control',
-      panelClass + '__control--drag-n-drop'
+    var input = doc.createElement("button");
+    setClasses(input, [
+      panelClass + "__control",
+      panelClass + "__control--drag-n-drop",
     ]);
-    input.setAttribute('type', 'button');
-    input.innerHTML = ' ';
+    input.setAttribute("type", "button");
+    input.innerHTML = " ";
 
     controlsPanel.appendChild(input);
 
@@ -257,12 +255,12 @@ function pixelGlass() {
 
       controlsPanel.style.top = styles.top;
       controlsPanel.style.left = styles.left;
-      controlsPanel.style.right = 'auto';
-      controlsPanel.style.bottom = 'auto';
+      controlsPanel.style.right = "auto";
+      controlsPanel.style.bottom = "auto";
 
-      doc.onmousemove = function ( ev ) {
-        var x = (ev.clientX - offsetLeft ) + 'px';
-        var y = (ev.clientY) + 'px';
+      doc.onmousemove = function (ev) {
+        var x = ev.clientX - offsetLeft + "px";
+        var y = ev.clientY + "px";
 
         controlsPanel.style.left = x;
         controlsPanel.style.top = y;
@@ -271,32 +269,30 @@ function pixelGlass() {
 
     input.onmouseup = function () {
       var styles = getComputedStyle(controlsPanel);
-      var left = +styles.left.replace(/px/,'');
-      var right = +styles.right.replace(/px/,'');
-      var top = +styles.top.replace(/px/,'');
-      var bottom = +styles.bottom.replace(/px/,'');
+      var left = +styles.left.replace(/px/, "");
+      var right = +styles.right.replace(/px/, "");
+      var top = +styles.top.replace(/px/, "");
+      var bottom = +styles.bottom.replace(/px/, "");
 
-      if ( left > right ) {
-        saveLocalStorage('left', 'auto');
-        saveLocalStorage('right', styles.right);
+      if (left > right) {
+        saveLocalStorage("left", "auto");
+        saveLocalStorage("right", styles.right);
 
         controlsPanel.style.right = styles.right;
-        controlsPanel.style.left = 'auto';
+        controlsPanel.style.left = "auto";
+      } else {
+        saveLocalStorage("left", styles.left);
+        saveLocalStorage("right", "auto"); //'auto' needs to override default position;
       }
-      else {
-        saveLocalStorage('left', styles.left);
-        saveLocalStorage('right', 'auto'); //'auto' needs to override default position;
-      }
-      if ( top > bottom ) {
-        saveLocalStorage('top', 'auto');
-        saveLocalStorage('bottom', styles.bottom);
+      if (top > bottom) {
+        saveLocalStorage("top", "auto");
+        saveLocalStorage("bottom", styles.bottom);
 
         controlsPanel.style.bottom = styles.bottom;
-        controlsPanel.style.top = 'auto';
-      }
-      else {
-        saveLocalStorage('top', styles.top);
-        saveLocalStorage('bottom', 'auto');
+        controlsPanel.style.top = "auto";
+      } else {
+        saveLocalStorage("top", styles.top);
+        saveLocalStorage("bottom", "auto");
       }
 
       doc.onmousemove = null;
@@ -306,31 +302,31 @@ function pixelGlass() {
   //---------------------------------------------
 
   function disableInputs() {
-    canBeDisabled.forEach(function(item) {
-      item.setAttribute('disabled', '');
+    canBeDisabled.forEach(function (item) {
+      item.setAttribute("disabled", "");
     });
   }
 
   //---------------------------------------------
 
   function enableInputs() {
-    canBeDisabled.forEach(function(item) {
-      item.removeAttribute('disabled');
+    canBeDisabled.forEach(function (item) {
+      item.removeAttribute("disabled");
     });
   }
 
   //---------------------------------------------
 
   function getCurrent(name, defaultValue) {
-    var itemName = [prefix, name].join('-');
-    var localStorageVal = localStorage[ itemName ];
+    var itemName = [prefix, name].join("-");
+    var localStorageVal = localStorage[itemName];
     return localStorageVal ? localStorageVal : defaultValue;
   }
 
   //---------------------------------------------
 
   function saveLocalStorage(name, value) {
-    var itemName = [prefix, name].join('-');
+    var itemName = [prefix, name].join("-");
     localStorage[itemName] = value;
   }
 
@@ -346,10 +342,10 @@ function pixelGlass() {
 
   // Not used
   function addExternalCSS() {
-    var styleElem = doc.createElement('style');
-    var cssLink = doc.createElement('link');
-    cssLink.setAttribute('rel', 'stylesheet');
-    cssLink.setAttribute('href', '../pixel-glass-js/styles.css');
+    var styleElem = doc.createElement("style");
+    var cssLink = doc.createElement("link");
+    cssLink.setAttribute("rel", "stylesheet");
+    cssLink.setAttribute("href", "../pixel-glass-js/styles.css");
 
     doc.head.appendChild(cssLink);
   }
@@ -357,28 +353,28 @@ function pixelGlass() {
   //---------------------------------------------
 
   function applyCurrentData() {
-    for (var key in targets ) {
-      var target = targets[ key ];
-      var current = currents[ key ];
+    for (var key in targets) {
+      var target = targets[key];
+      var current = currents[key];
 
-      if (target.attr === 'data') {
-        setData( target.elem, key, current );
+      if (target.attr === "data") {
+        setData(target.elem, key, current);
       }
     }
 
-    if(currents.state === 'off') {
+    if (currents.state === "off") {
       disableInputs();
     }
   }
   //---------------------------------------------
 
   function applyCurrentStyles() {
-    for (var key in targets ) {
-      var target = targets[ key ];
-      var current = currents[ key ];
+    for (var key in targets) {
+      var target = targets[key];
+      var current = currents[key];
 
-      if (target.attr === 'style') {
-        target.elem.style[ key ] = current;
+      if (target.attr === "style") {
+        target.elem.style[key] = current;
       }
     }
   }
@@ -386,11 +382,11 @@ function pixelGlass() {
   //---------------------------------------------
 
   function removeCurrentStyles() {
-    for (var key in targets ) {
-      var target = targets[ key ];
+    for (var key in targets) {
+      var target = targets[key];
 
-      if (target.attr === 'style') {
-        target.elem.style[ key ] = '';
+      if (target.attr === "style") {
+        target.elem.style[key] = "";
       }
     }
   }
@@ -399,14 +395,17 @@ function pixelGlass() {
 
   // Made for IE10, it doesn't support dataset
 
-  function hasData( elem, dataName ) {
-    if ( !elem ) {
+  function hasData(elem, dataName) {
+    if (!elem) {
       return false;
     }
 
-    dataName = 'data-' + dataName;
+    dataName = "data-" + dataName;
 
-    if ( elem.getAttribute( dataName) !== undefined && elem.getAttribute( dataName) !== null ) {
+    if (
+      elem.getAttribute(dataName) !== undefined &&
+      elem.getAttribute(dataName) !== null
+    ) {
       return true;
     }
 
@@ -415,13 +414,13 @@ function pixelGlass() {
 
   //---------------------------------------------
 
-  function setData( elem, dataName, dataVal ) {
-    if ( !elem ) {
+  function setData(elem, dataName, dataVal) {
+    if (!elem) {
       return;
     }
 
-    dataName = 'data-' + dataName;
-    elem.setAttribute( dataName, dataVal );
+    dataName = "data-" + dataName;
+    elem.setAttribute(dataName, dataVal);
   }
 
   //---------------------------------------------
@@ -429,14 +428,14 @@ function pixelGlass() {
   // Made for IE10, it doesn't support
   // multiply classes for classList.add
 
-  function setClasses( elem, classes ) {
-    if ( !elem ) {
+  function setClasses(elem, classes) {
+    if (!elem) {
       return;
     }
 
-    if ( classes.length > 0 ) {
-      classes.forEach( function ( className ) {
-        elem.classList.add( className );
+    if (classes.length > 0) {
+      classes.forEach(function (className) {
+        elem.classList.add(className);
       });
     }
   }
