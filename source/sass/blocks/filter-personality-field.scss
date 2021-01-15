@@ -76,7 +76,6 @@
     border-color: transparent transparent $blue-background-1 transparent;
     vertical-align: baseline;
 
-
     @media #{$min-tablet} and #{$max-tablet} {
       display: none;
     }
@@ -183,7 +182,6 @@
   @media #{$min-tablet} {
     padding-left: 37px;
   }
-
 
   &::before {
     cursor: pointer;

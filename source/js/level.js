@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 (() => {
   const DESIGN_ADJUSTMENT = 5;

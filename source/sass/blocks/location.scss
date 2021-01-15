@@ -59,7 +59,7 @@
     color: $basic-white;
 
     &::after {
-      border-color: transparent transparent transparent  $basic-white;
+      border-color: transparent transparent transparent $basic-white;
     }
   }
 
@@ -68,7 +68,7 @@
     color: rgba($basic-white, 0.3);
 
     &::after {
-      border-color: transparent transparent transparent  rgba($basic-white, 0.3);
+      border-color: transparent transparent transparent rgba($basic-white, 0.3);
     }
   }
 }

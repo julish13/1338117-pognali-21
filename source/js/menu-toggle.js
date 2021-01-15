@@ -1,12 +1,16 @@
-'use strict';
+"use strict";
 
 (() => {
   const mainNavElement = document.querySelector(`.main-nav`);
   const mainNavInnerElement = mainNavElement.querySelector(`.main-nav__inner`);
   const mobileLogoElement = mainNavInnerElement.querySelector(`#logo-mobile`);
   const tabletLogoElement = mainNavInnerElement.querySelector(`#logo-tablet`);
-  const mobileLogoWebpElement = mainNavInnerElement.querySelector(`#logo-mobile-webp`);
-  const tabletLogoWebpElement = mainNavInnerElement.querySelector(`#logo-tablet-webp`);
+  const mobileLogoWebpElement = mainNavInnerElement.querySelector(
+    `#logo-mobile-webp`
+  );
+  const tabletLogoWebpElement = mainNavInnerElement.querySelector(
+    `#logo-tablet-webp`
+  );
   const toggleElement = mainNavElement.querySelector(`.main-nav__toggle`);
 
   const setDarkColor = (element) => {
@@ -14,14 +18,14 @@
       element.src = element.src.replaceAll(`white`, `dark`);
     }
     element.srcset = element.srcset.replaceAll(`white`, `dark`);
-  }
+  };
 
   const setWhiteColor = (element) => {
     if (element.src) {
       element.src = element.src.replaceAll(`dark`, `white`);
     }
     element.srcset = element.srcset.replaceAll(`dark`, `white`);
-  }
+  };
 
   const setClosedMenuState = () => {
     mainNavElement.classList.add(`main-nav--closed`);
@@ -38,7 +42,6 @@
     setDarkColor(mobileLogoWebpElement);
     setDarkColor(tabletLogoWebpElement);
   };
-
 
   mainNavElement.classList.remove(`main-nav--nojs`);
   setClosedMenuState();
