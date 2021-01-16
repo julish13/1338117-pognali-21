@@ -67,7 +67,7 @@
 .users__subheading {
   margin-left: 25px;
   margin-right: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 
   @media #{$min-tablet} {
     margin-left: 33px;
@@ -84,7 +84,7 @@
 .users__description {
   margin-left: 25px;
   margin-right: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   @media #{$min-tablet} {
     margin-left: 33px;
@@ -142,7 +142,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 61px;
+    margin-top: 64px;
     margin-bottom: 71px;
   }
 

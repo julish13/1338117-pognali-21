@@ -72,10 +72,13 @@
 }
 
 .plans__title {
-  display: inline;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 22px;
   font-size: 16px;
   text-transform: none;
   font-weight: 700;
+  vertical-align: top;
 
   @media #{$min-tablet} {
     margin-top: 15px;
@@ -93,7 +96,7 @@
 }
 
 .plans__companion {
-  margin-top: 20px;
+  margin-top: 0;
   margin-bottom: 5px;
   letter-spacing: 0.07em;
 

@@ -63,7 +63,7 @@
 
 .planning-dates-option__input {
   @include border;
-  padding: 13px 38px;
+  padding: 12px 38px;
   border-radius: 4px;
   width: 100%;
   display: block;
@@ -75,7 +75,7 @@
   font-weight: 500;
 
   @media #{$min-tablet} {
-    padding: 22px 52px 22px 45px;
+    padding: 22px 52px 24px 45px;
     font-size: 20px;
     line-height: 1;
   }

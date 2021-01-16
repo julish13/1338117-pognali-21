@@ -146,9 +146,9 @@
     &::before {
       content: "";
       position: absolute;
-      top: 4px;
+      top: 6px;
       right: 0;
-      width: 25px;
+      width: 26px;
       height: 3px;
       border-radius: 1.5px;
       background-color: $basic-white;
@@ -173,7 +173,7 @@
 
 .main-nav__login {
   display: block;
-  margin: 25px auto;
+  margin: 0 auto 25px;
   flex-basis: 100%;
   padding: 10px;
   color: inherit;
@@ -226,7 +226,7 @@
 
 .main-nav__site-nav {
   flex-basis: 100%;
-  margin: 45px auto 25px;
+  margin: 42px auto 55px;
 
   @media #{$min-tablet} {
     margin-left: 57px;

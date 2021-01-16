@@ -2,7 +2,7 @@
   @include index-bottom-border-radius;
   position: relative;
   z-index: 5;
-  padding-bottom: 12px;
+  padding-bottom: 14px;
   background-color: $blue-3;
 
   @media #{$min-tablet} {
@@ -10,7 +10,7 @@
   }
 
   @media #{$min-desktop} {
-    padding-bottom: 78px;
+    padding-bottom: 75px;
   }
 }
 
@@ -43,6 +43,7 @@
   @media #{$min-desktop} {
     display: flex;
     justify-content: space-between;
+    margin-top: 46px;
     margin-left: 153px;
     margin-right: 153px;
   }
