@@ -6,6 +6,7 @@
   }
 
   @media #{$min-desktop} {
+    border-radius: 0 0 60px 60px;
     background-color: $basic-blue;
     background-image: url("../img/traveller-illustration-desktop.png"),
       url("../img/globe-back-desktop.png");
@@ -31,7 +32,7 @@
     background-color: inherit;
     background-image: url("../img/traveller-illustration-tablet.png"),
       url("../img/globe-back-tablet.png");
-    background-position: right 28% bottom 26%, center bottom;
+    background-position: right 28% bottom 25%, center bottom;
     background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {
@@ -145,7 +146,7 @@
 }
 
 .promo__todo-list-wrap {
-  padding-bottom: 40px;
+  padding-bottom: 43px;
   flex-basis: 100%;
   background-color: $blue-3;
 
@@ -162,7 +163,7 @@
 
 .promo__todo-list {
   margin-bottom: 0;
-  margin-top: -80px;
+  margin-top: -81px;
 
   @media #{$min-tablet} {
     position: relative;

@@ -15,12 +15,12 @@
 
 .user-catalog__item {
   border-radius: 20px;
-  margin-bottom: 9px;
+  margin-bottom: 11px;
   padding-top: 13px;
   padding-bottom: 23px;
 
   @media #{$min-tablet} {
-    margin-bottom: 39px;
+    margin-bottom: 40px;
     padding-top: 35px;
     padding-bottom: 22px;
   }

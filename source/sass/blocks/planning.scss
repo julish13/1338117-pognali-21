@@ -5,7 +5,7 @@
 
 .planning__heading {
   margin-top: 17px;
-  margin-bottom: 31px;
+  margin-bottom: 33px;
 
   @media #{$min-tablet} {
     margin-top: 40px;
@@ -94,12 +94,12 @@
 .planning__states {
   position: absolute;
   top: 13px;
-  right: 35px;
+  right: 33px;
 
   @media #{$min-desktop} {
     position: static;
     grid-area: 1 / 2 / span 2 / span 1;
-    margin: 4px 44px 0 auto;
+    margin: 7px 44px 0 auto;
   }
 }
 
@@ -112,7 +112,7 @@
 }
 
 .planning__dates {
-  margin-top: 20px;
+  margin-top: 21px;
 
   @media #{$min-tablet} {
     margin-top: 40px;
@@ -142,7 +142,7 @@
   @media #{$min-desktop} {
     margin-top: 37px;
     padding-top: 62px;
-    padding-bottom: 41px;
+    padding-bottom: 43px;
   }
 
   &::after {
@@ -174,13 +174,17 @@
 }
 
 .planning__buttons {
+  padding-bottom: 4px;
+
   @media #{$min-tablet} {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 2px;
   }
 
   @media #{$min-desktop} {
     grid-area: 4 / 1 / span 1 / span 2;
+    padding-bottom: 0;
   }
 }
 

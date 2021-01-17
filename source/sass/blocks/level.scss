@@ -19,6 +19,7 @@
   }
 
   &--index {
+    justify-content: flex-start;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -75,12 +76,9 @@
   font-weight: 700;
 
   &--index {
-    padding-top: 8px;
+    padding-top: 13px;
+    padding-bottom: 2px;
     color: $basic-white;
-
-    @media #{$min-tablet} {
-      padding-top: 4px;
-    }
   }
 
   &--form {

@@ -9,6 +9,7 @@
   }
 
   @media #{$min-desktop} {
+    grid-template: 1fr/35% 33% 1fr;
     width: 100%;
   }
 }

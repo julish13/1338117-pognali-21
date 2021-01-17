@@ -43,7 +43,7 @@
 }
 
 .planning-dates__children {
-  margin-bottom: 27px;
+  margin-bottom: 30px;
   margin-top: 10px;
   font-weight: 400;
 
@@ -128,7 +128,7 @@ input:checked:active + .planning-dates__checkbox-label {
 }
 
 .planning-dates__calendar {
-  margin-bottom: 23px;
+  margin-bottom: 22px;
   flex-basis: 100%;
 
   @media #{$min-tablet} {
@@ -139,5 +139,6 @@ input:checked:active + .planning-dates__checkbox-label {
   @media #{$min-desktop} {
     grid-area: 3 / 1 / span 1 / span 2;
     margin-top: 31px;
+    margin-bottom: 44px;
   }
 }
