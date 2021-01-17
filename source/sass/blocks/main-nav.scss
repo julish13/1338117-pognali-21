@@ -12,7 +12,7 @@
 
   &--opened {
     @media #{$max-tablet} {
-      position: absolute;
+      position: fixed;
       top: 0;
     }
   }
@@ -24,11 +24,11 @@
       background-color: transparent;
     }
   }
+}
 
-  &--scrolled,
-  &--nojs {
-    background-color: $basic-white;
-  }
+.main-nav--scrolled.main-nav--closed,
+.main-nav--nojs {
+  background-color: $basic-white;
 }
 
 .main-nav__inner {
@@ -66,7 +66,7 @@
     }
   }
 
-  .main-nav--scrolled & {
+  .main-nav--scrolled.main-nav--closed & {
     padding-top: 27px;
 
     @media #{$min-tablet} {
@@ -74,7 +74,7 @@
     }
   }
 
-  .main-nav--scrolled &,
+  .main-nav--scrolled.main-nav--closed &,
   .main-nav--nojs & {
     @media #{$min-desktop} {
       padding-top: 16px;
@@ -84,6 +84,7 @@
 }
 
 .main-nav__logo {
+  position: relative;
   display: block;
   margin-bottom: 25px;
   flex-basis: 85%;
@@ -92,6 +93,76 @@
     margin: 0;
     flex-basis: auto;
     order: -3;
+  }
+}
+
+.main-nav__logo::before {
+  position: absolute;
+  display: none;
+  content: "";
+  width: 96px;
+  height: 15px;
+  background-image: url("../img/content/logo-mobile-white.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/content/logo-mobile-white@2x.png");
+  }
+
+  @media #{$min-tablet} {
+    width: 166px;
+    height: 42px;
+    background-image: url("../img/content/logo-tablet-white.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/content/logo-tablet-white@2x.png");
+    }
+  }
+
+  @media #{$min-desktop} {
+    width: 200px;
+    height: 52px;
+    background-image: url("../img/content/logo-desktop-dark.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/content/logo-desktop-dark@2x.png");
+    }
+  }
+
+
+  .main-nav--closed & {
+    display: block;
+
+    @media #{$min-desktop} {
+      display: none;
+    }
+  }
+
+  .main-nav--scrolled & {
+    display: none;
+
+    @media #{$min-desktop} {
+      display: block;
+    }
+  }
+}
+
+.main-nav__logo-picture {
+  .main-nav--closed & {
+    opacity: 0;
+
+    @media #{$min-desktop} {
+      opacity: 1;
+    }
+  }
+
+  .main-nav--scrolled & {
+    opacity: 1;
+
+    @media #{$min-desktop} {
+      opacity: 0;
+    }
   }
 }
 
@@ -162,7 +233,7 @@
     }
   }
 
-  .main-nav--scrolled &,
+  .main-nav--scrolled.main-nav--closed &,
   .main-nav--nojs & {
     &::before {
       background-color: $grey-2;
@@ -249,7 +320,7 @@
     height: 2px;
     background-color: $basic-white;
 
-    .main-nav--scrolled &,
+    .main-nav--scrolled.main-nav--closed &,
     .main-nav--nojs & {
       @media #{$min-desktop} {
         left: -88px;
@@ -265,7 +336,7 @@
     }
   }
 
-  .main-nav--scrolled &,
+  .main-nav--scrolled.main-nav--closed &,
   .main-nav--nojs & {
     @media #{$min-desktop} {
       color: $blue-background-1;
