@@ -6,6 +6,7 @@
   }
 
   @media #{$min-desktop} {
+    border-radius: 0 0 60px 60px;
     background-color: $basic-blue;
     background-image: url("../img/traveller-illustration-desktop.png"),
       url("../img/globe-back-desktop.png");
