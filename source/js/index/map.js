@@ -5,11 +5,9 @@ function initMap() {
   const LOCATION = { lat: 59.938891, lng: 30.323037 };
 
   const mapElement = document.querySelector(`.map`);
-  const mapPicture = mapElement.querySelector(`.map__picture`);
   const mapPinElement = mapElement.querySelector(`#pin`);
 
   mapElement.classList.remove(`map--nojs`);
-  mapPicture.classList.remove(`map--nojs`);
   mapPinElement.classList.add(`visually-hidden`);
 
   const map = new google.maps.Map(document.querySelector(`#map`), {

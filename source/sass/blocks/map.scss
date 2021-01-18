@@ -17,7 +17,9 @@
 }
 
 .map__picture {
-  display: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 
   @media #{$min-tablet} {
     width: 768px;
@@ -27,12 +29,6 @@
   @media #{$min-desktop} {
     width: 1440px;
     height: 584px;
-  }
-
-  &--nojs {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
