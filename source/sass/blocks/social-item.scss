@@ -4,16 +4,16 @@
   justify-content: center;
   align-items: center;
 
-  &:hover,
-  &:focus {
+  &:hover {
     .social-item__icon {
       opacity: 0.6;
     }
   }
 
-  &:active {
+  &:active,
+  &:focus {
     .social-item__icon {
-      opacity: 0.3;
+      fill: rgba($blue-3, 0.3);
     }
   }
 
