@@ -1,7 +1,11 @@
 # Личный проект «Погнали» 
 
-- Студент: [Юлия Колупаева](https://up.htmlacademy.ru/adaptive/21/user/1338117).
-- Наставник: .`Андрей Чепулис`.
+### Ссылки на опубликованный проект:
+
+- [Главная страница](https://julish13.github.io/pognali/index.html)
+- Дополнительные страницы:
+  - [Попутчики](https://julish13.github.io/pognali/catalog.html)
+  - [Направления](https://julish13.github.io/pognali/form.html)
 
 ---
 - Сборка на Gulp
@@ -14,6 +18,13 @@
 - Семантическая вёрстка
 - Доступность
 - Chrome, Firefox
+
+
+---
+
+- Студент: [Юлия Колупаева](https://up.htmlacademy.ru/adaptive/21/user/1338117).
+- Наставник: [Андрей Чепулис](https://htmlacademy.ru/profile/id240237).
+
 ---
 
 <a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
