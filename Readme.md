@@ -1,4 +1,5 @@
 # Личный проект «Погнали» 
+![Project check](https://github.com/julish13/pognali/workflows/Project%20check/badge.svg)
 
 ### Ссылки на опубликованный проект:
 
